@@ -1,0 +1,94 @@
+{
+ "id": "swordsman_sword",
+ "cell": [
+  144,
+  144
+ ],
+ "pivot": [
+  72,
+  72
+ ],
+ "angles": [
+  125,
+  205,
+  285,
+  350,
+  0,
+  12,
+  0,
+  356
+ ],
+ "note": "the swordsman's ceremonial sword as a prop. One row per angle; the pivot is the grip pixel. \"fall\" starts where death frame 2 leaves it (grip_dx/dy from the swordsman's anchor, canvas px, y down; flip dx with his facing). Events: clang = a hit on the floor (sound, 2-3 steel sparks), rest = it lies flat until the room is cleared. It never stands upright and never sticks in the floor.",
+ "length_px": 71,
+ "from": "death frame 2",
+ "fall": [
+  {
+   "row": 0,
+   "angle": 125,
+   "grip_dx": 37,
+   "grip_dy": -115,
+   "ms": 70
+  },
+  {
+   "row": 1,
+   "angle": 205,
+   "grip_dx": 41,
+   "grip_dy": -121,
+   "ms": 60
+  },
+  {
+   "row": 2,
+   "angle": 285,
+   "grip_dx": 45,
+   "grip_dy": -113,
+   "ms": 60
+  },
+  {
+   "row": 3,
+   "angle": 350,
+   "grip_dx": 49,
+   "grip_dy": -56,
+   "ms": 60
+  },
+  {
+   "row": 4,
+   "angle": 0,
+   "grip_dx": 52,
+   "grip_dy": -8,
+   "ms": 70,
+   "event": "clang"
+  },
+  {
+   "row": 5,
+   "angle": 12,
+   "grip_dx": 55,
+   "grip_dy": -13,
+   "ms": 60
+  },
+  {
+   "row": 6,
+   "angle": 0,
+   "grip_dx": 57,
+   "grip_dy": -8,
+   "ms": 70,
+   "event": "clang"
+  },
+  {
+   "row": 7,
+   "angle": 356,
+   "grip_dx": 58,
+   "grip_dy": -10,
+   "ms": 50
+  },
+  {
+   "row": 6,
+   "angle": 0,
+   "grip_dx": 59,
+   "grip_dy": -8,
+   "ms": 400,
+   "event": "rest"
+  }
+ ],
+ "rest_row": 6,
+ "look": "pixel"
+}

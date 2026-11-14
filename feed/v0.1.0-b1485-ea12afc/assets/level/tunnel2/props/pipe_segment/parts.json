@@ -1,0 +1,637 @@
+{
+ "id": "pipe_segment",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A steam pipe that has leaked since the war: it splits in the middle with a scream of steam, the flanges stay bolted.",
+ "source": {
+  "intact": "props/pipe_segment_intact.png",
+  "crop": null,
+  "w": 64,
+  "h": 18,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "pipe_segment_col.png",
+   "n": "pipe_segment_n.png",
+   "mat": "pipe_segment_mat.png",
+   "parts": "pipe_segment_parts.png",
+   "grain": "pipe_segment_grain.png",
+   "inside": "pipe_segment_inside.png",
+   "under": {
+    "col": "pipe_segment_under_col.png",
+    "n": "pipe_segment_under_n.png",
+    "mat": "pipe_segment_under_mat.png",
+    "parts": "pipe_segment_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 cracked: the pipe bursts in the middle (steam)",
+  "2-3 bolted: each half lets go of its flange and drops"
+ ],
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: a hissing crack",
+  "burst": "orders 1+"
+ },
+ "pieces": [
+  {
+   "id": "flange_l",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 59.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    11,
+    0,
+    8,
+    16
+   ],
+   "at": [
+    0,
+    1
+   ],
+   "centre": [
+    3.9,
+    8.9
+   ],
+   "outline": [
+    [
+     -3.9,
+     -5.9
+    ],
+    [
+     -1.9,
+     -7.9
+    ],
+    [
+     2.1,
+     -7.9
+    ],
+    [
+     4.1,
+     -5.9
+    ],
+    [
+     4.1,
+     5.1
+    ],
+    [
+     2.1,
+     8.1
+    ],
+    [
+     -1.9,
+     8.1
+    ],
+    [
+     -3.9,
+     6.1
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      171,
+      0,
+      2,
+      9
+     ],
+     "at": [
+      6,
+      3
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "flange_r",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 61.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    0,
+    9,
+    16
+   ],
+   "at": [
+    55,
+    1
+   ],
+   "centre": [
+    60.0,
+    9.0
+   ],
+   "outline": [
+    [
+     -5.0,
+     -3.0
+    ],
+    [
+     -4.0,
+     -6.0
+    ],
+    [
+     -2.0,
+     -8.0
+    ],
+    [
+     2.0,
+     -8.0
+    ],
+    [
+     4.0,
+     -6.0
+    ],
+    [
+     4.0,
+     6.0
+    ],
+    [
+     2.0,
+     8.0
+    ],
+    [
+     -2.0,
+     8.0
+    ],
+    [
+     -4.0,
+     6.0
+    ],
+    [
+     -5.0,
+     -2.0
+    ]
+   ],
+   "partIndex": 2,
+   "anchor": true,
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      167,
+      0,
+      2,
+      10
+     ],
+     "at": [
+      57,
+      3
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "pipe_a",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 160.1,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    48,
+    0,
+    26,
+    12
+   ],
+   "at": [
+    7,
+    3
+   ],
+   "centre": [
+    19.8,
+    8.9
+   ],
+   "outline": [
+    [
+     -12.8,
+     -0.9
+    ],
+    [
+     -11.8,
+     -5.9
+    ],
+    [
+     13.2,
+     -5.9
+    ],
+    [
+     13.2,
+     -1.9
+    ],
+    [
+     12.2,
+     6.1
+    ],
+    [
+     -12.8,
+     6.1
+    ]
+   ],
+   "partIndex": 3,
+   "emit": "steam",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      175,
+      0,
+      3,
+      8
+     ],
+     "at": [
+      8,
+      3
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      110,
+      0,
+      3,
+      12
+     ],
+     "at": [
+      30,
+      3
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      21,
+      0,
+      25,
+      14
+     ],
+     "at": [
+      7,
+      3
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 10,
+      "squeeze": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "id": "pipe_b",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 159.0,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    76,
+    0,
+    26,
+    12
+   ],
+   "at": [
+    31,
+    3
+   ],
+   "centre": [
+    43.9,
+    9.1
+   ],
+   "outline": [
+    [
+     -12.9,
+     -1.1
+    ],
+    [
+     -10.9,
+     -6.1
+    ],
+    [
+     12.1,
+     -6.1
+    ],
+    [
+     13.1,
+     0.9
+    ],
+    [
+     13.1,
+     1.9
+    ],
+    [
+     12.1,
+     5.9
+    ],
+    [
+     -11.9,
+     5.9
+    ],
+    [
+     -12.9,
+     3.9
+    ]
+   ],
+   "partIndex": 4,
+   "emit": "steam",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      180,
+      0,
+      3,
+      8
+     ],
+     "at": [
+      54,
+      3
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      104,
+      0,
+      4,
+      12
+     ],
+     "at": [
+      30,
+      3
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "pipe_a_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 121.6,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    115,
+    0,
+    24,
+    10
+   ],
+   "at": [
+    8,
+    4
+   ],
+   "centre": [
+    19.8,
+    8.9
+   ],
+   "outline": [
+    [
+     -11.8,
+     -0.9
+    ],
+    [
+     -10.8,
+     -4.9
+    ],
+    [
+     12.2,
+     -4.9
+    ],
+    [
+     12.2,
+     -1.9
+    ],
+    [
+     11.2,
+     5.1
+    ],
+    [
+     -10.8,
+     5.1
+    ],
+    [
+     -11.8,
+     2.1
+    ]
+   ],
+   "partIndex": 5,
+   "what": "STAND-IN: the inside of pipe_a",
+   "inner_of": "pipe_a",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "pipe_b_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 122.1,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    141,
+    0,
+    24,
+    10
+   ],
+   "at": [
+    32,
+    4
+   ],
+   "centre": [
+    43.9,
+    9.1
+   ],
+   "outline": [
+    [
+     -11.9,
+     -1.1
+    ],
+    [
+     -9.9,
+     -5.1
+    ],
+    [
+     11.1,
+     -5.1
+    ],
+    [
+     12.1,
+     0.9
+    ],
+    [
+     12.1,
+     1.9
+    ],
+    [
+     11.1,
+     4.9
+    ],
+    [
+     -10.9,
+     4.9
+    ],
+    [
+     -11.9,
+     3.9
+    ]
+   ],
+   "partIndex": 6,
+   "what": "STAND-IN: the inside of pipe_b",
+   "inner_of": "pipe_b",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j03",
+   "a": "pipe_a",
+   "b": "pipe_b",
+   "kind": "cracked",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    30.9,
+    8.5
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "flange_r",
+   "b": "pipe_b",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 2,
+   "at": [
+    56.0,
+    8.5
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "flange_l",
+   "b": "pipe_a",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 3,
+   "at": [
+    6.7,
+    8.5
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "pipe_a_in",
+   "b": "pipe_a",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    19.8,
+    8.9
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "pipe_b_in",
+   "b": "pipe_b",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    43.9,
+    9.1
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    30,
+    8
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    32,
+    4
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    32,
+    5
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    30,
+    12
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "crack",
+   "at": [
+    28,
+    6
+   ]
+  }
+ ],
+ "notes": []
+}

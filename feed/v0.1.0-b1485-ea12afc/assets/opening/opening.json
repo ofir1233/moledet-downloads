@@ -1,0 +1,431 @@
+{
+ "version": 3,
+ "reference": [
+  1280,
+  720
+ ],
+ "fps": 12,
+ "frames": 30,
+ "seconds": 2.5,
+ "removed": "v3 (12.11): the pole, cloth_pop, cloth_wave, cloth_rest and the word plates are gone; the band and its words are not in this pack",
+ "band": {
+  "heightOfView": 0.42,
+  "centreY": 0.5,
+  "refRows": [
+   209,
+   511
+  ],
+  "owner": "the Host team (art/opening_band); bandTop = round(viewH/2 - bandH/2), bandBottom = bandTop + bandH",
+  "rule": "nothing of this pack is drawn inside the band rows: every layer here is BELOW the band in draw order, and the backdrops are drawn only above and below it"
+ },
+ "layers": [
+  "backdrop",
+  "smokeBack",
+  "blasts",
+  "confetti",
+  "(band: Host team)",
+  "flash"
+ ],
+ "view": {
+  "pixels": "1 art px = 1 world px (32 a cell), at the game's integer k; never scale a sprite or a backdrop",
+  "refToView": "x_view = x_ref - 640 + viewW/2; y_ref < 360: y_view = bandTop - (209 - y_ref); else y_view = bandBottom + (y_ref - 511)",
+  "backdrop": "scale 1: its rows 0..209 above the band (ref row 209 on bandTop), its rows 511..720 below (ref row 511 on bandBottom), centred in x; its band rows are never drawn; the view outside the 1280 x 720 picture is #07090c"
+ },
+ "backdrops": {
+  "a": {
+   "file": "sheets/backdrop_a.png",
+   "size": [
+    1280,
+    720
+   ],
+   "blast": "low left"
+  },
+  "b": {
+   "file": "sheets/backdrop_b.png",
+   "size": [
+    1280,
+    720
+   ],
+   "blast": "high right"
+  },
+  "c": {
+   "file": "sheets/backdrop_c.png",
+   "size": [
+    1280,
+    720
+   ],
+   "blast": "high centre"
+  },
+  "d": {
+   "file": "sheets/backdrop_d.png",
+   "size": [
+    1280,
+    720
+   ],
+   "blast": "low centre (the climax)"
+  }
+ },
+ "sprites": {
+  "confetti": {
+   "file": "sheets/confetti.png",
+   "frame": [
+    12,
+    12
+   ],
+   "frames": 8,
+   "cols": 8,
+   "variants": 6,
+   "note": "one row per piece type (blue, white, gold ribbon, light blue, white, gold ribbon); 8 tumble frames"
+  },
+  "confetti_star": {
+   "file": "sheets/confetti_star.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 8,
+   "cols": 8,
+   "variants": 2,
+   "anchor": [
+    7,
+    7
+   ],
+   "note": "the Star of David, the game's mark: row 0 blue, row 1 white; a true six-pointed star of two triangles; the 8 frames are a glint (tones swap); never rotate, squash or scale it"
+  },
+  "smoke_billow": {
+   "file": "sheets/smoke_billow.png",
+   "frame": [
+    128,
+    128
+   ],
+   "frames": 10,
+   "cols": 10,
+   "variants": 2,
+   "fps": 8,
+   "loop": false,
+   "anchor": [
+    64,
+    76
+   ],
+   "layer": "smokeBack"
+  }
+ },
+ "emitters": {
+  "confetti_burst": {
+   "sprite": "confetti",
+   "starSprite": "confetti_star",
+   "starFraction": 0.2,
+   "count": 140,
+   "origin": [
+    640,
+    120
+   ],
+   "spawnBox": [
+    260,
+    80
+   ],
+   "angleDeg": [
+    -170,
+    -10
+   ],
+   "speed": [
+    380,
+    820
+   ],
+   "gravity": 900,
+   "drag": 1.8,
+   "terminalFall": 150,
+   "sway": {
+    "amp": [
+     4,
+     12
+    ],
+    "hz": [
+     1.2,
+     2.6
+    ]
+   },
+   "tumbleFps": [
+    8,
+    20
+   ],
+   "life": [
+    2.0,
+    3.5
+   ],
+   "layer": "confetti",
+   "note": "above the band; pieces that fall into the band rows pass behind it (layer order) and come out below",
+   "snap": "integer px every drawn frame",
+   "units": "px, px/s, px/s^2"
+  },
+  "confetti_rain": {
+   "sprite": "confetti",
+   "starSprite": "confetti_star",
+   "starFraction": 0.25,
+   "rate": 40,
+   "duration": 1.0,
+   "spawnLine": [
+    [
+     0,
+     -10
+    ],
+    [
+     1280,
+     -10
+    ]
+   ],
+   "speed": [
+    60,
+    140
+   ],
+   "angleDeg": [
+    80,
+    100
+   ],
+   "gravity": 120,
+   "terminalFall": 150,
+   "sway": {
+    "amp": [
+     6,
+     14
+    ],
+    "hz": [
+     1.0,
+     2.0
+    ]
+   },
+   "tumbleFps": [
+    8,
+    16
+   ],
+   "layer": "confetti"
+  },
+  "smoke_back": {
+   "sprite": "smoke_billow",
+   "rate": 5,
+   "rateAfter": 2,
+   "area": [
+    [
+     80,
+     620
+    ],
+    [
+     1200,
+     690
+    ]
+   ],
+   "drift": [
+    [
+     -10,
+     10
+    ],
+    [
+     -30,
+     -14
+    ]
+   ],
+   "variant": "random",
+   "flip": "random",
+   "layer": "smokeBack",
+   "note": "below the band; rate per second during the sequence, rateAfter after it"
+  }
+ },
+ "timeline": [
+  {
+   "f": 0,
+   "do": "cut",
+   "backdrop": "a"
+  },
+  {
+   "f": 0,
+   "do": "flash",
+   "frames": 1,
+   "color": "#fffbf1"
+  },
+  {
+   "f": 0,
+   "do": "sound",
+   "event": "opening:blast"
+  },
+  {
+   "f": 0,
+   "do": "fx",
+   "effect": "explosion_huge",
+   "at": [
+    300,
+    690
+   ]
+  },
+  {
+   "f": 0,
+   "do": "burst",
+   "emitter": "smoke_back"
+  },
+  {
+   "f": 3,
+   "do": "cut",
+   "backdrop": "b"
+  },
+  {
+   "f": 3,
+   "do": "sound",
+   "event": "opening:blast"
+  },
+  {
+   "f": 3,
+   "do": "fx",
+   "effect": "explosion_big",
+   "at": [
+    1010,
+    140
+   ]
+  },
+  {
+   "f": 6,
+   "do": "cut",
+   "backdrop": "c"
+  },
+  {
+   "f": 6,
+   "do": "burst",
+   "emitter": "confetti_burst"
+  },
+  {
+   "f": 6,
+   "do": "sound",
+   "event": "opening:confetti"
+  },
+  {
+   "f": 9,
+   "do": "cut",
+   "backdrop": "d"
+  },
+  {
+   "f": 9,
+   "do": "sound",
+   "event": "opening:blast"
+  },
+  {
+   "f": 9,
+   "do": "fx",
+   "effect": "explosion_big",
+   "at": [
+    190,
+    140
+   ]
+  },
+  {
+   "f": 12,
+   "do": "cut",
+   "backdrop": "a"
+  },
+  {
+   "f": 12,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 15,
+   "do": "cut",
+   "backdrop": "c"
+  },
+  {
+   "f": 15,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 18,
+   "do": "cut",
+   "backdrop": "b"
+  },
+  {
+   "f": 18,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 20,
+   "do": "cut",
+   "backdrop": "c"
+  },
+  {
+   "f": 20,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 21,
+   "do": "cut",
+   "backdrop": "a"
+  },
+  {
+   "f": 21,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 22,
+   "do": "cut",
+   "backdrop": "b"
+  },
+  {
+   "f": 22,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 23,
+   "do": "cut",
+   "backdrop": "c"
+  },
+  {
+   "f": 23,
+   "do": "sound",
+   "event": "opening:drum"
+  },
+  {
+   "f": 24,
+   "do": "cut",
+   "backdrop": "d"
+  },
+  {
+   "f": 24,
+   "do": "flash",
+   "frames": 1,
+   "color": "#fffbf1"
+  },
+  {
+   "f": 24,
+   "do": "sound",
+   "event": "opening:blast_big"
+  },
+  {
+   "f": 24,
+   "do": "fx",
+   "effect": "explosion_huge",
+   "at": [
+    1060,
+    700
+   ]
+  },
+  {
+   "f": 24,
+   "do": "burst",
+   "emitter": "confetti_rain"
+  }
+ ],
+ "loop": {
+  "from": 30,
+  "emitters": [
+   "smoke_back"
+  ],
+  "backdrop": "d"
+ },
+ "sounds": [
+  "opening:drum",
+  "opening:blast",
+  "opening:blast_big",
+  "opening:confetti"
+ ]
+}

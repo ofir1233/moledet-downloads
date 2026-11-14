@@ -1,0 +1,134 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "include": [
+  "animals.json"
+ ],
+ "contract": "docs/LEVEL_ANIM_CONTRACT.md",
+ "builder": "art/level_anim/make_level_anim.py (J8a, account D)",
+ "anims": {
+  "weld": {
+   "on": {
+    "kind": "prop",
+    "prop": "cargo_lift",
+    "mode": "overlay",
+    "at": [
+     0,
+     0
+    ]
+   },
+   "sheet": "../../tunnel/anim/weld.png",
+   "frame": [
+    118,
+    223
+   ],
+   "cells": [
+    3.688,
+    6.969
+   ],
+   "anchor": [
+    0.4915,
+    0.9686
+   ],
+   "dz": 0.01,
+   "render": {
+    "shadow": "none",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1.4,
+    "emissive": "the arc and sparks"
+   },
+   "states": {
+    "burst": {
+     "row": 0,
+     "frames": 14,
+     "fps": 24,
+     "loop": false,
+     "repeat": true,
+     "hold": [
+      1400,
+      3200
+     ],
+     "next": "rest",
+     "lightLevels": [
+      0.85,
+      0.81,
+      0.76,
+      0.86,
+      0.81,
+      0.93,
+      0.95,
+      0.93,
+      0.86,
+      0.81,
+      0.85,
+      0.87,
+      0.91,
+      0.99
+     ]
+    },
+    "rest": {
+     "row": 1,
+     "frames": 4,
+     "durations": [
+      200,
+      300,
+      400,
+      600
+     ],
+     "loop": false,
+     "next": "burst",
+     "hold": [
+      900,
+      2600
+     ],
+     "lightLevels": [
+      0.12,
+      0.08,
+      0.04,
+      0
+     ]
+    }
+   },
+   "default": "burst",
+   "phase": "random",
+   "glow": {
+    "sheet": "../../tunnel/anim/weld_glow.png",
+    "frame": [
+     96,
+     96
+    ],
+    "cells": [
+     6.0,
+     6.0
+    ],
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "at": [
+     6,
+     -45
+    ],
+    "blend": "additive",
+    "layer": "fxGlow",
+    "rows": "states"
+   },
+   "light": {
+    "color": "#a8d4ff",
+    "radius": 5,
+    "intensity": 1.2
+   },
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 8,
+     "plusRadius": true,
+     "state": "rest"
+    }
+   ],
+   "note": "a welder at work INSIDE the cage, hidden by its lower panel: the arc and sparks show only between the bars (drawn where the lift is not opaque); the blue light spills out through the glow and the point light."
+  }
+ },
+ "packNote": "haifa: tunnel anims off by data (build_pack.py ANIMS_OFF): cable_sparks, cat, drip_drop, drip_form, drip_splash, fan, goat, lamp, laundry, monitors, pigeon, steam"
+}

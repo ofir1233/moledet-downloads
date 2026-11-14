@@ -1,0 +1,12 @@
+Hazit (HazitHeavy.ttf, HazitNarrow.ttf)
+
+Supplied by the owner on 13.11.2026 from his own files (dropped in D:\bs\incoming\fonts_hazit\), with his words:
+«תשתמשי בו הוא חינמי זה בסדר» (use it, it is free, it is fine).
+
+  HazitHeavy.ttf   33,880 bytes   name table: "Hazit" Regular, Version 1.0, "TMR: Hazit Bold: 2013"
+  HazitNarrow.ttf  36,132 bytes   name table: "Hazit Narrow" Regular, Version 1.0, "Tamirp.com: Hazit Narrow: 2014"
+  Both name tables read: "Copyright (c) 2013 by Tamirp.com. All rights reserved." and "Hazit is a trademark of Tamirp.com."
+
+No licence text came with the files.
+
+The game atlases in this folder (narrow_*, heavy_* .png/.json) are rendered from these outlines by tools/font_hazit/bake.py.

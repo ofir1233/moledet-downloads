@@ -1,0 +1,2787 @@
+{
+ "canvas": [
+  96,
+  96
+ ],
+ "anchor": [
+  48,
+  90
+ ],
+ "scale": "3/8",
+ "palette": "bomber_pixel",
+ "normal": "atlas_n.png",
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     96,
+     96
+    ],
+    [
+     96,
+     0,
+     96,
+     96
+    ],
+    [
+     192,
+     0,
+     96,
+     96
+    ],
+    [
+     288,
+     0,
+     96,
+     96
+    ],
+    [
+     384,
+     0,
+     96,
+     96
+    ],
+    [
+     480,
+     0,
+     96,
+     96
+    ],
+    [
+     576,
+     0,
+     96,
+     96
+    ],
+    [
+     672,
+     0,
+     96,
+     96
+    ]
+   ],
+   "fps": 5,
+   "loop": true
+  },
+  "alert": {
+   "frames": [
+    [
+     0,
+     96,
+     96,
+     96
+    ],
+    [
+     96,
+     96,
+     96,
+     96
+    ],
+    [
+     192,
+     96,
+     96,
+     96
+    ],
+    [
+     288,
+     96,
+     96,
+     96
+    ],
+    [
+     384,
+     96,
+     96,
+     96
+    ],
+    [
+     480,
+     96,
+     96,
+     96
+    ],
+    [
+     576,
+     96,
+     96,
+     96
+    ],
+    [
+     672,
+     96,
+     96,
+     96
+    ],
+    [
+     0,
+     192,
+     96,
+     96
+    ],
+    [
+     96,
+     192,
+     96,
+     96
+    ]
+   ],
+   "fps": 16,
+   "loop": false
+  },
+  "run": {
+   "frames": [
+    [
+     192,
+     192,
+     96,
+     96
+    ],
+    [
+     288,
+     192,
+     96,
+     96
+    ],
+    [
+     384,
+     192,
+     96,
+     96
+    ],
+    [
+     480,
+     192,
+     96,
+     96
+    ],
+    [
+     576,
+     192,
+     96,
+     96
+    ],
+    [
+     672,
+     192,
+     96,
+     96
+    ],
+    [
+     0,
+     288,
+     96,
+     96
+    ],
+    [
+     96,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 15,
+   "loop": true
+  },
+  "hurt": {
+   "frames": [
+    [
+     192,
+     288,
+     96,
+     96
+    ],
+    [
+     288,
+     288,
+     96,
+     96
+    ],
+    [
+     384,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 12,
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     480,
+     288,
+     96,
+     96
+    ],
+    [
+     576,
+     288,
+     96,
+     96
+    ],
+    [
+     672,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false,
+   "ticks": [
+    6,
+    7,
+    5
+   ],
+   "durations": [
+    100,
+    117,
+    83
+   ],
+   "note": "NO BODY (the Host's ruling, gate 1): 0 the take (both feet off the floor, arms out, eyes wide); 1 the turban lifts off a bald head and the belt is let go; 2 EMPTY. The props (turban_prop, belt_prop) play from where frame 1 leaves them; the forms burst is the effects pack's (death_bomber)"
+  },
+  "death_blast": {
+   "frames": [
+    [
+     576,
+     480,
+     96,
+     96
+    ],
+    [
+     672,
+     480,
+     96,
+     96
+    ],
+    [
+     0,
+     576,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false,
+   "ticks": [
+    9,
+    6,
+    3
+   ],
+   "durations": [
+    150,
+    100,
+    50
+   ],
+   "root": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   "note": "NO BODY: 0 he looks down at the clock on his belt; 1 the take, the clock face red; 2 EMPTY. The blast is the effects pack's; no root motion (he is not thrown)"
+  },
+  "fuse": {
+   "frames": [
+    [
+     0,
+     768,
+     96,
+     96
+    ],
+    [
+     96,
+     768,
+     96,
+     96
+    ],
+    [
+     192,
+     768,
+     96,
+     96
+    ],
+    [
+     288,
+     768,
+     96,
+     96
+    ],
+    [
+     384,
+     768,
+     96,
+     96
+    ],
+    [
+     480,
+     768,
+     96,
+     96
+    ],
+    [
+     576,
+     768,
+     96,
+     96
+    ],
+    [
+     672,
+     768,
+     96,
+     96
+    ],
+    [
+     0,
+     864,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "hop": {
+   "frames": [
+    [
+     96,
+     864,
+     96,
+     96
+    ],
+    [
+     192,
+     864,
+     96,
+     96
+    ]
+   ],
+   "fps": 8,
+   "loop": false
+  },
+  "dud": {
+   "frames": [
+    [
+     288,
+     864,
+     96,
+     96
+    ],
+    [
+     384,
+     864,
+     96,
+     96
+    ],
+    [
+     480,
+     864,
+     96,
+     96
+    ],
+    [
+     576,
+     864,
+     96,
+     96
+    ],
+    [
+     672,
+     864,
+     96,
+     96
+    ],
+    [
+     0,
+     960,
+     96,
+     96
+    ],
+    [
+     96,
+     960,
+     96,
+     96
+    ],
+    [
+     192,
+     960,
+     96,
+     96
+    ],
+    [
+     288,
+     960,
+     96,
+     96
+    ],
+    [
+     384,
+     960,
+     96,
+     96
+    ],
+    [
+     480,
+     960,
+     96,
+     96
+    ],
+    [
+     576,
+     960,
+     96,
+     96
+    ],
+    [
+     672,
+     960,
+     96,
+     96
+    ],
+    [
+     0,
+     1056,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "stun": {
+   "frames": [
+    [
+     96,
+     1056,
+     96,
+     96
+    ],
+    [
+     192,
+     1056,
+     96,
+     96
+    ],
+    [
+     288,
+     1056,
+     96,
+     96
+    ],
+    [
+     384,
+     1056,
+     96,
+     96
+    ],
+    [
+     480,
+     1056,
+     96,
+     96
+    ],
+    [
+     576,
+     1056,
+     96,
+     96
+    ],
+    [
+     672,
+     1056,
+     96,
+     96
+    ],
+    [
+     0,
+     1152,
+     96,
+     96
+    ]
+   ],
+   "fps": 8,
+   "loop": true
+  },
+  "fall": {
+   "frames": [
+    [
+     0,
+     384,
+     96,
+     96
+    ],
+    [
+     96,
+     384,
+     96,
+     96
+    ],
+    [
+     192,
+     384,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": true,
+   "loopFrom": 1,
+   "ticks": [
+    11,
+    5,
+    5
+   ],
+   "durations": [
+    183,
+    83,
+    83
+   ],
+   "note": "in the air going down: 0 the beat, played ONCE (frozen in his stride, the clock clutched, he looks down); 1-2 the fall, a LOOP (loopFrom 1): arms up, the robe blown up like a bell, the turban lifting a little and staying on. Never lying, kneeling or bowing"
+  },
+  "salute": {
+   "frames": [
+    [
+     0,
+     1248,
+     96,
+     96
+    ],
+    [
+     96,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    3,
+    67
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "salute"
+    ]
+   },
+   "note": "every clone starts it on the same tick; frame 1 held",
+   "durations": [
+    50,
+    1117
+   ],
+   "fps": 12
+  },
+  "tea": {
+   "frames": [
+    [
+     192,
+     1248,
+     96,
+     96
+    ],
+    [
+     288,
+     1248,
+     96,
+     96
+    ],
+    [
+     384,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    10,
+    60,
+    6
+   ],
+   "loop": false,
+   "events": {
+    "1": [
+     "sip"
+    ]
+   },
+   "note": "draw, sip, lower; then back to idle",
+   "durations": [
+    167,
+    1000,
+    100
+   ],
+   "fps": 12
+  },
+  "tea_turn": {
+   "frames": [
+    [
+     480,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    32
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "smash"
+    ]
+   },
+   "note": "every head turns to the king on the same tick; the glass is gone on this frame (the smash)",
+   "durations": [
+    533
+   ],
+   "fps": 12
+  },
+  "punch_clock": {
+   "frames": [
+    [
+     576,
+     1248,
+     96,
+     96
+    ],
+    [
+     672,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    8,
+    6
+   ],
+   "loop": false,
+   "events": {
+    "1": [
+     "ding",
+     "may_explode"
+    ]
+   },
+   "note": "",
+   "durations": [
+    133,
+    100
+   ],
+   "fps": 12
+  },
+  "placard_stand": {
+   "frames": [
+    [
+     0,
+     1344,
+     96,
+     96
+    ],
+    [
+     96,
+     1344,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    12,
+    12
+   ],
+   "loop": true,
+   "events": {},
+   "note": "the clock placard",
+   "durations": [
+    200,
+    200
+   ],
+   "fps": 12
+  },
+  "strike_walk": {
+   "frames": [
+    [
+     192,
+     1344,
+     96,
+     96
+    ],
+    [
+     288,
+     1344,
+     96,
+     96
+    ],
+    [
+     384,
+     1344,
+     96,
+     96
+    ],
+    [
+     480,
+     1344,
+     96,
+     96
+    ],
+    [
+     576,
+     1344,
+     96,
+     96
+    ],
+    [
+     672,
+     1344,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   "loop": true,
+   "events": {},
+   "note": "arms folded, half speed",
+   "durations": [
+    167,
+    167,
+    167,
+    167,
+    167,
+    167
+   ],
+   "fps": 12
+  },
+  "strike_placard": {
+   "frames": [
+    [
+     0,
+     1440,
+     96,
+     96
+    ],
+    [
+     96,
+     1440,
+     96,
+     96
+    ],
+    [
+     192,
+     1440,
+     96,
+     96
+    ],
+    [
+     288,
+     1440,
+     96,
+     96
+    ],
+    [
+     384,
+     1440,
+     96,
+     96
+    ],
+    [
+     480,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   "loop": true,
+   "events": {},
+   "note": "the tea placard, half speed",
+   "durations": [
+    167,
+    167,
+    167,
+    167,
+    167,
+    167
+   ],
+   "fps": 12
+  },
+  "crown_take": {
+   "frames": [
+    [
+     576,
+     1440,
+     96,
+     96
+    ],
+    [
+     672,
+     1440,
+     96,
+     96
+    ],
+    [
+     0,
+     1536,
+     96,
+     96
+    ],
+    [
+     96,
+     1536,
+     96,
+     96
+    ],
+    [
+     192,
+     1536,
+     96,
+     96
+    ],
+    [
+     288,
+     1536,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    10,
+    14,
+    14,
+    12,
+    30,
+    10
+   ],
+   "loop": false,
+   "events": {
+    "3": [
+     "fanfare"
+    ],
+    "4": [
+     "reflection"
+    ]
+   },
+   "note": "the hero king's own crown; crown:taken on frame 3",
+   "durations": [
+    167,
+    233,
+    233,
+    200,
+    500,
+    167
+   ],
+   "fps": 12
+  },
+  "doc_read": {
+   "frames": [
+    [
+     384,
+     1536,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    90
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "paper"
+    ]
+   },
+   "note": "held while the red line holds",
+   "durations": [
+    1500
+   ],
+   "fps": 12
+  },
+  "doc_so": {
+   "frames": [
+    [
+     480,
+     1536,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    40
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "bark"
+    ]
+   },
+   "note": "",
+   "durations": [
+    667
+   ],
+   "fps": 12
+  },
+  "redline_scuff": {
+   "frames": [
+    [
+     576,
+     1536,
+     96,
+     96
+    ],
+    [
+     672,
+     1536,
+     96,
+     96
+    ],
+    [
+     0,
+     1632,
+     96,
+     96
+    ],
+    [
+     96,
+     1632,
+     96,
+     96
+    ],
+    [
+     192,
+     1632,
+     96,
+     96
+    ],
+    [
+     288,
+     1632,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    6,
+    6,
+    6,
+    6,
+    20,
+    24
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "scuff"
+    ],
+    "2": [
+     "scuff"
+    ],
+    "4": [
+     "line_gone"
+    ]
+   },
+   "note": "BY CODE from standing cells (ruling 12.11: never kneeling or bowing): he scuffs the line with his shoe on the spot, arms folded, looking away (strike-walk cells with NO root motion), glances down (c2_13), chin up. RENDER fades the line 1 / .6 / .3 / 0 over frames 0-3",
+   "durations": [
+    100,
+    100,
+    100,
+    100,
+    333,
+    400
+   ],
+   "fps": 12
+  },
+  "dazed_flipped": {
+   "frames": [
+    [
+     0,
+     1728,
+     96,
+     96
+    ],
+    [
+     96,
+     1728,
+     96,
+     96
+    ],
+    [
+     192,
+     1728,
+     96,
+     96
+    ],
+    [
+     288,
+     1728,
+     96,
+     96
+    ],
+    [
+     384,
+     1728,
+     96,
+     96
+    ],
+    [
+     480,
+     1728,
+     96,
+     96
+    ]
+   ],
+   "loop": true,
+   "fps": 4,
+   "durations": [
+    250,
+    250,
+    250,
+    250,
+    250,
+    250
+   ],
+   "note": "Host art 12.11 (gate 3 redraw): dazed_flipped, the 150 confused ticks of Ben-Gurion's headstand power (bomber phase stun, foes phase hurt, timer = confuseTicks): toppled onto his head on the floor, hands planted, turban rolled off and rocking beside him, robe fallen over his beard; he checks his permit form (a rubber stamp, no emblem), turns it the right way for himself (frames 2-3), then glares at us: \"so?\" (4-5). Loop 1.5 s. Drawn by hand (never a flip): alive, eyes open, never hanging, never kneeling or bowing; the head carries him on the floor at the anchor line.",
+   "ticks": [
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+   ]
+  }
+ },
+ "heads": {
+  "idle": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.2,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 58,
+     "rot": 0,
+     "score": 0.714,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.207,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.851,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 33,
+     "y": 20,
+     "rot": 0,
+     "score": 0.259,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 57,
+     "rot": 0,
+     "score": 0.714,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.203,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.722,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.199,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 57,
+     "rot": 0,
+     "score": 0.714,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.311,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.792,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.206,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 58,
+     "rot": 0,
+     "score": 0.722,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.224,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 57,
+     "rot": 0,
+     "score": 0.643,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "alert": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 36,
+     "y": 22,
+     "rot": 0,
+     "score": 0.327,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.732,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 36,
+     "y": 22,
+     "rot": 0,
+     "score": 0.327,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.732,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.22,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 56,
+     "rot": 0,
+     "score": 0.792,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 35,
+     "y": 21,
+     "rot": 0,
+     "score": 0.329,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 58,
+     "rot": 0,
+     "score": 0.625,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 36,
+     "y": 11,
+     "rot": 0,
+     "score": 0.259,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 47,
+     "rot": 0,
+     "score": 0.857,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 35,
+     "y": 13,
+     "rot": 0,
+     "score": 0.238,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 48,
+     "rot": 0,
+     "score": 0.625,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 38,
+     "y": 29,
+     "rot": 0,
+     "score": 0.225,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 60,
+     "rot": 0,
+     "score": 0.643,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 37,
+     "y": 19,
+     "rot": 0,
+     "score": 0.234,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 56,
+     "rot": 0,
+     "score": 0.698,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 34,
+     "y": 17,
+     "rot": 0,
+     "score": 0.275,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 58,
+     "rot": 0,
+     "score": 0.623,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 36,
+     "y": 21,
+     "rot": 0,
+     "score": 0.245,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 59,
+     "rot": 0,
+     "score": 0.643,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "run": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 42,
+     "y": 16,
+     "rot": 0,
+     "score": 0.239,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 37,
+     "y": 52,
+     "rot": 0,
+     "score": 0.667,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 20,
+     "rot": 0,
+     "score": 0.235,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 52,
+     "rot": 0,
+     "score": 0.679,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 16,
+     "rot": 0,
+     "score": 0.236,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 54,
+     "rot": 0,
+     "score": 0.831,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 13,
+     "rot": 0,
+     "score": 0.232,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 50,
+     "rot": 0,
+     "score": 0.722,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 18,
+     "rot": 0,
+     "score": 0.242,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 37,
+     "y": 53,
+     "rot": 0,
+     "score": 0.698,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 40,
+     "y": 21,
+     "rot": 0,
+     "score": 0.231,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 38,
+     "y": 54,
+     "rot": 0,
+     "score": 0.625,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 15,
+     "rot": 0,
+     "score": 0.242,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 54,
+     "rot": 0,
+     "score": 0.774,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 41,
+     "y": 13,
+     "rot": 0,
+     "score": 0.24,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 50,
+     "rot": 0,
+     "score": 0.663,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "hurt": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "hurt",
+     "x": 19,
+     "y": 29,
+     "rot": 0,
+     "score": 0.33,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 33,
+     "y": 64,
+     "rot": 0,
+     "score": 0.661,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "hurt",
+     "x": 25,
+     "y": 23,
+     "rot": 0,
+     "score": 0.322,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 38,
+     "y": 62,
+     "rot": 0,
+     "score": 0.831,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "hurt",
+     "x": 23,
+     "y": 25,
+     "rot": 0,
+     "score": 0.32,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 36,
+     "y": 60,
+     "rot": 0,
+     "score": 0.714,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "death": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "startled",
+     "x": 36,
+     "y": 11,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 45,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled",
+     "x": 36,
+     "y": 14,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt"
+    },
+    "clock": {
+     "placed": false,
+     "score": null
+    },
+    "props": {
+     "turban": {
+      "at": [
+       48,
+       12
+      ],
+      "angle": 20
+     },
+     "belt": {
+      "at": [
+       49,
+       73
+      ],
+      "kind": "fall_a"
+     }
+    }
+   },
+   {
+    "head": {
+     "placed": false,
+     "empty": true
+    },
+    "clock": {
+     "placed": false,
+     "empty": true
+    }
+   }
+  ],
+  "death_blast": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 36,
+     "y": 23,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 56,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      12,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "startled",
+     "x": 36,
+     "y": 10,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 44,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      12,
+      0
+     ],
+     "blink": true
+    }
+   },
+   {
+    "head": {
+     "placed": false,
+     "empty": true
+    },
+    "clock": {
+     "placed": false,
+     "empty": true
+    }
+   }
+  ],
+  "fuse": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.225,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 56,
+     "rot": 0,
+     "score": 0.5,
+     "time": [
+      12,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.238,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 56,
+     "rot": 0,
+     "score": 0.5,
+     "time": [
+      12,
+      7.5
+     ],
+     "blink": true
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.214,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 56,
+     "rot": 0,
+     "score": 0.75,
+     "time": [
+      12,
+      15
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.244,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": false,
+     "score": null
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 53,
+     "y": 17,
+     "rot": 0,
+     "score": 0.228,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 49,
+     "y": 55,
+     "rot": 0,
+     "score": 0.667,
+     "time": [
+      12,
+      30
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.251,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 47,
+     "y": 52,
+     "rot": 0,
+     "score": 0.873,
+     "time": [
+      12,
+      37.5
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 22,
+     "rot": 0,
+     "score": 0.21,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 56,
+     "rot": 0,
+     "score": 0.683,
+     "time": [
+      12,
+      45
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 36,
+     "y": 22,
+     "rot": 0,
+     "score": 0.21,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 56,
+     "rot": 0,
+     "score": 0.698,
+     "time": [
+      12,
+      52.5
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 34,
+     "y": 22,
+     "rot": 0,
+     "score": 0.21,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 56,
+     "rot": 0,
+     "score": 0.5,
+     "time": [
+      12,
+      60
+     ],
+     "blink": true
+    }
+   }
+  ],
+  "hop": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 36,
+     "y": 13,
+     "rot": 0,
+     "score": 0.257,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 47,
+     "rot": 0,
+     "score": 0.607,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "shout",
+     "x": 35,
+     "y": 18,
+     "rot": 0,
+     "score": 0.214,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 50,
+     "rot": 0,
+     "score": 0.75,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "dud": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.225,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 56,
+     "rot": 0,
+     "score": 0.5,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.238,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 56,
+     "rot": 0,
+     "score": 0.5,
+     "time": [
+      3,
+      0
+     ],
+     "blink": true
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.214,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 56,
+     "rot": 0,
+     "score": 0.75,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.244,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": false,
+     "score": null
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 53,
+     "y": 17,
+     "rot": 0,
+     "score": 0.228,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 49,
+     "y": 55,
+     "rot": 0,
+     "score": 0.667,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.251,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 47,
+     "y": 52,
+     "rot": 0,
+     "score": 0.873,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.233,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 55,
+     "rot": 0,
+     "score": 0.542,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "eyes_down",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.242,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 54,
+     "rot": 0,
+     "score": 0.661,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 52,
+     "y": 16,
+     "rot": 0,
+     "score": 0.224,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 49,
+     "y": 55,
+     "rot": 0,
+     "score": 0.623,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 50,
+     "y": 16,
+     "rot": 0,
+     "score": 0.248,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 48,
+     "y": 54,
+     "rot": 0,
+     "score": 0.623,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "look_us",
+     "x": 35,
+     "y": 20,
+     "rot": 0,
+     "score": 0.235,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 57,
+     "rot": 0,
+     "score": 0.625,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "look_us",
+     "x": 35,
+     "y": 20,
+     "rot": 0,
+     "score": 0.262,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 56,
+     "rot": 0,
+     "score": 0.73,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "look_us",
+     "x": 34,
+     "y": 18,
+     "rot": 0,
+     "score": 0.263,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 55,
+     "rot": 0,
+     "score": 0.714,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "look_us",
+     "x": 35,
+     "y": 20,
+     "rot": 0,
+     "score": 0.243,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 57,
+     "rot": 0,
+     "score": 0.75,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "stun": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 36,
+     "y": 21,
+     "rot": 0,
+     "score": 0.294,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 58,
+     "rot": 0,
+     "score": 0.857,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 40,
+     "y": 21,
+     "rot": 0,
+     "score": 0.284,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 57,
+     "rot": 0,
+     "score": 0.736,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 43,
+     "y": 21,
+     "rot": 0,
+     "score": 0.292,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 45,
+     "y": 56,
+     "rot": 0,
+     "score": 0.821,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 40,
+     "y": 21,
+     "rot": 0,
+     "score": 0.289,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": false,
+     "score": null
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 36,
+     "y": 21,
+     "rot": 0,
+     "score": 0.286,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 57,
+     "rot": 0,
+     "score": 0.806,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 32,
+     "y": 22,
+     "rot": 0,
+     "score": 0.288,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 38,
+     "y": 56,
+     "rot": 0,
+     "score": 0.865,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 29,
+     "y": 22,
+     "rot": 0,
+     "score": 0.295,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 36,
+     "y": 56,
+     "rot": 0,
+     "score": 0.81,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "askew",
+     "x": 32,
+     "y": 22,
+     "rot": 0,
+     "score": 0.303,
+     "template": "bomber_head.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 37,
+     "y": 58,
+     "rot": 0,
+     "score": 0.821,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ],
+  "fall": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "startled_down",
+     "x": 45,
+     "y": 16,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt"
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 56,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      12,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_scream",
+     "x": 35,
+     "y": 6,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt",
+     "turban_lift": 1
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 47,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_scream",
+     "x": 35,
+     "y": 9,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/bomber_head_nobody.txt",
+     "turban_lift": 3
+    },
+    "clock": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 47,
+     "rot": 0,
+     "score": 0.0,
+     "time": [
+      3,
+      0
+     ],
+     "blink": false
+    }
+   }
+  ]
+ },
+ "families": {
+  "baked": [
+   "idle",
+   "alert",
+   "run",
+   "hurt",
+   "death",
+   "death_blast",
+   "fuse",
+   "hop",
+   "dud",
+   "stun",
+   "fall"
+  ],
+  "gags": [
+   "salute",
+   "tea",
+   "tea_turn",
+   "punch_clock",
+   "placard_stand",
+   "strike_walk",
+   "strike_placard",
+   "crown_take",
+   "doc_read",
+   "doc_so",
+   "redline_scuff"
+  ]
+ },
+ "look": "pixel"
+}
