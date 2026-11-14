@@ -1,0 +1,76 @@
+{
+ "about": "the stampede sow: drawn rows (enemy_anims_1411.py)",
+ "standin": true,
+ "canvas": [
+  160,
+  128
+ ],
+ "anchor": [
+  80,
+  124
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "look": "pixel",
+ "source": "art/skins_c/haifa/v3/boars/anims_enemy_1411 (drawn sheets, cut by enemy_anims_1411.py, x4/3 NEAREST)",
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    400
+   ],
+   "loop": true
+  },
+  "run": {
+   "frames": [
+    [
+     0,
+     128,
+     160,
+     128
+    ],
+    [
+     160,
+     128,
+     160,
+     128
+    ],
+    [
+     320,
+     128,
+     160,
+     128
+    ],
+    [
+     480,
+     128,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    70,
+    70,
+    70,
+    70
+   ],
+   "loop": true
+  }
+ },
+ "aliases": {
+  "walk": "run",
+  "charge": "run",
+  "exit": "run"
+ },
+ "drawn": [
+  "idle",
+  "run"
+ ]
+}

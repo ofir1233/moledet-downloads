@@ -1,0 +1,257 @@
+{
+ "about": "STAND-IN (until the owner approves): the piglet recruit: a gaggle of 3-5, a helmet too big for him. src/game/haifa/boarArmy.ts",
+ "standin": true,
+ "canvas": [
+  160,
+  128
+ ],
+ "anchor": [
+  80,
+  124
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "look": "pixel",
+ "source": "art/skins_c/haifa/v3/boars/v2 (x4/3, NEAREST) + code parts; build: py -3 art/skins_c/haifa/v3/boars/tools/boar_army_atlas.py",
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     160,
+     128
+    ],
+    [
+     160,
+     0,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    300,
+    300
+   ],
+   "loop": true
+  },
+  "alert": {
+   "frames": [
+    [
+     0,
+     128,
+     160,
+     128
+    ],
+    [
+     160,
+     128,
+     160,
+     128
+    ],
+    [
+     320,
+     128,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    90,
+    110,
+    140
+   ],
+   "loop": true
+  },
+  "run": {
+   "frames": [
+    [
+     0,
+     256,
+     160,
+     128
+    ],
+    [
+     160,
+     256,
+     160,
+     128
+    ],
+    [
+     320,
+     256,
+     160,
+     128
+    ],
+    [
+     480,
+     256,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    60,
+    60,
+    60,
+    60
+   ],
+   "loop": true
+  },
+  "walk": {
+   "frames": [
+    [
+     0,
+     384,
+     160,
+     128
+    ],
+    [
+     160,
+     384,
+     160,
+     128
+    ],
+    [
+     320,
+     384,
+     160,
+     128
+    ],
+    [
+     480,
+     384,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    100,
+    100,
+    100,
+    100
+   ],
+   "loop": true
+  },
+  "windup": {
+   "frames": [
+    [
+     0,
+     512,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    160
+   ],
+   "loop": false
+  },
+  "nip": {
+   "frames": [
+    [
+     0,
+     640,
+     160,
+     128
+    ],
+    [
+     160,
+     640,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    110,
+    130
+   ],
+   "loop": false
+  },
+  "hurt": {
+   "frames": [
+    [
+     0,
+     768,
+     160,
+     128
+    ],
+    [
+     160,
+     768,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    70,
+    140
+   ],
+   "loop": false
+  },
+  "fall": {
+   "frames": [
+    [
+     0,
+     896,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "bolt": {
+   "frames": [
+    [
+     0,
+     1024,
+     160,
+     128
+    ],
+    [
+     160,
+     1024,
+     160,
+     128
+    ],
+    [
+     320,
+     1024,
+     160,
+     128
+    ],
+    [
+     480,
+     1024,
+     160,
+     128
+    ]
+   ],
+   "durations": [
+    60,
+    60,
+    60,
+    60
+   ],
+   "loop": true
+  }
+ },
+ "aliases": {
+  "recover": "run",
+  "jump": "fall",
+  "land": "idle",
+  "shoot": "nip"
+ },
+ "drawn": [
+  "alert",
+  "bolt",
+  "hurt",
+  "nip",
+  "run",
+  "walk",
+  "windup"
+ ]
+}

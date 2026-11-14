@@ -1,0 +1,2131 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "note": "Named by fx.json \"include\". Effects here have the same form as fx.json effects (FX_CONTRACT section 2 and v2); ids are unique across both files. Sheets live in sheets/weapons/.",
+ "materialClass": {
+  "metal": [
+   "steel",
+   "glass",
+   "barrel",
+   "propane",
+   "fuel",
+   "hull"
+  ],
+  "rock": [
+   "stone",
+   "rubble",
+   "dirt",
+   "grass"
+  ],
+  "concrete": [
+   "concrete",
+   "brick"
+  ],
+  "wood": [
+   "wood",
+   "crate",
+   "tnt"
+  ],
+  "soft": [
+   "sandbag",
+   "sand",
+   "leaves"
+  ]
+ },
+ "effects": {
+  "tracer_rifle": {
+   "file": "sheets/weapons/tracer_rifle.png",
+   "frame": [
+    64,
+    5
+   ],
+   "frames": 2,
+   "variants": 1,
+   "fps": 30,
+   "loop": true,
+   "anchor": [
+    0.9531,
+    0.5
+   ],
+   "cells": [
+    2,
+    0.1562
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/tracer_rifle_glow.png",
+    "frame": [
+     64,
+     5
+    ],
+    "frames": 2,
+    "variants": 1,
+    "anchor": [
+     0.8125,
+     0.5
+    ],
+    "cells": [
+     4,
+     0.3125
+    ],
+    "opacity": 0.6,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "note": "the projectile of the rifle: a white-hot head 3 px tall, a 1.4-cell tail; rotate to its velocity"
+  },
+  "muzzle_rifle": {
+   "file": "sheets/weapons/muzzle_rifle.png",
+   "frame": [
+    48,
+    32
+   ],
+   "frames": 3,
+   "variants": 2,
+   "durations": [
+    33,
+    33,
+    40
+   ],
+   "fps": 28.3,
+   "loop": false,
+   "anchor": [
+    0.0625,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/muzzle_rifle_glow.png",
+    "frame": [
+     48,
+     32
+    ],
+    "frames": 3,
+    "variants": 1,
+    "anchor": [
+     0.1667,
+     0.5
+    ],
+    "cells": [
+     3,
+     2
+    ],
+    "opacity": 0.8,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 3,
+    "intensity": [
+     1,
+     0.6,
+     0.2
+    ]
+   },
+   "note": "the rifle: a star flash 1.5 cells long with a cross, frame 0 white-hot (replaces the small muzzle_flash for it)"
+  },
+  "hit_flash": {
+   "file": "sheets/weapons/hit_flash.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 2,
+   "variants": 1,
+   "durations": [
+    33,
+    33
+   ],
+   "fps": 30.3,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "note": "2 frames, with every bullet hit on a hard material, under its sparks or chips"
+  },
+  "muzzle_spray": {
+   "file": "sheets/weapons/muzzle_spray.png",
+   "frame": [
+    32,
+    20
+   ],
+   "frames": 2,
+   "variants": 3,
+   "durations": [
+    25,
+    25
+   ],
+   "fps": 40,
+   "loop": false,
+   "anchor": [
+    0.0312,
+    0.5
+   ],
+   "cells": [
+    1,
+    0.625
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/muzzle_spray_glow.png",
+    "frame": [
+     32,
+     20
+    ],
+    "frames": 2,
+    "variants": 1,
+    "anchor": [
+     0.1562,
+     0.5
+    ],
+    "cells": [
+     2,
+     1.25
+    ],
+    "opacity": 0.6,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 1.5,
+    "intensity": [
+     0.5,
+     0.2
+    ]
+   },
+   "note": "the small spray gun: 2 frames, one of 3 shapes per shot so a burst flickers"
+  },
+  "tracer_dash": {
+   "file": "sheets/weapons/tracer_dash.png",
+   "frame": [
+    24,
+    4
+   ],
+   "frames": 1,
+   "variants": 1,
+   "fps": 30,
+   "loop": true,
+   "anchor": [
+    0.9167,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.125
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "note": "spray gun rounds: short bright dashes"
+  },
+  "sparks_tiny": {
+   "file": "sheets/weapons/sparks_tiny.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 4,
+   "variants": 2,
+   "durations": [
+    25,
+    30,
+    35,
+    40
+   ],
+   "fps": 30.8,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "the spray gun's hit on any hard material: small, fast"
+  },
+  "chips_concrete": {
+   "file": "sheets/weapons/chips_concrete.png",
+   "frame": [
+    40,
+    40
+   ],
+   "frames": 7,
+   "variants": 2,
+   "durations": [
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70
+   ],
+   "fps": 21.2,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    1.25,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "a bullet on concrete: grey chips, a dust puff, one or two sparks"
+  },
+  "plasma_charge": {
+   "file": "sheets/weapons/plasma_charge.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "none",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/weapons/plasma_charge_glow.png",
+    "frame": [
+     32,
+     32
+    ],
+    "frames": 8,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "cells": [
+     2,
+     2
+    ],
+    "opacity": 1,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#7fa0ff",
+    "radius": 2.5,
+    "intensity": [
+     0.2,
+     0.30000000000000004,
+     0.4,
+     0.5,
+     0.6000000000000001,
+     0.7,
+     0.8,
+     0.9000000000000001
+    ]
+   },
+   "note": "plays while the trigger is held (0.5 s); the last frame holds until release"
+  },
+  "plasma_bolt": {
+   "file": "sheets/weapons/plasma_bolt.png",
+   "frame": [
+    48,
+    24
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 20,
+   "loop": true,
+   "anchor": [
+    0.8333,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/plasma_bolt_glow.png",
+    "frame": [
+     48,
+     24
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.75,
+     0.5
+    ],
+    "cells": [
+     3,
+     1.5
+    ],
+    "opacity": 0.9,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#7fa0ff",
+    "radius": 3,
+    "intensity": [
+     0.8,
+     0.7,
+     0.8,
+     0.7
+    ]
+   },
+   "note": "the bolt: a ball with a tapering tail, pointing right; anchor at the ball"
+  },
+  "plasma_trail": {
+   "file": "sheets/weapons/plasma_trail.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 6,
+   "variants": 2,
+   "fps": 18,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "dropped behind the bolt every 40 ms: sparks that fade"
+  },
+  "plasma_impact": {
+   "file": "sheets/weapons/plasma_impact.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 10,
+   "variants": 2,
+   "durations": [
+    30,
+    33,
+    36,
+    40,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80
+   ],
+   "fps": 20,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2,
+    2
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/weapons/plasma_impact_glow.png",
+    "frame": [
+     64,
+     64
+    ],
+    "frames": 10,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "cells": [
+     4,
+     4
+    ],
+    "opacity": 1,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#7fa0ff",
+    "radius": 4,
+    "intensity": [
+     1,
+     0.8,
+     0.6,
+     0.45,
+     0.3,
+     0.2,
+     0.1,
+     0.05,
+     0,
+     0
+    ]
+   },
+   "note": "any material: a hard blue ring, sparks, a little smoke"
+  },
+  "plasma_melt": {
+   "file": "sheets/weapons/plasma_melt.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    60,
+    80,
+    100,
+    140,
+    180,
+    240,
+    300,
+    400
+   ],
+   "fps": 5.3,
+   "loop": false,
+   "anchor": [
+    0,
+    0.5
+   ],
+   "cells": [
+    1,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "cell",
+   "flip": "none",
+   "rotate": "none",
+   "note": "the melt edge on the face of the cell the bolt struck (anchor = that face, x = cell edge); the last frame (slag) STAYS while the cell lives (cue part stay: true, stopOn cell:destroyed)"
+  },
+  "plasma_singe": {
+   "file": "sheets/weapons/plasma_singe.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 20,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.55
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "plasma on an actor: a cartoon puff with blue sparks, no blood"
+  },
+  "beam_body": {
+   "file": "sheets/weapons/beam_body.png",
+   "frame": [
+    32,
+    12
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 24,
+   "loop": true,
+   "anchor": [
+    0,
+    0.5
+   ],
+   "cells": [
+    1,
+    0.375
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/beam_body_glow.png",
+    "frame": [
+     32,
+     12
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0,
+     0.5
+    ],
+    "cells": [
+     2,
+     0.75
+    ],
+    "opacity": 0.8,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "tileX": true,
+   "note": "tile it along the beam from the start cap to the end point (tileX), frame by time; one quad per 32 px"
+  },
+  "beam_cap_start": {
+   "file": "sheets/weapons/beam_cap_start.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 24,
+   "loop": true,
+   "anchor": [
+    0.0833,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/beam_cap_start_glow.png",
+    "frame": [
+     24,
+     24
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.1667,
+     0.5
+    ],
+    "cells": [
+     1.5,
+     1.5
+    ],
+    "opacity": 1,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ff6a2a",
+    "radius": 2.5,
+    "intensity": [
+     0.8,
+     0.7,
+     0.8,
+     0.7
+    ]
+   }
+  },
+  "beam_cap_end": {
+   "file": "sheets/weapons/beam_cap_end.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 24,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.625
+   ],
+   "cells": [
+    1,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/weapons/beam_cap_end_glow.png",
+    "frame": [
+     32,
+     32
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.625
+    ],
+    "cells": [
+     2,
+     2
+    ],
+    "opacity": 1,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ff6a2a",
+    "radius": 3,
+    "intensity": [
+     1,
+     0.85,
+     1,
+     0.85
+    ]
+   },
+   "note": "where the beam meets a cell: a hot spot throwing sparks; loops while the beam is on"
+  },
+  "beam_burn": {
+   "file": "sheets/weapons/beam_burn.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 6,
+   "variants": 1,
+   "durations": [
+    80,
+    120,
+    160,
+    220,
+    300,
+    400
+   ],
+   "fps": 4.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "cell",
+   "flip": "random",
+   "rotate": "none",
+   "note": "the cut line left in a cell the beam crossed; the last frame (scar) STAYS while the cell lives"
+  },
+  "missile": {
+   "file": "sheets/weapons/missile.png",
+   "frame": [
+    24,
+    10
+   ],
+   "frames": 2,
+   "variants": 1,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.3125
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "note": "the guided missile body pointing right; rotate to its velocity; fins twitch as it steers"
+  },
+  "missile_exhaust": {
+   "file": "sheets/weapons/missile_exhaust.png",
+   "frame": [
+    16,
+    10
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 24,
+   "loop": true,
+   "anchor": [
+    0.9375,
+    0.5
+   ],
+   "cells": [
+    0.5,
+    0.3125
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/missile_exhaust_glow.png",
+    "frame": [
+     16,
+     10
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.8125,
+     0.5
+    ],
+    "cells": [
+     1,
+     0.625
+    ],
+    "opacity": 0.8,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 2,
+    "intensity": [
+     0.6,
+     0.5,
+     0.6,
+     0.5
+    ]
+   },
+   "note": "at the missile tail (anchor = the nozzle), points left of the body; rotate with it"
+  },
+  "missile_smoke": {
+   "file": "sheets/weapons/missile_smoke.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 12,
+   "variants": 2,
+   "fps": 11,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "draughtScale": 1,
+   "note": "dropped at the tail every 15 ms so the puffs overlap into one trail; grows, drifts with the draught, thins in 1.1 s"
+  },
+  "lockon_marker": {
+   "file": "sheets/weapons/lockon_marker.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 6,
+   "variants": 1,
+   "durations": [
+    60,
+    60,
+    60,
+    60,
+    120,
+    120
+   ],
+   "fps": 12.5,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "holdLastFrames": 2,
+   "note": "on the target: brackets close in over 4 frames, then frames 4-5 blink while locked (loop them)"
+  },
+  "interceptor_launch": {
+   "file": "sheets/weapons/interceptor_launch.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 20,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "none",
+   "rotate": "none",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 2,
+    "intensity": [
+     1,
+     0.6,
+     0.3,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "the launch from a pocket launcher pointing up: a hot cone up, white smoke kicked down and out"
+  },
+  "intercept_pop": {
+   "file": "sheets/weapons/intercept_pop.png",
+   "frame": [
+    80,
+    80
+   ],
+   "frames": 10,
+   "variants": 1,
+   "durations": [
+    30,
+    33,
+    36,
+    40,
+    45,
+    50,
+    60,
+    70,
+    80,
+    90
+   ],
+   "fps": 18.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.5,
+    2.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/weapons/intercept_pop_glow.png",
+    "frame": [
+     80,
+     80
+    ],
+    "frames": 10,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "cells": [
+     5,
+     5
+    ],
+    "opacity": 1,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#e8f6ff",
+    "radius": 5,
+    "intensity": [
+     1,
+     0.7,
+     0.45,
+     0.3,
+     0.15,
+     0.05,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "the airburst when it meets its target: a white-cyan flash ring and a white smoke ring, no fire ball"
+  },
+  "grenade": {
+   "file": "sheets/weapons/grenade.png",
+   "frame": [
+    10,
+    10
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.55
+   ],
+   "cells": [
+    0.3125,
+    0.3125
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "note": "the thrown grenade: rotation frames (the lever stub turns with it); the sim moves it"
+  },
+  "bounce_spark": {
+   "file": "sheets/weapons/bounce_spark.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 4,
+   "variants": 2,
+   "durations": [
+    25,
+    30,
+    35,
+    40
+   ],
+   "fps": 30.8,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "projectile:bounced of a grenade on a hard surface"
+  },
+  "digger_charge": {
+   "file": "sheets/weapons/digger_charge.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 8,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.6875
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "dir",
+   "rotate": "none",
+   "note": "stuck to a cell face, the drill bit (right) turning; its light blinks; then it bores (bore_dust) and blows"
+  },
+  "bore_dust": {
+   "file": "sheets/weapons/bore_dust.png",
+   "frame": [
+    48,
+    32
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 16,
+   "loop": true,
+   "anchor": [
+    0,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "cell",
+   "flip": "dir",
+   "rotate": "none",
+   "note": "spits out of the hole the charge bores, along its axis (drawn for a bore to the left; flip by dir)"
+  },
+  "shield_deflect": {
+   "file": "sheets/weapons/shield_deflect.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 6,
+   "variants": 1,
+   "durations": [
+    30,
+    30,
+    40,
+    50,
+    60,
+    70
+   ],
+   "fps": 21.4,
+   "loop": false,
+   "anchor": [
+    0.125,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "dir",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/weapons/shield_deflect_glow.png",
+    "frame": [
+     48,
+     48
+    ],
+    "frames": 6,
+    "variants": 1,
+    "anchor": [
+     0.325,
+     0.5
+    ],
+    "cells": [
+     3,
+     3
+    ],
+    "opacity": 0.9,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#6fd6e0",
+    "radius": 2.5,
+    "intensity": [
+     1,
+     0.7,
+     0.45,
+     0.25,
+     0.1,
+     0
+    ]
+   },
+   "note": "a round deflected off the shield: the arc of the shield face flashes (its centre = the shield face)"
+  },
+  "mega_column": {
+   "file": "sheets/weapons/mega_column.png",
+   "frame": [
+    192,
+    320
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    45,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80,
+    90,
+    100,
+    120
+   ],
+   "fps": 15.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    1
+   ],
+   "cells": [
+    6,
+    10
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "ground",
+   "flip": "none",
+   "rotate": "none",
+   "light": {
+    "color": "#fff1c8",
+    "radius": 20,
+    "intensity": [
+     1,
+     1,
+     0.9,
+     0.8,
+     0.6,
+     0.45,
+     0.3,
+     0.2,
+     0.1,
+     0.05,
+     0,
+     0
+    ]
+   },
+   "note": "the last-resort weapon: a pillar from the floor to the ceiling (10 cells; stretch nothing: stack two if the room is taller); with mega_wave both ways and the screenFlash rule"
+  },
+  "mega_wave": {
+   "file": "sheets/weapons/mega_wave.png",
+   "frame": [
+    384,
+    96
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0,
+    0.9792
+   ],
+   "cells": [
+    12,
+    3
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "none",
+   "rotate": "none",
+   "note": "the floor wave running RIGHT from the pillar (anchor = the pillar's foot); play a mirrored copy for the left"
+  },
+  "shotgun_smoke_ring": {
+   "file": "sheets/weapons/shotgun_smoke_ring.png",
+   "frame": [
+    48,
+    32
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.0833,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "draughtScale": 0.6,
+   "note": "v2.2: rolls out of the barrel after each shot, 0.6 s"
+  },
+  "bore_smoke": {
+   "file": "sheets/weapons/bore_smoke.png",
+   "frame": [
+    24,
+    48
+   ],
+   "frames": 14,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.25,
+    0.9375
+   ],
+   "cells": [
+    0.75,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "none",
+   "draughtScale": 0.8,
+   "note": "v2.2: curls up from the muzzle 120 ms after the shot; 1 s; follows the muzzle"
+  },
+  "sand_burst": {
+   "file": "sheets/weapons/sand_burst.png",
+   "frame": [
+    40,
+    40
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70,
+    80
+   ],
+   "fps": 19.5,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    1.25,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2: a pellet into a sandbag: grains and a sandy puff"
+  },
+  "hit_cloth": {
+   "file": "sheets/weapons/hit_cloth.png",
+   "frame": [
+    40,
+    40
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 18,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.55
+   ],
+   "cells": [
+    1.25,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2: a pellet into a body: dust and coat scraps, no blood; pairs with the hit flinch"
+  },
+  "plasma_ray": {
+   "file": "sheets/weapons/plasma_ray.png",
+   "frame": [
+    32,
+    24
+   ],
+   "frames": 5,
+   "variants": 1,
+   "durations": [
+    60,
+    60,
+    70,
+    80,
+    90
+   ],
+   "fps": 13.9,
+   "loop": false,
+   "anchor": [
+    0,
+    0.5
+   ],
+   "cells": [
+    1,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/weapons/plasma_ray_glow.png",
+    "frame": [
+     32,
+     24
+    ],
+    "frames": 5,
+    "variants": 1,
+    "anchor": [
+     0,
+     0.5
+    ],
+    "cells": [
+     2,
+     1.5
+    ],
+    "opacity": 0.9,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#a8dcff",
+    "radius": 4,
+    "intensity": [
+     1,
+     0.9,
+     0.6,
+     0.35,
+     0.15
+    ]
+   },
+   "tileX": true,
+   "note": "v2.2: tile from the muzzle to weapon:traced x1,y1 (it pierces); frames by time; the melt decal goes on every cell the ray cut"
+  }
+ },
+ "weapons": {
+  "king_shotgun": {
+   "events": {
+    "fire": "weapon:fired",
+    "hit": "projectile:hit",
+    "shell": "king:shell"
+   },
+   "fired": [
+    {
+     "fx": "muzzle_hand",
+     "place": "muzzle",
+     "variant": 0,
+     "note": "v4: 3 hand-pixelled frames (star, cone, puff); replaces muzzle_shotgun"
+    },
+    {
+     "fx": "smoke_wisp",
+     "place": "muzzle",
+     "delay": 110,
+     "follow": "muzzle",
+     "note": "v4: the wisp replaces the smoke ring"
+    },
+    {
+     "fx": "wadding",
+     "place": "muzzle",
+     "priority": 2
+    }
+   ],
+   "projectile": {
+    "fx": "pellet_trail",
+    "mode": "streak",
+    "note": "one streak per pellet (7), rotated to its velocity, a random variant (3 lengths) each"
+   },
+   "hit": {
+    "rock": [
+     {
+      "fx": "hit_rock"
+     },
+     {
+      "fx": "bits_mat",
+      "count": 4,
+      "variantBy": "material"
+     }
+    ],
+    "concrete": [
+     {
+      "fx": "hit_concrete"
+     },
+     {
+      "fx": "bits_mat",
+      "count": 4,
+      "variantBy": "material"
+     }
+    ],
+    "metal": [
+     {
+      "fx": "hit_steel"
+     },
+     {
+      "fx": "bits_mat",
+      "count": 3,
+      "variantBy": "material"
+     }
+    ],
+    "wood": [
+     {
+      "fx": "hit_wood"
+     },
+     {
+      "fx": "bits_mat",
+      "count": 4,
+      "variantBy": "material"
+     }
+    ],
+    "soft": [
+     {
+      "fx": "hit_sandbag"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "hit_cloth"
+     }
+    ]
+   },
+   "frameEvents": {
+    "shot": [
+     {
+      "ref": "fired"
+     }
+    ],
+    "shell_out": [
+     {
+      "fx": "shell_casing",
+      "variant": 1,
+      "place": "muzzle",
+      "offset": [
+       -0.7,
+       0.05
+      ],
+      "note": "the pump throws the spent shell: it spins, bounces twice and rests"
+     }
+    ],
+    "mag_in": [],
+    "ready": []
+   }
+  },
+  "plasma": {
+   "events": {
+    "charge": "weapon:charge",
+    "fire": "weapon:fired",
+    "ray": "weapon:traced",
+    "hit": "projectile:hit"
+   },
+   "charge": [],
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder: drawn by src/render/weapons (fireLayer.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "projectile": {
+    "fx": "plasma_ray",
+    "mode": "beam",
+    "event": "weapon:traced",
+    "end": "plasma_impact",
+    "note": "drawn by src/render/weapons: the blue bolt, its tail and channel, the burst (signatures.ts PLASMA)"
+   },
+   "hit": {
+    "any": [
+     {
+      "fx": "plasma_melt",
+      "place": "cell",
+      "stay": true,
+      "stopOn": [
+       "cell:destroyed"
+      ],
+      "note": "on every cell the ray damaged"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "plasma_singe"
+     }
+    ]
+   },
+   "frameEvents": {
+    "shot": [
+     {
+      "ref": "fired"
+     }
+    ],
+    "mag_out": [
+     {
+      "fx": "steam_puff",
+      "place": "muzzle",
+      "offset": [
+       -0.6,
+       0.1
+      ],
+      "count": 2,
+      "note": "the cell that is too hot to hold"
+     }
+    ],
+    "mag_in": [
+     {
+      "fx": "plasma_trail",
+      "place": "muzzle",
+      "offset": [
+       -0.6,
+       0.1
+      ]
+     }
+    ],
+    "ready": [
+     {
+      "fx": "plasma_trail",
+      "place": "muzzle"
+     }
+    ]
+   }
+  },
+  "beam": {
+   "events": {
+    "fire": "weapon:fired",
+    "ray": "weapon:traced",
+    "hit": "cell:damaged"
+   },
+   "fired": [
+    {
+     "fx": "beam_cap_start",
+     "place": "muzzle",
+     "loopWhileHeld": true
+    }
+   ],
+   "projectile": {
+    "fx": "beam_body",
+    "mode": "beam",
+    "event": "weapon:traced",
+    "end": "beam_cap_end",
+    "note": "every tick it fires: tile from the muzzle to x1,y1; beam_cap_end loops at the cut"
+   },
+   "hit": {
+    "any": [
+     {
+      "fx": "beam_burn",
+      "place": "cell",
+      "stay": true,
+      "stopOn": [
+       "cell:destroyed"
+      ],
+      "note": "the glowing cut line that cools, on each cell the beam crossed"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "hit_cloth"
+     }
+    ]
+   },
+   "frameEvents": {
+    "shot": [],
+    "ready": [
+     {
+      "fx": "steam_puff",
+      "place": "muzzle",
+      "offset": [
+       -0.4,
+       0.3
+      ],
+      "note": "the fins vent (state cool)"
+     }
+    ]
+   }
+  },
+  "beam_cutter": {
+   "events": {
+    "fire": "weapon:fired",
+    "ray": "weapon:traced"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder: drawn by src/render/weapons (fireLayer.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "the arm id the sim emits for the beam (weapon:fired weapon = beam_cutter): the green laser is drawn by src/render/weapons"
+  },
+  "cannon_ray": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder: drawn by src/render/weapons (fireLayer.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "the arm id the sim emits for the cannon: the gold ray and its rings are drawn by src/render/weapons"
+  },
+  "guided_missile": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "round 4 fix: the launch is drawn by src/render/weapons/calls.ts (a back-blast out of the tube's rear, the missile leaving the front in a ring of smoke); no pack sheet, so the generic muzzle flash never plays on it"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {
+    "shell_out": [
+     {
+      "note": "a launch tube throws no casing (the verifier, round 4: a shell_casing was a plain-gun tell)"
+     }
+    ]
+   },
+   "note": "the guided missile (game id guided, FX_WEAPON_ALIAS guided_missile); its blast is its own too (calls.ts ownsBlast: the pack's blast_big is dropped for it)"
+  },
+  "digger": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel, the digger sample: drawn by src/render/weapons/digger.ts (beacon, permit bar, drill, geyser, hard hat); no pack sheet, so the generic muzzle flash and shell casing never play on the throw"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "digger: the sim's arm id; the thrown charge keeps its digger_charge sprite (FX_WEAPON_ALIAS)"
+  },
+  "tape": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder 2: drawn by src/render/weapons (gadgets.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "tape: the red ribbon, the form, the bands, the stamp and the shreds are drawn by src/render/weapons/gadgets.ts"
+  },
+  "magnet": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder 2: drawn by src/render/weapons (gadgets.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "magnet: the arcs, the field, the torn boulder and the fling are drawn by src/render/weapons/gadgets.ts"
+  },
+  "speech": {
+   "events": {
+    "fire": "weapon:fired"
+   },
+   "fired": [
+    {
+     "place": "muzzle",
+     "note": "weapon feel builder 2: drawn by src/render/weapons (gadgets.ts); no pack sheet, so the generic muzzle flash and shell casing never play on an invention"
+    }
+   ],
+   "hit": {},
+   "frameEvents": {},
+   "note": "speech: the rings of sound, the words, the dust and the snores are drawn by src/render/weapons/gadgets.ts"
+  }
+ },
+ "provisional": {
+  "rifle": {
+   "fired": [
+    {
+     "fx": "muzzle_rifle",
+     "place": "muzzle"
+    }
+   ],
+   "projectile": {
+    "fx": "tracer_rifle",
+    "mode": "sprite"
+   },
+   "hit": {
+    "metal": [
+     {
+      "fx": "hit_flash"
+     },
+     {
+      "fx": "sparks_metal"
+     }
+    ],
+    "rock": [
+     {
+      "fx": "hit_flash"
+     },
+     {
+      "fx": "sparks_rock"
+     }
+    ],
+    "concrete": [
+     {
+      "fx": "hit_flash"
+     },
+     {
+      "fx": "chips_concrete"
+     }
+    ],
+    "wood": [
+     {
+      "fx": "hit_flash"
+     },
+     {
+      "fx": "chips_wood"
+     }
+    ],
+    "soft": [
+     {
+      "fx": "dust_puff"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "hit_poof"
+     }
+    ]
+   },
+   "residue": [
+    {
+     "event": "weapon:fired",
+     "fx": "shell_casing",
+     "variant": 0,
+     "delay": 40
+    }
+   ]
+  },
+  "spray_gun": {
+   "fired": [
+    {
+     "fx": "muzzle_spray",
+     "place": "muzzle"
+    }
+   ],
+   "projectile": {
+    "fx": "tracer_dash",
+    "mode": "sprite"
+   },
+   "hit": {
+    "metal": [
+     {
+      "fx": "sparks_tiny"
+     }
+    ],
+    "rock": [
+     {
+      "fx": "sparks_tiny"
+     }
+    ],
+    "concrete": [
+     {
+      "fx": "sparks_tiny"
+     }
+    ],
+    "wood": [
+     {
+      "fx": "sparks_tiny"
+     }
+    ],
+    "soft": [
+     {
+      "fx": "dust_puff"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "hit_poof",
+      "variant": 1
+     }
+    ]
+   },
+   "residue": [
+    {
+     "event": "weapon:fired",
+     "fx": "shell_casing",
+     "variant": 0,
+     "delay": 20,
+     "every": 2
+    }
+   ],
+   "note": "fires fast: every shot picks one of the 3 flash shapes; a casing every 2nd shot (budget.maxResting)"
+  },
+  "guided_missile": {
+   "fired": [
+    {
+     "fx": "muzzle_flash",
+     "place": "muzzle",
+     "variant": 1
+    },
+    {
+     "fx": "smoke_puff",
+     "place": "muzzle",
+     "count": 2,
+     "spread": [
+      0.3,
+      0.2
+     ]
+    }
+   ],
+   "lock": [
+    {
+     "fx": "lockon_marker",
+     "note": "on the locked target, follows it"
+    }
+   ],
+   "projectile": {
+    "fx": "missile",
+    "mode": "sprite",
+    "attach": [
+     {
+      "fx": "missile_exhaust",
+      "at": "tail"
+     }
+    ],
+    "trail": "missile_smoke",
+    "trailEveryMs": 15
+   },
+   "hit": {
+    "any": [
+     {
+      "cue": "explosion",
+      "radius": 2.6
+     }
+    ]
+   }
+  },
+  "pocket_interceptor": {
+   "fired": [
+    {
+     "fx": "interceptor_launch",
+     "place": "muzzle"
+    }
+   ],
+   "projectile": {
+    "fx": "missile",
+    "mode": "sprite",
+    "scale": "none",
+    "attach": [
+     {
+      "fx": "missile_exhaust",
+      "at": "tail"
+     }
+    ],
+    "trail": "missile_smoke",
+    "trailEveryMs": 12,
+    "note": "reuses the missile body (it is small)"
+   },
+   "hit": {
+    "any": [
+     {
+      "fx": "intercept_pop"
+     }
+    ],
+    "air": [
+     {
+      "fx": "intercept_pop"
+     }
+    ]
+   },
+   "note": "it meets projectiles in the air: intercept_pop at the meeting point"
+  },
+  "grenade": {
+   "fired": [],
+   "projectile": {
+    "fx": "grenade",
+    "mode": "sprite",
+    "rotate": "frames"
+   },
+   "bounce": [
+    {
+     "fx": "bounce_spark"
+    }
+   ],
+   "fuse": [
+    {
+     "fx": "fuse_spark",
+     "note": "follows the grenade"
+    }
+   ],
+   "hit": {
+    "any": [
+     {
+      "cue": "explosion"
+     }
+    ]
+   }
+  },
+  "digger_charge": {
+   "fired": [],
+   "projectile": {
+    "fx": "digger_charge",
+    "mode": "sprite"
+   },
+   "bore": [
+    {
+     "fx": "bore_dust",
+     "place": "cell",
+     "note": "while it bores into the cell, before its blast"
+    }
+   ],
+   "hit": {
+    "any": [
+     {
+      "cue": "explosion"
+     }
+    ]
+   }
+  },
+  "shield": {
+   "deflect": [
+    {
+     "fx": "shield_deflect",
+     "note": "at the shield face when a round is deflected"
+    },
+    {
+     "fx": "sparks_metal",
+     "count": 1
+    }
+   ]
+  },
+  "last_resort": {
+   "fired": [
+    {
+     "fx": "mega_column",
+     "place": "ground",
+     "delay": 60
+    },
+    {
+     "fx": "mega_wave",
+     "place": "ground",
+     "delay": 120
+    },
+    {
+     "fx": "mega_wave",
+     "place": "ground",
+     "delay": 120,
+     "mirror": true
+    }
+   ],
+   "screenFlash": {
+    "frames": 3,
+    "durationsMs": [
+     33,
+     33,
+     50
+    ],
+    "colors": [
+     "#fffef6",
+     "#ffe9b0",
+     "#ffb54a"
+    ],
+    "opacity": [
+     1,
+     0.6,
+     0.25
+    ],
+    "note": "a full-screen colour over everything but the HUD, nearest pixels, then the column shows; with the feel system's big shake and slow motion"
+   },
+   "hit": {}
+  },
+  "cutting_beam_old": {
+   "fired": [
+    {
+     "fx": "beam_cap_start",
+     "place": "muzzle",
+     "loopWhileHeld": true
+    }
+   ],
+   "projectile": {
+    "fx": "beam_body",
+    "mode": "beam",
+    "end": "beam_cap_end",
+    "note": "a continuous ray from the muzzle to the first solid cell; tile beam_body along it; beam_cap_end at the hit point; both loop while the trigger is held"
+   },
+   "hit": {
+    "any": [
+     {
+      "fx": "beam_burn",
+      "place": "cell",
+      "stay": true,
+      "stopOn": [
+       "cell:destroyed"
+      ],
+      "note": "one per cell the beam has cut through (cell:damaged with cause beam)"
+     }
+    ],
+    "actor": [
+     {
+      "fx": "hit_poof"
+     }
+    ]
+   }
+  },
+  "_note": "v2.2: NOT for the game yet. Ids from before docs/WEAPONS.md; their looks need the v2.2 pass. When redone: spray_gun -> spray, guided_missile -> guided, pocket_interceptor -> interceptor (interceptor:shot), grenade -> bouncer, digger_charge -> digger (digger:dig), shield -> reflector (reflector:on, reflector:bounce), last_resort -> cannon (cannon:windup, cannon:fire)."
+ }
+}

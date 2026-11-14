@@ -1,0 +1,48 @@
+{
+ "file": "pickup.png",
+ "cell": [
+  34,
+  67
+ ],
+ "anchor": "bottom centre of each cell (lying: the floor line; falling: the renderer puts the pickup point 6 px above the cell's bottom)",
+ "states": {
+  "lying": {
+   "cols": [
+    0,
+    1
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "it stands on its bell, mouth down, as megaphones do (the row 90 degrees down); the ON AIR lamp blinks"
+  },
+  "falling": {
+   "cols": [
+    2,
+    3
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "it comes down mouth first under its own ceremony ribbon spread like a canopy; the ribbon sways a pixel, the lamp blinks"
+  }
+ },
+ "grip": [
+  [
+   14,
+   27
+  ],
+  [
+   14,
+   27
+  ],
+  [
+   14,
+   27
+  ],
+  [
+   13,
+   27
+  ]
+ ],
+ "grip_note": "per cell: where the weapon's grip point is in the cell (px, y down), for a hand-over or a catch",
+ "star": "the megaphone's own roundel (the blue interlaced star on ivory, on the bell's flank) is upright and whole in all four cells"
+}

@@ -1,0 +1,182 @@
+{
+ "canvas": [
+  128,
+  128
+ ],
+ "anchor": [
+  64,
+  120
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     128,
+     128
+    ],
+    [
+     128,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    700,
+    700
+   ],
+   "loop": true
+  },
+  "run": {
+   "frames": [
+    [
+     256,
+     0,
+     128,
+     128
+    ],
+    [
+     384,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    160,
+    160
+   ],
+   "loop": true
+  },
+  "run_start": {
+   "frames": [
+    [
+     256,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    60
+   ],
+   "loop": false
+  },
+  "run_stop": {
+   "frames": [
+    [
+     0,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    60
+   ],
+   "loop": false
+  },
+  "jump": {
+   "frames": [
+    [
+     384,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    100
+   ],
+   "loop": false
+  },
+  "fall": {
+   "frames": [
+    [
+     256,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    100
+   ],
+   "loop": true
+  },
+  "land": {
+   "frames": [
+    [
+     128,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    80
+   ],
+   "loop": false
+  },
+  "shoot": {
+   "frames": [
+    [
+     640,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    120
+   ],
+   "loop": false
+  },
+  "hurt": {
+   "frames": [
+    [
+     128,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    120
+   ],
+   "loop": false
+  },
+  "cast_read": {
+   "frames": [
+    [
+     512,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "cast_write": {
+   "frames": [
+    [
+     640,
+     0,
+     128,
+     128
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  }
+ }
+}
