@@ -1,0 +1,5748 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "palette": {
+  "fireCore": "#fefbb8",
+  "fire": "#f98824",
+  "ember": "#b35a25",
+  "smoke": "#4f453d",
+  "dust": "#9e8462",
+  "glow": "#ffb54a"
+ },
+ "layers": {
+  "fxBehind": {
+   "z": -2,
+   "lit": true
+  },
+  "fxDecal": {
+   "z": 0.2,
+   "lit": true
+  },
+  "fxMid": {
+   "z": 1,
+   "lit": true
+  },
+  "fxFront": {
+   "z": 3,
+   "lit": false
+  },
+  "fxGlow": {
+   "z": 11,
+   "lit": false
+  }
+ },
+ "effects": {
+  "explosion_small": {
+   "file": "sheets/explosion_small.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 2,
+   "durations": [
+    33,
+    35,
+    35,
+    37,
+    37,
+    40,
+    40,
+    40,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 25.8,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/explosion_small_glow.png",
+    "frame": [
+     96,
+     96
+    ],
+    "frames": 12,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.62
+    ],
+    "cells": [
+     6,
+     6
+    ],
+    "opacity": 1.0,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 5,
+    "intensity": [
+     1.0,
+     0.95,
+     0.8,
+     0.62,
+     0.45,
+     0.217,
+     0.135,
+     0.052,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "litFromFrame": 5,
+   "wallFlash": "wall_flash",
+   "note": "radius < 3.2 cells. Fire and flash are self-lit; the smoke at its end is the start of smoke_linger."
+  },
+  "explosion_big": {
+   "file": "sheets/explosion_big.png",
+   "frame": [
+    160,
+    160
+   ],
+   "frames": 13,
+   "variants": 1,
+   "durations": [
+    33,
+    35,
+    35,
+    37,
+    37,
+    40,
+    40,
+    40,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 25.6,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    5.0,
+    5.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/explosion_big_glow.png",
+    "frame": [
+     160,
+     160
+    ],
+    "frames": 13,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.62
+    ],
+    "cells": [
+     10,
+     10
+    ],
+    "opacity": 1.0,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 9,
+    "intensity": [
+     1.0,
+     0.95,
+     0.8,
+     0.62,
+     0.45,
+     0.227,
+     0.153,
+     0.08,
+     0.007,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "litFromFrame": 5,
+   "wallFlash": "wall_flash",
+   "note": "radius 3.2 to 5.5 cells (barrels, gas)."
+  },
+  "blast_skirt_small": {
+   "file": "sheets/blast_skirt_small.png",
+   "frame": [
+    128,
+    40
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.95
+   ],
+   "cells": [
+    4.0,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "ground contact of explosion_small: dust rolling out on the floor"
+  },
+  "blast_skirt_big": {
+   "file": "sheets/blast_skirt_big.png",
+   "frame": [
+    224,
+    56
+   ],
+   "frames": 12,
+   "variants": 1,
+   "fps": 13,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9643
+   ],
+   "cells": [
+    7.0,
+    1.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "ground contact of explosion_big"
+  },
+  "scorch_small": {
+   "file": "sheets/scorch_small.png",
+   "frame": [
+    96,
+    20
+   ],
+   "frames": 1,
+   "variants": 1,
+   "fps": 1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    3.0,
+    0.625
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "still; hold then fadeOut (the cue says how long). Row 0.6 of the frame is the floor line."
+  },
+  "scorch_big": {
+   "file": "sheets/scorch_big.png",
+   "frame": [
+    160,
+    28
+   ],
+   "frames": 1,
+   "variants": 1,
+   "fps": 1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    5.0,
+    0.875
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none"
+  },
+  "smoke_linger": {
+   "file": "sheets/smoke_linger.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 16,
+   "variants": 3,
+   "fps": 8,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0.15,
+    0.5
+   ],
+   "draughtScale": 1.0,
+   "note": "v3: lingering blast smoke: a big lump, smaller ones, a top lobe that curls over, a piece that tears off"
+  },
+  "smoke_puff": {
+   "file": "sheets/smoke_puff.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0,
+    0.4
+   ],
+   "draughtScale": 0.8,
+   "note": "v3: a small grey billow"
+  },
+  "dust_puff": {
+   "file": "sheets/dust_puff.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0,
+    0.2
+   ],
+   "draughtScale": 0.5,
+   "note": "soft hits (sandbag, sand), a cell breaking, a prop breaking"
+  },
+  "smoke_rise_loop": {
+   "file": "sheets/smoke_rise_loop.png",
+   "frame": [
+    32,
+    96
+   ],
+   "frames": 12,
+   "variants": 2,
+   "fps": 10,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.9583
+   ],
+   "cells": [
+    1.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "draughtScale": 0.6,
+   "note": "over a burning cell, a wreck or the goal missile; stopOn fire:out"
+  },
+  "dust_land": {
+   "file": "sheets/dust_land.png",
+   "frame": [
+    64,
+    24
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9167
+   ],
+   "cells": [
+    2.0,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "actor:landed (speed > 6) and actor:jumped"
+  },
+  "dust_run": {
+   "file": "sheets/dust_run.png",
+   "frame": [
+    24,
+    16
+   ],
+   "frames": 6,
+   "variants": 2,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.875
+   ],
+   "cells": [
+    0.75,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "note": "the renderer's own footstep (no sim event); drawn for a runner going right (dust trails left)"
+  },
+  "dust_impact": {
+   "file": "sheets/dust_impact.png",
+   "frame": [
+    128,
+    48
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9583
+   ],
+   "cells": [
+    4.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "chunk:landed; for chunks of 6+ cells play 2 copies spread over the chunk width"
+  },
+  "muzzle_flash": {
+   "file": "sheets/muzzle_flash.png",
+   "frame": [
+    40,
+    24
+   ],
+   "frames": 4,
+   "variants": 3,
+   "durations": [
+    33,
+    33,
+    50,
+    60
+   ],
+   "fps": 22.7,
+   "loop": false,
+   "anchor": [
+    0.025,
+    0.5
+   ],
+   "cells": [
+    1.25,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/muzzle_flash_glow.png",
+    "frame": [
+     48,
+     32
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.25,
+     0.5
+    ],
+    "cells": [
+     3,
+     2
+    ],
+    "opacity": 0.9,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 3,
+    "intensity": [
+     1.0,
+     0.9,
+     0.4,
+     0.1
+    ]
+   },
+   "note": "variant 0 rifle, 1 star, 2 shotgun (the king). Frame 3 is the smoke wisp."
+  },
+  "sparks_metal": {
+   "file": "sheets/sparks_metal.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 6,
+   "variants": 3,
+   "durations": [
+    30,
+    30,
+    40,
+    40,
+    50,
+    60
+   ],
+   "fps": 24.0,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/sparks_metal_glow.png",
+    "frame": [
+     32,
+     32
+    ],
+    "frames": 6,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.62
+    ],
+    "cells": [
+     2,
+     2
+    ],
+    "opacity": 0.8,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "note": "projectile:hit on metal; projectile:bounced"
+  },
+  "sparks_rock": {
+   "file": "sheets/sparks_rock.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 6,
+   "variants": 3,
+   "durations": [
+    30,
+    40,
+    40,
+    50,
+    60,
+    70
+   ],
+   "fps": 20.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "projectile:hit on rock / concrete: chips, a dust puff and a couple of sparks"
+  },
+  "chips_wood": {
+   "file": "sheets/chips_wood.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 6,
+   "variants": 2,
+   "durations": [
+    30,
+    40,
+    40,
+    50,
+    60,
+    70
+   ],
+   "fps": 20.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "projectile:hit on wood / crate"
+  },
+  "hit_poof": {
+   "file": "sheets/hit_poof.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 8,
+   "variants": 2,
+   "fps": 20,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.55
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "cartoon hit on an actor: a puff, stars, speed lines. NO blood."
+  },
+  "ko_poof": {
+   "file": "sheets/ko_poof.png",
+   "frame": [
+    80,
+    80
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.55
+   ],
+   "cells": [
+    2.5,
+    2.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "actor:died (not by explosion): a big poof with stars circling above"
+  },
+  "debris_rock": {
+   "file": "sheets/debris_rock.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "note": "variants: rows 0 small (8 px), 1 mid (12 px), 2 large (18 px)"
+  },
+  "debris_concrete": {
+   "file": "sheets/debris_concrete.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "note": "variants: rows 0 small (8 px), 1 mid (12 px), 2 large (18 px)"
+  },
+  "debris_metal": {
+   "file": "sheets/debris_metal.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "note": "variants: rows 0 small (8 px), 1 mid (12 px), 2 large (18 px)"
+  },
+  "debris_wood": {
+   "file": "sheets/debris_wood.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "note": "variants: rows 0 small (8 px), 1 mid (12 px), 2 large (18 px)"
+  },
+  "shell_casing": {
+   "file": "sheets/shell_casing.png",
+   "frame": [
+    8,
+    8
+   ],
+   "frames": 8,
+   "variants": 2,
+   "fps": 16,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.25,
+    0.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "motion": {
+    "speed": [
+     2.5,
+     4.5
+    ],
+    "angleDeg": [
+     100,
+     125
+    ],
+    "angleFrom": "facing",
+    "gravity": 40,
+    "drag": 0.2,
+    "bounce": 2,
+    "restitution": 0.4,
+    "friction": 0.5,
+    "spinTurnsPerS": [
+     3,
+     8
+    ],
+    "lifeMs": [
+     0,
+     0
+    ],
+    "rest": "stay",
+    "restFrame": 0,
+    "frameBy": "angle"
+   },
+   "note": "variant 0 rifle brass, 1 shotgun shell (the king). Thrown up and back from the gun, bounces."
+  },
+  "fuse_spark": {
+   "file": "sheets/fuse_spark.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 6,
+   "variants": 1,
+   "fps": 20,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5625
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/fuse_spark_glow.png",
+    "frame": [
+     32,
+     32
+    ],
+    "frames": 6,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5625
+    ],
+    "cells": [
+     2,
+     2
+    ],
+    "opacity": 0.55,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 1.5,
+    "intensity": [
+     0.25,
+     0.35,
+     0.2,
+     0.3,
+     0.35,
+     0.25
+    ]
+   },
+   "note": "enemy:primed / explosive:primed; loops until explosion or actor:died of the same entity"
+  },
+  "flame_loop": {
+   "file": "sheets/flame_loop.png",
+   "frame": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "variants": 2,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.8333
+   ],
+   "cells": [
+    1.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "cell",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/flame_loop_glow.png",
+    "frame": [
+     48,
+     48
+    ],
+    "frames": 8,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5417
+    ],
+    "cells": [
+     3,
+     3
+    ],
+    "opacity": 0.7,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 3,
+    "intensity": [
+     0.8,
+     0.9,
+     0.85,
+     1.0,
+     0.8,
+     0.9,
+     1.0,
+     0.85
+    ]
+   },
+   "note": "fire:ignited on a cell; base sits 8 px below the cell centre; stopOn fire:out"
+  },
+  "explosion_huge": {
+   "file": "sheets/explosion_huge.png",
+   "frame": [
+    240,
+    240
+   ],
+   "frames": 14,
+   "variants": 1,
+   "durations": [
+    33,
+    35,
+    35,
+    37,
+    37,
+    40,
+    40,
+    40,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 25.5,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    7.5,
+    7.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/explosion_huge_glow.png",
+    "frame": [
+     240,
+     240
+    ],
+    "frames": 14,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.62
+    ],
+    "cells": [
+     15,
+     15
+    ],
+    "opacity": 1.0,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 12,
+    "intensity": [
+     1.0,
+     0.95,
+     0.8,
+     0.62,
+     0.45,
+     0.234,
+     0.168,
+     0.102,
+     0.036,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "litFromFrame": 5,
+   "wallFlash": "wall_flash",
+   "note": "radius >= 5.5 cells (trucks, the goal missile). v2."
+  },
+  "pop_small": {
+   "file": "sheets/pop_small.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 10,
+   "variants": 2,
+   "durations": [
+    33,
+    35,
+    37,
+    37,
+    40,
+    40,
+    40,
+    42,
+    42,
+    42
+   ],
+   "fps": 25.8,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/pop_small_glow.png",
+    "frame": [
+     48,
+     48
+    ],
+    "frames": 10,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.62
+    ],
+    "cells": [
+     3,
+     3
+    ],
+    "opacity": 0.5,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 2.5,
+    "intensity": [
+     0.7,
+     0.665,
+     0.56,
+     0.434,
+     0.315,
+     0.133,
+     0.056,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "litFromFrame": 4,
+   "note": "secondary pops around a big blast, 60-300 ms after it. v2."
+  },
+  "blast_skirt_huge": {
+   "file": "sheets/blast_skirt_huge.png",
+   "frame": [
+    320,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "fps": 12,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9688
+   ],
+   "cells": [
+    10.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "draughtScale": 0.3,
+   "note": "ground contact of explosion_huge. v2."
+  },
+  "scorch_huge": {
+   "file": "sheets/scorch_huge.png",
+   "frame": [
+    240,
+    36
+   ],
+   "frames": 1,
+   "variants": 1,
+   "fps": 1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    7.5,
+    1.125
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2: stays (cue part stay: true)."
+  },
+  "smoke_linger_big": {
+   "file": "sheets/smoke_linger_big.png",
+   "frame": [
+    128,
+    128
+   ],
+   "frames": 12,
+   "variants": 2,
+   "fps": 7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    4.0,
+    4.0
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0.1,
+    0.45
+   ],
+   "draughtScale": 1.0,
+   "note": "v3: one stands for about four smoke_linger (the budget)"
+  },
+  "ember": {
+   "file": "sheets/ember.png",
+   "frame": [
+    6,
+    6
+   ],
+   "frames": 6,
+   "variants": 2,
+   "fps": 6,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.1875,
+    0.1875
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/ember_glow.png",
+    "frame": [
+     16,
+     16
+    ],
+    "frames": 6,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "cells": [
+     1,
+     1
+    ],
+    "opacity": 0.7,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "motion": {
+    "speed": [
+     5,
+     13
+    ],
+    "angleDeg": [
+     15,
+     165
+    ],
+    "angleFrom": "world",
+    "gravity": 28,
+    "drag": 0.8,
+    "bounce": 2,
+    "restitution": 0.35,
+    "friction": 0.55,
+    "lifeMs": [
+     700,
+     1500
+    ],
+    "rest": "fade",
+    "restMs": 400,
+    "frameBy": "life"
+   },
+   "draughtScale": 0.3,
+   "note": "v2: a sprite thrown by its motion block; the frame follows its life (hot to cool)."
+  },
+  "muzzle_shotgun": {
+   "file": "sheets/muzzle_shotgun.png",
+   "frame": [
+    64,
+    40
+   ],
+   "frames": 4,
+   "variants": 3,
+   "durations": [
+    33,
+    40,
+    50,
+    60
+   ],
+   "fps": 21.9,
+   "loop": false,
+   "anchor": [
+    0.0156,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "glow": {
+    "file": "sheets/muzzle_shotgun_glow.png",
+    "frame": [
+     64,
+     40
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.1562,
+     0.5
+    ],
+    "cells": [
+     4,
+     2.5
+    ],
+    "opacity": 1.0,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 4,
+    "intensity": [
+     1.0,
+     1.0,
+     0.45,
+     0.1
+    ]
+   },
+   "note": "v2: the king's shotgun blast (2 cells of fire). Frame 3 is the smoke wisp."
+  },
+  "pellet_trail": {
+   "file": "sheets/pellet_trail.png",
+   "frame": [
+    128,
+    5
+   ],
+   "frames": 4,
+   "variants": 3,
+   "durations": [
+    30,
+    30,
+    40,
+    40
+   ],
+   "fps": 28.6,
+   "loop": false,
+   "anchor": [
+    0,
+    0.5
+   ],
+   "cells": [
+    4.0,
+    0.1562
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "note": "v2: one per pellet, rotated to that pellet's angle; streaks run from 1 to 4 cells out, past the flash"
+  },
+  "wadding": {
+   "file": "sheets/wadding.png",
+   "frame": [
+    8,
+    8
+   ],
+   "frames": 8,
+   "variants": 2,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.25,
+    0.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "muzzle",
+   "flip": "random",
+   "rotate": "frames",
+   "motion": {
+    "speed": [
+     9,
+     13
+    ],
+    "angleDeg": [
+     -6,
+     10
+    ],
+    "angleFrom": "aim",
+    "gravity": 30,
+    "drag": 1.6,
+    "bounce": 1,
+    "restitution": 0.2,
+    "friction": 0.6,
+    "spinTurnsPerS": [
+     2,
+     6
+    ],
+    "lifeMs": [
+     0,
+     0
+    ],
+    "rest": "fade",
+    "restMs": 1800,
+    "frameBy": "angle"
+   },
+   "note": "v2: the shell's wad and card, thrown forward by its motion block, lands and fades"
+  },
+  "wall_flash": {
+   "file": "sheets/wall_flash.png",
+   "frame": [
+    128,
+    128
+   ],
+   "frames": 2,
+   "variants": 1,
+   "durations": [
+    33,
+    33
+   ],
+   "fps": 30.3,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    4.0,
+    4.0
+   ],
+   "blend": "additive",
+   "layer": "fxGlow",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "scaleToRadius": true,
+   "radiusPx": 64,
+   "note": "v2: additive, 16 px a cell, 3 hard steps. Scale it so its outer edge = the event radius (scaleToRadius)."
+  },
+  "steam_puff": {
+   "file": "sheets/steam_puff.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 10,
+   "variants": 3,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.7
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0,
+    0.8
+   ],
+   "draughtScale": 1.0,
+   "note": "v2.2: steam (the samovar, a hot plasma cell, a beam vent, a burst pipe)"
+  },
+  "tea_glass_smash": {
+   "file": "sheets/tea_glass_smash.png",
+   "frame": [
+    64,
+    48
+   ],
+   "frames": 9,
+   "variants": 2,
+   "durations": [
+    60,
+    40,
+    30,
+    35,
+    40,
+    45,
+    60,
+    80,
+    400
+   ],
+   "fps": 11.4,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    2.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2, gags 2 and 10: a glass falls or is shot; the puddle holds on its last frame"
+  },
+  "camera_flash": {
+   "file": "sheets/camera_flash.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 2,
+   "variants": 1,
+   "durations": [
+    33,
+    33
+   ],
+   "fps": 30.3,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/camera_flash_glow.png",
+    "frame": [
+     48,
+     48
+    ],
+    "frames": 2,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "cells": [
+     3,
+     3
+    ],
+    "opacity": 1.0,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#fffaf0",
+    "radius": 6,
+    "intensity": [
+     1.0,
+     0.4
+    ]
+   },
+   "note": "v2.2, gag 6: the one camera flash over the cardboard king"
+  },
+  "red_line_draw": {
+   "file": "sheets/red_line_draw.png",
+   "frame": [
+    160,
+    16
+   ],
+   "frames": 10,
+   "variants": 1,
+   "durations": [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    60,
+    300
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0,
+    0.75
+   ],
+   "cells": [
+    5.0,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "note": "v2.2, gag 13: the stroke runs right from the anchor (the king's feet) for 4.75 cells; the last frame holds while the line stands (stay: true)"
+  },
+  "red_line_wipe": {
+   "file": "sheets/red_line_wipe.png",
+   "frame": [
+    160,
+    16
+   ],
+   "frames": 4,
+   "variants": 1,
+   "durations": [
+    50,
+    60,
+    70,
+    90
+   ],
+   "fps": 14.8,
+   "loop": false,
+   "anchor": [
+    0,
+    0.75
+   ],
+   "cells": [
+    5.0,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxDecal",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "note": "v2.2, gag 13: the clone's sleeve smears it off; ends empty"
+  },
+  "steam_jet": {
+   "file": "sheets/steam_jet.png",
+   "frame": [
+    32,
+    48
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 16,
+   "loop": true,
+   "anchor": [
+    0.125,
+    0.9167
+   ],
+   "cells": [
+    1.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "dir",
+   "rotate": "none",
+   "draughtScale": 0.5,
+   "note": "v2.2, gag 5: the samovar whistle; anchor = the spout; loops while it whistles"
+  },
+  "samovar_lid": {
+   "file": "sheets/samovar_lid.png",
+   "frame": [
+    16,
+    16
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.5,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "motion": {
+    "speed": [
+     7,
+     9
+    ],
+    "angleDeg": [
+     75,
+     105
+    ],
+    "angleFrom": "world",
+    "gravity": 30,
+    "drag": 0.2,
+    "bounce": 3,
+    "restitution": 0.45,
+    "friction": 0.6,
+    "spinTurnsPerS": [
+     3,
+     5
+    ],
+    "lifeMs": [
+     0,
+     0
+    ],
+    "rest": "stay",
+    "restFrame": 0,
+    "frameBy": "angle"
+   },
+   "note": "v2.2, gag 5: the lid flies off with a steam_puff and clatters (3 bounces), then lies still"
+  },
+  "dust_trickle": {
+   "file": "sheets/dust_trickle.png",
+   "frame": [
+    16,
+    64
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0
+   ],
+   "cells": [
+    0.5,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2, gag 3: hangs from the catwalk's underside (anchor top) during collapse:warn; 2 cells of fall"
+  },
+  "dust_drop": {
+   "file": "sheets/dust_drop.png",
+   "frame": [
+    224,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9688
+   ],
+   "cells": [
+    7.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "draughtScale": 0.4,
+   "note": "v2.2, gag 3: a whole catwalk lands: a 7-cell dust roll (chunk:landed of a big group)"
+  },
+  "bonk_ring": {
+   "file": "sheets/bonk_ring.png",
+   "frame": [
+    128,
+    48
+   ],
+   "frames": 7,
+   "variants": 1,
+   "durations": [
+    33,
+    33,
+    40,
+    40,
+    50,
+    60,
+    70
+   ],
+   "fps": 21.5,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0
+   ],
+   "cells": [
+    4.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "note": "v2.2, gag 5: the bonk; anchor = where the nose meets the ceiling (top centre); the renderer squashes the missile to 85 % for 6 frames"
+  },
+  "plaster_dust": {
+   "file": "sheets/plaster_dust.png",
+   "frame": [
+    96,
+    64
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0
+   ],
+   "cells": [
+    3.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2, gag 5 (and any ceiling hit): plaster flakes and a puff falling from the ceiling; anchor top"
+  },
+  "exhaust_stutter": {
+   "file": "sheets/exhaust_stutter.png",
+   "frame": [
+    48,
+    64
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    60,
+    50,
+    90,
+    60,
+    40,
+    120,
+    70,
+    110
+   ],
+   "fps": 13.3,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0
+   ],
+   "cells": [
+    1.5,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 3,
+    "intensity": [
+     0.9,
+     0.5,
+     0,
+     0.8,
+     0.3,
+     0,
+     1.0,
+     0.1
+    ]
+   },
+   "note": "v2.2, gag 5: the missile's hover; anchor = the nozzle (top centre); the gaps are the joke: keep the timing"
+  },
+  "land_cloud": {
+   "file": "sheets/land_cloud.png",
+   "frame": [
+    96,
+    32
+   ],
+   "frames": 10,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9375
+   ],
+   "cells": [
+    3.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2, gag 4: a heavy landing into a hole"
+  },
+  "whup_puff": {
+   "file": "sheets/whup_puff.png",
+   "frame": [
+    64,
+    40
+   ],
+   "frames": 6,
+   "variants": 1,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.95
+   ],
+   "cells": [
+    2.0,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v2.2, gag 6: the cardboard king lands flat: a low puff, cardboard bits, two air lines"
+  },
+  "star_spark_s": {
+   "file": "sheets/star_spark_s.png",
+   "frame": [
+    15,
+    17
+   ],
+   "frames": 5,
+   "variants": 3,
+   "fps": 10,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.4688,
+    0.5312
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "frames",
+   "variantNames": [
+    "white",
+    "blue",
+    "gold"
+   ],
+   "ourSideOnly": true,
+   "motion": {
+    "speed": [
+     5,
+     12
+    ],
+    "angleDeg": [
+     25,
+     155
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 0,
+    "restitution": 0,
+    "friction": 0,
+    "spinTurnsPerS": [
+     1.2,
+     2.5
+    ],
+    "lifeMs": [
+     900,
+     1600
+    ],
+    "rest": "fade",
+    "restMs": 0,
+    "frameBy": "angle"
+   },
+   "note": "v4 (ruling 5): an interlaced OUTLINE star (the UI's star_outline_13), coin-spinning; OUR side only"
+  },
+  "star_spark_m": {
+   "file": "sheets/star_spark_m.png",
+   "frame": [
+    19,
+    21
+   ],
+   "frames": 5,
+   "variants": 3,
+   "fps": 10,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.5938,
+    0.6562
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "frames",
+   "variantNames": [
+    "white",
+    "blue",
+    "gold"
+   ],
+   "ourSideOnly": true,
+   "motion": {
+    "speed": [
+     5,
+     12
+    ],
+    "angleDeg": [
+     25,
+     155
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 0,
+    "restitution": 0,
+    "friction": 0,
+    "spinTurnsPerS": [
+     1.2,
+     2.5
+    ],
+    "lifeMs": [
+     900,
+     1600
+    ],
+    "rest": "fade",
+    "restMs": 0,
+    "frameBy": "angle"
+   },
+   "note": "v4 (ruling 5): an interlaced OUTLINE star (the UI's star_outline_17), coin-spinning; OUR side only"
+  },
+  "star_spark_l": {
+   "file": "sheets/star_spark_l.png",
+   "frame": [
+    25,
+    29
+   ],
+   "frames": 5,
+   "variants": 3,
+   "fps": 10,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.7812,
+    0.9062
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "frames",
+   "variantNames": [
+    "white",
+    "blue",
+    "gold"
+   ],
+   "ourSideOnly": true,
+   "motion": {
+    "speed": [
+     5,
+     12
+    ],
+    "angleDeg": [
+     25,
+     155
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 0,
+    "restitution": 0,
+    "friction": 0,
+    "spinTurnsPerS": [
+     1.2,
+     2.5
+    ],
+    "lifeMs": [
+     900,
+     1600
+    ],
+    "rest": "fade",
+    "restMs": 0,
+    "frameBy": "angle"
+   },
+   "note": "v4 (ruling 5): an interlaced OUTLINE star (the UI's star_outline_25), coin-spinning; OUR side only"
+  },
+  "star_pop": {
+   "file": "sheets/star_pop.png",
+   "frame": [
+    48,
+    48
+   ],
+   "frames": 6,
+   "variants": 1,
+   "durations": [
+    33,
+    60,
+    80,
+    90,
+    60,
+    60
+   ],
+   "fps": 15.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "none",
+   "rotate": "none",
+   "light": {
+    "color": "#fff1c8",
+    "radius": 3,
+    "intensity": [
+     1.0,
+     0.7,
+     0.4,
+     0.2,
+     0.1,
+     0
+    ]
+   },
+   "ourSideOnly": true,
+   "note": "v4 (ruling 5): the UI's 33-px OUTLINE star pops in white, holds blue, turns away"
+  },
+  "hit_dust": {
+   "file": "sheets/hit_dust.png",
+   "frame": [
+    40,
+    40
+   ],
+   "frames": 8,
+   "variants": 8,
+   "durations": [
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    70,
+    80
+   ],
+   "fps": 19.5,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    1.25,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantBy": "material",
+   "variantMaterials": [
+    "rock",
+    "concrete",
+    "steel",
+    "wood",
+    "sandbag",
+    "earth",
+    "glass",
+    "rubble"
+   ],
+   "variantMaterialIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "note": "v3: a bullet's dust in the colour of what it hit (row = material); the kit's fragments fly with it"
+  },
+  "dust_puff_mat": {
+   "file": "sheets/dust_puff_mat.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 8,
+   "variants": 8,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "drift": [
+    0,
+    0.2
+   ],
+   "variantBy": "material",
+   "variantMaterials": [
+    "rock",
+    "concrete",
+    "steel",
+    "wood",
+    "sandbag",
+    "earth",
+    "glass",
+    "rubble"
+   ],
+   "variantMaterialIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "draughtScale": 0.5,
+   "note": "v3: dust_puff by material (a cell breaking, a prop breaking)"
+  },
+  "dust_land_mat": {
+   "file": "sheets/dust_land_mat.png",
+   "frame": [
+    64,
+    24
+   ],
+   "frames": 8,
+   "variants": 8,
+   "fps": 16,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9167
+   ],
+   "cells": [
+    2.0,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "variantBy": "material",
+   "variantMaterials": [
+    "rock",
+    "concrete",
+    "steel",
+    "wood",
+    "sandbag",
+    "earth",
+    "glass",
+    "rubble"
+   ],
+   "variantMaterialIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "note": "v3: landing dust in the colour of the floor it lands on"
+  },
+  "dust_impact_mat": {
+   "file": "sheets/dust_impact_mat.png",
+   "frame": [
+    128,
+    48
+   ],
+   "frames": 10,
+   "variants": 8,
+   "fps": 14,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9583
+   ],
+   "cells": [
+    4.0,
+    1.5
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "random",
+   "rotate": "none",
+   "variantBy": "material",
+   "variantMaterials": [
+    "rock",
+    "concrete",
+    "steel",
+    "wood",
+    "sandbag",
+    "earth",
+    "glass",
+    "rubble"
+   ],
+   "variantMaterialIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "note": "v3: a falling chunk lands: dust of the chunk's material"
+  },
+  "death_bomber": {
+   "file": "sheets/death_bomber.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "bomber",
+   "replacesBody": true,
+   "note": "v4 (gate item 1): the clone leaves NO body: a poof, stamped forms burst and flutter down, the turban lands last; 700 ms, nothing lingers"
+  },
+  "death_rifleman": {
+   "file": "sheets/death_rifleman.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "rifleman",
+   "replacesBody": true,
+   "note": "v4 (gate item 1): the clone leaves NO body: a poof, stamped forms burst and flutter down, the cap lands last; 700 ms, nothing lingers"
+  },
+  "death_swordsman": {
+   "file": "sheets/death_swordsman.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "swordsman",
+   "replacesBody": true,
+   "note": "v4 (gate item 1): the clone leaves NO body: a poof, stamped forms burst and flutter down, the turban lands last, the sword falls flat and bounces; 700 ms, nothing lingers"
+  },
+  "blast_small": {
+   "file": "sheets/blast_small.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 10,
+   "variants": 3,
+   "durations": [
+    33,
+    40,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80,
+    90,
+    100
+   ],
+   "fps": 16.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "air",
+    "floor",
+    "wall"
+   ],
+   "variantBy": "surface",
+   "litFromFrame": 5,
+   "note2": "floor: the event is within 1 cell above a floor; wall: a wall cell beside it (drawn with the wall on the LEFT, mirror for the right); else air",
+   "note": "v4 (gate item 4): hand-pixelled, 10 frames on a 6-colour fire ramp, 3-tone smoke, a broken ring"
+  },
+  "blast_big": {
+   "file": "sheets/blast_big.png",
+   "frame": [
+    160,
+    160
+   ],
+   "frames": 10,
+   "variants": 3,
+   "durations": [
+    33,
+    40,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80,
+    90,
+    100
+   ],
+   "fps": 16.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    5.0,
+    5.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "air",
+    "floor",
+    "wall"
+   ],
+   "variantBy": "surface",
+   "litFromFrame": 5,
+   "note2": "floor: the event is within 1 cell above a floor; wall: a wall cell beside it (drawn with the wall on the LEFT, mirror for the right); else air",
+   "note": "v4 (gate item 4): hand-pixelled, 10 frames on a 6-colour fire ramp, 3-tone smoke, a broken ring"
+  },
+  "blast_huge": {
+   "file": "sheets/blast_huge.png",
+   "frame": [
+    240,
+    240
+   ],
+   "frames": 10,
+   "variants": 3,
+   "durations": [
+    33,
+    40,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80,
+    90,
+    100
+   ],
+   "fps": 16.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.62
+   ],
+   "cells": [
+    7.5,
+    7.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "air",
+    "floor",
+    "wall"
+   ],
+   "variantBy": "surface",
+   "litFromFrame": 5,
+   "note2": "floor: the event is within 1 cell above a floor; wall: a wall cell beside it (drawn with the wall on the LEFT, mirror for the right); else air",
+   "note": "v4 (gate item 4): hand-pixelled, 10 frames on a 6-colour fire ramp, 3-tone smoke, a broken ring"
+  },
+  "gag_debris": {
+   "file": "sheets/gag_debris.png",
+   "frame": [
+    12,
+    12
+   ],
+   "frames": 8,
+   "variants": 3,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.375,
+    0.375
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "variantNames": [
+    "form",
+    "tea_glass",
+    "samovar_lid"
+   ],
+   "motion": {
+    "speed": [
+     6,
+     12
+    ],
+    "angleDeg": [
+     35,
+     145
+    ],
+    "angleFrom": "world",
+    "gravity": 26,
+    "drag": 0.6,
+    "bounce": 1,
+    "restitution": 0.3,
+    "friction": 0.5,
+    "spinTurnsPerS": [
+     1,
+     3
+    ],
+    "lifeMs": [
+     1200,
+     1800
+    ],
+    "rest": "fade",
+    "restMs": 300,
+    "frameBy": "angle"
+   },
+   "note": "v4: what flies out of a blast in the regime base: a form, a tea glass, the samovar lid"
+  },
+  "hit_steel": {
+   "file": "sheets/hit_steel.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    60,
+    70,
+    80,
+    90,
+    90,
+    100,
+    100,
+    110,
+    110,
+    120
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v4 (gate item 7): 64 px, the steel signature, about 1 s"
+  },
+  "hit_wood": {
+   "file": "sheets/hit_wood.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    60,
+    70,
+    80,
+    90,
+    90,
+    100,
+    100,
+    110,
+    110,
+    120
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v4 (gate item 7): 64 px, the wood signature, about 1 s"
+  },
+  "hit_sandbag": {
+   "file": "sheets/hit_sandbag.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    60,
+    70,
+    80,
+    90,
+    90,
+    100,
+    100,
+    110,
+    110,
+    120
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v4 (gate item 7): 64 px, the sandbag signature, about 1 s"
+  },
+  "hit_concrete": {
+   "file": "sheets/hit_concrete.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    60,
+    70,
+    80,
+    90,
+    90,
+    100,
+    100,
+    110,
+    110,
+    120
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v4 (gate item 7): 64 px, the concrete signature, about 1 s"
+  },
+  "hit_rock": {
+   "file": "sheets/hit_rock.png",
+   "frame": [
+    64,
+    64
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    60,
+    70,
+    80,
+    90,
+    90,
+    100,
+    100,
+    110,
+    110,
+    120
+   ],
+   "fps": 11.9,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    2.0,
+    2.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "note": "v4 (gate item 7): 64 px, the rock signature, about 1 s"
+  },
+  "bits_mat": {
+   "file": "sheets/bits_mat.png",
+   "frame": [
+    6,
+    6
+   ],
+   "frames": 4,
+   "variants": 8,
+   "fps": 10,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.1875,
+    0.1875
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "variantBy": "material",
+   "variantMaterials": [
+    "rock",
+    "concrete",
+    "steel",
+    "wood",
+    "sandbag",
+    "earth",
+    "glass",
+    "rubble"
+   ],
+   "variantMaterialIds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "motion": {
+    "speed": [
+     3,
+     7
+    ],
+    "angleDeg": [
+     30,
+     150
+    ],
+    "angleFrom": "world",
+    "gravity": 34,
+    "drag": 0.4,
+    "bounce": 1,
+    "restitution": 0.3,
+    "friction": 0.4,
+    "spinTurnsPerS": [
+     2,
+     5
+    ],
+    "lifeMs": [
+     0,
+     0
+    ],
+    "rest": "fade",
+    "restMs": 900,
+    "restFrame": 0,
+    "frameBy": "angle"
+   },
+   "note": "v4: the chips of a hit that land and LIE on the floor about 1 s (steel: hot flecks that cool frame by frame); the level kit fragments may replace them"
+  },
+  "muzzle_hand": {
+   "file": "sheets/muzzle_hand.png",
+   "frame": [
+    56,
+    32
+   ],
+   "frames": 3,
+   "variants": 2,
+   "durations": [
+    33,
+    40,
+    60
+   ],
+   "fps": 22.6,
+   "loop": false,
+   "anchor": [
+    0.1071,
+    0.5
+   ],
+   "cells": [
+    1.75,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "aim",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 3,
+    "intensity": [
+     1.0,
+     0.6,
+     0.0
+    ]
+   },
+   "variantNames": [
+    "shotgun",
+    "narrow"
+   ],
+   "note": "v4: 3 hand-pixelled frames: a star burst, a stepped cone, a smoke puff; no glow sheet, no bloom"
+  },
+  "smoke_wisp": {
+   "file": "sheets/smoke_wisp.png",
+   "frame": [
+    24,
+    40
+   ],
+   "frames": 8,
+   "variants": 1,
+   "fps": 12,
+   "loop": false,
+   "anchor": [
+    0.25,
+    0.95
+   ],
+   "cells": [
+    0.75,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "none",
+   "draughtScale": 0.6,
+   "note": "v4: the wisp from the barrel after the shot (replaces the ring)"
+  },
+  "blast_r3": {
+   "file": "sheets/blast_r3_flame.png",
+   "normal": "sheets/blast_r3_flame_n.png",
+   "frame": [
+    206,
+    222
+   ],
+   "frames": 5,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.7162
+   ],
+   "cells": [
+    6.4375,
+    6.9375
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 99,
+   "scaleToRadius": false,
+   "radiusCells": 3.0,
+   "coreWidthPx": 154,
+   "floorRow": 0.9234,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 4.8,
+    "intensity": [
+     1.0,
+     0.95,
+     0.85,
+     0.7,
+     0.55
+    ]
+   },
+   "note": "host art R5: the FLAME of a floor blast at its radius (frames 0 white, 1-4 fire; core 1.6 x r x 32 px, never scaled), drawn IN FRONT of actors and pieces; its smoke is blast_r3_smoke, started 210 ms later, drawn BEHIND them",
+   "smoke": "blast_r3_smoke"
+  },
+  "blast_r6_5": {
+   "file": "sheets/blast_r6_5_flame.png",
+   "normal": "sheets/blast_r6_5_flame_n.png",
+   "frame": [
+    416,
+    424
+   ],
+   "frames": 5,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6981
+   ],
+   "cells": [
+    13.0,
+    13.25
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 99,
+   "scaleToRadius": false,
+   "radiusCells": 6.5,
+   "coreWidthPx": 333,
+   "floorRow": 0.934,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 10.4,
+    "intensity": [
+     1.0,
+     0.95,
+     0.85,
+     0.7,
+     0.55
+    ]
+   },
+   "note": "host art R5: the FLAME of a floor blast at its radius (frames 0 white, 1-4 fire; core 1.6 x r x 32 px, never scaled), drawn IN FRONT of actors and pieces; its smoke is blast_r6_5_smoke, started 210 ms later, drawn BEHIND them",
+   "smoke": "blast_r6_5_smoke"
+  },
+  "blast_r7_5": {
+   "file": "sheets/blast_r7_5_flame.png",
+   "normal": "sheets/blast_r7_5_flame_n.png",
+   "frame": [
+    476,
+    477
+   ],
+   "frames": 5,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6939
+   ],
+   "cells": [
+    14.875,
+    14.90625
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 99,
+   "scaleToRadius": false,
+   "radiusCells": 7.5,
+   "coreWidthPx": 384,
+   "floorRow": 0.935,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 12.0,
+    "intensity": [
+     1.0,
+     0.95,
+     0.85,
+     0.7,
+     0.55
+    ]
+   },
+   "note": "host art R5: the FLAME of a floor blast at its radius (frames 0 white, 1-4 fire; core 1.6 x r x 32 px, never scaled), drawn IN FRONT of actors and pieces; its smoke is blast_r7_5_smoke, started 210 ms later, drawn BEHIND them",
+   "smoke": "blast_r7_5_smoke"
+  },
+  "blast_r3_smoke": {
+   "file": "sheets/blast_r3_smoke.png",
+   "normal": "sheets/blast_r3_smoke_n.png",
+   "frame": [
+    206,
+    222
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.7162
+   ],
+   "cells": [
+    6.4375,
+    6.9375
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 0,
+   "scaleToRadius": false,
+   "radiusCells": 3.0,
+   "coreWidthPx": 154,
+   "floorRow": 0.9234,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 4.8,
+    "intensity": [
+     0.34,
+     0.2,
+     0.1,
+     0.04,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art R5: the SMOKE of blast_r3 (its frames 5-12: 3 lit tones, the belly lit by the fire in the first 2, rising, breaking into clumps), drawn BEHIND flying parts and actors; same frame size and anchor as the flame"
+  },
+  "blast_r6_5_smoke": {
+   "file": "sheets/blast_r6_5_smoke.png",
+   "normal": "sheets/blast_r6_5_smoke_n.png",
+   "frame": [
+    416,
+    424
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6981
+   ],
+   "cells": [
+    13.0,
+    13.25
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 0,
+   "scaleToRadius": false,
+   "radiusCells": 6.5,
+   "coreWidthPx": 333,
+   "floorRow": 0.934,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 10.4,
+    "intensity": [
+     0.34,
+     0.2,
+     0.1,
+     0.04,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art R5: the SMOKE of blast_r6_5 (its frames 5-12: 3 lit tones, the belly lit by the fire in the first 2, rising, breaking into clumps), drawn BEHIND flying parts and actors; same frame size and anchor as the flame"
+  },
+  "blast_r7_5_smoke": {
+   "file": "sheets/blast_r7_5_smoke.png",
+   "normal": "sheets/blast_r7_5_smoke_n.png",
+   "frame": [
+    476,
+    477
+   ],
+   "frames": 8,
+   "variants": 1,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "fps": 24,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.6939
+   ],
+   "cells": [
+    14.875,
+    14.90625
+   ],
+   "blend": "normal",
+   "layer": "fxBehind",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "litFromFrame": 0,
+   "scaleToRadius": false,
+   "radiusCells": 7.5,
+   "coreWidthPx": 384,
+   "floorRow": 0.935,
+   "light": {
+    "color": "#ffb54a",
+    "radius": 12.0,
+    "intensity": [
+     0.34,
+     0.2,
+     0.1,
+     0.04,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art R5: the SMOKE of blast_r7_5 (its frames 5-12: 3 lit tones, the belly lit by the fire in the first 2, rising, breaking into clumps), drawn BEHIND flying parts and actors; same frame size and anchor as the flame"
+  },
+  "blast_bomber_d3": {
+   "file": "sheets/blast_bomber_d3.png",
+   "normal": "sheets/blast_bomber_d3_n.png",
+   "frame": [
+    272,
+    96
+   ],
+   "frames": 8,
+   "durations": [
+    33,
+    40,
+    45,
+    50,
+    55,
+    60,
+    70,
+    80
+   ],
+   "anchor": [
+    0.5,
+    0.6492
+   ],
+   "floorRow": 0.97,
+   "cells": [
+    8.5,
+    3.0
+   ],
+   "layer": "fxFront",
+   "litFromFrame": 99,
+   "cols": 8,
+   "rows": 1,
+   "measuredCoreWidthPx": [
+    136,
+    149,
+    164
+   ],
+   "smoke": "blast_bomber_d3_smoke",
+   "gag": "gag_form",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 4.8,
+    "intensity": [
+     1.0,
+     0.9,
+     0.8,
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0.0
+    ]
+   },
+   "lightPerFrame": [
+    {
+     "f": 0,
+     "color": "#fff6e0",
+     "intensity": 1.0,
+     "radiusCells": 7.0
+    },
+    {
+     "f": 1,
+     "color": "#ffd070",
+     "intensity": 0.9,
+     "radiusCells": 6.0
+    },
+    {
+     "f": 2,
+     "color": "#ffb048",
+     "intensity": 0.8,
+     "radiusCells": 5.5
+    },
+    {
+     "f": 3,
+     "color": "#ff9a40",
+     "intensity": 0.6,
+     "radiusCells": 5.0
+    },
+    {
+     "f": 4,
+     "color": "#f07a30",
+     "intensity": 0.45,
+     "radiusCells": 4.5
+    },
+    {
+     "f": 5,
+     "color": "#c4703a",
+     "intensity": 0.28,
+     "radiusCells": 4.0
+    },
+    {
+     "f": 6,
+     "color": "#a85a34",
+     "intensity": 0.15,
+     "radiusCells": 3.5
+    },
+    {
+     "f": 7,
+     "color": "#a85a34",
+     "intensity": 0.0,
+     "radiusCells": 0.0
+    }
+   ],
+   "note": "host art, account D's v4 blast technique at its radius (unit radius R = 73.3 px; D's keys, ramps, timing): the FLAME (0 white with 3 spikes, 1-7 the banded fire, the broken dust ring on the floor) IN FRONT of actors and pieces; its smoke is blast_bomber_d3_smoke, started with its first frame at startMs, BEHIND them. anchor = the event point (the core centre); floorRow = the flat bottom: snap down to the floor within 1 cell",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 3.0,
+   "coreWidthPx": 154
+  },
+  "blast_bomber_d3_smoke": {
+   "file": "sheets/blast_bomber_d3_smoke.png",
+   "normal": "sheets/blast_bomber_d3_smoke_n.png",
+   "frame": [
+    200,
+    117
+   ],
+   "frames": 7,
+   "durations": [
+    50,
+    55,
+    60,
+    70,
+    80,
+    90,
+    100
+   ],
+   "startMs": 118,
+   "anchor": [
+    0.5,
+    0.9771
+   ],
+   "floorRow": 1.2403,
+   "cells": [
+    6.25,
+    3.65625
+   ],
+   "layer": "fxBehind",
+   "litFromFrame": 0,
+   "cols": 7,
+   "rows": 1,
+   "light": {
+    "color": "#c4703a",
+    "radius": 4.0,
+    "intensity": [
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art, D technique: the SMOKE (D's 3-tone puffs, the belly fire-lit while the fire lives, thinning by whole puffs), frames 3-9 of the blast, BEHIND flying parts and actors",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 3.0,
+   "coreWidthPx": 154
+  },
+  "blast_truck_d3": {
+   "file": "sheets/blast_truck_d3.png",
+   "normal": "sheets/blast_truck_d3_n.png",
+   "frame": [
+    582,
+    200
+   ],
+   "frames": 8,
+   "durations": [
+    38,
+    46,
+    52,
+    57,
+    63,
+    69,
+    80,
+    92
+   ],
+   "anchor": [
+    0.5,
+    0.6558
+   ],
+   "floorRow": 0.9888,
+   "cells": [
+    18.1875,
+    6.25
+   ],
+   "layer": "fxFront",
+   "litFromFrame": 99,
+   "cols": 4,
+   "rows": 2,
+   "measuredCoreWidthPx": [
+    299,
+    322,
+    342
+   ],
+   "smoke": "blast_truck_d3_smoke",
+   "gag": "gag_wheel_tea",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 10.4,
+    "intensity": [
+     1.0,
+     0.9,
+     0.8,
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0.0
+    ]
+   },
+   "lightPerFrame": [
+    {
+     "f": 0,
+     "color": "#fff6e0",
+     "intensity": 1.0,
+     "radiusCells": 15.17
+    },
+    {
+     "f": 1,
+     "color": "#ffd070",
+     "intensity": 0.9,
+     "radiusCells": 13.0
+    },
+    {
+     "f": 2,
+     "color": "#ffb048",
+     "intensity": 0.8,
+     "radiusCells": 11.92
+    },
+    {
+     "f": 3,
+     "color": "#ff9a40",
+     "intensity": 0.6,
+     "radiusCells": 10.83
+    },
+    {
+     "f": 4,
+     "color": "#f07a30",
+     "intensity": 0.45,
+     "radiusCells": 9.75
+    },
+    {
+     "f": 5,
+     "color": "#c4703a",
+     "intensity": 0.28,
+     "radiusCells": 8.67
+    },
+    {
+     "f": 6,
+     "color": "#a85a34",
+     "intensity": 0.15,
+     "radiusCells": 7.58
+    },
+    {
+     "f": 7,
+     "color": "#a85a34",
+     "intensity": 0.0,
+     "radiusCells": 0.0
+    }
+   ],
+   "note": "host art, account D's v4 blast technique at its radius (unit radius R = 158.6 px; D's keys, ramps, timing): the FLAME (0 white with 3 spikes, 1-7 the banded fire, the broken dust ring on the floor) IN FRONT of actors and pieces; its smoke is blast_truck_d3_smoke, started with its first frame at startMs, BEHIND them. anchor = the event point (the core centre); floorRow = the flat bottom: snap down to the floor within 1 cell",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 6.5,
+   "coreWidthPx": 333
+  },
+  "blast_truck_d3_smoke": {
+   "file": "sheets/blast_truck_d3_smoke.png",
+   "normal": "sheets/blast_truck_d3_smoke_n.png",
+   "frame": [
+    412,
+    247
+   ],
+   "frames": 7,
+   "durations": [
+    57,
+    63,
+    69,
+    80,
+    92,
+    103,
+    115
+   ],
+   "startMs": 136,
+   "anchor": [
+    0.5,
+    1.0573
+   ],
+   "floorRow": 1.327,
+   "cells": [
+    12.875,
+    7.71875
+   ],
+   "layer": "fxBehind",
+   "litFromFrame": 0,
+   "cols": 7,
+   "rows": 1,
+   "light": {
+    "color": "#c4703a",
+    "radius": 8.67,
+    "intensity": [
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art, D technique: the SMOKE (D's 3-tone puffs, the belly fire-lit while the fire lives, thinning by whole puffs), frames 3-9 of the blast, BEHIND flying parts and actors",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 6.5,
+   "coreWidthPx": 333
+  },
+  "blast_missile_d3": {
+   "file": "sheets/blast_missile_d3.png",
+   "normal": "sheets/blast_missile_d3_n.png",
+   "frame": [
+    670,
+    227
+   ],
+   "frames": 8,
+   "durations": [
+    40,
+    48,
+    54,
+    60,
+    66,
+    72,
+    84,
+    96
+   ],
+   "anchor": [
+    0.5,
+    0.6495
+   ],
+   "floorRow": 0.9878,
+   "cells": [
+    20.9375,
+    7.09375
+   ],
+   "layer": "fxFront",
+   "litFromFrame": 99,
+   "cols": 4,
+   "rows": 2,
+   "measuredCoreWidthPx": [
+    341,
+    387,
+    409
+   ],
+   "smoke": "blast_missile_d3_smoke",
+   "gag": "gag_stamp",
+   "light": {
+    "color": "#ffb54a",
+    "radius": 12.0,
+    "intensity": [
+     1.0,
+     0.9,
+     0.8,
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0.0
+    ]
+   },
+   "lightPerFrame": [
+    {
+     "f": 0,
+     "color": "#fff6e0",
+     "intensity": 1.0,
+     "radiusCells": 17.5
+    },
+    {
+     "f": 1,
+     "color": "#ffd070",
+     "intensity": 0.9,
+     "radiusCells": 15.0
+    },
+    {
+     "f": 2,
+     "color": "#ffb048",
+     "intensity": 0.8,
+     "radiusCells": 13.75
+    },
+    {
+     "f": 3,
+     "color": "#ff9a40",
+     "intensity": 0.6,
+     "radiusCells": 12.5
+    },
+    {
+     "f": 4,
+     "color": "#f07a30",
+     "intensity": 0.45,
+     "radiusCells": 11.25
+    },
+    {
+     "f": 5,
+     "color": "#c4703a",
+     "intensity": 0.28,
+     "radiusCells": 10.0
+    },
+    {
+     "f": 6,
+     "color": "#a85a34",
+     "intensity": 0.15,
+     "radiusCells": 8.75
+    },
+    {
+     "f": 7,
+     "color": "#a85a34",
+     "intensity": 0.0,
+     "radiusCells": 0.0
+    }
+   ],
+   "note": "host art, account D's v4 blast technique at its radius (unit radius R = 182.9 px; D's keys, ramps, timing): the FLAME (0 white with 3 spikes, 1-7 the banded fire, the broken dust ring on the floor) IN FRONT of actors and pieces; its smoke is blast_missile_d3_smoke, started with its first frame at startMs, BEHIND them. anchor = the event point (the core centre); floorRow = the flat bottom: snap down to the floor within 1 cell",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 7.5,
+   "coreWidthPx": 384
+  },
+  "blast_missile_d3_smoke": {
+   "file": "sheets/blast_missile_d3_smoke.png",
+   "normal": "sheets/blast_missile_d3_smoke_n.png",
+   "frame": [
+    492,
+    282
+   ],
+   "frames": 7,
+   "durations": [
+    60,
+    66,
+    72,
+    84,
+    96,
+    108,
+    120
+   ],
+   "startMs": 142,
+   "anchor": [
+    0.5,
+    1.0512
+   ],
+   "floorRow": 1.3235,
+   "cells": [
+    15.375,
+    8.8125
+   ],
+   "layer": "fxBehind",
+   "litFromFrame": 0,
+   "cols": 7,
+   "rows": 1,
+   "light": {
+    "color": "#c4703a",
+    "radius": 10.0,
+    "intensity": [
+     0.6,
+     0.45,
+     0.28,
+     0.15,
+     0,
+     0,
+     0
+    ]
+   },
+   "note": "host art, D technique: the SMOKE (D's 3-tone puffs, the belly fire-lit while the fire lives, thinning by whole puffs), frames 3-9 of the blast, BEHIND flying parts and actors",
+   "variants": 1,
+   "fps": 24,
+   "loop": false,
+   "blend": "normal",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "variantNames": [
+    "floor"
+   ],
+   "scaleToRadius": false,
+   "radiusCells": 7.5,
+   "coreWidthPx": 384
+  },
+  "gag_form": {
+   "file": "sheets/gag_form.png",
+   "normal": "sheets/gag_form_n.png",
+   "frame": [
+    9,
+    11
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 8,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.28125,
+    0.34375
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "angles": [
+    "face",
+    "tilted",
+    "edge",
+    "back"
+   ],
+   "cycle": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+   ],
+   "motion": {
+    "speed": [
+     5,
+     9
+    ],
+    "angleDeg": [
+     95,
+     130
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 1,
+    "restitution": 0.2,
+    "friction": 0.6,
+    "spinTurnsPerS": [
+     0.6,
+     1.2
+    ],
+    "lifeMs": [
+     2600,
+     3400
+    ],
+    "rest": "swap",
+    "restMs": 3000,
+    "frameBy": "angle"
+   },
+   "note": "host art: the bomber's permit to explode, stamped, still in order; 4 drawn angles, never rotated; it flutters down IN FRONT of the smoke"
+  },
+  "gag_wheel_tea": {
+   "file": "sheets/gag_wheel_tea.png",
+   "normal": "sheets/gag_wheel_tea_n.png",
+   "frame": [
+    14,
+    16
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 8,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.4375,
+    0.5
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "angles": [
+    "face",
+    "tilted",
+    "edge",
+    "back"
+   ],
+   "cycle": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+   ],
+   "motion": {
+    "speed": [
+     5,
+     9
+    ],
+    "angleDeg": [
+     95,
+     130
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 1,
+    "restitution": 0.2,
+    "friction": 0.6,
+    "spinTurnsPerS": [
+     0.6,
+     1.2
+    ],
+    "lifeMs": [
+     2600,
+     3400
+    ],
+    "rest": "swap",
+    "restMs": 3000,
+    "frameBy": "angle"
+   },
+   "note": "host art: the truck driver's steering wheel with his tea glass still standing on it, not a drop spilled; 4 drawn angles (the glass stays upright in all), never rotated"
+  },
+  "gag_stamp": {
+   "file": "sheets/gag_stamp.png",
+   "normal": "sheets/gag_stamp_n.png",
+   "frame": [
+    9,
+    9
+   ],
+   "frames": 4,
+   "variants": 1,
+   "fps": 8,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.28125,
+    0.28125
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "angles": [
+    "handle_up",
+    "tilted",
+    "pad_up",
+    "tilted_back"
+   ],
+   "cycle": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+   ],
+   "motion": {
+    "speed": [
+     5,
+     9
+    ],
+    "angleDeg": [
+     95,
+     130
+    ],
+    "angleFrom": "world",
+    "gravity": 14,
+    "drag": 1.2,
+    "bounce": 1,
+    "restitution": 0.2,
+    "friction": 0.6,
+    "spinTurnsPerS": [
+     0.6,
+     1.2
+    ],
+    "lifeMs": [
+     2600,
+     3400
+    ],
+    "rest": "swap",
+    "restMs": 3000,
+    "frameBy": "angle"
+   },
+   "note": "host art: the rubber stamp that approved the missile (blank red pad: no text, no symbol); 4 drawn angles, never rotated"
+  },
+  "hit_spark4": {
+   "file": "sheets/hit_spark4.png",
+   "normal": "sheets/hit_spark4_n.png",
+   "frame": [
+    32,
+    32
+   ],
+   "frames": 4,
+   "variants": 3,
+   "durations": [
+    30,
+    30,
+    40,
+    50
+   ],
+   "fps": 26.7,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.5625
+   ],
+   "cells": [
+    1.0,
+    1.0
+   ],
+   "blend": "normal",
+   "layer": "fxFront",
+   "place": "point",
+   "flip": "random",
+   "rotate": "none",
+   "glow": {
+    "file": "sheets/hit_spark4_glow.png",
+    "frame": [
+     32,
+     32
+    ],
+    "frames": 4,
+    "variants": 1,
+    "anchor": [
+     0.5,
+     0.5625
+    ],
+    "cells": [
+     1,
+     1
+    ],
+    "opacity": 0.8,
+    "blend": "additive",
+    "layer": "fxGlow"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 2,
+    "intensity": [
+     0.8,
+     0.5,
+     0.25,
+     0.1
+    ]
+   },
+   "note": "host art (open item 3): the 4-frame hit spark in the technique of sparks_metal and the current blasts: a white-hot lobed clump, uneven streaks with a hot head and a cooling tail on the fire ramp, bending under gravity, ending by whole sparks; 150 ms"
+  },
+  "muzzle_shotgun_smoke": {
+   "file": "sheets/muzzle_shotgun_smoke.png",
+   "normal": "sheets/muzzle_shotgun_smoke_n.png",
+   "frame": [
+    48,
+    40
+   ],
+   "frames": 12,
+   "variants": 2,
+   "durations": [
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    90,
+    100,
+    110
+   ],
+   "fps": 14.3,
+   "loop": false,
+   "anchor": [
+    0.0417,
+    0.65
+   ],
+   "cells": [
+    1.5,
+    1.25
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "muzzle",
+   "flip": "dir",
+   "rotate": "none",
+   "startMs": 60,
+   "note": "host art (open item 2): the smoke the shotgun leaves after its flash, D's 3-tone puffs (lit top-left, body, belly fire-lit for 2 frames), rising and swelling, thinning by whole puffs; starts 60 ms in, under the flash; 840 ms; at most 1.2 cells tall"
+  },
+  "death_bomber_f5": {
+   "file": "sheets/death_bomber_f5.png",
+   "normal": "sheets/death_bomber_f5_n.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "bomber",
+   "replacesBody": true,
+   "note": "host art (open item 4): the forms burst of a defeated clone, no body: a lit 3-tone dust poof (D's poof) with 12 readable forms (typed lines, a RECTANGULAR rubber stamp: no cross) bursting out over it and fluttering down; the headgear lands last (D's drawings and 700 ms timing)"
+  },
+  "death_rifleman_f5": {
+   "file": "sheets/death_rifleman_f5.png",
+   "normal": "sheets/death_rifleman_f5_n.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "rifleman",
+   "replacesBody": true,
+   "note": "host art (open item 4): the forms burst of a defeated clone, no body: a lit 3-tone dust poof (D's poof) with 12 readable forms (typed lines, a RECTANGULAR rubber stamp: no cross) bursting out over it and fluttering down; the headgear lands last (D's drawings and 700 ms timing)"
+  },
+  "death_swordsman_f5": {
+   "file": "sheets/death_swordsman_f5.png",
+   "normal": "sheets/death_swordsman_f5_n.png",
+   "frame": [
+    96,
+    96
+   ],
+   "frames": 12,
+   "variants": 1,
+   "durations": [
+    40,
+    40,
+    50,
+    55,
+    55,
+    60,
+    60,
+    60,
+    60,
+    60,
+    70,
+    90
+   ],
+   "fps": 17.1,
+   "loop": false,
+   "anchor": [
+    0.5,
+    0.9792
+   ],
+   "cells": [
+    3.0,
+    3.0
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "ground",
+   "flip": "dir",
+   "rotate": "none",
+   "event": "actor:died",
+   "kindIs": "swordsman",
+   "replacesBody": true,
+   "note": "host art (open item 4): the forms burst of a defeated clone, no body: a lit 3-tone dust poof (D's poof) with 12 readable forms (typed lines, a RECTANGULAR rubber stamp: no cross) bursting out over it and fluttering down; the headgear lands last (D's drawings and 700 ms timing)"
+  },
+  "debris5_rock": {
+   "file": "sheets/debris5_rock.png",
+   "normal": "sheets/debris5_rock_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "rock",
+   "note": "host art (open item 1): debris that reads as rock: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_concrete": {
+   "file": "sheets/debris5_concrete.png",
+   "normal": "sheets/debris5_concrete_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "concrete",
+   "note": "host art (open item 1): debris that reads as concrete: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_metal": {
+   "file": "sheets/debris5_metal.png",
+   "normal": "sheets/debris5_metal_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "metal",
+   "note": "host art (open item 1): debris that reads as metal: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_wood": {
+   "file": "sheets/debris5_wood.png",
+   "normal": "sheets/debris5_wood_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "wood",
+   "note": "host art (open item 1): debris that reads as wood: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_glass": {
+   "file": "sheets/debris5_glass.png",
+   "normal": "sheets/debris5_glass_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "glass",
+   "note": "host art (open item 1): debris that reads as glass: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_paper": {
+   "file": "sheets/debris5_paper.png",
+   "normal": "sheets/debris5_paper_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "paper",
+   "note": "host art (open item 1): debris that reads as paper: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_sandbag": {
+   "file": "sheets/debris5_sandbag.png",
+   "normal": "sheets/debris5_sandbag_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "sandbag",
+   "note": "host art (open item 1): debris that reads as sandbag: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  },
+  "debris5_earth": {
+   "file": "sheets/debris5_earth.png",
+   "normal": "sheets/debris5_earth_n.png",
+   "frame": [
+    24,
+    24
+   ],
+   "frames": 8,
+   "variants": 4,
+   "fps": 12,
+   "loop": true,
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "blend": "normal",
+   "layer": "fxMid",
+   "place": "point",
+   "flip": "random",
+   "rotate": "frames",
+   "material": "earth",
+   "note": "host art (open item 1): debris that reads as earth: 4 grain shapes (rows), each drawn at 8 angles of 45 deg (frames) and relit per angle (faces up lit, down / right dark), the material's own grain; same format as debris_wood"
+  }
+ },
+ "cues": {
+  "explosion": [
+   {
+    "if": {
+     "field": "radius",
+     "lt": 2.8
+    },
+    "parts": [
+     {
+      "fx": "blast_small",
+      "delay": 0,
+      "priority": 1,
+      "variantBy": "surface"
+     },
+     {
+      "fx": "wall_flash",
+      "delay": 0,
+      "priority": 1,
+      "note": "scale to the event radius"
+     },
+     {
+      "fx": "ember",
+      "delay": 20,
+      "count": 6,
+      "spread": [
+       0.4,
+       0.4
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "blast_skirt_small",
+      "delay": 30,
+      "place": "ground",
+      "maxDrop": 2.5,
+      "priority": 1
+     },
+     {
+      "fx": "scorch_small",
+      "delay": 90,
+      "place": "ground",
+      "maxDrop": 2.5,
+      "hold": 8000,
+      "fadeOut": 4000,
+      "stay": true,
+      "priority": 1
+     },
+     {
+      "fx": "heat_shimmer",
+      "delay": 60,
+      "hold": 600,
+      "fadeOut": 250,
+      "priority": 3
+     },
+     {
+      "fx": "smoke_linger",
+      "delay": 380,
+      "count": 2,
+      "spread": [
+       0.7,
+       0.4
+      ],
+      "offset": [
+       0,
+       0.6
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "debris_rock",
+      "delay": 0,
+      "count": 0,
+      "note": "bits come from the sim debris pool"
+     },
+     {
+      "fx": "gag_debris",
+      "delay": 40,
+      "count": 2,
+      "priority": 2,
+      "note": "in the regime base: forms, a tea glass, the samovar lid (random row)"
+     }
+    ]
+   },
+   {
+    "if": {
+     "field": "radius",
+     "lt": 3.2
+    },
+    "parts": [
+     {
+      "fx": "blast_bomber_d3",
+      "delay": 0,
+      "priority": 1,
+      "note": "render integrator 5: HOST ART d3 blast (account D technique at its radius), the flame in front"
+     },
+     {
+      "fx": "blast_bomber_d3_smoke",
+      "delay": 118,
+      "priority": 1,
+      "note": "the d3 smoke behind pieces and actors, from startMs"
+     },
+     {
+      "fx": "wall_flash",
+      "delay": 0,
+      "priority": 1,
+      "note": "scale to the event radius"
+     },
+     {
+      "fx": "ember",
+      "delay": 20,
+      "count": 6,
+      "spread": [
+       0.4,
+       0.4
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "blast_skirt_small",
+      "delay": 30,
+      "place": "ground",
+      "maxDrop": 2.5,
+      "priority": 1
+     },
+     {
+      "fx": "scorch_small",
+      "delay": 90,
+      "place": "ground",
+      "maxDrop": 2.5,
+      "hold": 8000,
+      "fadeOut": 4000,
+      "stay": true,
+      "priority": 1
+     },
+     {
+      "fx": "heat_shimmer",
+      "delay": 60,
+      "hold": 600,
+      "fadeOut": 250,
+      "priority": 3
+     },
+     {
+      "fx": "smoke_linger",
+      "delay": 380,
+      "count": 2,
+      "spread": [
+       0.7,
+       0.4
+      ],
+      "offset": [
+       0,
+       0.6
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "debris_rock",
+      "delay": 0,
+      "count": 0,
+      "note": "bits come from the sim debris pool"
+     },
+     {
+      "fx": "gag_debris",
+      "delay": 40,
+      "count": 2,
+      "priority": 2,
+      "note": "in the regime base: forms, a tea glass, the samovar lid (random row)"
+     },
+     {
+      "fx": "gag_form",
+      "delay": 33,
+      "priority": 2,
+      "note": "the one gag piece of this blast (frame 1), in front of the smoke"
+     }
+    ]
+   },
+   {
+    "if": {
+     "field": "radius",
+     "lt": 5.5
+    },
+    "parts": [
+     {
+      "fx": "blast_big",
+      "delay": 0,
+      "priority": 1,
+      "variantBy": "surface"
+     },
+     {
+      "fx": "wall_flash",
+      "delay": 0,
+      "priority": 1,
+      "note": "scale to the event radius"
+     },
+     {
+      "fx": "ember",
+      "delay": 20,
+      "count": 12,
+      "spread": [
+       0.8,
+       0.6
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "blast_skirt_big",
+      "delay": 40,
+      "place": "ground",
+      "maxDrop": 4,
+      "priority": 1
+     },
+     {
+      "fx": "scorch_big",
+      "delay": 120,
+      "place": "ground",
+      "maxDrop": 4,
+      "hold": 12000,
+      "fadeOut": 5000,
+      "stay": true,
+      "priority": 1
+     },
+     {
+      "fx": "heat_shimmer",
+      "delay": 60,
+      "hold": 800,
+      "fadeOut": 300,
+      "priority": 3
+     },
+     {
+      "fx": "smoke_linger_big",
+      "delay": 420,
+      "count": 2,
+      "spread": [
+       1.2,
+       0.5
+      ],
+      "offset": [
+       0,
+       1.0
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "smoke_linger",
+      "delay": 900,
+      "count": 2,
+      "spread": [
+       1.6,
+       0.3
+      ],
+      "offset": [
+       0,
+       0.5
+      ],
+      "priority": 3,
+      "note": "the smoulder: low haze that drifts with the draught and thins, never a column"
+     },
+     {
+      "fx": "gag_debris",
+      "delay": 40,
+      "count": 3,
+      "priority": 2,
+      "note": "in the regime base: forms, a tea glass, the samovar lid (random row)"
+     }
+    ]
+   },
+   {
+    "parts": [
+     {
+      "fx": "blast_truck_d3",
+      "delay": 0,
+      "priority": 1,
+      "note": "render integrator 5: HOST ART d3 blast (account D technique at its radius), the flame in front"
+     },
+     {
+      "fx": "blast_truck_d3_smoke",
+      "delay": 136,
+      "priority": 1,
+      "note": "the d3 smoke behind pieces and actors, from startMs"
+     },
+     {
+      "fx": "wall_flash",
+      "delay": 0,
+      "priority": 1,
+      "note": "scale to the event radius"
+     },
+     {
+      "fx": "blast_small",
+      "delay": 260,
+      "count": 1,
+      "spread": [
+       2.4,
+       0.4
+      ],
+      "offset": [
+       0,
+       -0.4
+      ],
+      "priority": 3,
+      "variantBy": "surface"
+     },
+     {
+      "fx": "ember",
+      "delay": 20,
+      "count": 18,
+      "spread": [
+       1.4,
+       1.0
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "blast_skirt_huge",
+      "delay": 40,
+      "place": "ground",
+      "maxDrop": 6,
+      "priority": 1
+     },
+     {
+      "fx": "scorch_huge",
+      "delay": 140,
+      "place": "ground",
+      "maxDrop": 6,
+      "hold": 15000,
+      "fadeOut": 5000,
+      "stay": true,
+      "priority": 1
+     },
+     {
+      "fx": "heat_shimmer",
+      "delay": 60,
+      "hold": 1000,
+      "fadeOut": 400,
+      "count": 2,
+      "spread": [
+       1.5,
+       0
+      ],
+      "priority": 3
+     },
+     {
+      "fx": "smoke_linger_big",
+      "delay": 500,
+      "count": 3,
+      "spread": [
+       2.0,
+       0.8
+      ],
+      "offset": [
+       0,
+       1.8
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "smoke_linger",
+      "delay": 1100,
+      "count": 2,
+      "spread": [
+       2.4,
+       0.3
+      ],
+      "offset": [
+       0,
+       0.6
+      ],
+      "priority": 3
+     },
+     {
+      "fx": "gag_debris",
+      "delay": 40,
+      "count": 4,
+      "priority": 2,
+      "note": "in the regime base: forms, a tea glass, the samovar lid (random row)"
+     },
+     {
+      "fx": "gag_wheel_tea",
+      "delay": 38,
+      "priority": 2,
+      "note": "the one gag piece of this blast (frame 1), in front of the smoke"
+     }
+    ],
+    "if": {
+     "field": "radius",
+     "lt": 7.0
+    }
+   },
+   {
+    "parts": [
+     {
+      "fx": "blast_missile_d3",
+      "delay": 0,
+      "priority": 1,
+      "note": "render integrator 5: HOST ART d3 blast (account D technique at its radius), the flame in front"
+     },
+     {
+      "fx": "blast_missile_d3_smoke",
+      "delay": 142,
+      "priority": 1,
+      "note": "the d3 smoke behind pieces and actors, from startMs"
+     },
+     {
+      "fx": "wall_flash",
+      "delay": 0,
+      "priority": 1,
+      "note": "scale to the event radius"
+     },
+     {
+      "fx": "blast_small",
+      "delay": 260,
+      "count": 1,
+      "spread": [
+       2.4,
+       0.4
+      ],
+      "offset": [
+       0,
+       -0.4
+      ],
+      "priority": 3,
+      "variantBy": "surface"
+     },
+     {
+      "fx": "ember",
+      "delay": 20,
+      "count": 18,
+      "spread": [
+       1.4,
+       1.0
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "blast_skirt_huge",
+      "delay": 40,
+      "place": "ground",
+      "maxDrop": 6,
+      "priority": 1
+     },
+     {
+      "fx": "scorch_huge",
+      "delay": 140,
+      "place": "ground",
+      "maxDrop": 6,
+      "hold": 15000,
+      "fadeOut": 5000,
+      "stay": true,
+      "priority": 1
+     },
+     {
+      "fx": "heat_shimmer",
+      "delay": 60,
+      "hold": 1000,
+      "fadeOut": 400,
+      "count": 2,
+      "spread": [
+       1.5,
+       0
+      ],
+      "priority": 3
+     },
+     {
+      "fx": "smoke_linger_big",
+      "delay": 500,
+      "count": 3,
+      "spread": [
+       2.0,
+       0.8
+      ],
+      "offset": [
+       0,
+       1.8
+      ],
+      "priority": 2
+     },
+     {
+      "fx": "smoke_linger",
+      "delay": 1100,
+      "count": 2,
+      "spread": [
+       2.4,
+       0.3
+      ],
+      "offset": [
+       0,
+       0.6
+      ],
+      "priority": 3
+     },
+     {
+      "fx": "gag_debris",
+      "delay": 40,
+      "count": 4,
+      "priority": 2,
+      "note": "in the regime base: forms, a tea glass, the samovar lid (random row)"
+     },
+     {
+      "fx": "gag_stamp",
+      "delay": 40,
+      "priority": 2,
+      "note": "the one gag piece of this blast (frame 1), in front of the smoke"
+     }
+    ]
+   }
+  ],
+  "weapon:fired": [
+   {
+    "if": {
+     "field": "weapon",
+     "eq": "shotgun"
+    },
+    "parts": [
+     {
+      "fx": "muzzle_shotgun",
+      "delay": 0,
+      "place": "muzzle",
+      "priority": 1
+     },
+     {
+      "fx": "pellet_trail",
+      "delay": 0,
+      "place": "muzzle",
+      "count": 7,
+      "aimSpreadDeg": 9,
+      "priority": 1,
+      "note": "one per pellet: rotate by the angle of that pellet (aim +- aimSpreadDeg, or the projectile velocity)"
+     },
+     {
+      "fx": "wadding",
+      "delay": 0,
+      "place": "muzzle",
+      "priority": 2
+     },
+     {
+      "fx": "smoke_puff",
+      "delay": 50,
+      "place": "muzzle",
+      "offset": [
+       0.5,
+       0.05
+      ],
+      "count": 2,
+      "spread": [
+       0.3,
+       0.1
+      ],
+      "priority": 3
+     },
+     {
+      "fx": "muzzle_flash",
+      "delay": 0,
+      "place": "muzzle",
+      "count": 0,
+      "note": "v1 renderers that do not know muzzle_shotgun play muzzle_flash variant 2 (as before)"
+     }
+    ]
+   },
+   {
+    "parts": [
+     {
+      "fx": "muzzle_flash",
+      "delay": 0,
+      "place": "muzzle",
+      "note": "variant by weapon: shotgun -> 2, else 0 or 1"
+     },
+     {
+      "fx": "shell_casing",
+      "delay": 60,
+      "note": "thrown by its motion block; stays on the floor (budget.maxResting)"
+     }
+    ]
+   }
+  ],
+  "king:shell": [
+   {
+    "parts": [
+     {
+      "fx": "shell_casing",
+      "delay": 0,
+      "variant": 1,
+      "priority": 1,
+      "note": "the pump ejects the spent shell: variant 1 (red hull), thrown by its motion block, stays on the floor"
+     }
+    ]
+   }
+  ],
+  "projectile:hit": [
+   {
+    "if": {
+     "target": "actor"
+    },
+    "parts": [
+     {
+      "fx": "hit_poof",
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "if": {
+     "matClass": "metal"
+    },
+    "parts": [
+     {
+      "fx": "sparks_metal",
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "if": {
+     "matClass": "rock"
+    },
+    "parts": [
+     {
+      "fx": "sparks_rock",
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "if": {
+     "matClass": "wood"
+    },
+    "parts": [
+     {
+      "fx": "chips_wood",
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "parts": [
+     {
+      "fx": "dust_puff",
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "projectile:bounced": [
+   {
+    "parts": [
+     {
+      "fx": "sparks_metal",
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "cell:destroyed": [
+   {
+    "parts": [
+     {
+      "fx": "dust_puff",
+      "delay": 0,
+      "place": "cell",
+      "count": 2,
+      "spread": [
+       0.6,
+       0.6
+      ]
+     }
+    ]
+   }
+  ],
+  "chunk:fell": [
+   {
+    "parts": [
+     {
+      "fx": "dust_puff",
+      "delay": 0,
+      "count": 2,
+      "spread": [
+       1.0,
+       0.4
+      ]
+     }
+    ]
+   }
+  ],
+  "chunk:landed": [
+   {
+    "parts": [
+     {
+      "fx": "dust_impact",
+      "delay": 0,
+      "place": "ground",
+      "maxDrop": 1.5
+     }
+    ]
+   }
+  ],
+  "actor:jumped": [
+   {
+    "parts": [
+     {
+      "fx": "dust_land",
+      "delay": 0,
+      "place": "ground",
+      "maxDrop": 0.6
+     }
+    ]
+   }
+  ],
+  "actor:landed": [
+   {
+    "if": {
+     "field": "speed",
+     "gte": 6
+    },
+    "parts": [
+     {
+      "fx": "dust_land",
+      "delay": 0,
+      "place": "ground",
+      "maxDrop": 0.6
+     }
+    ]
+   }
+  ],
+  "actor:damaged": [
+   {
+    "if": {
+     "field": "cause",
+     "eq": "melee"
+    },
+    "parts": [
+     {
+      "fx": "hit_poof",
+      "delay": 0,
+      "offset": [
+       0,
+       0.9
+      ]
+     }
+    ]
+   }
+  ],
+  "actor:died": [
+   {
+    "if": {
+     "field": "kind",
+     "eq": "bomber"
+    },
+    "parts": [
+     {
+      "fx": "death_bomber",
+      "place": "ground",
+      "maxDrop": 2
+     }
+    ]
+   },
+   {
+    "if": {
+     "field": "kind",
+     "eq": "rifleman"
+    },
+    "parts": [
+     {
+      "fx": "death_rifleman",
+      "place": "ground",
+      "maxDrop": 2
+     }
+    ]
+   },
+   {
+    "if": {
+     "field": "kind",
+     "eq": "swordsman"
+    },
+    "parts": [
+     {
+      "fx": "death_swordsman",
+      "place": "ground",
+      "maxDrop": 2
+     }
+    ]
+   },
+   {
+    "if": {
+     "field": "cause",
+     "eq": "bullet"
+    },
+    "parts": [
+     {
+      "fx": "ko_poof",
+      "delay": 0,
+      "offset": [
+       0,
+       0.9
+      ]
+     }
+    ]
+   }
+  ],
+  "enemy:primed": [
+   {
+    "parts": [
+     {
+      "fx": "fuse_spark",
+      "delay": 0,
+      "offset": [
+       0.25,
+       1.0
+      ],
+      "stopOn": [
+       "explosion",
+       "actor:died"
+      ],
+      "note": "follow the entity (the belt), not the event point"
+     }
+    ]
+   }
+  ],
+  "explosive:primed": [
+   {
+    "parts": [
+     {
+      "fx": "fuse_spark",
+      "delay": 0,
+      "offset": [
+       0,
+       0.6
+      ],
+      "stopOn": [
+       "explosion"
+      ]
+     }
+    ]
+   }
+  ],
+  "fire:ignited": [
+   {
+    "parts": [
+     {
+      "fx": "flame_loop",
+      "delay": 0,
+      "place": "cell",
+      "stopOn": [
+       "fire:out",
+       "cell:destroyed"
+      ]
+     },
+     {
+      "fx": "smoke_rise_loop",
+      "delay": 400,
+      "place": "cell",
+      "offset": [
+       0,
+       1.0
+      ],
+      "stopOn": [
+       "fire:out",
+       "cell:destroyed"
+      ]
+     }
+    ]
+   }
+  ],
+  "prop:broke": [
+   {
+    "parts": [
+     {
+      "fx": "dust_puff",
+      "delay": 0,
+      "count": 3,
+      "spread": [
+       1.0,
+       0.6
+      ]
+     }
+    ]
+   }
+  ],
+  "weapon:picked": [
+   {
+    "parts": [
+     {
+      "fx": "star_pop",
+      "offset": [
+       0,
+       1.2
+      ]
+     },
+     {
+      "fx": "star_spark_m",
+      "count": 6,
+      "variant": 1,
+      "offset": [
+       0,
+       1.2
+      ]
+     },
+     {
+      "fx": "star_spark_s",
+      "count": 8,
+      "variant": 2,
+      "offset": [
+       0,
+       1.2
+      ]
+     }
+    ]
+   }
+  ],
+  "weapon:revealed": [
+   {
+    "parts": [
+     {
+      "fx": "star_pop",
+      "offset": [
+       0,
+       1.4
+      ]
+     }
+    ],
+    "note": "the star rule (Host 12.11): one OUR-side outline star_pop alone, no thrown star bits"
+   }
+  ],
+  "checkpoint:reached": [
+   {
+    "parts": [
+     {
+      "fx": "dust_puff",
+      "offset": [
+       0,
+       0.2
+      ]
+     }
+    ],
+    "note": "the star rule (Host 12.11): no star at a checkpoint (it can sit near a defeat); a dust puff only"
+   }
+  ],
+  "level:complete": [
+   {
+    "parts": [
+     {
+      "fx": "star_pop",
+      "offset": [
+       0,
+       2.0
+      ]
+     },
+     {
+      "fx": "star_spark_l",
+      "count": 6,
+      "variant": 2,
+      "offset": [
+       0,
+       2.0
+      ],
+      "spread": [
+       2,
+       1
+      ]
+     },
+     {
+      "fx": "star_spark_m",
+      "count": 12,
+      "variant": 1,
+      "offset": [
+       0,
+       2.0
+      ],
+      "spread": [
+       3,
+       1
+      ]
+     },
+     {
+      "fx": "star_spark_s",
+      "count": 16,
+      "variant": 0,
+      "offset": [
+       0,
+       2.0
+      ],
+      "spread": [
+       3,
+       1
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "draught": {
+  "vector": [
+   0.45,
+   0.06
+  ],
+  "gust": {
+   "amp": 0.3,
+   "periodS": 5.0
+  },
+  "note": "cells/s; the tunnel air moves to the right and a little up. Each effect moves by drift + draught * draughtScale (draughtScale defaults to 0). A level may override it."
+ },
+ "budget": {
+  "note": "the render agent measured batch:fxNormal at 0.85 ms a frame, 6.2 ms peaks, in the missile cascade (many large alpha sprites over each other). Keep the live counts under these caps; when a cap is hit, drop parts by priority (3 first, then 2; 1 never) and let the OLDEST smoke of the same kind dither out first (jump to the last third of its clip), never pop it.",
+  "smokeMaxLive": 12,
+  "smokeMaxPerBlast": {
+   "small": 2,
+   "big": 3,
+   "huge": 4
+  },
+  "fxNormalMaxLive": 64,
+  "fxNormalMaxArea": 220,
+  "fxNormalMaxAreaNote": "sum of live normal sprites areas in cells^2 (a smoke_linger_big is 16, an explosion_huge 56)",
+  "embersMaxLive": 60,
+  "maxResting": 40,
+  "maxScorch": 16,
+  "dropFirst": [
+   "heat_shimmer",
+   "smoke_linger (late copies)",
+   "explosion_small (secondary in huge)",
+   "pop_small",
+   "ember",
+   "smoke_puff (cell:destroyed)",
+   "smoke_linger_big"
+  ],
+  "neverDrop": [
+   "explosion_*",
+   "blast_skirt_*",
+   "scorch_*",
+   "muzzle_*",
+   "pellet_trail"
+  ],
+  "smokeKinds": [
+   "smoke_linger",
+   "smoke_linger_big",
+   "smoke_puff",
+   "smoke_rise_loop"
+  ]
+ },
+ "distortions": {
+  "heat_shimmer": {
+   "file": "sheets/heat_shimmer.png",
+   "size": [
+    64,
+    128
+   ],
+   "cells": [
+    4,
+    8
+   ],
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "place": "point",
+   "offset": [
+    0,
+    -0.6
+   ],
+   "scrollCellsPerS": [
+    0,
+    1.4
+   ],
+   "amplitudePx": 2.0,
+   "tileY": true,
+   "use": "NOT a sprite. A displacement map at 16 px a cell that tiles in y. In a pass that sees the scene behind the fx (a copy of the frame so far, or the layers below fxFront), offset each screen pixel inside this quad by ((R - 128) / 127, (G - 128) / 127) * amplitudePx * (B / 255) * fade art pixels, snapped to whole art pixels; scroll the map up by scrollCellsPerS. fade = 1 during hold, then down to 0 over fadeOut. The quad bottom sits on the event point plus offset (cells, y up). Without such a pass, skip it (priority 3); nothing else depends on it."
+  }
+ },
+ "gags": {
+  "note": "v2.2: effects for the comedy bible's tier A. The events are GAMEPLAY's (some do not exist yet: named here as the bible names them). Each entry is a list of cue parts (FX_CONTRACT 4.1).",
+  "glass:smash": [
+   {
+    "fx": "tea_glass_smash",
+    "place": "ground",
+    "stay": true
+   },
+   {
+    "fx": "steam_puff",
+    "count": 1
+   }
+  ],
+  "standee:spawned": [
+   {
+    "fx": "whup_puff",
+    "place": "ground"
+   },
+   {
+    "fx": "camera_flash",
+    "delay": 900,
+    "offset": [
+     0,
+     1.4
+    ]
+   }
+  ],
+  "camera:flash": [
+   {
+    "fx": "camera_flash"
+   }
+  ],
+  "power:redline": [
+   {
+    "fx": "red_line_draw",
+    "place": "ground",
+    "stay": true,
+    "stopOn": [
+     "redline:wiped"
+    ]
+   }
+  ],
+  "redline:wiped": [
+   {
+    "fx": "red_line_wipe",
+    "place": "ground"
+   }
+  ],
+  "samovar:whistle": [
+   {
+    "fx": "steam_jet",
+    "until": 2000
+   },
+   {
+    "fx": "steam_puff",
+    "delay": 300,
+    "count": 3,
+    "spread": [
+     0.3,
+     0.2
+    ]
+   }
+  ],
+  "samovar:lid": [
+   {
+    "fx": "samovar_lid"
+   },
+   {
+    "fx": "steam_puff",
+    "count": 2
+   }
+  ],
+  "collapse:warn": [
+   {
+    "fx": "dust_trickle",
+    "stopOn": [
+     "chunk:fell"
+    ]
+   }
+  ],
+  "chunk:landed:big": [
+   {
+    "fx": "dust_drop",
+    "place": "ground",
+    "note": "chunk:landed with cells >= 12"
+   }
+  ],
+  "missile:bonk": [
+   {
+    "fx": "bonk_ring"
+   },
+   {
+    "fx": "plaster_dust",
+    "delay": 30
+   }
+  ],
+  "missile:hover": [
+   {
+    "fx": "exhaust_stutter",
+    "stopOn": [
+     "missile:topple"
+    ]
+   }
+  ],
+  "king:landedHard": [
+   {
+    "fx": "land_cloud",
+    "place": "ground"
+   }
+  ],
+  "screenFlash:camera": {
+   "durationsMs": [
+    33,
+    33
+   ],
+   "colors": [
+    "#fffaf0",
+    "#fffaf0"
+   ],
+   "opacity": [
+    0.55,
+    0.2
+   ]
+  }
+ },
+ "include": [
+  "weapons_fx.json"
+ ],
+ "materialClass": {
+  "metal": [
+   "steel",
+   "glass",
+   "barrel",
+   "propane",
+   "fuel"
+  ],
+  "rock": [
+   "stone",
+   "concrete",
+   "brick",
+   "rubble",
+   "dirt",
+   "grass"
+  ],
+  "wood": [
+   "wood",
+   "crate",
+   "tnt"
+  ],
+  "soft": [
+   "sandbag",
+   "sand",
+   "leaves"
+  ]
+ }
+}

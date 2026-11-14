@@ -1,0 +1,2331 @@
+{
+ "id": "laundry_line",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "The guards' laundry, the only clean thing in the tunnel: the clothes jump their pegs, swing, and drop limp; the line snaps last.",
+ "source": {
+  "intact": "props/laundry_line_intact.png",
+  "crop": null,
+  "w": 146,
+  "h": 110,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "laundry_line_col.png",
+   "n": "laundry_line_n.png",
+   "mat": "laundry_line_mat.png",
+   "parts": "laundry_line_parts.png",
+   "grain": "laundry_line_grain.png",
+   "inside": "laundry_line_inside.png",
+   "under": {
+    "col": "laundry_line_under_col.png",
+    "n": "laundry_line_under_n.png",
+    "mat": "laundry_line_under_mat.png",
+    "parts": "laundry_line_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1-2 pegged: the clothes jump their pegs one by one, swing on the last peg and drop limp",
+  "2 stitched: a garment can tear into its strips",
+  "3 tied: the line snaps off the posts",
+  "9 hung: the segments of a strip never part; they are the cloth's bends (limp revolute joints)"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png",
+  "broken": "orders 1-3"
+ },
+ "pieces": [
+  {
+   "id": "post_l",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 218.0,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    18,
+    0,
+    10,
+    103
+   ],
+   "at": [
+    8,
+    2
+   ],
+   "centre": [
+    13.7,
+    54.8
+   ],
+   "outline": [
+    [
+     -5.7,
+     -51.8
+    ],
+    [
+     -4.7,
+     -52.8
+    ],
+    [
+     -1.7,
+     -52.8
+    ],
+    [
+     -0.7,
+     -51.8
+    ],
+    [
+     4.3,
+     -42.8
+    ],
+    [
+     4.3,
+     50.2
+    ],
+    [
+     -4.7,
+     50.2
+    ],
+    [
+     -5.7,
+     -44.8
+    ]
+   ],
+   "partIndex": 1,
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      188,
+      115,
+      1,
+      3
+     ],
+     "at": [
+      17,
+      12
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "post_r",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 213.5,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    0,
+    16,
+    103
+   ],
+   "at": [
+    120,
+    2
+   ],
+   "centre": [
+    130.2,
+    53.9
+   ],
+   "outline": [
+    [
+     -10.2,
+     -39.9
+    ],
+    [
+     1.8,
+     -51.9
+    ],
+    [
+     4.8,
+     -51.9
+    ],
+    [
+     5.8,
+     -50.9
+    ],
+    [
+     5.8,
+     -40.9
+    ],
+    [
+     4.8,
+     51.1
+    ],
+    [
+     -4.2,
+     51.1
+    ],
+    [
+     -10.2,
+     -36.9
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      249,
+      115,
+      1,
+      2
+     ],
+     "at": [
+      120,
+      15
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "line",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    105,
+    102,
+    8
+   ],
+   "at": [
+    18,
+    12
+   ],
+   "centre": [
+    66.1,
+    17.7
+   ],
+   "outline": [
+    [
+     -48.1,
+     -5.7
+    ],
+    [
+     -47.1,
+     -5.7
+    ],
+    [
+     53.9,
+     -2.7
+    ],
+    [
+     53.9,
+     -0.7
+    ],
+    [
+     52.9,
+     0.3
+    ],
+    [
+     49.9,
+     1.3
+    ],
+    [
+     45.9,
+     2.3
+    ],
+    [
+     -37.1,
+     2.3
+    ],
+    [
+     -47.1,
+     -1.7
+    ],
+    [
+     -48.1,
+     -2.7
+    ]
+   ],
+   "partIndex": 3,
+   "what": "the rope and pegs",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      166,
+      115,
+      4,
+      3
+     ],
+     "at": [
+      15,
+      12
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      246,
+      115,
+      1,
+      2
+     ],
+     "at": [
+      119,
+      15
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      22,
+      115,
+      3,
+      4
+     ],
+     "at": [
+      73,
+      19
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      191,
+      105,
+      7,
+      5
+     ],
+     "at": [
+      31,
+      19
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      132,
+      105,
+      11,
+      5
+     ],
+     "at": [
+      38,
+      19
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      172,
+      115,
+      4,
+      3
+     ],
+     "at": [
+      89,
+      19
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      181,
+      105,
+      8,
+      5
+     ],
+     "at": [
+      102,
+      19
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c0_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 6.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    182,
+    0,
+    9,
+    13
+   ],
+   "at": [
+    29,
+    20
+   ],
+   "centre": [
+    33.9,
+    26.9
+   ],
+   "outline": [
+    [
+     -4.9,
+     2.1
+    ],
+    [
+     -3.9,
+     -3.9
+    ],
+    [
+     -2.9,
+     -6.9
+    ],
+    [
+     4.1,
+     -6.9
+    ],
+    [
+     4.1,
+     6.1
+    ],
+    [
+     -4.9,
+     6.1
+    ]
+   ],
+   "partIndex": 4,
+   "what": "trousers_a: strip 0, segment 0",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c0",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      157,
+      115,
+      7,
+      3
+     ],
+     "at": [
+      31,
+      18
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      241,
+      105,
+      9,
+      4
+     ],
+     "at": [
+      29,
+      32
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      119,
+      0,
+      4,
+      14
+     ],
+     "at": [
+      37,
+      20
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c0_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 7.9,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    77,
+    0,
+    12,
+    14
+   ],
+   "at": [
+    26,
+    33
+   ],
+   "centre": [
+    32.3,
+    40.1
+   ],
+   "outline": [
+    [
+     -6.3,
+     4.9
+    ],
+    [
+     -5.3,
+     -0.1
+    ],
+    [
+     -3.3,
+     -7.1
+    ],
+    [
+     5.7,
+     -7.1
+    ],
+    [
+     5.7,
+     -2.1
+    ],
+    [
+     4.7,
+     2.9
+    ],
+    [
+     3.7,
+     5.9
+    ],
+    [
+     2.7,
+     6.9
+    ],
+    [
+     -6.3,
+     6.9
+    ]
+   ],
+   "partIndex": 5,
+   "what": "trousers_a: strip 0, segment 1",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c0",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j14",
+     "atlas": [
+      124,
+      115,
+      9,
+      3
+     ],
+     "at": [
+      29,
+      31
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      0,
+      115,
+      9,
+      4
+     ],
+     "at": [
+      26,
+      46
+     ]
+    },
+    {
+     "joint": "j17",
+     "atlas": [
+      0,
+      121,
+      1,
+      2
+     ],
+     "at": [
+      37,
+      33
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c0_r2",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 1.4,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    113,
+    115,
+    9,
+    3
+   ],
+   "at": [
+    26,
+    47
+   ],
+   "centre": [
+    31.1,
+    48.4
+   ],
+   "outline": [
+    [
+     -5.1,
+     -1.4
+    ],
+    [
+     3.9,
+     -1.4
+    ],
+    [
+     3.9,
+     1.6
+    ],
+    [
+     -2.1,
+     1.6
+    ],
+    [
+     -4.1,
+     0.6
+    ],
+    [
+     -5.1,
+     -0.4
+    ]
+   ],
+   "partIndex": 6,
+   "what": "trousers_a: strip 0, segment 2",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c0",
+    "row": 2
+   },
+   "edges": [
+    {
+     "joint": "j16",
+     "atlas": [
+      135,
+      115,
+      9,
+      3
+     ],
+     "at": [
+      26,
+      45
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c1_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 10.1,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    131,
+    0,
+    17,
+    13
+   ],
+   "at": [
+    38,
+    20
+   ],
+   "centre": [
+    44.9,
+    26.2
+   ],
+   "outline": [
+    [
+     -6.9,
+     -6.2
+    ],
+    [
+     8.1,
+     -6.2
+    ],
+    [
+     10.1,
+     -5.2
+    ],
+    [
+     10.1,
+     -2.2
+    ],
+    [
+     5.1,
+     6.8
+    ],
+    [
+     -6.9,
+     6.8
+    ]
+   ],
+   "partIndex": 7,
+   "what": "trousers_a: strip 1, segment 0",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c1",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      9,
+      121,
+      11,
+      1
+     ],
+     "at": [
+      38,
+      20
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      27,
+      115,
+      3,
+      4
+     ],
+     "at": [
+      54,
+      21
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      199,
+      0,
+      4,
+      13
+     ],
+     "at": [
+      35,
+      20
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      118,
+      105,
+      12,
+      5
+     ],
+     "at": [
+      38,
+      32
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c1_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.3,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    62,
+    0,
+    13,
+    14
+   ],
+   "at": [
+    38,
+    33
+   ],
+   "centre": [
+    45.5,
+    40.0
+   ],
+   "outline": [
+    [
+     -7.5,
+     -7.0
+    ],
+    [
+     4.5,
+     -7.0
+    ],
+    [
+     5.5,
+     0.0
+    ],
+    [
+     5.5,
+     7.0
+    ],
+    [
+     -4.5,
+     7.0
+    ],
+    [
+     -7.5,
+     -5.0
+    ]
+   ],
+   "partIndex": 8,
+   "what": "trousers_a: strip 1, segment 1",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c1",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j17",
+     "atlas": [
+      3,
+      121,
+      1,
+      2
+     ],
+     "at": [
+      38,
+      33
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      194,
+      115,
+      12,
+      2
+     ],
+     "at": [
+      38,
+      32
+     ]
+    },
+    {
+     "joint": "j19",
+     "atlas": [
+      89,
+      115,
+      10,
+      3
+     ],
+     "at": [
+      41,
+      46
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_a_c1_r2",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 2.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    145,
+    105,
+    10,
+    5
+   ],
+   "at": [
+    41,
+    47
+   ],
+   "centre": [
+    46.2,
+    49.3
+   ],
+   "outline": [
+    [
+     -5.2,
+     -2.3
+    ],
+    [
+     4.8,
+     -2.3
+    ],
+    [
+     4.8,
+     1.7
+    ],
+    [
+     3.8,
+     2.7
+    ],
+    [
+     -3.2,
+     2.7
+    ],
+    [
+     -5.2,
+     0.7
+    ]
+   ],
+   "partIndex": 9,
+   "what": "trousers_a: strip 1, segment 2",
+   "flap": {
+    "garment": "trousers_a",
+    "strip": "trousers_a_c1",
+    "row": 2
+   },
+   "edges": [
+    {
+     "joint": "j19",
+     "atlas": [
+      208,
+      115,
+      10,
+      2
+     ],
+     "at": [
+      41,
+      46
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "smalls_c0_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    30,
+    0,
+    14,
+    15
+   ],
+   "at": [
+    55,
+    19
+   ],
+   "centre": [
+    63.2,
+    27.1
+   ],
+   "outline": [
+    [
+     -8.2,
+     -6.1
+    ],
+    [
+     -2.2,
+     -8.1
+    ],
+    [
+     -0.2,
+     -8.1
+    ],
+    [
+     5.8,
+     -5.1
+    ],
+    [
+     5.8,
+     6.9
+    ],
+    [
+     -4.2,
+     6.9
+    ],
+    [
+     -8.2,
+     -3.1
+    ]
+   ],
+   "partIndex": 10,
+   "what": "smalls: strip 0, segment 0",
+   "flap": {
+    "garment": "smalls",
+    "strip": "smalls_c0",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      157,
+      105,
+      10,
+      5
+     ],
+     "at": [
+      59,
+      33
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      224,
+      0,
+      3,
+      12
+     ],
+     "at": [
+      68,
+      22
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      32,
+      115,
+      2,
+      4
+     ],
+     "at": [
+      54,
+      21
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "smalls_c0_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 7.0,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    210,
+    0,
+    12,
+    12
+   ],
+   "at": [
+    57,
+    34
+   ],
+   "centre": [
+    63.4,
+    39.6
+   ],
+   "outline": [
+    [
+     -6.4,
+     -1.6
+    ],
+    [
+     -4.4,
+     -5.6
+    ],
+    [
+     5.6,
+     -5.6
+    ],
+    [
+     5.6,
+     -0.6
+    ],
+    [
+     4.6,
+     6.4
+    ],
+    [
+     -0.4,
+     6.4
+    ],
+    [
+     -4.4,
+     4.4
+    ],
+    [
+     -6.4,
+     2.4
+    ]
+   ],
+   "partIndex": 11,
+   "what": "smalls: strip 0, segment 1",
+   "flap": {
+    "garment": "smalls",
+    "strip": "smalls_c0",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      77,
+      115,
+      10,
+      3
+     ],
+     "at": [
+      59,
+      32
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      178,
+      115,
+      4,
+      3
+     ],
+     "at": [
+      68,
+      34
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "smalls_c1_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.1,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    46,
+    0,
+    14,
+    14
+   ],
+   "at": [
+    69,
+    20
+   ],
+   "centre": [
+    74.7,
+    27.3
+   ],
+   "outline": [
+    [
+     -5.7,
+     -5.3
+    ],
+    [
+     -1.7,
+     -7.3
+    ],
+    [
+     2.3,
+     -7.3
+    ],
+    [
+     8.3,
+     -5.3
+    ],
+    [
+     8.3,
+     -2.3
+    ],
+    [
+     5.3,
+     6.7
+    ],
+    [
+     -5.7,
+     6.7
+    ]
+   ],
+   "partIndex": 12,
+   "what": "smalls: strip 1, segment 0",
+   "flap": {
+    "garment": "smalls",
+    "strip": "smalls_c1",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      236,
+      115,
+      3,
+      2
+     ],
+     "at": [
+      73,
+      19
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      193,
+      0,
+      4,
+      13
+     ],
+     "at": [
+      66,
+      22
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      228,
+      105,
+      11,
+      4
+     ],
+     "at": [
+      69,
+      33
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      184,
+      115,
+      2,
+      3
+     ],
+     "at": [
+      82,
+      22
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "smalls_c1_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 4.4,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    104,
+    105,
+    12,
+    8
+   ],
+   "at": [
+    69,
+    34
+   ],
+   "centre": [
+    75.3,
+    37.5
+   ],
+   "outline": [
+    [
+     -6.3,
+     -3.5
+    ],
+    [
+     4.7,
+     -3.5
+    ],
+    [
+     5.7,
+     -1.5
+    ],
+    [
+     5.7,
+     2.5
+    ],
+    [
+     3.7,
+     3.5
+    ],
+    [
+     0.7,
+     4.5
+    ],
+    [
+     -3.3,
+     4.5
+    ],
+    [
+     -6.3,
+     -1.5
+    ]
+   ],
+   "partIndex": 13,
+   "what": "smalls: strip 1, segment 1",
+   "flap": {
+    "garment": "smalls",
+    "strip": "smalls_c1",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j11",
+     "atlas": [
+      252,
+      115,
+      1,
+      2
+     ],
+     "at": [
+      69,
+      34
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      64,
+      115,
+      11,
+      3
+     ],
+     "at": [
+      69,
+      32
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c0_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 9.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    150,
+    0,
+    16,
+    13
+   ],
+   "at": [
+    83,
+    20
+   ],
+   "centre": [
+    92.6,
+    26.3
+   ],
+   "outline": [
+    [
+     -9.6,
+     -4.3
+    ],
+    [
+     -7.6,
+     -5.3
+    ],
+    [
+     -3.6,
+     -6.3
+    ],
+    [
+     6.4,
+     -6.3
+    ],
+    [
+     6.4,
+     6.7
+    ],
+    [
+     -5.6,
+     6.7
+    ],
+    [
+     -9.6,
+     -1.3
+    ]
+   ],
+   "partIndex": 14,
+   "what": "trousers_b: strip 0, segment 0",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c0",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j06",
+     "atlas": [
+      230,
+      115,
+      4,
+      2
+     ],
+     "at": [
+      89,
+      19
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      191,
+      115,
+      1,
+      3
+     ],
+     "at": [
+      83,
+      22
+     ]
+    },
+    {
+     "joint": "j20",
+     "atlas": [
+      200,
+      105,
+      12,
+      4
+     ],
+     "at": [
+      87,
+      32
+     ]
+    },
+    {
+     "joint": "j21",
+     "atlas": [
+      205,
+      0,
+      3,
+      13
+     ],
+     "at": [
+      98,
+      20
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c0_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 9.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    91,
+    0,
+    12,
+    14
+   ],
+   "at": [
+    87,
+    33
+   ],
+   "centre": [
+    92.5,
+    39.8
+   ],
+   "outline": [
+    [
+     -5.5,
+     -6.8
+    ],
+    [
+     6.5,
+     -6.8
+    ],
+    [
+     6.5,
+     -3.8
+    ],
+    [
+     5.5,
+     3.2
+    ],
+    [
+     4.5,
+     7.2
+    ],
+    [
+     -5.5,
+     7.2
+    ]
+   ],
+   "partIndex": 15,
+   "what": "trousers_b: strip 0, segment 1",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c0",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j20",
+     "atlas": [
+      36,
+      115,
+      12,
+      3
+     ],
+     "at": [
+      87,
+      31
+     ]
+    },
+    {
+     "joint": "j22",
+     "atlas": [
+      169,
+      105,
+      10,
+      5
+     ],
+     "at": [
+      87,
+      46
+     ]
+    },
+    {
+     "joint": "j23",
+     "atlas": [
+      241,
+      115,
+      3,
+      2
+     ],
+     "at": [
+      98,
+      33
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c0_r2",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 6.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    229,
+    0,
+    10,
+    11
+   ],
+   "at": [
+    87,
+    47
+   ],
+   "centre": [
+    91.8,
+    52.3
+   ],
+   "outline": [
+    [
+     -4.8,
+     -5.3
+    ],
+    [
+     5.2,
+     -5.3
+    ],
+    [
+     5.2,
+     0.7
+    ],
+    [
+     4.2,
+     5.7
+    ],
+    [
+     -3.8,
+     5.7
+    ],
+    [
+     -4.8,
+     4.7
+    ]
+   ],
+   "partIndex": 16,
+   "what": "trousers_b: strip 0, segment 2",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c0",
+    "row": 2
+   },
+   "edges": [
+    {
+     "joint": "j22",
+     "atlas": [
+      101,
+      115,
+      10,
+      3
+     ],
+     "at": [
+      87,
+      45
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c1_r0",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.7,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    168,
+    0,
+    12,
+    13
+   ],
+   "at": [
+    99,
+    20
+   ],
+   "centre": [
+    104.6,
+    26.6
+   ],
+   "outline": [
+    [
+     -5.6,
+     -6.6
+    ],
+    [
+     5.4,
+     -6.6
+    ],
+    [
+     6.4,
+     4.4
+    ],
+    [
+     6.4,
+     6.4
+    ],
+    [
+     -5.6,
+     6.4
+    ]
+   ],
+   "partIndex": 17,
+   "what": "trousers_b: strip 1, segment 0",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c1",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      220,
+      115,
+      8,
+      2
+     ],
+     "at": [
+      102,
+      19
+     ]
+    },
+    {
+     "joint": "j21",
+     "atlas": [
+      125,
+      0,
+      4,
+      14
+     ],
+     "at": [
+      96,
+      20
+     ]
+    },
+    {
+     "joint": "j24",
+     "atlas": [
+      214,
+      105,
+      12,
+      4
+     ],
+     "at": [
+      99,
+      32
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c1_r1",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 8.7,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    105,
+    0,
+    12,
+    14
+   ],
+   "at": [
+    99,
+    33
+   ],
+   "centre": [
+    105.8,
+    39.6
+   ],
+   "outline": [
+    [
+     -6.8,
+     -6.6
+    ],
+    [
+     5.2,
+     -6.6
+    ],
+    [
+     5.2,
+     7.4
+    ],
+    [
+     -3.8,
+     7.4
+    ],
+    [
+     -5.8,
+     0.4
+    ],
+    [
+     -6.8,
+     -4.6
+    ]
+   ],
+   "partIndex": 18,
+   "what": "trousers_b: strip 1, segment 1",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c1",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j23",
+     "atlas": [
+      6,
+      121,
+      1,
+      2
+     ],
+     "at": [
+      99,
+      33
+     ]
+    },
+    {
+     "joint": "j24",
+     "atlas": [
+      50,
+      115,
+      12,
+      3
+     ],
+     "at": [
+      99,
+      31
+     ]
+    },
+    {
+     "joint": "j25",
+     "atlas": [
+      11,
+      115,
+      9,
+      4
+     ],
+     "at": [
+      102,
+      46
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "trousers_b_c1_r2",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 4.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    241,
+    0,
+    9,
+    9
+   ],
+   "at": [
+    102,
+    47
+   ],
+   "centre": [
+    106.4,
+    51.3
+   ],
+   "outline": [
+    [
+     -4.4,
+     -4.3
+    ],
+    [
+     4.6,
+     -4.3
+    ],
+    [
+     4.6,
+     2.7
+    ],
+    [
+     2.6,
+     4.7
+    ],
+    [
+     -3.4,
+     4.7
+    ],
+    [
+     -4.4,
+     3.7
+    ]
+   ],
+   "partIndex": 19,
+   "what": "trousers_b: strip 1, segment 2",
+   "flap": {
+    "garment": "trousers_b",
+    "strip": "trousers_b_c1",
+    "row": 2
+   },
+   "edges": [
+    {
+     "joint": "j25",
+     "atlas": [
+      146,
+      115,
+      9,
+      3
+     ],
+     "at": [
+      102,
+      45
+     ]
+    }
+   ],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j03",
+   "a": "line",
+   "b": "smalls_c1_r0",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    74.0,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "line",
+   "b": "trousers_a_c0_r0",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    34.0,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "line",
+   "b": "trousers_a_c1_r0",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    42.6,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "smalls_c0_r0",
+   "b": "trousers_a_c1_r0",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 1,
+   "at": [
+    55.0,
+    22.0
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j13",
+   "a": "smalls_c1_r0",
+   "b": "trousers_b_c0_r0",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 1,
+   "at": [
+    82.0,
+    23.0
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j26",
+   "a": "smalls_c0_r0",
+   "b": "line",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    66.1,
+    17.7
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "line",
+   "b": "trousers_b_c0_r0",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 2,
+   "at": [
+    90.5,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "line",
+   "b": "trousers_b_c1_r0",
+   "kind": "pegged",
+   "strength": 0.1,
+   "order": 2,
+   "at": [
+    105.5,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "smalls_c0_r0",
+   "b": "smalls_c1_r0",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    68.0,
+    27.7
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "smalls_c0_r1",
+   "b": "smalls_c1_r1",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    68.0,
+    34.5
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j15",
+   "a": "trousers_a_c0_r0",
+   "b": "trousers_a_c1_r0",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    37.0,
+    26.0
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j17",
+   "a": "trousers_a_c0_r1",
+   "b": "trousers_a_c1_r1",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    37.0,
+    33.5
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j21",
+   "a": "trousers_b_c0_r0",
+   "b": "trousers_b_c1_r0",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    98.0,
+    26.0
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j23",
+   "a": "trousers_b_c0_r1",
+   "b": "trousers_b_c1_r1",
+   "kind": "stitched",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    98.0,
+    33.5
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "line",
+   "b": "post_l",
+   "kind": "tied",
+   "strength": 0.3,
+   "order": 3,
+   "at": [
+    18.0,
+    13.0
+   ],
+   "rapier": "rope",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "line",
+   "b": "post_r",
+   "kind": "tied",
+   "strength": 0.3,
+   "order": 3,
+   "at": [
+    119.0,
+    15.5
+   ],
+   "rapier": "rope",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "smalls_c0_r0",
+   "b": "smalls_c0_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    63.5,
+    33.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j12",
+   "a": "smalls_c1_r0",
+   "b": "smalls_c1_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    74.0,
+    33.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j14",
+   "a": "trousers_a_c0_r0",
+   "b": "trousers_a_c0_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    33.0,
+    32.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j16",
+   "a": "trousers_a_c0_r1",
+   "b": "trousers_a_c0_r2",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    30.0,
+    46.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j18",
+   "a": "trousers_a_c1_r0",
+   "b": "trousers_a_c1_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    43.5,
+    32.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j19",
+   "a": "trousers_a_c1_r1",
+   "b": "trousers_a_c1_r2",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    45.5,
+    46.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j20",
+   "a": "trousers_b_c0_r0",
+   "b": "trousers_b_c0_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    92.5,
+    32.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j22",
+   "a": "trousers_b_c0_r1",
+   "b": "trousers_b_c0_r2",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    91.5,
+    46.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j24",
+   "a": "trousers_b_c1_r0",
+   "b": "trousers_b_c1_r1",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    104.5,
+    32.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  },
+  {
+   "id": "j25",
+   "a": "trousers_b_c1_r1",
+   "b": "trousers_b_c1_r2",
+   "kind": "hung",
+   "strength": 1.0,
+   "order": 9,
+   "at": [
+    106.0,
+    46.0
+   ],
+   "rapier": "revolute",
+   "hp": 100,
+   "radius": 8,
+   "note": "limp revolute: the cloth bends here"
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j04",
+   "kind": "tear",
+   "at": [
+    31,
+    19
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "tear",
+   "at": [
+    36,
+    19
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "tear",
+   "at": [
+    38,
+    19
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "tear",
+   "at": [
+    46,
+    19
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "tear",
+   "at": [
+    55,
+    21
+   ]
+  },
+  {
+   "joint": "j13",
+   "kind": "tear",
+   "at": [
+    82,
+    22
+   ]
+  }
+ ],
+ "notes": [
+  "Cloth = chains of small bodies on limp revolute joints (the model's own joint class). ASK FOR ACCOUNT C: a cheap verlet strip per `flap.strip` (points at segment joints, the bitmap skinned along it) would flap better and cost less than bodies."
+ ]
+}

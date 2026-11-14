@@ -1,0 +1,316 @@
+{
+ "note": "key caps for the 360-tall UI canvas; frames: up, down (sunk 1 px); Latin labels in a 5x7 font (gate 2)",
+ "h": 18,
+ "caps": {
+  "Space": {
+   "file": "keys360/Space.png",
+   "w": 42,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Enter": {
+   "file": "keys360/Enter.png",
+   "w": 38,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Backspace": {
+   "file": "keys360/Backspace.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyP": {
+   "file": "keys360/KeyP.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyR": {
+   "file": "keys360/KeyR.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "F3": {
+   "file": "keys360/F3.png",
+   "w": 19,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowLeft": {
+   "file": "keys360/ArrowLeft.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowRight": {
+   "file": "keys360/ArrowRight.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowUp": {
+   "file": "keys360/ArrowUp.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowDown": {
+   "file": "keys360/ArrowDown.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Slash": {
+   "file": "keys360/Slash.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Period": {
+   "file": "keys360/Period.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Comma": {
+   "file": "keys360/Comma.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad0": {
+   "file": "keys360/Numpad0.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad1": {
+   "file": "keys360/Numpad1.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad2": {
+   "file": "keys360/Numpad2.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Escape": {
+   "file": "keys360/Escape.png",
+   "w": 25,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyA": {
+   "file": "keys360/KeyA.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyD": {
+   "file": "keys360/KeyD.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyW": {
+   "file": "keys360/KeyW.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyS": {
+   "file": "keys360/KeyS.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyJ": {
+   "file": "keys360/KeyJ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyK": {
+   "file": "keys360/KeyK.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyL": {
+   "file": "keys360/KeyL.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyF": {
+   "file": "keys360/KeyF.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyG": {
+   "file": "keys360/KeyG.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyZ": {
+   "file": "keys360/KeyZ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyX": {
+   "file": "keys360/KeyX.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyC": {
+   "file": "keys360/KeyC.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyE": {
+   "file": "keys360/KeyE.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyQ": {
+   "file": "keys360/KeyQ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  }
+ }
+}

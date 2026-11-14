@@ -1,0 +1,351 @@
+{
+ "pa_horn": {
+  "states": {
+   "intact": "props/pa_horn_mounted.png",
+   "damaged": "props/pa_horn_dangling.png",
+   "broken": "props/pa_horn_silent.png"
+  },
+  "w": 65,
+  "h": 72,
+  "cells": [
+   2.0312,
+   2.25
+  ],
+  "anchor": [
+   0.5,
+   0.0
+  ],
+  "note": "anchor = the top centre of the assembly: the middle of pixel column 32, row 0 (under the girder, or where the wire ends). Every state is a strip of `frames` frames.",
+  "z": -3,
+  "facing": "right",
+  "frames": 6,
+  "fps": 6,
+  "hangs": false,
+  "hangsNote": "its anchor IS the top centre and it hangs under matter, but do not sway it by code (lifeOf turns `hangs` props about their anchor): the girder plate is bolted, and its life is drawn in the frames. The wire variant may be swayed with its wire, like the lamp.",
+  "render": {
+   "shadow": "baked",
+   "lampTint": true,
+   "hazeDepth": 0.2,
+   "pxScale": 1,
+   "emissive": "the red ON AIR lamp on the can and the overlays rings and sparks (draw those unlit, over the scene)"
+  },
+  "debris": [
+   "debris/pa_horn_0.png",
+   "debris/pa_horn_1.png",
+   "debris/pa_horn_2.png",
+   "debris/pa_horn_3.png"
+  ],
+  "debrisNormals": [
+   "debris/pa_horn_0_n.png",
+   "debris/pa_horn_1_n.png",
+   "debris/pa_horn_2_n.png",
+   "debris/pa_horn_3_n.png"
+  ],
+  "debrisWhat": [
+   "cone_half",
+   "driver_cap",
+   "bracket_bit",
+   "wire_end"
+  ],
+  "normals": {
+   "intact": "props/pa_horn_mounted_n.png",
+   "damaged": "props/pa_horn_dangling_n.png",
+   "broken": "props/pa_horn_silent_n.png",
+   "convention": "OpenGL (green = up)"
+  },
+  "faces": {
+   "mounted": {
+    "file": "props/pa_horn_mounted.png",
+    "normal": "props/pa_horn_mounted_n.png",
+    "frames": 6,
+    "fps": 6,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_mounted_wire.png",
+     "normal": "props/pa_horn_mounted_wire_n.png"
+    },
+    "note": "Dressing.face mounted: the idle loop (lamp blinks, tag flutters, strap sways, the loose nut drops a thread, one nod)"
+   },
+   "blaring": {
+    "file": "props/pa_horn_blaring.png",
+    "normal": "props/pa_horn_blaring_n.png",
+    "frames": 8,
+    "fps": 12,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_blaring_wire.png",
+     "normal": "props/pa_horn_blaring_wire_n.png"
+    },
+    "overlay": "rings",
+    "withRings": {
+     "file": "props/pa_horn_blaring_rings.png",
+     "normal": "props/pa_horn_blaring_rings_n.png",
+     "w": 97,
+     "h": 72,
+     "anchor": [
+      0.3351,
+      0.0
+     ],
+     "wire": {
+      "file": "props/pa_horn_blaring_rings_wire.png",
+      "normal": "props/pa_horn_blaring_rings_wire_n.png"
+     }
+    },
+    "note": "played while it announces, in mounted: the horn frames WITHOUT rings; draw overlay `rings` over the scene on the same anchor, frame for frame"
+   },
+   "rings": {
+    "file": "props/pa_horn_rings.png",
+    "normal": "props/pa_horn_rings_n.png",
+    "frames": 8,
+    "fps": 12,
+    "loop": true,
+    "w": 97,
+    "h": 72,
+    "anchor": [
+     0.3351,
+     0.0
+    ],
+    "note": "OVERLAY, no shadow, alpha 0/255, two tones: the sound rings of `blaring`, in a wider frame on the same anchor; mirror it with the horn"
+   },
+   "dangling": {
+    "file": "props/pa_horn_dangling.png",
+    "normal": "props/pa_horn_dangling_n.png",
+    "frames": 6,
+    "fps": 6,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_dangling_wire.png",
+     "normal": "props/pa_horn_dangling_wire_n.png"
+    },
+    "note": "Dressing.face dangling: it hangs mouth-up by the cable in its throat and swings; the lamp still blinks"
+   },
+   "dangling_blaring": {
+    "file": "props/pa_horn_dangling_blaring.png",
+    "normal": "props/pa_horn_dangling_blaring_n.png",
+    "frames": 6,
+    "fps": 6,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_dangling_blaring_wire.png",
+     "normal": "props/pa_horn_dangling_blaring_wire_n.png"
+    },
+    "overlay": "rings_dangling",
+    "sync": "dangling",
+    "withRings": {
+     "file": "props/pa_horn_dangling_blaring_rings.png",
+     "normal": "props/pa_horn_dangling_blaring_rings_n.png",
+     "w": 65,
+     "h": 72,
+     "anchor": [
+      0.5,
+      0.0
+     ],
+     "wire": {
+      "file": "props/pa_horn_dangling_blaring_rings_wire.png",
+      "normal": "props/pa_horn_dangling_blaring_rings_wire_n.png"
+     }
+    },
+    "note": "it keeps talking, quieter: the same swing frame for frame as `dangling` (keep the frame clock when switching), a jerk on each syllable; overlay `rings_dangling`"
+   },
+   "rings_dangling": {
+    "file": "props/pa_horn_rings_dangling.png",
+    "normal": "props/pa_horn_rings_dangling_n.png",
+    "frames": 6,
+    "fps": 6,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "note": "OVERLAY: the gargle: small cups of sound bubbling up out of the upturned mouth, flattening under the mount"
+   },
+   "silent": {
+    "file": "props/pa_horn_silent.png",
+    "normal": "props/pa_horn_silent_n.png",
+    "frames": 6,
+    "fps": 6,
+    "loop": true,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_silent_wire.png",
+     "normal": "props/pa_horn_silent_wire_n.png"
+    },
+    "note": "Dressing.face silent: split, the cap blown off, the lamp out; only the pulled coil sways"
+   },
+   "sparking": {
+    "file": "props/pa_horn_sparking.png",
+    "normal": "props/pa_horn_sparking_n.png",
+    "frames": 5,
+    "fps": 12,
+    "loop": false,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "wire": {
+     "file": "props/pa_horn_sparking_wire.png",
+     "normal": "props/pa_horn_sparking_wire_n.png"
+    },
+    "overlay": "sparks",
+    "note": "play ONCE when it breaks and now and then after (then back to `silent`): silent with its sparks baked in"
+   },
+   "sparks": {
+    "file": "props/pa_horn_sparks.png",
+    "normal": "props/pa_horn_sparks_n.png",
+    "frames": 5,
+    "fps": 12,
+    "loop": false,
+    "w": 65,
+    "h": 72,
+    "anchor": [
+     0.5,
+     0.0
+    ],
+    "note": "OVERLAY: the sparks alone (3 hard tones + the dying red), for a renderer that keeps `silent` on and adds them unlit"
+   }
+  },
+  "mounts": {
+   "girder": {
+    "when": "cord == 0",
+    "files": "the `file` of each face",
+    "what": "a clamp plate bolted under a girder; the rows above the anchor are hidden by the catwalk edge the game draws over them"
+   },
+   "wire": {
+    "when": "cord > 0",
+    "files": "the `wire.file` of each face",
+    "what": "a hanger whose top is a 5 px wire clamp centred on the anchor column (cols 30-34, row 0); the wire itself is the cables builder's"
+   }
+  },
+  "hit": "level.json fixtures.pa_horn: 0.9 x 0.9 cells under the anchor = px x 18-46, y 0-29 of a frame. Mounted, the clamp, the throat and half the bell lie in it; dangling, the upturned mouth and the upper bell do.",
+  "places": [
+   {
+    "x": 25.5,
+    "y": 13,
+    "cord": 0,
+    "mount": "girder",
+    "use": "as drawn",
+    "why": "the lamp at 21.5 lights it from the left, as the baked key",
+    "nearestLamps": [
+     {
+      "dist": 4.0,
+      "x": 21.5,
+      "y": 13,
+      "cord": 0
+     },
+     {
+      "dist": 8.1,
+      "x": 33.5,
+      "y": 14,
+      "cord": 10
+     }
+    ]
+   },
+   {
+    "x": 84.5,
+    "y": 13,
+    "cord": 11,
+    "mount": "wire",
+    "use": "mirror",
+    "why": "no lamp within 6 cells; the nearest (91.5) is to its RIGHT: mirror it (it then faces the king as he comes) or let the normal map light it",
+    "nearestLamps": [
+     {
+      "dist": 7.1,
+      "x": 91.5,
+      "y": 14,
+      "cord": 10
+     },
+     {
+      "dist": 14.0,
+      "x": 70.5,
+      "y": 13,
+      "cord": 11
+     }
+    ]
+   },
+   {
+    "x": 119.5,
+    "y": 13,
+    "cord": 0,
+    "mount": "girder",
+    "use": "as drawn",
+    "why": "lamps on both sides (116.5 and 121.5): either way",
+    "nearestLamps": [
+     {
+      "dist": 2.0,
+      "x": 121.5,
+      "y": 13,
+      "cord": 0
+     },
+     {
+      "dist": 3.0,
+      "x": 116.5,
+      "y": 13,
+      "cord": 0
+     }
+    ]
+   },
+   {
+    "x": 143.5,
+    "y": 16,
+    "cord": 8,
+    "mount": "wire",
+    "use": "as drawn",
+    "why": "the lamp at 140.5 hangs BELOW and to the left of it (its bulb about 2.7 cells lower): the baked key is from above, so here the normal map should carry the under-light",
+    "nearestLamps": [
+     {
+      "dist": 3.6,
+      "x": 140.5,
+      "y": 14,
+      "cord": 10
+     },
+     {
+      "dist": 5.8,
+      "x": 148.5,
+      "y": 13,
+      "cord": 0
+     }
+    ]
+   }
+  ],
+  "light": "ONE set, lit from above-left (the level's key) with one step of teal bounce. For a place whose lamp is on the other side, mirror the prop (scale.x = -1: the horn then faces left) and flip the normal map's red.",
+  "character": "The regime's mouth: a parade horn two sizes too big for its bracket, its own cable shoved down its throat and taped to its lip. Idle it hums with self-importance; speaking it lunges chin-up at every syllable; shot, it hangs mouth-up by that cable and goes on announcing into the ceiling: a gargle.",
+  "palette": {
+   "colours": 23,
+   "file": "art/level/dressing/pa_horn/tools/px.py (PAL)"
+  },
+  "builder": "account D, art/level/dressing/pa_horn/tools/build.py, 12.11.2026 03:33"
+ }
+}

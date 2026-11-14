@@ -1,0 +1,4 @@
+Stand-ins for the main screen's opening (src/content/main_sound.json), until the five effects made for it land in
+public/assets/audio/ui/mainscreen/ (they take over by name; nothing else changes). Copied unchanged from the project's
+own trailer hits, docs/trailer/stems/hits/*.ogg (manifest: docs/trailer/stems/manifest.json, made 12.11, synthesised
+hits measured there). No new generation, nothing downloaded.

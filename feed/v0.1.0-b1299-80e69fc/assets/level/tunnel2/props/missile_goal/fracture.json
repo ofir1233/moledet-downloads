@@ -1,0 +1,2123 @@
+{
+ "id": "missile_goal",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "The regime's pride, polished for the parade camera and hollow inside: its middle ring buckles while it still stands, it tips like a felled tree and breaks at that ring, and the fins tear off when it hits the floor.",
+ "source": {
+  "intact": "props/missile_goal_intact.png",
+  "crop": null,
+  "w": 194,
+  "h": 447,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "missile_goal_col.png",
+   "n": "missile_goal_n.png",
+   "mat": "missile_goal_mat.png",
+   "parts": "missile_goal_parts.png",
+   "grain": "missile_goal_grain.png",
+   "inside": "missile_goal_inside.png",
+   "under": {
+    "col": "missile_goal_under_col.png",
+    "n": "missile_goal_under_n.png",
+    "mat": "missile_goal_under_mat.png",
+    "parts": "missile_goal_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 strapped: the umbilical arm lets go",
+  "2 bolted: the service ladder falls",
+  "buckle: the middle ring crumples while it stands (state buckled.png: sags 3 px, leans right, a lit and a dark crease)",
+  "3 welded: it tips like a felled tree and tears at that ring into two sections that keep their shape",
+  "4 bolted: the lower section leaves the stand",
+  "5 welded: the fin tears off on the floor",
+  "9 welded: nose, warhead, guidance and tanks stay joined (sections keep their shape)"
+ ],
+ "buckle": {
+  "ring": 316,
+  "moves": [
+   "nose",
+   "warhead",
+   "guidance",
+   "tank_upper"
+  ],
+  "drop": 2,
+  "lean": 0.0,
+  "x0": 56,
+  "x1": 94,
+  "state": "buckled.png"
+ },
+ "sections": {
+  "upper": [
+   "nose",
+   "warhead",
+   "guidance",
+   "tank_upper"
+  ],
+  "lower": [
+   "tank_lower",
+   "engine",
+   "fin_l"
+  ],
+  "ring_y": 316,
+  "note": "gag 5 (COMEDY_BIBLE): the finale missile rises, bonks, hovers and tips like a tree as ONE body (all joints held) and sleds; if the player destroys it instead, it buckles at the same ring (buckled.png), tips, and parts into exactly these two sections."
+ },
+ "states": {
+  "standing": "sprite",
+  "damaged": "damaged.png: dents and a crack at the middle ring",
+  "buckled": "buckled.png",
+  "burning": "+ FX",
+  "destroyed": "orders 1-5"
+ },
+ "pieces": [
+  {
+   "id": "stand",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 641.3,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    257,
+    94,
+    17
+   ],
+   "at": [
+    50,
+    425
+   ],
+   "centre": [
+    92.3,
+    433.7
+   ],
+   "outline": [
+    [
+     -42.3,
+     -3.7
+    ],
+    [
+     -37.3,
+     -7.7
+    ],
+    [
+     -13.3,
+     -8.7
+    ],
+    [
+     -0.3,
+     -8.7
+    ],
+    [
+     49.7,
+     -6.7
+    ],
+    [
+     51.7,
+     5.3
+    ],
+    [
+     51.7,
+     7.3
+    ],
+    [
+     46.7,
+     8.3
+    ],
+    [
+     33.7,
+     8.3
+    ],
+    [
+     -42.3,
+     7.3
+    ]
+   ],
+   "partIndex": 1,
+   "what": "the launch stand",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      185,
+      257,
+      47,
+      3
+     ],
+     "at": [
+      55,
+      426
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      96,
+      276,
+      34,
+      3
+     ],
+     "at": [
+      102,
+      426
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "nose",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 541.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    35,
+    151,
+    27,
+    55
+   ],
+   "at": [
+    62,
+    122
+   ],
+   "centre": [
+    75.7,
+    155.1
+   ],
+   "outline": [
+    [
+     -13.7,
+     17.9
+    ],
+    [
+     -9.7,
+     -10.1
+    ],
+    [
+     -7.7,
+     -18.1
+    ],
+    [
+     -1.7,
+     -33.1
+    ],
+    [
+     1.3,
+     -33.1
+    ],
+    [
+     4.3,
+     -29.1
+    ],
+    [
+     8.3,
+     -15.1
+    ],
+    [
+     12.3,
+     5.9
+    ],
+    [
+     13.3,
+     21.9
+    ],
+    [
+     -13.7,
+     21.9
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j14",
+     "atlas": [
+      126,
+      281,
+      27,
+      2
+     ],
+     "at": [
+      62,
+      175
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "warhead",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 547.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    128,
+    208,
+    37,
+    33
+   ],
+   "at": [
+    56,
+    176
+   ],
+   "centre": [
+    75.4,
+    193.7
+   ],
+   "outline": [
+    [
+     -19.4,
+     11.3
+    ],
+    [
+     -13.4,
+     -16.7
+    ],
+    [
+     0.6,
+     -17.7
+    ],
+    [
+     10.6,
+     -17.7
+    ],
+    [
+     13.6,
+     -16.7
+    ],
+    [
+     14.6,
+     -11.7
+    ],
+    [
+     17.6,
+     7.3
+    ],
+    [
+     17.6,
+     15.3
+    ],
+    [
+     -19.4,
+     15.3
+    ]
+   ],
+   "partIndex": 3,
+   "emit": "warhead",
+   "edges": [
+    {
+     "joint": "j10",
+     "atlas": [
+      87,
+      281,
+      37,
+      2
+     ],
+     "at": [
+      56,
+      208
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      113,
+      257,
+      2,
+      7
+     ],
+     "at": [
+      91,
+      202
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      200,
+      276,
+      27,
+      3
+     ],
+     "at": [
+      62,
+      175
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "guidance",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 907.0,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    64,
+    151,
+    37,
+    54
+   ],
+   "at": [
+    56,
+    209
+   ],
+   "centre": [
+    75.0,
+    235.4
+   ],
+   "outline": [
+    [
+     -19.0,
+     -26.4
+    ],
+    [
+     18.0,
+     -26.4
+    ],
+    [
+     18.0,
+     -3.4
+    ],
+    [
+     15.0,
+     25.6
+    ],
+    [
+     13.0,
+     26.6
+    ],
+    [
+     9.0,
+     27.6
+    ],
+    [
+     2.0,
+     27.6
+    ],
+    [
+     -17.0,
+     26.6
+    ],
+    [
+     -19.0,
+     -22.4
+    ]
+   ],
+   "partIndex": 4,
+   "emit": "sparks",
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      96,
+      257,
+      2,
+      17
+     ],
+     "at": [
+      91,
+      209
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      117,
+      257,
+      32,
+      5
+     ],
+     "at": [
+      58,
+      259
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      48,
+      281,
+      37,
+      2
+     ],
+     "at": [
+      56,
+      208
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "tank_upper",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 974.1,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    171,
+    0,
+    35,
+    57
+   ],
+   "at": [
+    58,
+    260
+   ],
+   "centre": [
+    74.2,
+    289.0
+   ],
+   "outline": [
+    [
+     -16.2,
+     -27.0
+    ],
+    [
+     -5.2,
+     -29.0
+    ],
+    [
+     -4.2,
+     -29.0
+    ],
+    [
+     15.8,
+     -28.0
+    ],
+    [
+     18.8,
+     -23.0
+    ],
+    [
+     18.8,
+     -16.0
+    ],
+    [
+     15.8,
+     27.0
+    ],
+    [
+     12.8,
+     28.0
+    ],
+    [
+     -9.2,
+     28.0
+    ],
+    [
+     -16.2,
+     27.0
+    ]
+   ],
+   "partIndex": 5,
+   "emit": "fuel",
+   "edges": [
+    {
+     "joint": "j09",
+     "atlas": [
+      151,
+      257,
+      32,
+      4
+     ],
+     "at": [
+      58,
+      260
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      241,
+      281,
+      2,
+      1
+     ],
+     "at": [
+      91,
+      266
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      166,
+      276,
+      32,
+      3
+     ],
+     "at": [
+      58,
+      315
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      208,
+      0,
+      35,
+      57
+     ],
+     "at": [
+      58,
+      260
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.88,
+      "ang": 5,
+      "squeeze": 0.85
+     }
+    }
+   ]
+  },
+  {
+   "id": "tank_lower",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 858.0,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    167,
+    151,
+    46,
+    47
+   ],
+   "at": [
+    58,
+    316
+   ],
+   "centre": [
+    75.6,
+    340.5
+   ],
+   "outline": [
+    [
+     -17.6,
+     -24.5
+    ],
+    [
+     14.4,
+     -24.5
+    ],
+    [
+     28.4,
+     11.5
+    ],
+    [
+     28.4,
+     21.5
+    ],
+    [
+     -7.6,
+     22.5
+    ],
+    [
+     -11.6,
+     22.5
+    ],
+    [
+     -17.6,
+     21.5
+    ]
+   ],
+   "partIndex": 6,
+   "emit": "fuel",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      48,
+      276,
+      46,
+      3
+     ],
+     "at": [
+      58,
+      360
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      100,
+      257,
+      2,
+      9
+     ],
+     "at": [
+      102,
+      352
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      230,
+      281,
+      9,
+      1
+     ],
+     "at": [
+      93,
+      353
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      132,
+      276,
+      32,
+      3
+     ],
+     "at": [
+      58,
+      315
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      0,
+      208,
+      46,
+      47
+     ],
+     "at": [
+      58,
+      316
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.12,
+      "ang": 5,
+      "squeeze": 0.85,
+      "side": -1
+     }
+    }
+   ]
+  },
+  {
+   "id": "engine",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 1513.1,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    64,
+    0,
+    48,
+    66
+   ],
+   "at": [
+    56,
+    361
+   ],
+   "centre": [
+    81.1,
+    392.5
+   ],
+   "outline": [
+    [
+     -25.1,
+     -7.5
+    ],
+    [
+     -23.1,
+     -30.5
+    ],
+    [
+     -12.1,
+     -31.5
+    ],
+    [
+     21.9,
+     -31.5
+    ],
+    [
+     22.9,
+     -30.5
+    ],
+    [
+     22.9,
+     33.5
+    ],
+    [
+     18.9,
+     34.5
+    ],
+    [
+     -24.1,
+     34.5
+    ],
+    [
+     -25.1,
+     23.5
+    ]
+   ],
+   "partIndex": 7,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      122,
+      208,
+      4,
+      38
+     ],
+     "at": [
+      55,
+      378
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      167,
+      0,
+      2,
+      60
+     ],
+     "at": [
+      102,
+      362
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      0,
+      281,
+      46,
+      2
+     ],
+     "at": [
+      58,
+      424
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      0,
+      276,
+      46,
+      3
+     ],
+     "at": [
+      58,
+      361
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "fin_l",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 167.8,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    94,
+    208,
+    10,
+    41
+   ],
+   "at": [
+    48,
+    378
+   ],
+   "centre": [
+    52.5,
+    400.8
+   ],
+   "outline": [
+    [
+     -4.5,
+     -12.8
+    ],
+    [
+     -2.5,
+     -15.8
+    ],
+    [
+     2.5,
+     -21.8
+    ],
+    [
+     3.5,
+     -22.8
+    ],
+    [
+     4.5,
+     -22.8
+    ],
+    [
+     5.5,
+     -20.8
+    ],
+    [
+     5.5,
+     -0.8
+    ],
+    [
+     4.5,
+     16.2
+    ],
+    [
+     2.5,
+     18.2
+    ],
+    [
+     -4.5,
+     18.2
+    ]
+   ],
+   "partIndex": 8,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      117,
+      208,
+      3,
+      39
+     ],
+     "at": [
+      55,
+      378
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      106,
+      208,
+      9,
+      40
+     ],
+     "at": [
+      48,
+      379
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 12,
+      "squeeze": 0.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "mast",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 899.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    0,
+    21,
+    149
+   ],
+   "at": [
+    93,
+    203
+   ],
+   "centre": [
+    99.7,
+    293.6
+   ],
+   "outline": [
+    [
+     -6.7,
+     -90.6
+    ],
+    [
+     -5.7,
+     -90.6
+    ],
+    [
+     -3.7,
+     -87.6
+    ],
+    [
+     6.3,
+     -40.6
+    ],
+    [
+     8.3,
+     -26.6
+    ],
+    [
+     14.3,
+     56.4
+    ],
+    [
+     14.3,
+     58.4
+    ],
+    [
+     -6.7,
+     58.4
+    ]
+   ],
+   "partIndex": 9,
+   "what": "the umbilical arm",
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      208,
+      281,
+      9,
+      1
+     ],
+     "at": [
+      104,
+      350
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      204,
+      208,
+      3,
+      25
+     ],
+     "at": [
+      93,
+      208
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      219,
+      281,
+      9,
+      1
+     ],
+     "at": [
+      93,
+      350
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      108,
+      257,
+      3,
+      7
+     ],
+     "at": [
+      93,
+      265
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      168,
+      281,
+      1,
+      2
+     ],
+     "at": [
+      94,
+      205
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "gantry",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 911.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    23,
+    0,
+    39,
+    75
+   ],
+   "at": [
+    104,
+    352
+   ],
+   "centre": [
+    123.1,
+    388.4
+   ],
+   "outline": [
+    [
+     -19.1,
+     -36.4
+    ],
+    [
+     -8.1,
+     -36.4
+    ],
+    [
+     14.9,
+     -30.4
+    ],
+    [
+     19.9,
+     -25.4
+    ],
+    [
+     19.9,
+     -4.4
+    ],
+    [
+     18.9,
+     38.6
+    ],
+    [
+     -19.1,
+     38.6
+    ]
+   ],
+   "partIndex": 10,
+   "what": "the service ladder",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      114,
+      0,
+      3,
+      66
+     ],
+     "at": [
+      104,
+      361
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      155,
+      281,
+      11,
+      2
+     ],
+     "at": [
+      104,
+      352
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      171,
+      281,
+      35,
+      1
+     ],
+     "at": [
+      104,
+      425
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      104,
+      257,
+      2,
+      8
+     ],
+     "at": [
+      105,
+      352
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "nose_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 466.4,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    103,
+    151,
+    25,
+    53
+   ],
+   "at": [
+    63,
+    123
+   ],
+   "centre": [
+    75.7,
+    155.2
+   ],
+   "outline": [
+    [
+     -12.7,
+     17.8
+    ],
+    [
+     -8.7,
+     -10.2
+    ],
+    [
+     -6.7,
+     -18.2
+    ],
+    [
+     -2.7,
+     -29.2
+    ],
+    [
+     1.3,
+     -32.2
+    ],
+    [
+     3.3,
+     -29.2
+    ],
+    [
+     7.3,
+     -15.2
+    ],
+    [
+     11.3,
+     5.8
+    ],
+    [
+     12.3,
+     20.8
+    ],
+    [
+     -12.7,
+     20.8
+    ]
+   ],
+   "partIndex": 11,
+   "what": "STAND-IN: the inside of nose",
+   "inner_of": "nose",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "warhead_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 479.6,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    167,
+    208,
+    35,
+    31
+   ],
+   "at": [
+    57,
+    177
+   ],
+   "centre": [
+    75.4,
+    193.7
+   ],
+   "outline": [
+    [
+     -18.4,
+     11.3
+    ],
+    [
+     -13.4,
+     -11.7
+    ],
+    [
+     -12.4,
+     -15.7
+    ],
+    [
+     0.6,
+     -16.7
+    ],
+    [
+     10.6,
+     -16.7
+    ],
+    [
+     12.6,
+     -15.7
+    ],
+    [
+     13.6,
+     -11.7
+    ],
+    [
+     16.6,
+     7.3
+    ],
+    [
+     16.6,
+     14.3
+    ],
+    [
+     -18.4,
+     14.3
+    ]
+   ],
+   "partIndex": 12,
+   "what": "painted from the Host sheet level2_fracture_goal_missile_insides (1177, 144, 1573, 380): the inside of warhead",
+   "inner_of": "warhead",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "guidance_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 806.9,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    130,
+    151,
+    35,
+    52
+   ],
+   "at": [
+    57,
+    210
+   ],
+   "centre": [
+    75.1,
+    235.6
+   ],
+   "outline": [
+    [
+     -18.1,
+     -25.6
+    ],
+    [
+     16.9,
+     -25.6
+    ],
+    [
+     16.9,
+     -5.6
+    ],
+    [
+     13.9,
+     24.4
+    ],
+    [
+     12.9,
+     25.4
+    ],
+    [
+     8.9,
+     26.4
+    ],
+    [
+     1.9,
+     26.4
+    ],
+    [
+     -16.1,
+     25.4
+    ],
+    [
+     -18.1,
+     -23.6
+    ]
+   ],
+   "partIndex": 13,
+   "what": "painted from the Host sheet level2_fracture_goal_missile_insides (1985, 123, 2408, 375): the inside of guidance",
+   "inner_of": "guidance",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "tank_upper_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 878.9,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    0,
+    151,
+    33,
+    55
+   ],
+   "at": [
+    59,
+    261
+   ],
+   "centre": [
+    74.1,
+    289.0
+   ],
+   "outline": [
+    [
+     -15.1,
+     -26.0
+    ],
+    [
+     -5.1,
+     -28.0
+    ],
+    [
+     -4.1,
+     -28.0
+    ],
+    [
+     14.9,
+     -27.0
+    ],
+    [
+     17.9,
+     -22.0
+    ],
+    [
+     17.9,
+     -17.0
+    ],
+    [
+     14.9,
+     26.0
+    ],
+    [
+     12.9,
+     27.0
+    ],
+    [
+     -9.1,
+     27.0
+    ],
+    [
+     -15.1,
+     26.0
+    ]
+   ],
+   "partIndex": 14,
+   "what": "STAND-IN: the inside of tank_upper",
+   "inner_of": "tank_upper",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "tank_lower_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 754.1,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    48,
+    208,
+    44,
+    45
+   ],
+   "at": [
+    59,
+    317
+   ],
+   "centre": [
+    75.2,
+    340.2
+   ],
+   "outline": [
+    [
+     -16.2,
+     -23.2
+    ],
+    [
+     13.8,
+     -23.2
+    ],
+    [
+     27.8,
+     12.8
+    ],
+    [
+     27.8,
+     19.8
+    ],
+    [
+     25.8,
+     20.8
+    ],
+    [
+     -7.2,
+     21.8
+    ],
+    [
+     -11.2,
+     21.8
+    ],
+    [
+     -16.2,
+     20.8
+    ]
+   ],
+   "partIndex": 15,
+   "what": "STAND-IN: the inside of tank_lower",
+   "inner_of": "tank_lower",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "engine_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 1334.3,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    119,
+    0,
+    46,
+    64
+   ],
+   "at": [
+    57,
+    362
+   ],
+   "centre": [
+    81.1,
+    391.7
+   ],
+   "outline": [
+    [
+     -24.1,
+     -6.7
+    ],
+    [
+     -22.1,
+     -28.7
+    ],
+    [
+     -12.1,
+     -29.7
+    ],
+    [
+     21.9,
+     -29.7
+    ],
+    [
+     21.9,
+     33.3
+    ],
+    [
+     18.9,
+     34.3
+    ],
+    [
+     -20.1,
+     34.3
+    ],
+    [
+     -24.1,
+     23.3
+    ]
+   ],
+   "partIndex": 16,
+   "what": "STAND-IN: the inside of engine",
+   "inner_of": "engine",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j05",
+   "a": "gantry",
+   "b": "mast",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    109.1,
+    352.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "guidance",
+   "b": "mast",
+   "kind": "strapped",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    92.0,
+    221.6
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "mast",
+   "b": "tank_lower",
+   "kind": "strapped",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    98.0,
+    351.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "mast",
+   "b": "tank_upper",
+   "kind": "strapped",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    93.0,
+    269.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j13",
+   "a": "mast",
+   "b": "warhead",
+   "kind": "strapped",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    93.0,
+    205.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "engine",
+   "b": "gantry",
+   "kind": "bolted",
+   "strength": 0.35,
+   "order": 2,
+   "at": [
+    103.0,
+    393.5
+   ],
+   "rapier": "fixed",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "gantry",
+   "b": "stand",
+   "kind": "bolted",
+   "strength": 0.35,
+   "order": 2,
+   "at": [
+    123.3,
+    426.0
+   ],
+   "rapier": "fixed",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "gantry",
+   "b": "tank_lower",
+   "kind": "bolted",
+   "strength": 0.35,
+   "order": 2,
+   "at": [
+    104.0,
+    356.5
+   ],
+   "rapier": "fixed",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j15",
+   "a": "tank_lower",
+   "b": "tank_upper",
+   "kind": "welded",
+   "strength": 0.5,
+   "order": 3,
+   "at": [
+    73.5,
+    316.6
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8,
+   "note": "the middle ring: buckles first (buckled.png), then tears"
+  },
+  {
+   "id": "j03",
+   "a": "engine",
+   "b": "stand",
+   "kind": "bolted",
+   "strength": 0.6,
+   "order": 4,
+   "at": [
+    80.0,
+    425.1
+   ],
+   "rapier": "fixed",
+   "hp": 60,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "engine",
+   "b": "fin_l",
+   "kind": "welded",
+   "strength": 0.4,
+   "order": 5,
+   "at": [
+    56.6,
+    396.5
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8,
+   "note": "fails on the ground impact"
+  },
+  {
+   "id": "j04",
+   "a": "engine",
+   "b": "tank_lower",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    79.8,
+    361.9
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "guidance",
+   "b": "tank_upper",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    73.5,
+    260.9
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "guidance",
+   "b": "warhead",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    74.0,
+    209.0
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j14",
+   "a": "nose",
+   "b": "warhead",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    75.0,
+    175.6
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j16",
+   "a": "nose_in",
+   "b": "nose",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    75.7,
+    155.2
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j17",
+   "a": "warhead_in",
+   "b": "warhead",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    75.4,
+    193.7
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j18",
+   "a": "guidance_in",
+   "b": "guidance",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    75.1,
+    235.6
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j19",
+   "a": "tank_upper_in",
+   "b": "tank_upper",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    74.1,
+    289.0
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j20",
+   "a": "tank_lower_in",
+   "b": "tank_lower",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    75.2,
+    340.2
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j21",
+   "a": "engine_in",
+   "b": "engine",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    81.1,
+    391.7
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    103,
+    362
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "bolt",
+   "at": [
+    103,
+    368
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    103,
+    374
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    103,
+    380
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "bolt",
+   "at": [
+    103,
+    392
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "bolt",
+   "at": [
+    103,
+    398
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    103,
+    404
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "bolt",
+   "at": [
+    103,
+    410
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    103,
+    422
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    104,
+    352
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    113,
+    352
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "lift",
+   "at": [
+    104,
+    426
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "lift",
+   "at": [
+    110,
+    426
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "lift",
+   "at": [
+    131,
+    426
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "bolt",
+   "at": [
+    137,
+    426
+   ]
+  },
+  {
+   "joint": "j07",
+   "kind": "lift",
+   "at": [
+    104,
+    352
+   ]
+  },
+  {
+   "joint": "j07",
+   "kind": "bolt",
+   "at": [
+    104,
+    358
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "lift",
+   "at": [
+    92,
+    209
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "lift",
+   "at": [
+    92,
+    227
+   ]
+  },
+  {
+   "joint": "j13",
+   "kind": "bolt",
+   "at": [
+    93,
+    203
+   ]
+  },
+  {
+   "joint": "j15",
+   "kind": "lift",
+   "at": [
+    70,
+    317
+   ]
+  },
+  {
+   "joint": "j15",
+   "kind": "lift",
+   "at": [
+    76,
+    317
+   ]
+  },
+  {
+   "joint": "j15",
+   "kind": "lift",
+   "at": [
+    82,
+    316
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "dent",
+   "at": [
+    70,
+    300
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "crack",
+   "at": [
+    64,
+    315
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "dent",
+   "at": [
+    78,
+    240
+   ]
+  }
+ ],
+ "notes": []
+}

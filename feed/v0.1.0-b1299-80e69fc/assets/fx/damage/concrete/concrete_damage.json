@@ -1,0 +1,229 @@
+{
+ "material": "concrete",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "regime concrete, poured thin over too little rebar: it maps into plates, spalls in angular flakes, and when it goes it shows its rusty ribs, bent the way the blast pushed them",
+ "ramp": [
+  "#1e2228",
+  "#2c3238",
+  "#3f474e",
+  "#56636e",
+  "#7c8a92"
+ ],
+ "section": [
+  "#1e2228",
+  "#2c3238"
+ ],
+ "back": [
+  "#0b0c0e",
+  "#15171a"
+ ],
+ "rebarRamp": [
+  "#2a1812",
+  "#5a3020",
+  "#8a4a2a",
+  "#b8703e"
+ ],
+ "aggregate": [
+  "#4a5056",
+  "#6e7478",
+  "#9a9e9a"
+ ],
+ "hash": "h32(x, y, k) as in tools/art_host/fx/hashrule.py (JS given there), LEVEL coordinates; keys: TOP 1, BOTTOM 2, LEFT 3, RIGHT 4; + 0 join level, + 16 variant, + 32 corner, + 48 section; + salt",
+ "edges": {
+  "strips": {
+   "file": "concrete_edge_strips.png",
+   "normal": "concrete_edge_strips_n.png",
+   "slot": [
+    32,
+    32
+   ],
+   "halfDepth": 16,
+   "variants": 6,
+   "joinLevels": [
+    -4,
+    2,
+    7,
+    12
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -8,
+    16
+   ]
+  },
+  "corners": {
+   "file": "concrete_edge_corners.png",
+   "normal": "concrete_edge_corners_n.png",
+   "slot": [
+    21,
+    21
+   ],
+   "origin": [
+    10,
+    10
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 101
+ },
+ "cracks": {
+  "file": "concrete_cracks.png",
+  "normal": "concrete_cracks_n.png",
+  "canvas": 48,
+  "cellAt": [
+   8,
+   8
+  ],
+  "variants": 4,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "reachPastCellPx": [
+   4,
+   8,
+   8,
+   8
+  ],
+  "use": "columns = variants, rows = stages (25 / 50 / 75 % of dmg / threshold), cumulative. The canvas is the cell + 8 px a side: draw it centred on the cell OVER the neighbours (clip to matter), so the fracture lines cross the border 4-12 px; a line never runs along a cell border."
+ },
+ "bites": {
+  "file": "concrete_bites.png",
+  "normal": "concrete_bites_n.png",
+  "slot": 8,
+  "variants": 8,
+  "bites": [
+   {
+    "diameter": 4
+   },
+   {
+    "diameter": 4
+   },
+   {
+    "diameter": 3
+   },
+   {
+    "diameter": 3
+   },
+   {
+    "diameter": 4
+   },
+   {
+    "diameter": 6
+   },
+   {
+    "diameter": 6
+   },
+   {
+    "diameter": 6
+   }
+  ],
+  "use": "one per pellet, centred on the hit point, over the cell art; random variant"
+ },
+ "rebar": {
+  "file": "concrete_rebar.png",
+  "normal": "concrete_rebar_n.png",
+  "slot": 12,
+  "anchor": [
+   6,
+   0
+  ],
+  "variants": 12,
+  "kinds": [
+   "straight",
+   "bent",
+   "bent",
+   "hook",
+   "pair",
+   "stub",
+   "bent",
+   "wire",
+   "straight",
+   "aggregate",
+   "aggregate",
+   "aggregate"
+  ],
+  "use": "along every lip of a hole: walk the lip pixels in order; the gap to the next sprite is 5 + h32(x, y, 48 + salt) % 16 px; the variant is h32(x, y, 49 + salt) % 12; turn the sprite so it points away from the matter (down out of a lip above, rotate 90s); clip to the hole. Aggregate sprites (variants 9-11) sit in the section band."
+ },
+ "chunks": {
+  "file": "concrete_chunks.png",
+  "normal": "concrete_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   {
+    "name": "slab",
+    "px": 62
+   },
+   {
+    "name": "wedge",
+    "px": 37
+   },
+   {
+    "name": "block",
+    "px": 54
+   },
+   {
+    "name": "sliver",
+    "px": 28
+   },
+   {
+    "name": "boulder",
+    "px": 69
+   },
+   {
+    "name": "rebar_chunk",
+    "px": 49
+   },
+   {
+    "name": "shard",
+    "px": 43
+   },
+   {
+    "name": "grains",
+    "px": 21
+   }
+  ],
+  "facets": {
+   "#ff0000": "top: the art one ramp step lighter",
+   "#00ff00": "front: the art as it is",
+   "#0000ff": "side / underside: one step darker",
+   "#ffdc00": "rebar: REBAR[2], its lower pixel REBAR[1]"
+  },
+  "use": "a removed cell gives 3-6 chunks: shape = h32(cx, cy, 60 + i + salt) % 8, the art cut from the cell at offset (h32(..., 61 + i) % 16, h32(..., 62 + i) % 16), turned by (h32 % 4) x 90 deg and flipped by bit 2; each landed chunk gets a 1 px RAMP[0] contact under its lowest row and settles on a cone of repose of 36 deg. The heap keeps about a third of the removed volume; the rest is dust."
+ },
+ "slabs": {
+  "file": "concrete_slabs.png",
+  "normal": "concrete_slabs_n.png",
+  "slot": [
+   24,
+   12
+  ],
+  "variants": 4,
+  "facets": {
+   "#00ff00": "the wall's painted face kept AS IT IS (it reads as a piece of this wall)",
+   "#ff0000": "the broken top edge: the section, lit",
+   "#0000ff": "side / underside: RAMP[0..1]"
+  },
+  "use": "holes of 3+ cells: min(4, 1 + n // 2) slabs, cut from removed cell (i * 3) % n at hashed offsets (keys 64-66), leaning on the wall foot by a shear of one px every 2-3 rows (alternate sides), 1 in 3 stood on end; then the chunks on a 36 deg cone within +-min(32, 10 + 6n) px of the hole centre; grains at the toe"
+ },
+ "stages": {
+  "25": "cracks row 0",
+  "50": "cracks row 1 + 2-3 bites",
+  "75": "cracks row 2 + bites",
+  "note": "opaque overlays drawn over the cell art, never alpha"
+ }
+}

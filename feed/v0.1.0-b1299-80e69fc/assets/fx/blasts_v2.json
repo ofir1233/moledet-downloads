@@ -1,0 +1,110 @@
+{
+ "blast_bomber_v2": {
+  "file": "sheets/blast_bomber_v2.png",
+  "normal": "sheets/blast_bomber_v2_n.png",
+  "frame": [
+   224,
+   236
+  ],
+  "frames": 13,
+  "fps": 24,
+  "loop": false,
+  "anchor": [
+   0.5,
+   0.9322033898305084
+  ],
+  "floorRow": 0.9322033898305084,
+  "radiusCells": 3.0,
+  "coreWidthPx": 154,
+  "measuredCoreWidthPx": [
+   157,
+   150,
+   136
+  ],
+  "scaleToRadius": false,
+  "layers": "frames 0-4 fxFront (in front of actors and pieces); frames 5-12 fxBehind (behind the flying pieces, or they vanish)",
+  "light": {
+   "note": "RENDER owns the light: a point light at the anchor, 1.2 cells above the floor; on rock, floor and actors (rim)",
+   "perFrame": [
+    {
+     "f": 0,
+     "color": "#fff6e0",
+     "intensity": 1.0,
+     "radiusCells": 7.0,
+     "note": "the snap: actors get a full white rim for this frame"
+    },
+    {
+     "f": 1,
+     "color": "#ffd070",
+     "intensity": 0.9,
+     "radiusCells": 6.0
+    },
+    {
+     "f": 2,
+     "color": "#ffb048",
+     "intensity": 0.8,
+     "radiusCells": 5.5
+    },
+    {
+     "f": 3,
+     "color": "#ff9a40",
+     "intensity": 0.6,
+     "radiusCells": 5.0
+    },
+    {
+     "f": 4,
+     "color": "#f07a30",
+     "intensity": 0.45,
+     "radiusCells": 4.5
+    },
+    {
+     "f": 5,
+     "color": "#c4703a",
+     "intensity": 0.25,
+     "radiusCells": 4.0,
+     "note": "the fire in the smoke belly"
+    },
+    {
+     "f": 6,
+     "color": "#a85a34",
+     "intensity": 0.15,
+     "radiusCells": 3.5
+    },
+    {
+     "f": 7,
+     "color": "#a85a34",
+     "intensity": 0.0,
+     "radiusCells": 0
+    }
+   ],
+   "floor": "frames 0-2: a floor flash band 2 cells either side of the anchor (the floor top row +1 step); the scorch decal stays"
+  },
+  "gag": "gag_form"
+ },
+ "gag_form": {
+  "file": "sheets/gag_form.png",
+  "normal": "sheets/gag_form_n.png",
+  "frame": [
+   9,
+   11
+  ],
+  "frames": 4,
+  "angles": [
+   "face",
+   "tilted",
+   "edge",
+   "back"
+  ],
+  "cycle": [
+   0,
+   1,
+   2,
+   3,
+   2,
+   1
+  ],
+  "ticksPerAngle": 3,
+  "motion": "spawn at blast frame 1, 0.3 cells up-left of the anchor; rise 3 cells in 0.4 s (ease out), then fall at 0.6 cells/s swinging +-0.5 cell (a sine of 1.1 Hz); land flat (angle 0 or 3), lie 3 s; then a 2-frame swap to angle 2 and gone (no alpha)",
+  "character": "the bomber's paperwork: his permit to explode, stamped, still in order"
+ }
+}

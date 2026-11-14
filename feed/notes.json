@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "note": "Patch notes, written by hand at each release: one entry per release id (the folder name in builds/releases). kind: added | changed | fixed. Plain Hebrew a player reads. The feed tool (launcher2/tools/make_feed.mjs) copies this file into the feed beside latest.json; the launcher shows it in «מה חדש» and under the update question. docs/RELEASE_AND_LAUNCHER.md, section 4b.",
+ "versions": {
+  "v0.1.0-b1101-137ecbd": {
+   "version": "0.1.0",
+   "date": "2026-11-13",
+   "title": "תיקונים קטנים",
+   "items": [
+    { "kind": "fixed", "text": "כתמי האור המרובעים שהופיעו בתוך הסלע: תיקון ראשון." },
+    { "kind": "changed", "text": "בפס החדשות המתגלגל מופיע עכשיו הברק הצהוב, הסמל של הערוץ." }
+   ]
+  },
+  "v0.1.0-b1082-4bcb0b2": {
+   "version": "0.1.0",
+   "date": "2026-11-13",
+   "title": "לכל שלב ארוך מראה משלו",
+   "items": [
+    { "kind": "changed", "text": "לכל שלב ארוך צבע ואווירה משלו: אדום חלוד, בטון כחול ורטוב, צהוב גופרית." },
+    { "kind": "changed", "text": "חדרי הדגלים שונים זה מזה." },
+    { "kind": "added", "text": "שלב ארוך רביעי, עם חדר בוס חדש." },
+    { "kind": "added", "text": "החפצים שאפשר לאסוף זוהרים." }
+   ]
+  },
+  "v0.1.0-b1053-1ab510f": {
+   "version": "0.1.0",
+   "date": "2026-11-13",
+   "title": "שלבים ארוכים",
+   "items": [
+    { "kind": "added", "text": "שלושה שלבים ארוכים, כחמש דקות כל אחד." },
+    { "kind": "added", "text": "בכל שלב 7 עד 8 דגלים של נקודת שמירה." }
+   ]
+  }
+ }
+}

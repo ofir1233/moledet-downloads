@@ -1,0 +1,60 @@
+{
+ "sign_queue": {
+  "states": {
+   "intact": "props/sign_queue_intact.png",
+   "damaged": "props/sign_queue_damaged.png",
+   "broken": "props/sign_queue_broken.png"
+  },
+  "w": 120,
+  "h": 104,
+  "cells": [
+   3.75,
+   3.25
+  ],
+  "anchor": [
+   0.5,
+   1.0
+  ],
+  "z": -2,
+  "facing": "right",
+  "frames": 1,
+  "fps": 0,
+  "render": {
+   "shadow": "baked",
+   "lampTint": true,
+   "hazeDepth": 0.2,
+   "pxScale": 1
+  },
+  "note": "the joke sign «התור לתור: כאן»: the tunnel's tool board frame with a paper notice, on a post standing on the floor at the anchor (bottom centre). intact: straight; damaged (shot): hangs crooked on one bolt, holes; broken: the post snapped, the board on the floor, still readable",
+  "builder": "lane 4 (generator 2), signs.mjs: canvas rtl text over the tool board, alpha hard-edged, 13.11.2026"
+ },
+ "sign_tea": {
+  "states": {
+   "intact": "props/sign_tea_intact.png",
+   "damaged": "props/sign_tea_damaged.png",
+   "broken": "props/sign_tea_broken.png"
+  },
+  "w": 120,
+  "h": 104,
+  "cells": [
+   3.75,
+   3.25
+  ],
+  "anchor": [
+   0.5,
+   1.0
+  ],
+  "z": -2,
+  "facing": "right",
+  "frames": 1,
+  "fps": 0,
+  "render": {
+   "shadow": "baked",
+   "lampTint": true,
+   "hazeDepth": 0.2,
+   "pxScale": 1
+  },
+  "note": "the joke sign «הפסקת תה. חוזרים אחרי המהפכה»: the tunnel's tool board frame with a paper notice, on a post standing on the floor at the anchor (bottom centre). intact: straight; damaged (shot): hangs crooked on one bolt, holes; broken: the post snapped, the board on the floor, still readable",
+  "builder": "lane 4 (generator 2), signs.mjs: canvas rtl text over the tool board, alpha hard-edged, 13.11.2026"
+ }
+}

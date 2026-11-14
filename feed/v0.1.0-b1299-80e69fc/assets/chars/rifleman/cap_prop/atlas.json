@@ -1,0 +1,121 @@
+{
+ "id": "rifleman_cap",
+ "cell": [
+  32,
+  32
+ ],
+ "pivot": [
+  16,
+  16
+ ],
+ "angles": [
+  340,
+  250,
+  160,
+  70,
+  0
+ ],
+ "note": "the rifleman's cap as a prop. One ROW per angle (a quarter turn each), row 4 (angle 0) has two COLUMNS: 0 = level in the air, 1 = lying on the floor with a contact shadow. The pivot is the middle of its crown. \"fall\" starts where death frame 2 leaves it (grip_dx/dy = the pivot from the rifleman's anchor, canvas px, y down; flip dx with his facing): it rises 16 px more, turning, comes down LAST, lands the right way up (thud = a soft pat), hops once and rests.",
+ "from": "death frame 2",
+ "fall": [
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 340,
+   "grip_dx": 4,
+   "grip_dy": -77,
+   "ms": 50
+  },
+  {
+   "row": 1,
+   "col": 0,
+   "angle": 250,
+   "grip_dx": 7,
+   "grip_dy": -86,
+   "ms": 50
+  },
+  {
+   "row": 2,
+   "col": 0,
+   "angle": 160,
+   "grip_dx": 10,
+   "grip_dy": -91,
+   "ms": 60
+  },
+  {
+   "row": 3,
+   "col": 0,
+   "angle": 70,
+   "grip_dx": 13,
+   "grip_dy": -93,
+   "ms": 80
+  },
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 340,
+   "grip_dx": 18,
+   "grip_dy": -89,
+   "ms": 80
+  },
+  {
+   "row": 1,
+   "col": 0,
+   "angle": 250,
+   "grip_dx": 23,
+   "grip_dy": -79,
+   "ms": 70
+  },
+  {
+   "row": 2,
+   "col": 0,
+   "angle": 160,
+   "grip_dx": 28,
+   "grip_dy": -61,
+   "ms": 60
+  },
+  {
+   "row": 3,
+   "col": 0,
+   "angle": 70,
+   "grip_dx": 33,
+   "grip_dy": -37,
+   "ms": 60
+  },
+  {
+   "row": 4,
+   "col": 1,
+   "angle": 0,
+   "grip_dx": 38,
+   "grip_dy": -5,
+   "ms": 60,
+   "event": "thud"
+  },
+  {
+   "row": 4,
+   "col": 0,
+   "angle": 0,
+   "grip_dx": 40,
+   "grip_dy": -8,
+   "ms": 60
+  },
+  {
+   "row": 4,
+   "col": 1,
+   "angle": 0,
+   "grip_dx": 42,
+   "grip_dy": -5,
+   "ms": 400,
+   "event": "rest"
+  }
+ ],
+ "fall_ms": 630,
+ "rest_row": 4,
+ "rest_col": 1,
+ "size_px": [
+  21,
+  10
+ ],
+ "normal": "atlas_n.png",
+ "look": "pixel"
+}

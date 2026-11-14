@@ -1,0 +1,8 @@
+version: 2.1.0
+files:
+  - url: https://github.com/ofir1233/moledet-downloads/releases/latest/download/MoledetAhuva_Setup.exe
+    sha512: vV1OLrm7wbWjfNIc/n3GeEk5Xmc5bh6Gznse0IpqY7mwz6SL8xkF6eDsDa7rUfql8+BgVJuEih7nVeEbMVDbsg==
+    size: 167309230
+path: https://github.com/ofir1233/moledet-downloads/releases/latest/download/MoledetAhuva_Setup.exe
+sha512: vV1OLrm7wbWjfNIc/n3GeEk5Xmc5bh6Gznse0IpqY7mwz6SL8xkF6eDsDa7rUfql8+BgVJuEih7nVeEbMVDbsg==
+releaseDate: '2026-11-14T17:52:40.477Z'

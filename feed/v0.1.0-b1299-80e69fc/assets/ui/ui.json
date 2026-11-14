@@ -1,0 +1,6489 @@
+{
+ "version": 2,
+ "refRes": [
+  1280,
+  720
+ ],
+ "dir": "rtl",
+ "palette": {
+  "letterbox": "#0b1214",
+  "text": "#eedeb8",
+  "textShadow": "#0e0906",
+  "accent": "#ffb54a",
+  "danger": "#d6402c",
+  "screenGreen": "#7dffb0"
+ },
+ "font": {
+  "name": "Unifont (subset, bitmap atlas)",
+  "source": "GNU Unifont 18.0.01, https://unifoundry.com/unifont/",
+  "licence": "fonts/OFL-1.1.txt",
+  "atlas": "fonts/unifont_he.png",
+  "outline": "fonts/unifont_he_outline.png",
+  "glyphMap": "fonts/unifont_he.json",
+  "cell": [
+   16,
+   16
+  ],
+  "outlineCell": [
+   18,
+   18
+  ],
+  "lineHeight": 16
+ },
+ "screens": {
+  "title": {
+   "bg": {
+    "file": "screens/title_bg.png",
+    "w": 1280,
+    "h": 720
+   },
+   "safe": [
+    240,
+    30,
+    800,
+    420
+   ],
+   "layers": [
+    {
+     "file": "screens/title_name.png",
+     "x": 330,
+     "y": 52,
+     "w": 620,
+     "h": 172,
+     "id": "name",
+     "swap": "name"
+    },
+    {
+     "file": "screens/title_tag_1.png",
+     "x": 343,
+     "y": 264,
+     "w": 594,
+     "h": 36,
+     "swap": "text",
+     "options": [
+      "screens/title_tag_1.png",
+      "screens/title_tag_2.png",
+      "screens/title_tag_3.png"
+     ],
+     "id": "tagline"
+    },
+    {
+     "file": "screens/title_prompt.png",
+     "x": 535,
+     "y": 381,
+     "w": 210,
+     "h": 36,
+     "id": "prompt",
+     "frames": 2,
+     "fps": 2
+    }
+   ]
+  },
+  "controls": {
+   "bg": {
+    "file": "screens/controls_bg.png",
+    "w": 1280,
+    "h": 720
+   },
+   "safe": [
+    170,
+    40,
+    940,
+    556
+   ],
+   "layers": [
+    {
+     "file": "screens/controls_head_1.png",
+     "x": 245,
+     "y": 62,
+     "w": 790,
+     "h": 52,
+     "swap": "text",
+     "options": [
+      "screens/controls_head_1.png",
+      "screens/controls_head_2.png",
+      "screens/controls_head_3.png"
+     ],
+     "id": "head"
+    }
+   ]
+  },
+  "won": {
+   "bg": {
+    "file": "screens/won_bg.png",
+    "w": 1280,
+    "h": 720
+   },
+   "safe": [
+    300,
+    40,
+    640,
+    497
+   ],
+   "layers": [
+    {
+     "file": "screens/won_flash.png",
+     "x": 816,
+     "y": 242,
+     "w": 90,
+     "h": 42,
+     "id": "flash",
+     "frames": 2,
+     "fps": 3
+    },
+    {
+     "file": "screens/won_head_1.png",
+     "x": 342,
+     "y": 294,
+     "w": 556,
+     "h": 72,
+     "swap": "text",
+     "options": [
+      "screens/won_head_1.png",
+      "screens/won_head_2.png",
+      "screens/won_head_3.png"
+     ],
+     "id": "headline"
+    },
+    {
+     "file": "screens/won_action.png",
+     "x": 579,
+     "y": 471,
+     "w": 212,
+     "h": 36,
+     "id": "action"
+    }
+   ]
+  },
+  "lost": {
+   "bg": {
+    "file": "screens/lost_bg.png",
+    "w": 1280,
+    "h": 720
+   },
+   "safe": [
+    200,
+    90,
+    700,
+    450
+   ],
+   "layers": [
+    {
+     "file": "screens/lost_body_1.png",
+     "x": 416,
+     "y": 226,
+     "w": 448,
+     "h": 72,
+     "swap": "text",
+     "options": [
+      "screens/lost_body_1.png",
+      "screens/lost_body_2.png",
+      "screens/lost_body_3.png"
+     ],
+     "id": "body"
+    },
+    {
+     "file": "screens/lost_action.png",
+     "x": 264,
+     "y": 471,
+     "w": 212,
+     "h": 36,
+     "id": "action"
+    }
+   ]
+  }
+ },
+ "hud": {
+  "portrait": {
+   "file": "hud/portrait_king.png",
+   "w": 52,
+   "h": 52,
+   "anchor": "top-right",
+   "offset": [
+    12,
+    10
+   ]
+  },
+  "health": {
+   "frame": {
+    "file": "hud/health_frame.png",
+    "w": 130,
+    "h": 18
+   },
+   "pip": {
+    "file": "hud/health_pip.png",
+    "w": 10,
+    "h": 8
+   },
+   "pipEmpty": {
+    "file": "hud/health_pip_empty.png",
+    "w": 10,
+    "h": 8
+   },
+   "pips": 10,
+   "pipOrigin": [
+    115,
+    5
+   ],
+   "pipStep": [
+    -12,
+    0
+   ],
+   "anchor": "top-right",
+   "offset": [
+    72,
+    14
+   ]
+  },
+  "shells": {
+   "rack": {
+    "file": "hud/shell_rack.png",
+    "w": 66,
+    "h": 26,
+    "offset": [
+     66,
+     36
+    ]
+   },
+   "full": {
+    "file": "hud/shell.png",
+    "w": 9,
+    "h": 20
+   },
+   "empty": {
+    "file": "hud/shell_empty.png",
+    "w": 9,
+    "h": 20
+   },
+   "count": 4,
+   "origin": [
+    0,
+    0
+   ],
+   "step": [
+    -13,
+    0
+   ],
+   "anchor": "top-right",
+   "offset": [
+    72,
+    38
+   ],
+   "note": "shell i is drawn at (right edge - offset.x - 9) + i * step.x; count comes from mvp.json hero.shells"
+  },
+  "reload": {
+   "file": "hud/reload.png",
+   "w": 57,
+   "h": 20,
+   "frames": 4,
+   "fps": 8,
+   "anchor": "top-right",
+   "offset": [
+    72,
+    38
+   ]
+  },
+  "score": {
+   "plate": {
+    "file": "hud/score_plate.png",
+    "w": 154,
+    "h": 30
+   },
+   "digitsOrigin": [
+    6,
+    6
+   ],
+   "digitsMax": 6,
+   "anchor": "top-left",
+   "offset": [
+    12,
+    10
+   ]
+  },
+  "hudPlayerStep": [
+   0,
+   70
+  ]
+ },
+ "digits": {
+  "file": "hud/digits.png",
+  "w": 12,
+  "h": 18,
+  "chars": "0123456789",
+  "advance": 14
+ },
+ "keycaps": {
+  "KeyA": {
+   "file": "keys/KeyA.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyD": {
+   "file": "keys/KeyD.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyW": {
+   "file": "keys/KeyW.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyS": {
+   "file": "keys/KeyS.png",
+   "w": 28,
+   "h": 31
+  },
+  "Space": {
+   "file": "keys/Space.png",
+   "w": 76,
+   "h": 31
+  },
+  "KeyK": {
+   "file": "keys/KeyK.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyJ": {
+   "file": "keys/KeyJ.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyF": {
+   "file": "keys/KeyF.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyL": {
+   "file": "keys/KeyL.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyG": {
+   "file": "keys/KeyG.png",
+   "w": 28,
+   "h": 31
+  },
+  "ArrowLeft": {
+   "file": "keys/ArrowLeft.png",
+   "w": 28,
+   "h": 31
+  },
+  "ArrowRight": {
+   "file": "keys/ArrowRight.png",
+   "w": 28,
+   "h": 31
+  },
+  "ArrowUp": {
+   "file": "keys/ArrowUp.png",
+   "w": 28,
+   "h": 31
+  },
+  "ArrowDown": {
+   "file": "keys/ArrowDown.png",
+   "w": 28,
+   "h": 31
+  },
+  "KeyZ": {
+   "file": "keys/KeyZ.png",
+   "w": 28,
+   "h": 31
+  },
+  "Slash": {
+   "file": "keys/Slash.png",
+   "w": 28,
+   "h": 31
+  },
+  "Numpad0": {
+   "file": "keys/Numpad0.png",
+   "w": 44,
+   "h": 31
+  },
+  "KeyX": {
+   "file": "keys/KeyX.png",
+   "w": 28,
+   "h": 31
+  },
+  "Period": {
+   "file": "keys/Period.png",
+   "w": 28,
+   "h": 31
+  },
+  "Numpad1": {
+   "file": "keys/Numpad1.png",
+   "w": 44,
+   "h": 31
+  },
+  "KeyC": {
+   "file": "keys/KeyC.png",
+   "w": 28,
+   "h": 31
+  },
+  "Comma": {
+   "file": "keys/Comma.png",
+   "w": 28,
+   "h": 31
+  },
+  "Numpad2": {
+   "file": "keys/Numpad2.png",
+   "w": 44,
+   "h": 31
+  },
+  "KeyE": {
+   "file": "keys/KeyE.png",
+   "w": 28,
+   "h": 31
+  },
+  "Enter": {
+   "file": "keys/Enter.png",
+   "w": 60,
+   "h": 31
+  },
+  "KeyQ": {
+   "file": "keys/KeyQ.png",
+   "w": 28,
+   "h": 31
+  },
+  "Backspace": {
+   "file": "keys/Backspace.png",
+   "w": 52,
+   "h": 31
+  },
+  "KeyR": {
+   "file": "keys/KeyR.png",
+   "w": 28,
+   "h": 31
+  },
+  "F3": {
+   "file": "keys/F3.png",
+   "w": 32,
+   "h": 31
+  },
+  "KeyP": {
+   "file": "keys/KeyP.png",
+   "w": 28,
+   "h": 31
+  }
+ },
+ "v2": {
+  "scale": {
+   "rule": "k = the world's integer device px per art px (renderer.pixelScale or the mobile device scale); the UI canvas is W/k x H/k art px; never fractional",
+   "designMin": [
+    540,
+    960
+   ],
+   "phonePortraitWidth": 585
+  },
+  "palette": {
+   "ink": "#0a0f12",
+   "inkWarm": "#140c08",
+   "gold": [
+    "#fff1c4",
+    "#f0c060",
+    "#c8862a",
+    "#7a4a1c"
+   ],
+   "velvet": [
+    "#5c0c1e",
+    "#8e1a2e",
+    "#c43448"
+   ],
+   "blue": "#0038b8",
+   "white": "#f4f1e8",
+   "hazard": [
+    "#f0b81c",
+    "#15110c"
+   ],
+   "paper": "#ead9b0",
+   "red": "#ca2520",
+   "teal": [
+    "#304141",
+    "#426867"
+   ],
+   "lamp": "#efa045"
+  },
+  "fonts": {
+   "small": {
+    "atlas": "fonts/display_small.png",
+    "map": "fonts/display_small.json"
+   },
+   "smallLit": {
+    "atlas": "fonts/display_smallLit.png",
+    "map": "fonts/display_smallLit.json"
+   },
+   "plate": {
+    "atlas": "fonts/display_plate.png",
+    "map": "fonts/display_plate.json"
+   },
+   "announce": {
+    "atlas": "fonts/display_announce.png",
+    "map": "fonts/display_announce.json"
+   },
+   "hero": {
+    "atlas": "fonts/display_hero.png",
+    "map": "fonts/display_hero.json"
+   },
+   "pop": {
+    "atlas": "fonts/display_pop.png",
+    "map": "fonts/display_pop.json"
+   },
+   "stamp": {
+    "atlas": "fonts/display_stamp.png",
+    "map": "fonts/display_stamp.json"
+   }
+  },
+  "bodyFont": "font (v1 Unifont atlas, 8x16, outline atlas for text over the picture)"
+ },
+ "hud2": {
+  "designCanvasH": 360,
+  "heroes": {
+   "king": {
+    "portrait": {
+     "file": "hud2/portrait_king.png",
+     "w": 44,
+     "h": 50,
+     "frames": 6,
+     "names": [
+      "idle",
+      "grin",
+      "hurt",
+      "worried",
+      "shout",
+      "ko"
+     ]
+    },
+    "portraitFlash": {
+     "file": "hud2/portrait_king_flash.png",
+     "w": 44,
+     "h": 50,
+     "frames": 6
+    },
+    "medallionBack": {
+     "file": "hud2/medallion_back_king.png",
+     "w": 42,
+     "h": 48
+    },
+    "medallionRing": {
+     "file": "hud2/medallion_ring_king.png",
+     "w": 54,
+     "h": 60,
+     "window": [
+      6,
+      6,
+      42,
+      48
+     ]
+    },
+    "nameplate": {
+     "file": "hud2/nameplate_king.png",
+     "w": 39,
+     "h": 13
+    },
+    "lifeIcon": {
+     "file": "hud2/life_king.png",
+     "w": 10,
+     "h": 9,
+     "frames": 2,
+     "names": [
+      "on",
+      "off"
+     ]
+    },
+    "lifeLose": {
+     "file": "hud2/life_king_lose.png",
+     "w": 10,
+     "h": 15,
+     "frames": 5,
+     "fps": 15
+    },
+    "cardColours": [
+     "#8e1a2e",
+     "#f0c060"
+    ]
+   },
+   "bengurion": {
+    "portrait": {
+     "file": "hud2/portrait_bengurion.png",
+     "w": 44,
+     "h": 50,
+     "frames": 6,
+     "names": [
+      "idle",
+      "grin",
+      "hurt",
+      "worried",
+      "shout",
+      "ko"
+     ]
+    },
+    "portraitFlash": {
+     "file": "hud2/portrait_bengurion_flash.png",
+     "w": 44,
+     "h": 50,
+     "frames": 6
+    },
+    "medallionBack": {
+     "file": "hud2/medallion_back_bengurion.png",
+     "w": 42,
+     "h": 48
+    },
+    "medallionRing": {
+     "file": "hud2/medallion_ring_bengurion.png",
+     "w": 54,
+     "h": 60,
+     "window": [
+      6,
+      6,
+      42,
+      48
+     ]
+    },
+    "nameplate": {
+     "file": "hud2/nameplate_bengurion.png",
+     "w": 49,
+     "h": 13
+    },
+    "lifeIcon": {
+     "file": "hud2/life_bengurion.png",
+     "w": 10,
+     "h": 9,
+     "frames": 2,
+     "names": [
+      "on",
+      "off"
+     ]
+    },
+    "lifeLose": {
+     "file": "hud2/life_bengurion_lose.png",
+     "w": 10,
+     "h": 15,
+     "frames": 5,
+     "fps": 15
+    },
+    "cardColours": [
+     "#6c6844",
+     "#3d6ee6"
+    ]
+   }
+  },
+  "rail": {
+   "file": "hud2/rail.png",
+   "w": 118,
+   "h": 32
+  },
+  "health": {
+   "tube": {
+    "file": "hud2/health_tube.png",
+    "w": 92,
+    "h": 11
+   },
+   "cell": {
+    "file": "hud2/health_cell.png",
+    "w": 8,
+    "h": 5,
+    "frames": 3,
+    "names": [
+     "on",
+     "off",
+     "hot"
+    ]
+   },
+   "crack": {
+    "file": "hud2/health_crack.png",
+    "w": 8,
+    "h": 10,
+    "frames": 4,
+    "fps": 15
+   },
+   "cells": 10,
+   "cellOrigin": [
+    82,
+    3
+   ],
+   "cellStep": [
+    -9,
+    0
+   ]
+  },
+  "ammo": {
+   "shell": {
+    "file": "hud2/ammo_shell.png",
+    "w": 4,
+    "h": 10,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_shell_eject.png",
+     "w": 14,
+     "h": 20,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "round": {
+    "file": "hud2/ammo_round.png",
+    "w": 3,
+    "h": 8,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_round_eject.png",
+     "w": 12,
+     "h": 18,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "cell": {
+    "file": "hud2/ammo_cell.png",
+    "w": 5,
+    "h": 8,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_cell_eject.png",
+     "w": 12,
+     "h": 18,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "missile": {
+    "file": "hud2/ammo_missile.png",
+    "w": 5,
+    "h": 11,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_missile_eject.png",
+     "w": 15,
+     "h": 21,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "grenade": {
+    "file": "hud2/ammo_grenade.png",
+    "w": 7,
+    "h": 7,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_grenade_eject.png",
+     "w": 11,
+     "h": 17,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "charge": {
+    "file": "hud2/ammo_charge.png",
+    "w": 6,
+    "h": 7,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_charge_eject.png",
+     "w": 11,
+     "h": 17,
+     "frames": 4,
+     "fps": 15
+    }
+   },
+   "use": {
+    "file": "hud2/ammo_use.png",
+    "w": 7,
+    "h": 7,
+    "frames": 2,
+    "names": [
+     "full",
+     "spent"
+    ],
+    "eject": {
+     "file": "hud2/ammo_use_eject.png",
+     "w": 11,
+     "h": 17,
+     "frames": 4,
+     "fps": 15
+    }
+   }
+  },
+  "ammoBar": {
+   "frame": {
+    "file": "hud2/ammo_bar.png",
+    "w": 40,
+    "h": 8
+   },
+   "fill": {
+    "file": "hud2/ammo_bar_fill.png",
+    "w": 1,
+    "h": 4,
+    "origin": [
+     2,
+     2
+    ],
+    "length": 36,
+    "tile": "x"
+   }
+  },
+  "madeInIsrael": {
+   "file": "stars/star_emboss_13.png",
+   "note": "stamped on every weapon card, top-left inside the header (gate 3: 13 px, the smallest star; 7 and 9 px are deleted)"
+  },
+  "card": {
+   "nine": {
+    "file": "hud2/card9.png",
+    "w": 30,
+    "h": 28,
+    "slice": [
+     8,
+     7,
+     8,
+     7
+    ]
+   },
+   "header": {
+    "h": 3,
+    "colourFrom": "heroes.<id>.cardColours",
+    "rule": 1
+   },
+   "stamp": {
+    "file": "hud2/card_stamp.png",
+    "w": 22,
+    "h": 18
+   },
+   "iconBox": [
+    4,
+    4,
+    32,
+    26
+   ],
+   "starAt": [
+    39,
+    3
+   ],
+   "stampAt": [
+    38,
+    15
+   ],
+   "nameFont": "smallLit",
+   "jokeFont": "small",
+   "jokeInk": "#4a3220",
+   "minW": 124,
+   "maxW": 194,
+   "layoutNote": "gate 3 (UI agent 6): the icon centred in iconBox, alone; the made-in-Israel star and the stamp in their own column right of it (they had covered the weapon); width = text + 68",
+   "icons": "reveal.weapons.<id>.icon (48 px wide; on the card drawn from the key picture at 32 px: weapons/icon32_<id>.png)"
+  },
+  "score": {
+   "housing": {
+    "file": "hud2/score_housing.png",
+    "w": 63,
+    "h": 29
+   },
+   "drum": {
+    "file": "hud2/score_drum.png",
+    "w": 8,
+    "h": 132,
+    "digitH": 12
+   },
+   "drumShade": {
+    "file": "hud2/score_drum_shade.png",
+    "w": 8,
+    "h": 12
+   },
+   "windows": {
+    "origin": [
+     5,
+     12
+    ],
+    "step": 9,
+    "count": 6,
+    "size": [
+     8,
+     11
+    ]
+   }
+  },
+  "chaos": {
+   "plate": {
+    "file": "hud2/chaos_plate.png",
+    "w": 56,
+    "h": 46
+   },
+   "needle": {
+    "file": "hud2/chaos_needle.png",
+    "w": 40,
+    "h": 22,
+    "frames": 17,
+    "origin": [
+     8,
+     4
+    ],
+    "note": "frame = round(meter * 16)"
+   },
+   "burst": {
+    "file": "hud2/burst_small.png",
+    "w": 30,
+    "h": 30,
+    "frames": 4,
+    "fps": 15
+   },
+   "multFont": "plate"
+  },
+  "redline": {
+   "marker": {
+    "file": "hud2/redline_marker.png",
+    "w": 15,
+    "h": 7
+   },
+   "ruler": {
+    "file": "hud2/redline_ruler.png",
+    "w": 44,
+    "h": 7
+   },
+   "fill": {
+    "file": "hud2/redline_fill.png",
+    "w": 1,
+    "h": 2,
+    "origin": [
+     3,
+     4
+    ],
+    "length": 40,
+    "tile": "x",
+    "note": "grows from the right as the power recharges"
+   }
+  },
+  "objective": {
+   "nine": {
+    "file": "hud2/sign9.png",
+    "w": 30,
+    "h": 14,
+    "slice": [
+     5,
+     4,
+     12,
+     4
+    ]
+   },
+   "textFont": "small",
+   "textInk": "#15110c"
+  },
+  "checkpoint": {
+   "post": {
+    "file": "hud2/checkpoint_post.png",
+    "w": 12,
+    "h": 22,
+    "anchor": [
+     0.5,
+     1
+    ]
+   }
+  },
+  "bubble": {
+   "nine": {
+    "file": "hud2/bubble9.png",
+    "w": 24,
+    "h": 20,
+    "slice": [
+     6,
+     5,
+     6,
+     6
+    ],
+    "pad": [
+     5,
+     4,
+     5,
+     4
+    ]
+   },
+   "tailR": {
+    "file": "hud2/bubble_tail_r.png",
+    "w": 10,
+    "h": 9
+   },
+   "tailL": {
+    "file": "hud2/bubble_tail_l.png",
+    "w": 10,
+    "h": 9
+   },
+   "spike": {
+    "file": "hud2/bubble_spike.png",
+    "w": 5,
+    "h": 4
+   },
+   "textFont": "small",
+   "textInk": "#0a0f12",
+   "tagFont": "smallLit"
+  },
+  "tickers": {
+   "ours": {
+    "band": {
+     "file": "hud2/ticker_band.png",
+     "w": 16,
+     "h": 13,
+     "tile": "x"
+    },
+    "head": {
+     "file": "hud2/ticker_head.png",
+     "w": 44,
+     "h": 16,
+     "frames": 2,
+     "fps": 2
+    },
+    "textFont": "small",
+    "textInk": "#140c08",
+    "scrollPxPerS": 30
+   },
+   "regime": {
+    "band": {
+     "file": "hud2/regime_band.png",
+     "w": 16,
+     "h": 13,
+     "tile": "x"
+    },
+    "head": {
+     "file": "hud2/regime_head.png",
+     "w": 26,
+     "h": 16,
+     "frames": 2,
+     "fps": 2
+    },
+    "textFont": "small",
+    "textInk": "#e8f0d8",
+    "subFont": "small",
+    "subInk": "#c9d4b0",
+    "scrollPxPerS": 24,
+    "persian": "pending a native check (contract A6)"
+   }
+  },
+  "announce": {
+   "nine": {
+    "file": "hud2/announce9.png",
+    "w": 36,
+    "h": 33,
+    "slice": [
+     8,
+     8,
+     8,
+     10
+    ],
+    "pad": [
+     8,
+     5,
+     8,
+     7
+    ]
+   },
+   "font": "plate",
+   "burst": "chaos.burst"
+  },
+  "boss": {
+   "bar": {
+    "file": "hud2/boss_bar.png",
+    "w": 160,
+    "h": 14
+   },
+   "fill": {
+    "file": "hud2/boss_fill.png",
+    "w": 1,
+    "h": 6,
+    "origin": [
+     5,
+     3
+    ],
+    "length": 150,
+    "tile": "x"
+   },
+   "chunk": {
+    "file": "hud2/boss_chunk.png",
+    "w": 1,
+    "h": 6
+   },
+   "nameFont": "smallLit",
+   "samovar": {
+    "file": "hud2/boss_samovar.png",
+    "w": 56,
+    "h": 62,
+    "frames": 11,
+    "note": "gate 3: the tank's copper samovar; frame = round((1 - hp) * 10): 10 = the tea strike (a full steam cloud); steam answers the value from frame 4; his name on hud2 plate beside it (the plate font); shudders 1 px on every tank step",
+    "replaces": "boss.bar (kept for the old code)"
+   }
+  },
+  "gevalt": {
+   "corner": {
+    "file": "hud2/gevalt_corner.png",
+    "w": 32,
+    "h": 32
+   },
+   "pulseHz": 2,
+   "labelFont": "plate"
+  },
+  "cluster": {
+   "plate": {
+    "file": "hud2/cluster_plate.png",
+    "w": 178,
+    "h": 73
+   },
+   "rail": [
+    4,
+    2
+   ],
+   "shelfY": 50,
+   "medallion": "right end, its top 6 px above the plate",
+   "note": "gate 2: draw order plate > rail + tube > ammo on the shelf (right to left, from x W-56) > crowns at the shelf left end > ruler under the plate > medallion > nameplate; the card only for 2 s after weapon:swap"
+  },
+  "cardSwap": {
+   "keys": {
+    "file": "hud2/card_swap_tab.png",
+    "w": 76,
+    "h": 28,
+    "frames": 2,
+    "names": [
+     "rest",
+     "hint"
+    ]
+   },
+   "touch": {
+    "file": "hud2/card_swap_tab_touch.png",
+    "w": 34,
+    "h": 28,
+    "frames": 2,
+    "names": [
+     "rest",
+     "hint"
+    ]
+   },
+   "at": [
+    4,
+    32
+   ],
+   "note": "riveted under the weapon card: tab top-left = card top-left + at (it overlaps the card bottom by 2 px, drawn after the card, covering none of its content); always shown; on weapon:keyHint play frames 0/1 at 2 Hz for ticks, then frame 0; keyboard tab on desktop, touch tab on phones"
+  },
+  "identity": {
+   "frames": {
+    "22": {
+     "file": "hud2/id_frame_22.png",
+     "w": 28,
+     "h": 28,
+     "window": [
+      3,
+      3,
+      22,
+      22
+     ]
+    },
+    "36": {
+     "file": "hud2/id_frame_36.png",
+     "w": 42,
+     "h": 42,
+     "window": [
+      3,
+      3,
+      36,
+      36
+     ]
+    }
+   },
+   "at": "centred on the old medallion box (medallionRing w), top = medallion top + 4",
+   "window": "fill: rows 0-3 emblem colour x1.25, then the emblem colour to 58 % of the window, the rest x0.7 (emblem colour = heroes.<id>.cardColours[0]; a hero with no data: #46605e)",
+   "head": "the hero's idle frame 0 from his atlas, at the WORLD's pixel (device scale kWorld, never the UI scale): a square crop S = round(36 * opaqueHeight / 72), centred on the mean x of the opaque pixels in rows top+4 .. top+30 % of the height, its top 3 px above the opaque top; drawn bottom-aligned in the window, centred, clipped to it. It may play his own states (hurt, gloat) by the same crop.",
+   "replaces": "portrait / portraitFlash / medallionBack / medallionRing / nameplate (painted): they leave the shipped set once the renderer has switched"
+  }
+ },
+ "reveal": {
+  "weapons": {
+   "king_shotgun": {
+    "key": {
+     "file": "weapons/key_king_shotgun.png",
+     "w": 602,
+     "h": 236
+    },
+    "shine": {
+     "file": "weapons/key_king_shotgun_shine.png",
+     "w": 599,
+     "h": 232
+    },
+    "silhouette": {
+     "file": "weapons/key_king_shotgun_sil.png",
+     "w": 602,
+     "h": 236
+    },
+    "icon": {
+     "file": "weapons/icon_king_shotgun.png",
+     "w": 48,
+     "h": 19
+    },
+    "texts": {
+     "name": "השוטגאן המלכותי",
+     "nameAlt": null,
+     "joke": "שתי יריות ואז נאום.",
+     "strip": {
+      "visible": "שתי יריות",
+      "censored": "ואז נאום."
+     },
+     "codename": "מבצע מסע ציד",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "השוטגאן המלכותי",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    }
+   },
+   "ben_rifle": {
+    "key": {
+     "file": "weapons/key_ben_rifle.png",
+     "w": 602,
+     "h": 310
+    },
+    "shine": {
+     "file": "weapons/key_ben_rifle_shine.png",
+     "w": 598,
+     "h": 307
+    },
+    "silhouette": {
+     "file": "weapons/key_ben_rifle_sil.png",
+     "w": 602,
+     "h": 310
+    },
+    "icon": {
+     "file": "weapons/icon_ben_rifle.png",
+     "w": 48,
+     "h": 25
+    },
+    "texts": {
+     "name": "הצ'כי של 48",
+     "nameAlt": null,
+     "joke": "ירייה אחת, שלושה אויבים, ואז שעה של הסבר למה ככה עשו פעם.",
+     "strip": {
+      "visible": "ירייה אחת, שלושה אויבים,",
+      "censored": "ואז שעה של הסבר למה ככה עשו פעם."
+     },
+     "codename": "מבצע עוד דונם",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "הצ'כי של 48",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    }
+   },
+   "beta": {
+    "key": {
+     "file": "weapons/key_beta.png",
+     "w": 484,
+     "h": 264
+    },
+    "shine": {
+     "file": "weapons/key_beta_shine.png",
+     "w": 484,
+     "h": 264
+    },
+    "silhouette": {
+     "file": "weapons/key_beta_sil.png",
+     "w": 484,
+     "h": 264
+    },
+    "icon": {
+     "file": "weapons/icon_beta.png",
+     "w": 48,
+     "h": 26
+    },
+    "texts": {
+     "name": "הבטא של הסטארט-אפ",
+     "nameAlt": "אב-טיפוס של סטארט-אפ",
+     "joke": "כל לחיצה עושה משהו אחר. המשקיעים מרוצים.",
+     "strip": {
+      "visible": "כל לחיצה עושה משהו אחר.",
+      "censored": "המשקיעים מרוצים."
+     },
+     "codename": "מבצע אקזיט",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "הבטא של הסטארט-אפ",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "tape": {
+    "key": {
+     "file": "weapons/key_tape.png",
+     "w": 484,
+     "h": 252
+    },
+    "shine": {
+     "file": "weapons/key_tape_shine.png",
+     "w": 484,
+     "h": 252
+    },
+    "silhouette": {
+     "file": "weapons/key_tape_sil.png",
+     "w": 484,
+     "h": 252
+    },
+    "icon": {
+     "file": "weapons/icon_tape.png",
+     "w": 48,
+     "h": 25
+    },
+    "texts": {
+     "name": "אקדח הוועדה",
+     "nameAlt": null,
+     "joke": "יורה סרט אדום. המטרה עומדת וממתינה לאישור. עד היום.",
+     "strip": {
+      "visible": "יורה סרט אדום. המטרה עומדת וממתינה לאישור.",
+      "censored": "עד היום."
+     },
+     "codename": "מבצע ועדת משנה",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "אקדח הוועדה",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "magnet": {
+    "key": {
+     "file": "weapons/key_magnet.png",
+     "w": 524,
+     "h": 326
+    },
+    "shine": {
+     "file": "weapons/key_magnet_shine.png",
+     "w": 524,
+     "h": 326
+    },
+    "silhouette": {
+     "file": "weapons/key_magnet_sil.png",
+     "w": 524,
+     "h": 326
+    },
+    "icon": {
+     "file": "weapons/icon_magnet.png",
+     "w": 48,
+     "h": 30
+    },
+    "texts": {
+     "name": "מגנט העגורן של הנמל",
+     "nameAlt": null,
+     "joke": "מרים כל דבר. כמו ועד העובדים.",
+     "strip": {
+      "visible": "מרים כל דבר.",
+      "censored": "כמו ועד העובדים."
+     },
+     "codename": "מבצע מנוף כלכלי",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "מגנט העגורן של הנמל",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "beam": {
+    "key": {
+     "file": "weapons/key_beam.png",
+     "w": 524,
+     "h": 285
+    },
+    "shine": {
+     "file": "weapons/key_beam_shine.png",
+     "w": 524,
+     "h": 285
+    },
+    "silhouette": {
+     "file": "weapons/key_beam_sil.png",
+     "w": 524,
+     "h": 285
+    },
+    "icon": {
+     "file": "weapons/icon_beam.png",
+     "w": 48,
+     "h": 26
+    },
+    "texts": {
+     "name": "קרן אל-ביט",
+     "nameAlt": "קרן של אלביט",
+     "joke": "חותך סלע כמו תקציב חינוך.",
+     "strip": {
+      "visible": "חותך סלע",
+      "censored": "כמו תקציב חינוך."
+     },
+     "codename": "מבצע קיצוץ רוחבי",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "קרן אל-ביט",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "speech": {
+    "key": {
+     "file": "weapons/key_speech.png",
+     "w": 464,
+     "h": 317
+    },
+    "shine": {
+     "file": "weapons/key_speech_shine.png",
+     "w": 464,
+     "h": 317
+    },
+    "silhouette": {
+     "file": "weapons/key_speech_sil.png",
+     "w": 464,
+     "h": 317
+    },
+    "icon": {
+     "file": "weapons/icon_speech.png",
+     "w": 48,
+     "h": 33
+    },
+    "texts": {
+     "name": "מגפון הנאום הארוך",
+     "nameAlt": null,
+     "joke": "כל מי שבטווח מתיישב ומקשיב. אף אחד לא זוכר מה נאמר.",
+     "strip": {
+      "visible": "כל מי שבטווח מתיישב ומקשיב.",
+      "censored": "אף אחד לא זוכר מה נאמר."
+     },
+     "codename": "מבצע זכות דיבור",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "מגפון הנאום הארוך",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "digger": {
+    "key": {
+     "file": "weapons/key_digger.png",
+     "w": 484,
+     "h": 376
+    },
+    "shine": {
+     "file": "weapons/key_digger_shine.png",
+     "w": 484,
+     "h": 376
+    },
+    "silhouette": {
+     "file": "weapons/key_digger_sil.png",
+     "w": 484,
+     "h": 376
+    },
+    "icon": {
+     "file": "weapons/icon_digger.png",
+     "w": 48,
+     "h": 37
+    },
+    "texts": {
+     "name": "החופר הלאומי",
+     "nameAlt": null,
+     "joke": "חופר את הרצפה. כמו הרכבת הקלה, רק מהר.",
+     "strip": {
+      "visible": "חופר את הרצפה.",
+      "censored": "כמו הרכבת הקלה, רק מהר."
+     },
+     "codename": "מבצע הקו הירוק־אדום",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "החופר הלאומי",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "reflector": {
+    "key": {
+     "file": "weapons/key_reflector.png",
+     "w": 384,
+     "h": 325
+    },
+    "shine": {
+     "file": "weapons/key_reflector_shine.png",
+     "w": 384,
+     "h": 325
+    },
+    "silhouette": {
+     "file": "weapons/key_reflector_sil.png",
+     "w": 384,
+     "h": 325
+    },
+    "icon": {
+     "file": "weapons/icon_reflector.png",
+     "w": 48,
+     "h": 41
+    },
+    "texts": {
+     "name": "מעיל הרוח",
+     "nameAlt": null,
+     "joke": "מחזיר הכל לשולח. גם האשמות.",
+     "strip": {
+      "visible": "מחזיר הכל לשולח.",
+      "censored": "גם האשמות."
+     },
+     "codename": "מבצע זה לא אני",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "מעיל הרוח",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "drones": {
+    "key": {
+     "file": "weapons/key_drones.png",
+     "w": 504,
+     "h": 346
+    },
+    "shine": {
+     "file": "weapons/key_drones_shine.png",
+     "w": 504,
+     "h": 346
+    },
+    "silhouette": {
+     "file": "weapons/key_drones_sil.png",
+     "w": 504,
+     "h": 346
+    },
+    "icon": {
+     "file": "weapons/icon_drones.png",
+     "w": 48,
+     "h": 33
+    },
+    "texts": {
+     "name": "נחיל המשלוחים",
+     "nameAlt": null,
+     "joke": "משלוח עד הראש. בלי דמי משלוח.",
+     "strip": {
+      "visible": "משלוח עד הראש.",
+      "censored": "בלי דמי משלוח."
+     },
+     "codename": "מבצע משלוח חינם",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "נחיל המשלוחים",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "strike": {
+    "key": {
+     "file": "weapons/key_strike.png",
+     "w": 444,
+     "h": 282
+    },
+    "shine": {
+     "file": "weapons/key_strike_shine.png",
+     "w": 444,
+     "h": 282
+    },
+    "silhouette": {
+     "file": "weapons/key_strike_sil.png",
+     "w": 444,
+     "h": 282
+    },
+    "icon": {
+     "file": "weapons/icon_strike.png",
+     "w": 48,
+     "h": 30
+    },
+    "texts": {
+     "name": "תקיפה לפי מקורות זרים",
+     "nameAlt": null,
+     "joke": "לא אנחנו. אבל זה היה מדויק.",
+     "strip": {
+      "visible": "לא אנחנו.",
+      "censored": "אבל זה היה מדויק."
+     },
+     "codename": "מבצע לפי פרסומים זרים",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "תקיפה לפי מקורות זרים",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "interceptor": {
+    "key": {
+     "file": "weapons/key_interceptor.png",
+     "w": 304,
+     "h": 379
+    },
+    "shine": {
+     "file": "weapons/key_interceptor_shine.png",
+     "w": 304,
+     "h": 379
+    },
+    "silhouette": {
+     "file": "weapons/key_interceptor_sil.png",
+     "w": 304,
+     "h": 379
+    },
+    "icon": {
+     "file": "weapons/icon_interceptor.png",
+     "w": 48,
+     "h": 60
+    },
+    "texts": {
+     "name": "כיפת ברזל לכיס",
+     "nameAlt": "כיפת ברזל",
+     "joke": "מיירטת הכל. חוץ מביקורת.",
+     "strip": {
+      "visible": "מיירטת הכל.",
+      "censored": "חוץ מביקורת."
+     },
+     "codename": "מבצע מטרייה",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "כיפת ברזל לכיס",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "plasma": {
+    "key": {
+     "file": "weapons/key_plasma.png",
+     "w": 564,
+     "h": 249
+    },
+    "shine": {
+     "file": "weapons/key_plasma_shine.png",
+     "w": 564,
+     "h": 249
+    },
+    "silhouette": {
+     "file": "weapons/key_plasma_sil.png",
+     "w": 564,
+     "h": 249
+    },
+    "icon": {
+     "file": "weapons/icon_plasma.png",
+     "w": 48,
+     "h": 21
+    },
+    "texts": {
+     "name": "פלזמה סודית של רפא-אל",
+     "nameAlt": "פלזמה של רפאל",
+     "joke": "סודי ביותר. לכן יש לו נורה מהבהבת ושלט.",
+     "strip": {
+      "visible": "סודי ביותר.",
+      "censored": "לכן יש לו נורה מהבהבת ושלט."
+     },
+     "codename": "פרויקט עמימות",
+     "announcer": "נשק פלזמה סו—",
+     "announcerCut": true,
+     "plate": "פלזמה סודית של רפא-אל",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "guided": {
+    "key": {
+     "file": "weapons/key_guided.png",
+     "w": 564,
+     "h": 273
+    },
+    "shine": {
+     "file": "weapons/key_guided_shine.png",
+     "w": 564,
+     "h": 273
+    },
+    "silhouette": {
+     "file": "weapons/key_guided_sil.png",
+     "w": 564,
+     "h": 273
+    },
+    "icon": {
+     "file": "weapons/icon_guided.png",
+     "w": 48,
+     "h": 23
+    },
+    "texts": {
+     "name": "ספייקי",
+     "nameAlt": "ספייק",
+     "joke": "אתה מנווט. המלך עומד וחושף את החזה. כמו בבחירות.",
+     "strip": {
+      "visible": "אתה מנווט. המלך עומד וחושף את החזה.",
+      "censored": "כמו בבחירות."
+     },
+     "codename": "מבצע ג׳ויסטיק",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "ספייקי",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   },
+   "cannon": {
+    "key": {
+     "file": "weapons/key_cannon.png",
+     "w": 484,
+     "h": 304
+    },
+    "shine": {
+     "file": "weapons/key_cannon_shine.png",
+     "w": 484,
+     "h": 304
+    },
+    "silhouette": {
+     "file": "weapons/key_cannon_sil.png",
+     "w": 484,
+     "h": 304
+    },
+    "icon": {
+     "file": "weapons/icon_cannon.png",
+     "w": 48,
+     "h": 30
+    },
+    "texts": {
+     "name": "התותח של סבא",
+     "nameAlt": "יריחו",
+     "joke": "דקה וחצי של הכנות, שנייה של היסטוריה.",
+     "strip": {
+      "visible": "דקה וחצי של הכנות,",
+      "censored": "שנייה של היסטוריה."
+     },
+     "codename": "מבצע חומה ומגדל",
+     "announcer": null,
+     "announcerCut": false,
+     "plate": "התותח של סבא",
+     "source": "docs/WEAPONS.md (name column: shown name, the other in brackets; the game picks by aliases.json weaponName(id)) and lines.json ui.card.<id> / announcer.<id>"
+    },
+    "pixelPass": "gate 3 (UI agent 5): one grid, <= 24 colours, one key light, sel-out ink, the blue made-in-Israel star (tools/ui/key_pass.mjs)"
+   }
+  },
+  "banner": {
+   "left": {
+    "file": "reveal/banner_l.png",
+    "w": 640,
+    "h": 720
+   },
+   "right": {
+    "file": "reveal/banner_r.png",
+    "w": 640,
+    "h": 720
+   },
+   "centre": [
+    640,
+    340
+   ],
+   "note": "two halves of one 1280x720 cloth; centred on the canvas, cropped by it; they slide in from the sides and part on the exit"
+  },
+  "slab": {
+   "nine": {
+    "file": "reveal/slab9.png",
+    "w": 96,
+    "h": 68,
+    "slice": [
+     0,
+     12,
+     0,
+     18
+    ],
+    "tile": "x"
+   },
+   "cap": {
+    "file": "reveal/slab_cap.png",
+    "w": 18,
+    "h": 68,
+    "note": "the left end; mirror it for the right end"
+   },
+   "tiltPx": 10,
+   "nameFont": "hero"
+  },
+  "stampSecret": {
+   "file": "reveal/stamp_secret.png",
+   "w": 290,
+   "h": 115,
+   "frames": 3,
+   "names": [
+    "falling",
+    "impact",
+    "settled"
+   ]
+  },
+  "stamp9": {
+   "file": "reveal/stamp9.png",
+   "w": 120,
+   "h": 30,
+   "slice": [
+    6,
+    6,
+    6,
+    6
+   ],
+   "font": "stamp"
+  },
+  "censor": {
+   "nine": {
+    "file": "reveal/censor9.png",
+    "w": 24,
+    "h": 17,
+    "slice": [
+     2,
+     2,
+     2,
+     2
+    ]
+   },
+   "peel": {
+    "file": "reveal/censor_peel.png",
+    "w": 40,
+    "h": 30,
+    "frames": 5,
+    "fps": 15,
+    "note": "drawn at the bar's right end; the bar shortens with it"
+   }
+  },
+  "confetti": {
+   "file": "reveal/confetti.png",
+   "w": 13,
+   "h": 12,
+   "rows": 8,
+   "frames": 4,
+   "fps": 12,
+   "count": [
+    40,
+    60
+   ],
+   "note": "row = scrap kind, column = spin frame; burst from the slam point, gravity 300 art px/s², drag 0.9/s"
+  },
+  "sparks": {
+   "file": "reveal/sparks.png",
+   "w": 40,
+   "h": 24,
+   "frames": 5,
+   "fps": 20,
+   "anchor": [
+    20,
+    22
+   ]
+  },
+  "dust": {
+   "file": "reveal/dust.png",
+   "w": 36,
+   "h": 14,
+   "frames": 4,
+   "fps": 15,
+   "anchor": [
+    18,
+    12
+   ]
+  },
+  "sparkle": {
+   "file": "reveal/sparkle.png",
+   "w": 15,
+   "h": 15,
+   "frames": 6,
+   "fps": 15
+  },
+  "jokeStrip": {
+   "nine": {
+    "file": "reveal/strip9.png",
+    "w": 40,
+    "h": 30,
+    "slice": [
+     8,
+     6,
+     8,
+     8
+    ]
+   },
+   "font": "body",
+   "ink": "#140c08",
+   "note": "the whole line visible except the punchline under a censor bar (the part after the last full stop or comma, or the second half), which peels late"
+  },
+  "codenameTag": {
+   "nine": {
+    "file": "reveal/tag9.png",
+    "w": 30,
+    "h": 24,
+    "slice": [
+     12,
+     6,
+     6,
+     6
+    ]
+   },
+   "font": "plate",
+   "note": "the codename (lines.json ui.card.<weapon>) in the plate style, readable at 1x"
+  },
+  "stampCensored": {
+   "file": "reveal/stamp_censored.png",
+   "w": 91,
+   "h": 49,
+   "frames": 3,
+   "names": [
+    "falling",
+    "impact",
+    "settled"
+   ],
+   "note": "slam it on the censor bar the moment the bar lands over texts.strip.censored (2-3 px shake); the bar is never on screen before the line was read"
+  },
+  "rules": {
+   "plate": "the name plate shows texts.plate, never texts.announcer (announcerCut lines are voice only, cut by a beep)",
+   "tag": "the codename tag at 2x its old size, clear of the gun and the sling",
+   "seam": "the curtain seam is drawn behind the gun and the plate"
+  }
+ },
+ "opening": {
+  "words": [
+   {
+    "text": "טוב",
+    "file": "opening/word_0.png",
+    "shadow": "opening/word_0_shadow.png",
+    "w": 133,
+    "h": 105,
+    "baselineY": 77
+   },
+   {
+    "text": "למות",
+    "file": "opening/word_1.png",
+    "shadow": "opening/word_1_shadow.png",
+    "w": 182,
+    "h": 105,
+    "baselineY": 77
+   },
+   {
+    "text": "בעד",
+    "file": "opening/word_2.png",
+    "shadow": "opening/word_2_shadow.png",
+    "w": 161,
+    "h": 105,
+    "baselineY": 77
+   },
+   {
+    "text": "ארצנו",
+    "file": "opening/word_3.png",
+    "shadow": "opening/word_3_shadow.png",
+    "w": 203,
+    "h": 105,
+    "baselineY": 77
+   }
+  ],
+  "note": "reading order right to left: words[0] is the rightmost. Layout: words 0-1 on the right of the star, 2-3 on its left, baseline at the band centre + 4 % of the band height; each word slams on its beat of the shout",
+  "half_right": {
+   "text": "טוב למות",
+   "file": "opening/half_right.png",
+   "w": 315,
+   "h": 105
+  },
+  "half_left": {
+   "text": "בעד ארצנו",
+   "file": "opening/half_left.png",
+   "w": 364,
+   "h": 105
+  },
+  "shadowRule": "draw the shadow sprite at (+6, +8) art px under the word, dithered by a 4x4 Bayer threshold at 0.4 (the cloth stays visible through it); it moves with the cloth wave",
+  "slam": "each word: 1 f at 30 px above with 4 smear lines, then the landing frame with a 2 px band shake and a 2-frame white flash on the word, then the word rides the cloth wave (1 px every 6 columns follows the band flipbook)",
+  "trim": {
+   "top": {
+    "file": "opening/trim_top.png",
+    "w": 32,
+    "h": 16,
+    "tile": "x",
+    "note": "its bottom 2 px overlap the cloth top edge"
+   },
+   "bottom": {
+    "file": "opening/trim_bottom.png",
+    "w": 32,
+    "h": 16,
+    "tile": "x",
+    "note": "its top 2 px overlap the cloth bottom edge"
+   }
+  }
+ },
+ "screens2": {
+  "designCanvasH": 360,
+  "common": {
+   "chain": {
+    "file": "screens2/chain.png",
+    "w": 5,
+    "h": 8,
+    "tile": "y"
+   },
+   "star49": {
+    "file": "screens2/star_il_49_gold.png",
+    "w": 45,
+    "h": 51
+   },
+   "star49glint": {
+    "file": "screens2/star_il_49_glint.png",
+    "w": 45,
+    "h": 51,
+    "frames": 6,
+    "fps": 15,
+    "every": "3 s"
+   },
+   "star65": {
+    "file": "screens2/star_il_65_gold.png",
+    "w": 59,
+    "h": 67
+   },
+   "star65glint": {
+    "file": "screens2/star_il_65_glint.png",
+    "w": 59,
+    "h": 67,
+    "frames": 6,
+    "fps": 15
+   },
+   "star41white": {
+    "file": "screens2/star_il_41_white.png",
+    "w": 39,
+    "h": 43
+   },
+   "star41blue": {
+    "file": "screens2/star_il_41_blue.png",
+    "w": 39,
+    "h": 43
+   }
+  },
+  "title": {
+   "rays": {
+    "file": "screens2/title_rays.png",
+    "w": 520,
+    "h": 240,
+    "frames": 6,
+    "fps": 6,
+    "centre": [
+     260,
+     44
+    ],
+    "note": "gate 2: OPAQUE (no alpha), behind the sign only; it opens by growing in 3 stepped rings (screens2_draw drawTitle), never by a fade"
+   },
+   "sign": {
+    "file": "screens2/title_sign.png",
+    "w": 312,
+    "h": 140,
+    "frames": 12,
+    "tilts": [
+     16,
+     24,
+     36,
+     60,
+     0,
+     -40
+    ],
+    "crownStates": [
+     "on",
+     "slipped"
+    ],
+    "index": "frame = crownState * 6 + tiltIndex",
+    "eyelets": [
+     [
+      [
+       44,
+       25
+      ],
+      [
+       272,
+       40
+      ]
+     ],
+     [
+      [
+       43,
+       28
+      ],
+      [
+       271,
+       37
+      ]
+     ],
+     [
+      [
+       42,
+       29
+      ],
+      [
+       270,
+       36
+      ]
+     ],
+     [
+      [
+       42,
+       31
+      ],
+      [
+       270,
+       34
+      ]
+     ],
+     [
+      [
+       41,
+       32
+      ],
+      [
+       269,
+       32
+      ]
+     ],
+     [
+      [
+       41,
+       35
+      ],
+      [
+       269,
+       29
+      ]
+     ],
+     [
+      [
+       44,
+       25
+      ],
+      [
+       272,
+       40
+      ]
+     ],
+     [
+      [
+       43,
+       28
+      ],
+      [
+       271,
+       37
+      ]
+     ],
+     [
+      [
+       42,
+       29
+      ],
+      [
+       270,
+       36
+      ]
+     ],
+     [
+      [
+       42,
+       31
+      ],
+      [
+       270,
+       34
+      ]
+     ],
+     [
+      [
+       41,
+       32
+      ],
+      [
+       269,
+       32
+      ]
+     ],
+     [
+      [
+       41,
+       35
+      ],
+      [
+       269,
+       29
+      ]
+     ]
+    ],
+    "w0": 312,
+    "top": 18,
+    "note": "gate 2: sign, logo and crown baked as one piece and tilted pixel by pixel; never rotate or scale it at run time. Cast shadow: title_sign_shadow.png (multiply)."
+   },
+   "signShadow": {
+    "file": "screens2/title_sign_shadow.png",
+    "w": 312,
+    "h": 140,
+    "frames": 12,
+    "offset": [
+     5,
+     7
+    ],
+    "blend": "multiply",
+    "note": "the shadow on the wall behind: draw the same frame under the sign at +6,+8 with a multiply (one flat step, no alpha ramp)"
+   },
+   "logo": {
+    "file": "screens2/title_logo.png",
+    "w": 197,
+    "h": 77,
+    "swap": "name",
+    "note": "the working title, swappable in data; baked into title_sign.png (gate 2: no visible temporary-name tag)"
+   },
+   "crown": {
+    "file": "screens2/title_crown.png",
+    "w": 26,
+    "h": 22,
+    "frames": 2,
+    "names": [
+     "on",
+     "slipped"
+    ],
+    "note": "baked into title_sign.png"
+   },
+   "portrait": {
+    "file": "screens2/title_portrait.png",
+    "w": 96,
+    "h": 122,
+    "note": "phone title only, between the sign and the button; hangs from one nail on a cord (drawn by screens2_draw)"
+   },
+   "stampTemp": {
+    "file": "screens2/title_stamp_temp.png",
+    "w": 1,
+    "h": 1,
+    "retired": "gate 2 (RULING UI ART 1): do not draw"
+   },
+   "chip": {
+    "file": "screens2/title_chip.png",
+    "w": 8,
+    "h": 20,
+    "frames": 4,
+    "fps": 12
+   },
+   "ribbon": {
+    "file": "screens2/title_ribbon.png",
+    "w": 330,
+    "h": 34,
+    "frames": 4,
+    "names": [
+     "12%",
+     "40%",
+     "72%",
+     "open"
+    ],
+    "fps": 15
+   },
+   "tagline": {
+    "file": "screens2/title_tagline.png",
+    "w": 248,
+    "h": 32
+   },
+   "strike": {
+    "file": "screens2/title_strike.png",
+    "w": 1,
+    "h": 1,
+    "retired": "gate 2 (RULING UI ART 1): do not draw"
+   },
+   "correction": {
+    "file": "screens2/title_correction.png",
+    "w": 1,
+    "h": 1,
+    "retired": "gate 2 (RULING UI ART 1): do not draw"
+   },
+   "caret": {
+    "file": "screens2/title_caret.png",
+    "w": 1,
+    "h": 1,
+    "retired": "gate 2 (RULING UI ART 1): do not draw"
+   },
+   "launch": {
+    "file": "screens2/title_launch_key.png",
+    "w": 200,
+    "h": 106,
+    "frames": 3,
+    "names": [
+     "lit",
+     "dim",
+     "pressed"
+    ],
+    "fps": 4,
+    "note": "gate 3: the start button as an object of the world (the launch desk); replaces title_prompt_key.png"
+   },
+   "launchTouch": {
+    "file": "screens2/title_launch_touch.png",
+    "w": 154,
+    "h": 106,
+    "frames": 3,
+    "names": [
+     "lit",
+     "dim",
+     "pressed"
+    ],
+    "fps": 4
+   },
+   "king3": {
+    "file": "screens2/title_king3.png",
+    "w": 288,
+    "h": 288,
+    "frames": 7,
+    "fps": 8,
+    "anchor": [
+     144,
+     270
+    ],
+    "from": "chars/king wave_off, Scale3x"
+   },
+   "prompt": {
+    "file": "screens2/title_prompt_key.png",
+    "w": 188,
+    "h": 51,
+    "frames": 2,
+    "fps": 4,
+    "names": [
+     "a",
+     "b"
+    ]
+   },
+   "promptTouch": {
+    "file": "screens2/title_prompt_touch.png",
+    "w": 142,
+    "h": 51,
+    "frames": 2,
+    "fps": 4,
+    "names": [
+     "a",
+     "b"
+    ]
+   }
+  },
+  "select": {
+   "title": {
+    "file": "screens2/select_title.png",
+    "w": 170,
+    "h": 49
+   },
+   "billboard": {
+    "w": 108,
+    "h": 165,
+    "window": [
+     8,
+     8,
+     92,
+     116
+    ],
+    "portraitAt": [
+     18,
+     12
+    ],
+    "portraitSize": [
+     72,
+     72
+    ],
+    "crestAt": "centre of the top edge, star centre 2 px above it"
+   },
+   "heroes": {
+    "king": {
+     "board": {
+      "file": "screens2/select_board_king.png",
+      "w": 108,
+      "h": 165
+     },
+     "boardDim": {
+      "file": "screens2/select_board_king_dim.png",
+      "w": 108,
+      "h": 165
+     },
+     "face": {
+      "file": "screens2/select_face_king.png",
+      "w": 432,
+      "h": 72,
+      "frameW": 72,
+      "frameH": 72,
+      "frames": 6,
+      "names": [
+       "idle",
+       "grin",
+       "hurt",
+       "worried",
+       "shout",
+       "ko"
+      ],
+      "dim": "screens2/select_face_king_dim.png"
+     },
+     "flap": {
+      "file": "screens2/select_flap_king.png",
+      "w": 16,
+      "h": 16,
+      "frames": 2,
+      "at": [
+       8,
+       108
+      ]
+     }
+    },
+    "bengurion": {
+     "board": {
+      "file": "screens2/select_board_bengurion.png",
+      "w": 108,
+      "h": 165
+     },
+     "boardDim": {
+      "file": "screens2/select_board_bengurion_dim.png",
+      "w": 108,
+      "h": 165
+     },
+     "face": {
+      "file": "screens2/select_face_bengurion.png",
+      "w": 432,
+      "h": 72,
+      "frameW": 72,
+      "frameH": 72,
+      "frames": 6,
+      "names": [
+       "idle",
+       "grin",
+       "hurt",
+       "worried",
+       "shout",
+       "ko"
+      ],
+      "dim": "screens2/select_face_bengurion_dim.png"
+     },
+     "flap": {
+      "file": "screens2/select_flap_bengurion.png",
+      "w": 16,
+      "h": 16,
+      "frames": 2,
+      "at": [
+       8,
+       108
+      ]
+     }
+    }
+   },
+   "soon": [
+    {
+     "file": "screens2/select_board_soon_0.png",
+     "w": 108,
+     "h": 165,
+     "locked": true,
+     "prop": "eyepatch"
+    },
+    {
+     "file": "screens2/select_board_soon_1.png",
+     "w": 108,
+     "h": 165,
+     "locked": true,
+     "prop": "handbag"
+    },
+    {
+     "file": "screens2/select_board_soon_2.png",
+     "w": 108,
+     "h": 165,
+     "locked": true,
+     "prop": "rotorcap"
+    }
+   ],
+   "cone": {
+    "file": "screens2/select_cone.png",
+    "w": 150,
+    "h": 230,
+    "apex": [
+     75,
+     10
+    ]
+   },
+   "lamp": {
+    "file": "screens2/select_lamp.png",
+    "w": 26,
+    "h": 18
+   },
+   "podium": {
+    "file": "screens2/select_podium.png",
+    "w": 110,
+    "h": 38,
+    "standY": 1
+   },
+   "stampChosen": {
+    "file": "screens2/select_stamp_chosen.png",
+    "w": 100,
+    "h": 49,
+    "frames": 3,
+    "names": [
+     "falling",
+     "impact",
+     "settled"
+    ]
+   },
+   "power": {
+    "king": {
+     "file": "screens2/select_power_king.png",
+     "w": 66,
+     "h": 65
+    },
+    "bengurion": {
+     "file": "screens2/select_power_bengurion.png",
+     "w": 66,
+     "h": 65
+    }
+   },
+   "infoCard_land": {
+    "file": "screens2/select_infocard_land.png",
+    "w": 432,
+    "h": 132
+   },
+   "infoCard_port": {
+    "file": "screens2/select_infocard_port.png",
+    "w": 374,
+    "h": 172
+   },
+   "infoPlate": {
+    "file": "screens2/select_info9.png",
+    "w": 48,
+    "h": 43,
+    "slice": [
+     10,
+     10,
+     10,
+     12
+    ]
+   },
+   "quote9": {
+    "file": "screens2/select_quote9.png",
+    "w": 40,
+    "h": 24,
+    "slice": [
+     8,
+     6,
+     8,
+     7
+    ]
+   }
+  },
+  "report": {
+   "folder_land": {
+    "file": "screens2/report_folder_land.png",
+    "w": 440,
+    "h": 304,
+    "pages": {
+     "a": [
+      238,
+      16,
+      178,
+      241
+     ],
+     "b": [
+      35,
+      16,
+      178,
+      241
+     ]
+    },
+    "from": "art/ui/v2/gen/266 (raw material, redrawn on the grid)"
+   },
+   "folder_port": {
+    "file": "screens2/report_folder_port.png",
+    "w": 370,
+    "h": 644,
+    "pages": {
+     "a": [
+      10,
+      8,
+      350,
+      306
+     ],
+     "b": [
+      10,
+      326,
+      350,
+      306
+     ]
+    }
+   },
+   "cover_land": {
+    "file": "screens2/report_cover_land.png",
+    "w": 204,
+    "h": 284
+   },
+   "flip_land": {
+    "file": "screens2/report_flip_land.png",
+    "w": 135,
+    "h": 292,
+    "frames": 3,
+    "fps": 20,
+    "note": "the cover squashing toward the spine (anchored there); then it is gone and the open folder shows"
+   },
+   "cover_port": {
+    "file": "screens2/report_cover_port.png",
+    "w": 350,
+    "h": 306
+   },
+   "flip_port": {
+    "file": "screens2/report_flip_port.png",
+    "w": 231,
+    "h": 314,
+    "frames": 3,
+    "fps": 20,
+    "note": "the cover squashing toward the spine (anchored there); then it is gone and the open folder shows"
+   },
+   "stampSecret": {
+    "file": "screens2/report_stamp_secret.png",
+    "w": 169,
+    "h": 49,
+    "frames": 3,
+    "names": [
+     "falling",
+     "impact",
+     "settled"
+    ]
+   },
+   "stampArchived": {
+    "file": "screens2/report_stamp_archived.png",
+    "w": 157,
+    "h": 49,
+    "frames": 3,
+    "names": [
+     "falling",
+     "impact",
+     "settled"
+    ]
+   },
+   "inkGlint": {
+    "file": "screens2/report_ink_glint.png",
+    "w": 157,
+    "h": 49,
+    "frames": 5,
+    "fps": 15
+   },
+   "table_land": {
+    "file": "screens2/report_table_land.png",
+    "w": 158,
+    "h": 78,
+    "rowH": 18,
+    "rowsTop": 3,
+    "valueRight": 69,
+    "rows": [
+     "ui.report.cells",
+     "ui.report.barrels",
+     "ui.report.shots",
+     "ui.report.score"
+    ]
+   },
+   "table_port": {
+    "file": "screens2/report_table_port.png",
+    "w": 300,
+    "h": 78,
+    "rowH": 18,
+    "rowsTop": 3,
+    "valueRight": 115,
+    "rows": [
+     "ui.report.cells",
+     "ui.report.barrels",
+     "ui.report.shots",
+     "ui.report.score"
+    ]
+   },
+   "fileStamp": {
+    "file": "screens2/report_filestamp.png",
+    "w": 46,
+    "h": 52,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ],
+    "label": "ui.report.file",
+    "note": "the prompt: the stamp object, its key cap and the label beside it; on press it goes down and the report is filed"
+   },
+   "tick": {
+    "file": "screens2/report_tick.png",
+    "w": 12,
+    "h": 10,
+    "frames": 3,
+    "fps": 20
+   },
+   "medals": {
+    "ammo": {
+     "file": "screens2/report_medal_ammo.png",
+     "w": 28,
+     "h": 52,
+     "label": "ui.medal.ammo",
+     "pivot": [
+      14,
+      0
+     ]
+    },
+    "paper": {
+     "file": "screens2/report_medal_paper.png",
+     "w": 28,
+     "h": 52,
+     "label": "ui.medal.paper",
+     "pivot": [
+      14,
+      0
+     ]
+    },
+    "teabreak": {
+     "file": "screens2/report_medal_teabreak.png",
+     "w": 28,
+     "h": 52,
+     "label": "ui.medal.teabreak",
+     "pivot": [
+      14,
+      0
+     ]
+    }
+   },
+   "medalBar": {
+    "file": "screens2/report_medal_bar.png",
+    "w": 40,
+    "h": 6,
+    "tile": "x"
+   },
+   "capPlate": {
+    "file": "screens2/report_capplate9.png",
+    "w": 12,
+    "h": 10,
+    "slice": [
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   "formBox": {
+    "file": "screens2/report_formbox9.png",
+    "w": 20,
+    "h": 16,
+    "slice": [
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   "flap": {
+    "file": "screens2/report_flap.png",
+    "w": 12,
+    "h": 12,
+    "frames": 2
+   },
+   "censored": {
+    "file": "screens2/report_stamp_censored.png",
+    "w": 64,
+    "h": 32,
+    "note": "gate 3 (UI agent 9): the censored stamp (ui.reveal.censored) slammed over the finding-5 bars at censorT + 6 (2 f 6 px higher), centred on the bars"
+   },
+   "note_g6": "gate 3 (UI agent 9): table_* is a typed slip (torn top, typed labels, dotted leaders; the numbers still stamped at valueRight); the pages in 4 paper tones; the medal rims on a 4-tone metal ramp; the heading and finding 3 per hero (report.title.<hero>, report.f3.<hero>; st.hero)"
+  },
+  "controls": {
+   "poses": {
+    "move": {
+     "file": "screens2/controls_pose_move.png",
+     "w": 96,
+     "h": 96,
+     "frames": 4,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king run",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "jump": {
+     "file": "screens2/controls_pose_jump.png",
+     "w": 96,
+     "h": 96,
+     "frames": 4,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king jump",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "climb": {
+     "file": "screens2/controls_pose_climb.png",
+     "w": 96,
+     "h": 96,
+     "frames": 3,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king climb_up",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "fire": {
+     "file": "screens2/controls_pose_fire.png",
+     "w": 96,
+     "h": 96,
+     "frames": 4,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king shoot",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "next": {
+     "file": "screens2/controls_pose_next.png",
+     "w": 96,
+     "h": 96,
+     "frames": 4,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king armed_reload_show",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "power": {
+     "file": "screens2/controls_pose_power.png",
+     "w": 96,
+     "h": 96,
+     "frames": 5,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king redline_draw",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "pause": {
+     "file": "screens2/controls_pose_pause.png",
+     "w": 96,
+     "h": 96,
+     "frames": 4,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king wave_off",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    },
+    "restart": {
+     "file": "screens2/controls_pose_restart.png",
+     "w": 96,
+     "h": 96,
+     "frames": 2,
+     "anchor": [
+      48,
+      90
+     ],
+     "fps": 6,
+     "from": "chars/king headfirst_kick",
+     "note": "the real faced sprite frames at 1:1 (never enlarged, never re-clustered)"
+    }
+   },
+   "placard": {
+    "file": "screens2/controls_placard.png",
+    "w": 628,
+    "h": 348,
+    "grid": {
+     "x": 12,
+     "y": 42,
+     "cols": 4,
+     "rows": 2,
+     "cw": 150,
+     "ch": 150
+    },
+    "stampAt": [
+     8,
+     2
+    ],
+    "stamp": "controls_stamp.png"
+   },
+   "placardPort": {
+    "file": "screens2/controls_placard_port.png",
+    "w": 386,
+    "h": 424,
+    "grid": {
+     "x": 6,
+     "y": 42,
+     "cols": 2,
+     "rows": 3,
+     "cw": 186,
+     "ch": 124
+    }
+   },
+   "stamp": {
+    "file": "screens2/controls_stamp.png",
+    "w": 86,
+    "h": 40,
+    "frames": 3,
+    "names": [
+     "falling",
+     "impact",
+     "settled"
+    ]
+   },
+   "rows": [
+    {
+     "id": "move",
+     "label": "ui.controls.move",
+     "dry": "ui.controls.dry.move",
+     "keys": [
+      [
+       "KeyA",
+       "KeyD"
+      ],
+      [
+       "ArrowLeft",
+       "ArrowRight"
+      ]
+     ]
+    },
+    {
+     "id": "jump",
+     "label": "ui.controls.jump",
+     "dry": "ui.controls.dry.jump",
+     "keys": [
+      [
+       "Space"
+      ],
+      [
+       "KeyZ"
+      ]
+     ]
+    },
+    {
+     "id": "climb",
+     "label": "ui.controls.climb",
+     "dry": "ui.controls.dry.climb",
+     "keys": [
+      [
+       "KeyW",
+       "KeyS"
+      ],
+      [
+       "ArrowUp",
+       "ArrowDown"
+      ]
+     ]
+    },
+    {
+     "id": "fire",
+     "label": "ui.controls.fire",
+     "dry": "ui.controls.dry.fire",
+     "keys": [
+      [
+       "KeyJ"
+      ],
+      [
+       "KeyX"
+      ]
+     ]
+    },
+    {
+     "id": "next",
+     "label": "ui.controls.next",
+     "dry": "ui.controls.dry.next",
+     "keys": [
+      [
+       "KeyL"
+      ],
+      [
+       "KeyC"
+      ]
+     ]
+    },
+    {
+     "id": "power",
+     "label": "ui.controls.power",
+     "dry": "ui.controls.dry.power",
+     "keys": [
+      [
+       "KeyS",
+       "+",
+       "KeyL"
+      ],
+      [
+       "ArrowDown",
+       "+",
+       "KeyC"
+      ]
+     ]
+    },
+    {
+     "id": "pause",
+     "label": "ui.controls.pause",
+     "dry": "ui.controls.dry.pause",
+     "keys": [
+      [
+       "KeyP"
+      ],
+      [
+       "Escape"
+      ]
+     ]
+    },
+    {
+     "id": "restart",
+     "label": "ui.controls.restart",
+     "dry": "ui.controls.dry.restart",
+     "keys": [
+      [
+       "KeyR"
+      ],
+      []
+     ]
+    }
+   ],
+   "icons": {
+    "move": {
+     "file": "screens2/controls_icon_move.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "jump": {
+     "file": "screens2/controls_icon_jump.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "climb": {
+     "file": "screens2/controls_icon_climb.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "fire": {
+     "file": "screens2/controls_icon_fire.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "next": {
+     "file": "screens2/controls_icon_next.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "power": {
+     "file": "screens2/controls_icon_power.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "pause": {
+     "file": "screens2/controls_icon_pause.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    },
+    "restart": {
+     "file": "screens2/controls_icon_restart.png",
+     "w": 20,
+     "h": 20,
+     "retired": "gate 2: replaced by controls.poses; the old files stay shipped until the port drops them"
+    }
+   },
+   "note": "keys from src/content/actionmap.json (layout 1 | layout 2); the renderer builds the clauses from the live action map with keys360 caps; texts from weapon_cards.json screens.labels; layout and motion: screens2_draw.mjs drawControls"
+  },
+  "mobile": {
+   "stickBase": {
+    "file": "screens2/mobile_stick_base.png",
+    "w": 64,
+    "h": 64
+   },
+   "stickKnob": {
+    "file": "screens2/mobile_stick_knob.png",
+    "w": 30,
+    "h": 30
+   },
+   "jump": {
+    "file": "screens2/mobile_btn_jump.png",
+    "w": 44,
+    "h": 46,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "fire": {
+    "file": "screens2/mobile_btn_fire.png",
+    "w": 44,
+    "h": 46,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "next": {
+    "file": "screens2/mobile_btn_next.png",
+    "w": 44,
+    "h": 46,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "power": {
+    "file": "screens2/mobile_btn_power.png",
+    "w": 44,
+    "h": 46,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "note": "thumb buttons at the 360-tall UI scale: stick bottom-left, jump / fire / next / power bottom-right (layout in screens2_draw.mjs drawControls portrait); MOBILE owns the hit areas (at least 44 css px)",
+   "swap": {
+    "file": "screens2/mobile_btn_swap.png",
+    "w": 44,
+    "h": 46,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ],
+    "note": "replaces mobile.next as the weapon swap button (same place, same hit area)"
+   }
+  },
+  "pause": {
+   "curtain_land": {
+    "file": "screens2/pause_curtain_land.png",
+    "w": 304,
+    "h": 362,
+    "frames": 4,
+    "gap": 32,
+    "note": "gate 2: the left half (mirror it for the right); 4 breathing frames at 45 f; the halves stop 32 px apart at the centre so the frozen game shows through"
+   },
+   "curtain_port": {
+    "file": "screens2/pause_curtain_port.png",
+    "w": 179,
+    "h": 846,
+    "frames": 4,
+    "gap": 32,
+    "note": "gate 2: the left half (mirror it for the right); 4 breathing frames at 45 f; the halves stop 32 px apart at the centre so the frozen game shows through"
+   },
+   "plate": {
+    "file": "screens2/pause_plate9.png",
+    "w": 60,
+    "h": 40,
+    "slice": [
+     12,
+     12,
+     12,
+     14
+    ]
+   },
+   "plate_land": {
+    "file": "screens2/pause_plate_land.png",
+    "w": 290,
+    "h": 226
+   },
+   "plate_port": {
+    "file": "screens2/pause_plate_port.png",
+    "w": 234,
+    "h": 250
+   },
+   "cursor": {
+    "file": "screens2/pause_cursor.png",
+    "w": 16,
+    "h": 12
+   },
+   "tassel": {
+    "file": "screens2/pause_tassel.png",
+    "w": 10,
+    "h": 26,
+    "frames": 4,
+    "fps": 4
+   },
+   "gavel": {
+    "file": "screens2/pause_gavel.png",
+    "w": 37,
+    "h": 28
+   },
+   "selFrame": {
+    "file": "screens2/pause_sel9.png",
+    "w": 18,
+    "h": 16,
+    "slice": [
+     5,
+     5,
+     5,
+     5
+    ]
+   },
+   "note_g6": "gate 3 (UI agent 9): the velvet on a 5-tone crimson ramp per fold (curtain files re-toned, same sizes); selFrame is a 3 px brass bar frame (18 x 16, slice 5); plate_port is 234 wide (60 % of the phone width), the layout reads its w"
+  },
+  "lost": {
+   "sheet_land": {
+    "file": "screens2/lost_sheet_land.png",
+    "w": 262,
+    "h": 156,
+    "textTop": 48
+   },
+   "sheet_port": {
+    "file": "screens2/lost_sheet_port.png",
+    "w": 360,
+    "h": 176,
+    "textTop": 48
+   },
+   "lectern": {
+    "file": "screens2/lost_lectern.png",
+    "w": 120,
+    "h": 167,
+    "from": "art/ui/v2/gen/265 (raw material, redrawn on the grid)"
+   },
+   "flash": {
+    "file": "screens2/lost_flash.png",
+    "w": 24,
+    "h": 24,
+    "frames": 2,
+    "fps": 30
+   },
+   "koKing": {
+    "file": "screens2/lost_ko_king.png",
+    "w": 192,
+    "h": 192,
+    "frames": 8,
+    "fps": 8,
+    "anchor": [
+     96,
+     182
+    ],
+    "note": "gate 3 (UI agent 6): drawn at the screen's own pixel (no Scale2x): the king sitting on the floor dazed, eyes shut, twinkles (four-point) round his head, the crown spinning away on the floor; never lying, never X eyes"
+   },
+   "koBengurion": {
+    "file": "screens2/lost_ko_bengurion.png",
+    "w": 192,
+    "h": 192,
+    "frames": 8,
+    "fps": 8,
+    "anchor": [
+     96,
+     182
+    ],
+    "note": "gate 3 (UI agent 6): his own knockout frames at the screen's pixel: stuck in his headstand, wobbling, sparks; never flat, never X eyes"
+   }
+  },
+  "ballot": {
+   "slip": {
+    "file": "screens2/ballot_slip.png",
+    "w": 116,
+    "h": 82,
+    "counterAt": null,
+    "insetIdle": 20,
+    "note": "gate 3: idle, its lower 20 px are inside the slot (hidden by the lid)"
+   },
+   "fold": {
+    "file": "screens2/ballot_fold.png",
+    "w": 150,
+    "h": 48,
+    "frames": 2,
+    "fps": 20,
+    "note": "gate 2: drawn fold frames (the back of the paper), centred in W x H cells"
+   },
+   "box": {
+    "file": "screens2/ballot_box.png",
+    "w": 184,
+    "h": 161,
+    "slot": [
+     28,
+     2,
+     128,
+     3
+    ],
+    "counterAt": [
+     92,
+     85
+    ],
+    "promptAt": [
+     92,
+     166
+    ],
+    "view": "side",
+    "note": "gate 3: side view; the slip is drawn BEFORE the box so the lid hides what is inside the slot"
+   },
+   "lamp": {
+    "file": "screens2/ballot_lamp.png",
+    "w": 8,
+    "h": 8,
+    "frames": 2,
+    "fps": 2,
+    "at": [
+     20,
+     -6
+    ]
+   },
+   "slipBengurion": {
+    "file": "screens2/ballot_slip_bengurion.png",
+    "w": 116,
+    "h": 82
+   }
+  },
+  "trans": {
+   "stencil": {
+    "file": "screens2/trans_stencil.png",
+    "w": 161,
+    "h": 28,
+    "at": "left leaf, its right end 40 px before the leading edge, at 33 % of the height + 12; NEVER on the mirrored right leaf"
+   },
+   "doorL_land": {
+    "file": "screens2/trans_door_land.png",
+    "w": 328,
+    "h": 360,
+    "note": "the left leaf; the right leaf is its mirror; they overlap by 16 px when shut"
+   },
+   "doorL_port": {
+    "file": "screens2/trans_door_port.png",
+    "w": 203,
+    "h": 844,
+    "note": "the left leaf; the right leaf is its mirror; they overlap by 16 px when shut"
+   },
+   "wheel": {
+    "file": "screens2/trans_wheel.png",
+    "w": 70,
+    "h": 70,
+    "note": "on the left leaf, centred on its leading edge (so the star is whole and never cut by the seam)"
+   },
+   "dust": {
+    "file": "screens2/trans_dust.png",
+    "w": 40,
+    "h": 24,
+    "frames": 4,
+    "fps": 15,
+    "note": "falls from the doors' top edge on the slam, 4 frames"
+   },
+   "form_land": {
+    "file": "screens2/trans_form_land.png",
+    "w": 640,
+    "h": 360,
+    "strips": 20
+   },
+   "form_port": {
+    "file": "screens2/trans_form_port.png",
+    "w": 390,
+    "h": 844,
+    "strips": 12
+   },
+   "starWipe": {
+    "rim": [
+     "#fff1c4",
+     "#f0c060",
+     "#c8862a",
+     "#7a4a1c"
+    ],
+    "rimW": 5,
+    "cloth": [
+     "#0c1c4a",
+     "#122a66",
+     "#1a3a86"
+    ],
+    "note": "gate 2: procedural in screens2_draw.mjs starWipe: the screen shows through a hexagram; a 5 px brass INTERLACED frame on both triangles' edges (weave at the 6 inner crossings, a glint running round), the blue cloth with stepped folds outside; it closes to a small star with an overshoot, holds, then pops open"
+   }
+  }
+ },
+ "keys360": {
+  "note": "key caps for the 360-tall UI canvas; frames: up, down (sunk 1 px); Latin labels in a 5x7 font (gate 2)",
+  "h": 18,
+  "caps": {
+   "Space": {
+    "file": "keys360/Space.png",
+    "w": 42,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Enter": {
+    "file": "keys360/Enter.png",
+    "w": 38,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Backspace": {
+    "file": "keys360/Backspace.png",
+    "w": 22,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyP": {
+    "file": "keys360/KeyP.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyR": {
+    "file": "keys360/KeyR.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "F3": {
+    "file": "keys360/F3.png",
+    "w": 19,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "ArrowLeft": {
+    "file": "keys360/ArrowLeft.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "ArrowRight": {
+    "file": "keys360/ArrowRight.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "ArrowUp": {
+    "file": "keys360/ArrowUp.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "ArrowDown": {
+    "file": "keys360/ArrowDown.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Slash": {
+    "file": "keys360/Slash.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Period": {
+    "file": "keys360/Period.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Comma": {
+    "file": "keys360/Comma.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Numpad0": {
+    "file": "keys360/Numpad0.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Numpad1": {
+    "file": "keys360/Numpad1.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Numpad2": {
+    "file": "keys360/Numpad2.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "Escape": {
+    "file": "keys360/Escape.png",
+    "w": 25,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyA": {
+    "file": "keys360/KeyA.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyD": {
+    "file": "keys360/KeyD.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyW": {
+    "file": "keys360/KeyW.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyS": {
+    "file": "keys360/KeyS.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyJ": {
+    "file": "keys360/KeyJ.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyK": {
+    "file": "keys360/KeyK.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyL": {
+    "file": "keys360/KeyL.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyF": {
+    "file": "keys360/KeyF.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyG": {
+    "file": "keys360/KeyG.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyZ": {
+    "file": "keys360/KeyZ.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyX": {
+    "file": "keys360/KeyX.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyC": {
+    "file": "keys360/KeyC.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyE": {
+    "file": "keys360/KeyE.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   },
+   "KeyQ": {
+    "file": "keys360/KeyQ.png",
+    "w": 16,
+    "h": 18,
+    "frames": 2,
+    "names": [
+     "up",
+     "down"
+    ]
+   }
+  }
+ },
+ "scenes9": {
+  "version": 1,
+  "master": {
+   "w": 1280,
+   "h": 720,
+   "cx": 640,
+   "cy": 360,
+   "floorY": 576,
+   "trussY": 94
+  },
+  "portrait": {
+   "rule": "panX = master.cx - the plate column to centre on the canvas",
+   "title": {
+    "panX": 0
+   },
+   "select": {
+    "panX": "master.cx - slots.x[chosen]"
+   },
+   "lost": {
+    "panX": -12
+   }
+  },
+  "title": {
+   "plate": {
+    "file": "scenes9/title/plate.png",
+    "w": 1280,
+    "h": 720,
+    "wingL": "scenes9/title/wing_l.png",
+    "wingR": "scenes9/title/wing_r.png",
+    "wingW": 192,
+    "fillAbove": "#071012"
+   },
+   "shadow": {
+    "file": "scenes9/title/shadow.png",
+    "w": 33,
+    "h": 3,
+    "at": [
+     -16,
+     0
+    ]
+   },
+   "prompt": {
+    "key": {
+     "file": "scenes9/common/prompt_key.png",
+     "w": 322,
+     "h": 47,
+     "dx": -162,
+     "dy": 0,
+     "ph": 47
+    },
+    "touch": {
+     "file": "scenes9/common/prompt_touch.png",
+     "w": 400,
+     "h": 47,
+     "dx": -201,
+     "dy": 0,
+     "ph": 47
+    }
+   },
+   "hero": {
+    "foot": [
+     462,
+     576
+    ],
+    "states": [
+     "wave_off",
+     "victory",
+     "gloat",
+     "idle"
+    ],
+    "stillFrame": {
+     "wave_off": 3,
+     "victory": 2,
+     "gloat": 2,
+     "idle": 0
+    }
+   },
+   "jump": {
+    "rule": "foot y = the surface ink row (as on the floor: anchor row lands on the first face row)",
+    "lowStep": [
+     488,
+     549
+    ],
+    "highStep": [
+     509,
+     525
+    ],
+    "dome": [
+     580,
+     453
+    ],
+    "approvedDomeTop": [
+     644,
+     438
+    ]
+   },
+   "lamp": {
+    "x": 560,
+    "mouth": 367
+   },
+   "cone": {
+    "x": 560,
+    "runs": [
+     [
+      366,
+      369,
+      18
+     ],
+     [
+      370,
+      371,
+      19
+     ],
+     [
+      372,
+      373,
+      20
+     ],
+     [
+      374,
+      375,
+      21
+     ],
+     [
+      376,
+      377,
+      22
+     ],
+     [
+      378,
+      380,
+      23
+     ],
+     [
+      381,
+      382,
+      24
+     ],
+     [
+      383,
+      384,
+      25
+     ],
+     [
+      385,
+      386,
+      26
+     ],
+     [
+      387,
+      388,
+      27
+     ],
+     [
+      389,
+      391,
+      28
+     ],
+     [
+      392,
+      393,
+      29
+     ],
+     [
+      394,
+      395,
+      30
+     ],
+     [
+      396,
+      397,
+      31
+     ],
+     [
+      398,
+      400,
+      32
+     ],
+     [
+      401,
+      402,
+      33
+     ],
+     [
+      403,
+      404,
+      34
+     ],
+     [
+      405,
+      406,
+      35
+     ],
+     [
+      407,
+      408,
+      36
+     ],
+     [
+      409,
+      410,
+      37
+     ],
+     [
+      411,
+      413,
+      38
+     ],
+     [
+      414,
+      415,
+      39
+     ],
+     [
+      416,
+      417,
+      40
+     ],
+     [
+      418,
+      419,
+      41
+     ],
+     [
+      420,
+      422,
+      42
+     ],
+     [
+      423,
+      424,
+      43
+     ],
+     [
+      425,
+      426,
+      44
+     ],
+     [
+      427,
+      428,
+      45
+     ],
+     [
+      429,
+      430,
+      46
+     ],
+     [
+      431,
+      433,
+      47
+     ],
+     [
+      434,
+      435,
+      48
+     ],
+     [
+      436,
+      437,
+      49
+     ],
+     [
+      438,
+      439,
+      50
+     ],
+     [
+      440,
+      441,
+      51
+     ],
+     [
+      442,
+      443,
+      52
+     ],
+     [
+      444,
+      446,
+      53
+     ],
+     [
+      447,
+      448,
+      54
+     ],
+     [
+      449,
+      450,
+      55
+     ],
+     [
+      451,
+      452,
+      56
+     ],
+     [
+      453,
+      454,
+      57
+     ],
+     [
+      455,
+      457,
+      58
+     ],
+     [
+      458,
+      459,
+      59
+     ],
+     [
+      460,
+      461,
+      60
+     ],
+     [
+      462,
+      463,
+      61
+     ],
+     [
+      464,
+      466,
+      62
+     ],
+     [
+      467,
+      468,
+      63
+     ],
+     [
+      469,
+      470,
+      64
+     ],
+     [
+      471,
+      472,
+      65
+     ],
+     [
+      473,
+      474,
+      66
+     ],
+     [
+      475,
+      477,
+      67
+     ],
+     [
+      478,
+      479,
+      68
+     ],
+     [
+      480,
+      481,
+      69
+     ],
+     [
+      482,
+      483,
+      70
+     ],
+     [
+      484,
+      485,
+      71
+     ],
+     [
+      486,
+      488,
+      72
+     ],
+     [
+      489,
+      490,
+      73
+     ],
+     [
+      491,
+      492,
+      74
+     ],
+     [
+      493,
+      494,
+      75
+     ],
+     [
+      495,
+      496,
+      76
+     ],
+     [
+      497,
+      499,
+      77
+     ],
+     [
+      500,
+      501,
+      78
+     ],
+     [
+      502,
+      503,
+      79
+     ],
+     [
+      504,
+      505,
+      80
+     ],
+     [
+      506,
+      507,
+      81
+     ],
+     [
+      508,
+      509,
+      82
+     ],
+     [
+      510,
+      512,
+      83
+     ],
+     [
+      513,
+      514,
+      84
+     ],
+     [
+      515,
+      516,
+      85
+     ],
+     [
+      517,
+      518,
+      86
+     ],
+     [
+      519,
+      520,
+      87
+     ],
+     [
+      521,
+      523,
+      88
+     ],
+     [
+      524,
+      525,
+      89
+     ],
+     [
+      526,
+      527,
+      90
+     ],
+     [
+      528,
+      529,
+      91
+     ],
+     [
+      530,
+      531,
+      92
+     ],
+     [
+      532,
+      534,
+      93
+     ],
+     [
+      535,
+      536,
+      94
+     ],
+     [
+      537,
+      538,
+      95
+     ],
+     [
+      539,
+      540,
+      96
+     ],
+     [
+      541,
+      542,
+      97
+     ],
+     [
+      543,
+      545,
+      98
+     ],
+     [
+      546,
+      547,
+      99
+     ],
+     [
+      548,
+      549,
+      100
+     ],
+     [
+      550,
+      551,
+      101
+     ],
+     [
+      552,
+      553,
+      102
+     ],
+     [
+      554,
+      556,
+      103
+     ],
+     [
+      557,
+      558,
+      104
+     ],
+     [
+      559,
+      560,
+      105
+     ],
+     [
+      561,
+      562,
+      106
+     ],
+     [
+      563,
+      565,
+      107
+     ],
+     [
+      566,
+      567,
+      108
+     ],
+     [
+      568,
+      569,
+      109
+     ],
+     [
+      570,
+      571,
+      110
+     ],
+     [
+      572,
+      573,
+      111
+     ],
+     [
+      574,
+      576,
+      112
+     ],
+     [
+      577,
+      578,
+      113
+     ],
+     [
+      579,
+      580,
+      114
+     ],
+     [
+      581,
+      582,
+      115
+     ],
+     [
+      583,
+      584,
+      116
+     ],
+     [
+      585,
+      587,
+      117
+     ],
+     [
+      588,
+      589,
+      118
+     ],
+     [
+      590,
+      590,
+      119
+     ]
+    ]
+   },
+   "dimTint": 0.66
+  },
+  "select": {
+   "plateLit": {
+    "file": "scenes9/select/plate_lit.png",
+    "w": 1280,
+    "h": 720
+   },
+   "plate": {
+    "file": "scenes9/select/plate.png",
+    "w": 1280,
+    "h": 720,
+    "wingL": "scenes9/select/wing_l.png",
+    "wingR": "scenes9/select/wing_r.png",
+    "wingW": 192,
+    "fillAbove": "#071012"
+   },
+   "slots": {
+    "x": [
+     272,
+     456,
+     640,
+     824,
+     1008
+    ],
+    "layout": "slot 0 = paint gag (closed, baked), 1 = bengurion, 2 = king, 3 = the empty candidacy (neutral dossier, no figure), 4 = build gag (closed, baked)",
+    "heroes": {
+     "bengurion": 1,
+     "king": 2
+    },
+    "defaultChosen": 2,
+    "dossierOrigin": [
+     -86,
+     264
+    ]
+   },
+   "pool": {
+    "mouth": 255,
+    "runs": [
+     [
+      254,
+      262,
+      70
+     ],
+     [
+      263,
+      270,
+      71
+     ],
+     [
+      271,
+      278,
+      72
+     ],
+     [
+      279,
+      286,
+      73
+     ],
+     [
+      287,
+      294,
+      74
+     ],
+     [
+      295,
+      302,
+      75
+     ],
+     [
+      303,
+      310,
+      76
+     ],
+     [
+      311,
+      318,
+      77
+     ],
+     [
+      319,
+      326,
+      78
+     ],
+     [
+      327,
+      334,
+      79
+     ],
+     [
+      335,
+      342,
+      80
+     ],
+     [
+      343,
+      350,
+      81
+     ],
+     [
+      351,
+      358,
+      82
+     ],
+     [
+      359,
+      366,
+      83
+     ],
+     [
+      367,
+      374,
+      84
+     ],
+     [
+      375,
+      382,
+      85
+     ],
+     [
+      383,
+      390,
+      86
+     ],
+     [
+      391,
+      398,
+      87
+     ],
+     [
+      399,
+      406,
+      88
+     ],
+     [
+      407,
+      414,
+      89
+     ],
+     [
+      415,
+      422,
+      90
+     ],
+     [
+      423,
+      430,
+      91
+     ],
+     [
+      431,
+      438,
+      92
+     ],
+     [
+      439,
+      446,
+      93
+     ],
+     [
+      447,
+      454,
+      94
+     ],
+     [
+      455,
+      462,
+      95
+     ],
+     [
+      463,
+      470,
+      96
+     ],
+     [
+      471,
+      478,
+      97
+     ],
+     [
+      479,
+      486,
+      98
+     ],
+     [
+      487,
+      494,
+      99
+     ],
+     [
+      495,
+      502,
+      100
+     ],
+     [
+      503,
+      510,
+      101
+     ],
+     [
+      511,
+      518,
+      102
+     ],
+     [
+      519,
+      526,
+      103
+     ],
+     [
+      527,
+      534,
+      104
+     ],
+     [
+      535,
+      542,
+      105
+     ],
+     [
+      543,
+      550,
+      106
+     ],
+     [
+      551,
+      558,
+      107
+     ],
+     [
+      559,
+      566,
+      108
+     ],
+     [
+      567,
+      574,
+      109
+     ],
+     [
+      575,
+      582,
+      110
+     ],
+     [
+      583,
+      590,
+      111
+     ]
+    ]
+   },
+   "spots": [
+    {
+     "file": "scenes9/select/spot_0.png",
+     "w": 54,
+     "h": 150,
+     "at": [
+      245,
+      111
+     ]
+    },
+    {
+     "file": "scenes9/select/spot_1.png",
+     "w": 55,
+     "h": 150,
+     "at": [
+      429,
+      111
+     ]
+    },
+    {
+     "file": "scenes9/select/spot_2.png",
+     "w": 55,
+     "h": 150,
+     "at": [
+      613,
+      111
+     ]
+    },
+    {
+     "file": "scenes9/select/spot_3.png",
+     "w": 55,
+     "h": 150,
+     "at": [
+      797,
+      111
+     ]
+    },
+    {
+     "file": "scenes9/select/spot_4.png",
+     "w": 54,
+     "h": 150,
+     "at": [
+      981,
+      111
+     ]
+    }
+   ],
+   "dossiers": {
+    "king": {
+     "chosen": {
+      "file": "scenes9/select/dossier_king_chosen.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/dossier_king.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     }
+    },
+    "bengurion": {
+     "chosen": {
+      "file": "scenes9/select/dossier_bengurion_chosen.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/dossier_bengurion.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     }
+    },
+    "blank": {
+     "chosen": {
+      "file": "scenes9/select/dossier_blank_chosen.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/dossier_blank.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     }
+    },
+    "test": {
+     "chosen": {
+      "file": "scenes9/select/dossier_test_chosen.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/dossier_test.png",
+      "w": 174,
+      "h": 195,
+      "at": [
+       -1,
+       -10
+      ]
+     }
+    }
+   },
+   "shadows": [
+    {
+     "lit": {
+      "file": "scenes9/select/shadow_0.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       260,
+       576
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/shadow_0_dim.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       260,
+       576
+      ]
+     }
+    },
+    {
+     "lit": {
+      "file": "scenes9/select/shadow_1.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       444,
+       576
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/shadow_1_dim.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       444,
+       576
+      ]
+     }
+    },
+    {
+     "lit": {
+      "file": "scenes9/select/shadow_2.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       628,
+       576
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/shadow_2_dim.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       628,
+       576
+      ]
+     }
+    },
+    {
+     "lit": {
+      "file": "scenes9/select/shadow_3.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       812,
+       576
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/shadow_3_dim.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       812,
+       576
+      ]
+     }
+    },
+    {
+     "lit": {
+      "file": "scenes9/select/shadow_4.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       996,
+       576
+      ]
+     },
+     "dim": {
+      "file": "scenes9/select/shadow_4_dim.png",
+      "w": 33,
+      "h": 3,
+      "at": [
+       996,
+       576
+      ]
+     }
+    }
+   ],
+   "heroFootDx": 4,
+   "floorY": 576,
+   "dimTint": 0.62,
+   "prompt": "title.prompt (the same pieces and rule)"
+  },
+  "lost": {
+   "plate": {
+    "file": "scenes9/lost/plate.png",
+    "w": 1280,
+    "h": 720,
+    "wingL": "scenes9/lost/wing_l.png",
+    "wingR": "scenes9/lost/wing_r.png",
+    "wingW": 192,
+    "fillAbove": "#071012"
+   },
+   "hero": {
+    "foot": [
+     670,
+     576
+    ],
+    "states": [
+     "knockout_loop",
+     "knockout",
+     "death",
+     "idle"
+    ],
+    "stillFrame": {
+     "knockout_loop": 2,
+     "knockout": "last",
+     "death": "last",
+     "idle": 0
+    }
+   },
+   "lamp": {
+    "x": 674,
+    "mouth": 281
+   },
+   "cone": {
+    "x": 674,
+    "runs": [
+     [
+      280,
+      283,
+      26
+     ],
+     [
+      284,
+      286,
+      27
+     ],
+     [
+      287,
+      288,
+      28
+     ],
+     [
+      289,
+      291,
+      29
+     ],
+     [
+      292,
+      293,
+      30
+     ],
+     [
+      294,
+      296,
+      31
+     ],
+     [
+      297,
+      299,
+      32
+     ],
+     [
+      300,
+      301,
+      33
+     ],
+     [
+      302,
+      304,
+      34
+     ],
+     [
+      305,
+      306,
+      35
+     ],
+     [
+      307,
+      309,
+      36
+     ],
+     [
+      310,
+      312,
+      37
+     ],
+     [
+      313,
+      314,
+      38
+     ],
+     [
+      315,
+      317,
+      39
+     ],
+     [
+      318,
+      319,
+      40
+     ],
+     [
+      320,
+      322,
+      41
+     ],
+     [
+      323,
+      325,
+      42
+     ],
+     [
+      326,
+      327,
+      43
+     ],
+     [
+      328,
+      330,
+      44
+     ],
+     [
+      331,
+      332,
+      45
+     ],
+     [
+      333,
+      335,
+      46
+     ],
+     [
+      336,
+      338,
+      47
+     ],
+     [
+      339,
+      340,
+      48
+     ],
+     [
+      341,
+      343,
+      49
+     ],
+     [
+      344,
+      345,
+      50
+     ],
+     [
+      346,
+      348,
+      51
+     ],
+     [
+      349,
+      351,
+      52
+     ],
+     [
+      352,
+      353,
+      53
+     ],
+     [
+      354,
+      356,
+      54
+     ],
+     [
+      357,
+      358,
+      55
+     ],
+     [
+      359,
+      361,
+      56
+     ],
+     [
+      362,
+      364,
+      57
+     ],
+     [
+      365,
+      366,
+      58
+     ],
+     [
+      367,
+      369,
+      59
+     ],
+     [
+      370,
+      371,
+      60
+     ],
+     [
+      372,
+      374,
+      61
+     ],
+     [
+      375,
+      377,
+      62
+     ],
+     [
+      378,
+      379,
+      63
+     ],
+     [
+      380,
+      382,
+      64
+     ],
+     [
+      383,
+      384,
+      65
+     ],
+     [
+      385,
+      387,
+      66
+     ],
+     [
+      388,
+      390,
+      67
+     ],
+     [
+      391,
+      392,
+      68
+     ],
+     [
+      393,
+      395,
+      69
+     ],
+     [
+      396,
+      397,
+      70
+     ],
+     [
+      398,
+      400,
+      71
+     ],
+     [
+      401,
+      403,
+      72
+     ],
+     [
+      404,
+      405,
+      73
+     ],
+     [
+      406,
+      408,
+      74
+     ],
+     [
+      409,
+      410,
+      75
+     ],
+     [
+      411,
+      413,
+      76
+     ],
+     [
+      414,
+      416,
+      77
+     ],
+     [
+      417,
+      418,
+      78
+     ],
+     [
+      419,
+      421,
+      79
+     ],
+     [
+      422,
+      423,
+      80
+     ],
+     [
+      424,
+      426,
+      81
+     ],
+     [
+      427,
+      429,
+      82
+     ],
+     [
+      430,
+      431,
+      83
+     ],
+     [
+      432,
+      434,
+      84
+     ],
+     [
+      435,
+      436,
+      85
+     ],
+     [
+      437,
+      439,
+      86
+     ],
+     [
+      440,
+      442,
+      87
+     ],
+     [
+      443,
+      444,
+      88
+     ],
+     [
+      445,
+      447,
+      89
+     ],
+     [
+      448,
+      449,
+      90
+     ],
+     [
+      450,
+      452,
+      91
+     ],
+     [
+      453,
+      455,
+      92
+     ],
+     [
+      456,
+      457,
+      93
+     ],
+     [
+      458,
+      460,
+      94
+     ],
+     [
+      461,
+      462,
+      95
+     ],
+     [
+      463,
+      465,
+      96
+     ],
+     [
+      466,
+      468,
+      97
+     ],
+     [
+      469,
+      470,
+      98
+     ],
+     [
+      471,
+      473,
+      99
+     ],
+     [
+      474,
+      475,
+      100
+     ],
+     [
+      476,
+      478,
+      101
+     ],
+     [
+      479,
+      481,
+      102
+     ],
+     [
+      482,
+      483,
+      103
+     ],
+     [
+      484,
+      486,
+      104
+     ],
+     [
+      487,
+      488,
+      105
+     ],
+     [
+      489,
+      491,
+      106
+     ],
+     [
+      492,
+      494,
+      107
+     ],
+     [
+      495,
+      496,
+      108
+     ],
+     [
+      497,
+      499,
+      109
+     ],
+     [
+      500,
+      501,
+      110
+     ],
+     [
+      502,
+      504,
+      111
+     ],
+     [
+      505,
+      507,
+      112
+     ],
+     [
+      508,
+      509,
+      113
+     ],
+     [
+      510,
+      512,
+      114
+     ],
+     [
+      513,
+      514,
+      115
+     ],
+     [
+      515,
+      517,
+      116
+     ],
+     [
+      518,
+      520,
+      117
+     ],
+     [
+      521,
+      522,
+      118
+     ],
+     [
+      523,
+      525,
+      119
+     ],
+     [
+      526,
+      527,
+      120
+     ],
+     [
+      528,
+      530,
+      121
+     ],
+     [
+      531,
+      533,
+      122
+     ],
+     [
+      534,
+      535,
+      123
+     ],
+     [
+      536,
+      538,
+      124
+     ],
+     [
+      539,
+      540,
+      125
+     ],
+     [
+      541,
+      543,
+      126
+     ],
+     [
+      544,
+      546,
+      127
+     ],
+     [
+      547,
+      548,
+      128
+     ],
+     [
+      549,
+      551,
+      129
+     ],
+     [
+      552,
+      553,
+      130
+     ],
+     [
+      554,
+      556,
+      131
+     ],
+     [
+      557,
+      559,
+      132
+     ],
+     [
+      560,
+      561,
+      133
+     ],
+     [
+      562,
+      564,
+      134
+     ],
+     [
+      565,
+      566,
+      135
+     ],
+     [
+      567,
+      569,
+      136
+     ],
+     [
+      570,
+      572,
+      137
+     ],
+     [
+      573,
+      574,
+      138
+     ],
+     [
+      575,
+      577,
+      139
+     ],
+     [
+      578,
+      579,
+      140
+     ],
+     [
+      580,
+      582,
+      141
+     ],
+     [
+      583,
+      585,
+      142
+     ],
+     [
+      586,
+      587,
+      143
+     ],
+     [
+      588,
+      590,
+      144
+     ]
+    ]
+   },
+   "dimTint": 0.66,
+   "signs": {
+    "1": {
+     "file": "scenes9/lost/sign_1.png",
+     "w": 485,
+     "h": 109,
+     "at": [
+      399,
+      113
+     ]
+    },
+    "2": {
+     "file": "scenes9/lost/sign_2.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "3": {
+     "file": "scenes9/lost/sign_3.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "4": {
+     "file": "scenes9/lost/sign_4.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "5": {
+     "file": "scenes9/lost/sign_5.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "6": {
+     "file": "scenes9/lost/sign_6.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "7": {
+     "file": "scenes9/lost/sign_7.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "8": {
+     "file": "scenes9/lost/sign_8.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "9": {
+     "file": "scenes9/lost/sign_9.png",
+     "w": 495,
+     "h": 109,
+     "at": [
+      394,
+      113
+     ]
+    },
+    "10": {
+     "file": "scenes9/lost/sign_10.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "11": {
+     "file": "scenes9/lost/sign_11.png",
+     "w": 505,
+     "h": 109,
+     "at": [
+      389,
+      113
+     ]
+    },
+    "12": {
+     "file": "scenes9/lost/sign_12.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "13": {
+     "file": "scenes9/lost/sign_13.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "14": {
+     "file": "scenes9/lost/sign_14.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "15": {
+     "file": "scenes9/lost/sign_15.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "16": {
+     "file": "scenes9/lost/sign_16.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "17": {
+     "file": "scenes9/lost/sign_17.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "18": {
+     "file": "scenes9/lost/sign_18.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "19": {
+     "file": "scenes9/lost/sign_19.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "20": {
+     "file": "scenes9/lost/sign_20.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "21": {
+     "file": "scenes9/lost/sign_21.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "22": {
+     "file": "scenes9/lost/sign_22.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "23": {
+     "file": "scenes9/lost/sign_23.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "24": {
+     "file": "scenes9/lost/sign_24.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "25": {
+     "file": "scenes9/lost/sign_25.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "26": {
+     "file": "scenes9/lost/sign_26.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "27": {
+     "file": "scenes9/lost/sign_27.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "28": {
+     "file": "scenes9/lost/sign_28.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "29": {
+     "file": "scenes9/lost/sign_29.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "30": {
+     "file": "scenes9/lost/sign_30.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "31": {
+     "file": "scenes9/lost/sign_31.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "32": {
+     "file": "scenes9/lost/sign_32.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "33": {
+     "file": "scenes9/lost/sign_33.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "34": {
+     "file": "scenes9/lost/sign_34.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "35": {
+     "file": "scenes9/lost/sign_35.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "36": {
+     "file": "scenes9/lost/sign_36.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "37": {
+     "file": "scenes9/lost/sign_37.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "38": {
+     "file": "scenes9/lost/sign_38.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "39": {
+     "file": "scenes9/lost/sign_39.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "40": {
+     "file": "scenes9/lost/sign_40.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "41": {
+     "file": "scenes9/lost/sign_41.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "42": {
+     "file": "scenes9/lost/sign_42.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "43": {
+     "file": "scenes9/lost/sign_43.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "44": {
+     "file": "scenes9/lost/sign_44.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "45": {
+     "file": "scenes9/lost/sign_45.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "46": {
+     "file": "scenes9/lost/sign_46.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "47": {
+     "file": "scenes9/lost/sign_47.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "48": {
+     "file": "scenes9/lost/sign_48.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "49": {
+     "file": "scenes9/lost/sign_49.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "50": {
+     "file": "scenes9/lost/sign_50.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "51": {
+     "file": "scenes9/lost/sign_51.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "52": {
+     "file": "scenes9/lost/sign_52.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "53": {
+     "file": "scenes9/lost/sign_53.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "54": {
+     "file": "scenes9/lost/sign_54.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "55": {
+     "file": "scenes9/lost/sign_55.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "56": {
+     "file": "scenes9/lost/sign_56.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "57": {
+     "file": "scenes9/lost/sign_57.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "58": {
+     "file": "scenes9/lost/sign_58.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "59": {
+     "file": "scenes9/lost/sign_59.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "60": {
+     "file": "scenes9/lost/sign_60.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "61": {
+     "file": "scenes9/lost/sign_61.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "62": {
+     "file": "scenes9/lost/sign_62.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "63": {
+     "file": "scenes9/lost/sign_63.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "64": {
+     "file": "scenes9/lost/sign_64.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "65": {
+     "file": "scenes9/lost/sign_65.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "66": {
+     "file": "scenes9/lost/sign_66.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "67": {
+     "file": "scenes9/lost/sign_67.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "68": {
+     "file": "scenes9/lost/sign_68.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "69": {
+     "file": "scenes9/lost/sign_69.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "70": {
+     "file": "scenes9/lost/sign_70.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "71": {
+     "file": "scenes9/lost/sign_71.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "72": {
+     "file": "scenes9/lost/sign_72.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "73": {
+     "file": "scenes9/lost/sign_73.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "74": {
+     "file": "scenes9/lost/sign_74.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "75": {
+     "file": "scenes9/lost/sign_75.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "76": {
+     "file": "scenes9/lost/sign_76.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "77": {
+     "file": "scenes9/lost/sign_77.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "78": {
+     "file": "scenes9/lost/sign_78.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "79": {
+     "file": "scenes9/lost/sign_79.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "80": {
+     "file": "scenes9/lost/sign_80.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "81": {
+     "file": "scenes9/lost/sign_81.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "82": {
+     "file": "scenes9/lost/sign_82.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "83": {
+     "file": "scenes9/lost/sign_83.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "84": {
+     "file": "scenes9/lost/sign_84.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "85": {
+     "file": "scenes9/lost/sign_85.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "86": {
+     "file": "scenes9/lost/sign_86.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "87": {
+     "file": "scenes9/lost/sign_87.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "88": {
+     "file": "scenes9/lost/sign_88.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "89": {
+     "file": "scenes9/lost/sign_89.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "90": {
+     "file": "scenes9/lost/sign_90.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "91": {
+     "file": "scenes9/lost/sign_91.png",
+     "w": 515,
+     "h": 109,
+     "at": [
+      384,
+      113
+     ]
+    },
+    "92": {
+     "file": "scenes9/lost/sign_92.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "93": {
+     "file": "scenes9/lost/sign_93.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "94": {
+     "file": "scenes9/lost/sign_94.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "95": {
+     "file": "scenes9/lost/sign_95.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "96": {
+     "file": "scenes9/lost/sign_96.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "97": {
+     "file": "scenes9/lost/sign_97.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "98": {
+     "file": "scenes9/lost/sign_98.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    },
+    "99": {
+     "file": "scenes9/lost/sign_99.png",
+     "w": 525,
+     "h": 109,
+     "at": [
+      379,
+      113
+     ]
+    }
+   },
+   "statements": {
+    "bengurion.belt": {
+     "file": "scenes9/lost/statement_bengurion_belt.png",
+     "w": 208,
+     "h": 109,
+     "at": [
+      377,
+      463
+     ]
+    },
+    "bengurion.own_barrel": {
+     "file": "scenes9/lost/statement_bengurion_own_barrel.png",
+     "w": 208,
+     "h": 109,
+     "at": [
+      377,
+      463
+     ]
+    },
+    "bengurion.ceiling": {
+     "file": "scenes9/lost/statement_bengurion_ceiling.png",
+     "w": 208,
+     "h": 124,
+     "at": [
+      377,
+      448
+     ]
+    },
+    "bengurion.crush": {
+     "file": "scenes9/lost/statement_bengurion_crush.png",
+     "w": 208,
+     "h": 124,
+     "at": [
+      377,
+      448
+     ]
+    },
+    "bengurion.tank": {
+     "file": "scenes9/lost/statement_bengurion_tank.png",
+     "w": 208,
+     "h": 109,
+     "at": [
+      377,
+      463
+     ]
+    },
+    "bengurion.goat": {
+     "file": "scenes9/lost/statement_bengurion_goat.png",
+     "w": 208,
+     "h": 109,
+     "at": [
+      377,
+      463
+     ]
+    },
+    "bengurion.none": {
+     "file": "scenes9/lost/statement_bengurion_none.png",
+     "w": 208,
+     "h": 94,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.belt": {
+     "file": "scenes9/lost/statement_default_belt.png",
+     "w": 208,
+     "h": 79,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.own_barrel": {
+     "file": "scenes9/lost/statement_default_own_barrel.png",
+     "w": 208,
+     "h": 79,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.ceiling": {
+     "file": "scenes9/lost/statement_default_ceiling.png",
+     "w": 208,
+     "h": 94,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.crush": {
+     "file": "scenes9/lost/statement_default_crush.png",
+     "w": 208,
+     "h": 94,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.tank": {
+     "file": "scenes9/lost/statement_default_tank.png",
+     "w": 208,
+     "h": 79,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.goat": {
+     "file": "scenes9/lost/statement_default_goat.png",
+     "w": 208,
+     "h": 79,
+     "at": [
+      377,
+      478
+     ]
+    },
+    "default.none": {
+     "file": "scenes9/lost/statement_default_none.png",
+     "w": 208,
+     "h": 64,
+     "at": [
+      377,
+      478
+     ]
+    }
+   },
+   "causes": [
+    "belt",
+    "own_barrel",
+    "ceiling",
+    "crush",
+    "tank",
+    "goat"
+   ],
+   "prompt": {
+    "key": {
+     "file": "scenes9/common/prompt_restart_key.png",
+     "w": 209,
+     "h": 41,
+     "dx": -104,
+     "dy": 0,
+     "ph": 41
+    },
+    "touch": {
+     "file": "scenes9/common/prompt_restart_touch.png",
+     "w": 223,
+     "h": 44,
+     "dx": -111,
+     "dy": 0,
+     "ph": 44
+    }
+   }
+  }
+ }
+}

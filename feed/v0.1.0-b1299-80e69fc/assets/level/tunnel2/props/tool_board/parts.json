@@ -1,0 +1,1324 @@
+{
+ "id": "tool_board",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A tool board where every tool hangs on its painted outline and none is ever used: they jump their hooks, then the board cracks down the middle.",
+ "source": {
+  "intact": "props/tool_board_intact.png",
+  "crop": null,
+  "w": 103,
+  "h": 81,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "tool_board_col.png",
+   "n": "tool_board_n.png",
+   "mat": "tool_board_mat.png",
+   "parts": "tool_board_parts.png",
+   "grain": "tool_board_grain.png",
+   "inside": "tool_board_inside.png",
+   "under": {
+    "col": "tool_board_under_col.png",
+    "n": "tool_board_under_n.png",
+    "mat": "tool_board_under_mat.png",
+    "parts": "tool_board_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1-2 hooked: the tools jump their hooks",
+  "3 cracked: the right half of the board splits off along the grain"
+ ],
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: tools askew, a crack",
+  "broken": "orders 1-3"
+ },
+ "pieces": [
+  {
+   "id": "board",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "medium",
+   "mass": 642.9,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    0,
+    52,
+    73
+   ],
+   "at": [
+    5,
+    3
+   ],
+   "centre": [
+    29.9,
+    33.3
+   ],
+   "outline": [
+    [
+     -24.9,
+     -30.3
+    ],
+    [
+     25.1,
+     -30.3
+    ],
+    [
+     26.1,
+     -25.3
+    ],
+    [
+     27.1,
+     -19.3
+    ],
+    [
+     27.1,
+     -15.3
+    ],
+    [
+     24.1,
+     41.7
+    ],
+    [
+     23.1,
+     42.7
+    ],
+    [
+     -24.9,
+     42.7
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "the board, nailed to the wall (anchored)",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      101,
+      0,
+      8,
+      73
+     ],
+     "at": [
+      52,
+      3
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      190,
+      75,
+      16,
+      29
+     ],
+     "at": [
+      9,
+      46
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      152,
+      75,
+      17,
+      31
+     ],
+     "at": [
+      24,
+      44
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      25,
+      119,
+      31,
+      12
+     ],
+     "at": [
+      7,
+      12
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      91,
+      119,
+      31,
+      12
+     ],
+     "at": [
+      7,
+      29
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      216,
+      0,
+      11,
+      44
+     ],
+     "at": [
+      44,
+      21
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "board_r",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "medium",
+   "mass": 555.4,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    54,
+    0,
+    45,
+    73
+   ],
+   "at": [
+    53,
+    3
+   ],
+   "centre": [
+    77.5,
+    48.1
+   ],
+   "outline": [
+    [
+     -24.5,
+     16.9
+    ],
+    [
+     -22.5,
+     -45.1
+    ],
+    [
+     20.5,
+     -45.1
+    ],
+    [
+     20.5,
+     27.9
+    ],
+    [
+     -24.5,
+     27.9
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      111,
+      0,
+      6,
+      73
+     ],
+     "at": [
+      52,
+      3
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      30,
+      75,
+      20,
+      39
+     ],
+     "at": [
+      61,
+      9
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      74,
+      75,
+      18,
+      39
+     ],
+     "at": [
+      80,
+      9
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      242,
+      0,
+      9,
+      44
+     ],
+     "at": [
+      54,
+      21
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "spanner_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 159.5,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    156,
+    119,
+    29,
+    10
+   ],
+   "at": [
+    8,
+    13
+   ],
+   "centre": [
+    22.5,
+    18.0
+   ],
+   "outline": [
+    [
+     -14.5,
+     -5.0
+    ],
+    [
+     14.5,
+     -5.0
+    ],
+    [
+     14.5,
+     5.0
+    ],
+    [
+     -14.5,
+     5.0
+    ]
+   ],
+   "partIndex": 3,
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      58,
+      119,
+      31,
+      12
+     ],
+     "at": [
+      7,
+      12
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "spanner_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 159.5,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    187,
+    119,
+    29,
+    10
+   ],
+   "at": [
+    8,
+    30
+   ],
+   "centre": [
+    22.5,
+    35.0
+   ],
+   "outline": [
+    [
+     -14.5,
+     -5.0
+    ],
+    [
+     14.5,
+     -5.0
+    ],
+    [
+     14.5,
+     5.0
+    ],
+    [
+     -14.5,
+     5.0
+    ]
+   ],
+   "partIndex": 4,
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      124,
+      119,
+      30,
+      12
+     ],
+     "at": [
+      8,
+      29
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wrench_d",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 392.7,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    0,
+    75,
+    17,
+    42
+   ],
+   "at": [
+    45,
+    22
+   ],
+   "centre": [
+    53.5,
+    43.0
+   ],
+   "outline": [
+    [
+     -8.5,
+     -21.0
+    ],
+    [
+     8.5,
+     -21.0
+    ],
+    [
+     8.5,
+     21.0
+    ],
+    [
+     -8.5,
+     21.0
+    ]
+   ],
+   "partIndex": 5,
+   "edges": [
+    {
+     "joint": "j06",
+     "atlas": [
+      229,
+      0,
+      11,
+      44
+     ],
+     "at": [
+      44,
+      21
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      19,
+      75,
+      9,
+      42
+     ],
+     "at": [
+      54,
+      22
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      21,
+      119,
+      2,
+      24
+     ],
+     "at": [
+      60,
+      22
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wrench_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 366.3,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    114,
+    75,
+    18,
+    37
+   ],
+   "at": [
+    62,
+    10
+   ],
+   "centre": [
+    71.0,
+    28.5
+   ],
+   "outline": [
+    [
+     -9.0,
+     -18.5
+    ],
+    [
+     9.0,
+     -18.5
+    ],
+    [
+     9.0,
+     18.5
+    ],
+    [
+     -9.0,
+     18.5
+    ]
+   ],
+   "partIndex": 6,
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      52,
+      75,
+      20,
+      39
+     ],
+     "at": [
+      61,
+      9
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      16,
+      119,
+      3,
+      26
+     ],
+     "at": [
+      62,
+      21
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wrench_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 325.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    134,
+    75,
+    16,
+    37
+   ],
+   "at": [
+    81,
+    10
+   ],
+   "centre": [
+    89.0,
+    28.5
+   ],
+   "outline": [
+    [
+     -8.0,
+     -18.5
+    ],
+    [
+     8.0,
+     -18.5
+    ],
+    [
+     8.0,
+     18.5
+    ],
+    [
+     -8.0,
+     18.5
+    ]
+   ],
+   "partIndex": 7,
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      94,
+      75,
+      18,
+      39
+     ],
+     "at": [
+      80,
+      9
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "pliers",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 207.9,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    0,
+    119,
+    14,
+    27
+   ],
+   "at": [
+    10,
+    47
+   ],
+   "centre": [
+    17.0,
+    60.5
+   ],
+   "outline": [
+    [
+     -7.0,
+     -13.5
+    ],
+    [
+     7.0,
+     -13.5
+    ],
+    [
+     7.0,
+     13.5
+    ],
+    [
+     -7.0,
+     13.5
+    ]
+   ],
+   "partIndex": 8,
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      208,
+      75,
+      16,
+      29
+     ],
+     "at": [
+      9,
+      46
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "screwdriver",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 239.3,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    226,
+    75,
+    15,
+    29
+   ],
+   "at": [
+    25,
+    45
+   ],
+   "centre": [
+    32.5,
+    59.5
+   ],
+   "outline": [
+    [
+     -7.5,
+     -14.5
+    ],
+    [
+     7.5,
+     -14.5
+    ],
+    [
+     7.5,
+     14.5
+    ],
+    [
+     -7.5,
+     14.5
+    ]
+   ],
+   "partIndex": 9,
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      171,
+      75,
+      17,
+      30
+     ],
+     "at": [
+      24,
+      45
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "board_in",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "medium",
+   "mass": 448.3,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    119,
+    0,
+    50,
+    71
+   ],
+   "at": [
+    6,
+    4
+   ],
+   "centre": [
+    31.4,
+    30.0
+   ],
+   "outline": [
+    [
+     -25.4,
+     -26.0
+    ],
+    [
+     22.6,
+     -26.0
+    ],
+    [
+     23.6,
+     -22.0
+    ],
+    [
+     24.6,
+     -16.0
+    ],
+    [
+     24.6,
+     -12.0
+    ],
+    [
+     21.6,
+     45.0
+    ],
+    [
+     -25.4,
+     45.0
+    ]
+   ],
+   "partIndex": 10,
+   "what": "STAND-IN: the inside of board",
+   "inner_of": "board",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "board_r_in",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "medium",
+   "mass": 438.9,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    171,
+    0,
+    43,
+    71
+   ],
+   "at": [
+    54,
+    4
+   ],
+   "centre": [
+    77.3,
+    51.3
+   ],
+   "outline": [
+    [
+     -23.3,
+     13.7
+    ],
+    [
+     -21.3,
+     -47.3
+    ],
+    [
+     19.7,
+     -47.3
+    ],
+    [
+     19.7,
+     23.7
+    ],
+    [
+     -22.3,
+     23.7
+    ],
+    [
+     -23.3,
+     14.7
+    ]
+   ],
+   "partIndex": 11,
+   "what": "STAND-IN: the inside of board_r",
+   "inner_of": "board_r",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j04",
+   "a": "board",
+   "b": "spanner_1",
+   "kind": "hooked",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    22.0,
+    17.5
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "board",
+   "b": "spanner_2",
+   "kind": "hooked",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    22.0,
+    34.5
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "board",
+   "b": "wrench_d",
+   "kind": "hooked",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    45.6,
+    42.1
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "board_r",
+   "b": "wrench_d",
+   "kind": "hooked",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    60.0,
+    49.8
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "wrench_1",
+   "b": "wrench_d",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 1,
+   "at": [
+    62.0,
+    34.0
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "board",
+   "b": "pliers",
+   "kind": "hooked",
+   "strength": 0.15,
+   "order": 2,
+   "at": [
+    16.5,
+    60.0
+   ],
+   "rapier": "fixed",
+   "hp": 15,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "board",
+   "b": "screwdriver",
+   "kind": "hooked",
+   "strength": 0.15,
+   "order": 2,
+   "at": [
+    32.0,
+    59.0
+   ],
+   "rapier": "fixed",
+   "hp": 15,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "board_r",
+   "b": "wrench_1",
+   "kind": "hooked",
+   "strength": 0.15,
+   "order": 2,
+   "at": [
+    73.3,
+    26.2
+   ],
+   "rapier": "fixed",
+   "hp": 15,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "board_r",
+   "b": "wrench_2",
+   "kind": "hooked",
+   "strength": 0.15,
+   "order": 2,
+   "at": [
+    88.5,
+    28.0
+   ],
+   "rapier": "fixed",
+   "hp": 15,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "board",
+   "b": "board_r",
+   "kind": "cracked",
+   "strength": 0.4,
+   "order": 3,
+   "at": [
+    54.0,
+    34.3
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "board_in",
+   "b": "board",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    31.4,
+    30.0
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "board_r_in",
+   "b": "board_r",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    77.3,
+    51.3
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    9,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    7,
+    22
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    14,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    20,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    23,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    26,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    29,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    32,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    35,
+    12
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    37,
+    14
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "split",
+   "at": [
+    37,
+    18
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    7,
+    30
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    9,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    7,
+    39
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    17,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    20,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    26,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    29,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    32,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    35,
+    29
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "split",
+   "at": [
+    37,
+    31
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    44,
+    35
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    51,
+    21
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    54,
+    21
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    44,
+    54
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    47,
+    64
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    53,
+    64
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "split",
+   "at": [
+    55,
+    21
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "split",
+   "at": [
+    61,
+    21
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "split",
+   "at": [
+    62,
+    49
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "split",
+   "at": [
+    62,
+    58
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    62,
+    22
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    62,
+    28
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    62,
+    40
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    62,
+    46
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "crack",
+   "at": [
+    52,
+    20
+   ]
+  }
+ ],
+ "notes": []
+}

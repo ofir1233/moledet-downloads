@@ -1,0 +1,5 @@
+{
+  "about": "THE EXTRACTION FINALE's sprite set (src/render/paint/finaleView.ts). Sizes in cells. A sprite not named here is drawn as the plain STAND-IN shape (never to the owner). The painted set (art/skins_c/finale/) drops in by copying its files beside this file and naming them: body {file,w,h}, rotor [{file,w,h}, ...] (frames), ladder {file,w,h} (one segment, tiled), dust {file,w,h}. No maker name on any of them.",
+  "set": "stand-in",
+  "sprites": {}
+}

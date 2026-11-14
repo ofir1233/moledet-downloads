@@ -1,0 +1,29 @@
+{
+ "file": "pickup.png",
+ "cell": [
+  58,
+  58
+ ],
+ "anchor": "bottom centre of each cell (lying: on the floor; falling: the gun's centre is the pickup point)",
+ "states": {
+  "lying": {
+   "cols": [
+    0,
+    1
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "the glow outline pulses"
+  },
+  "falling": {
+   "cols": [
+    2,
+    3
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "the canopy sways; drift is the sim's"
+  }
+ },
+ "star": "lying frames: the UI agent's star_white_7 over the gun (whole); the canopy carries one too"
+}

@@ -1,0 +1,947 @@
+{
+ "id": "fan",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "The fan that never cooled anything: its rotor spins off the axle and rolls away; the housing hangs on by one bolt, then drops.",
+ "source": {
+  "intact": "props/fan_intact.png",
+  "crop": [
+   0,
+   0,
+   76,
+   99
+  ],
+  "w": 76,
+  "h": 99,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "fan_col.png",
+   "n": "fan_n.png",
+   "mat": "fan_mat.png",
+   "parts": "fan_parts.png",
+   "grain": "fan_grain.png",
+   "inside": "fan_inside.png",
+   "under": {
+    "col": "fan_under_col.png",
+    "n": "fan_under_n.png",
+    "mat": "fan_under_mat.png",
+    "parts": "fan_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 axle: the rotor leaves its axle",
+  "2 bolted: its blades part",
+  "3 bolted: the housing drops off the mount"
+ ],
+ "states": {
+  "intact": "4 spinning frames",
+  "damaged": "damaged.png (frame 0): it wobbles",
+  "broken": "orders 1-3 (sparks)"
+ },
+ "pieces": [
+  {
+   "id": "mount",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 148.5,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    158,
+    54,
+    52,
+    10
+   ],
+   "at": [
+    11,
+    72
+   ],
+   "centre": [
+    37.0,
+    75.6
+   ],
+   "outline": [
+    [
+     -26.0,
+     -3.6
+    ],
+    [
+     26.0,
+     -3.6
+    ],
+    [
+     26.0,
+     6.4
+    ],
+    [
+     -26.0,
+     6.4
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "the wall mount (anchored)",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      102,
+      81,
+      47,
+      1
+     ],
+     "at": [
+      11,
+      73
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "housing",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 849.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    51,
+    0,
+    52,
+    48
+   ],
+   "at": [
+    11,
+    24
+   ],
+   "centre": [
+    37.0,
+    46.2
+   ],
+   "outline": [
+    [
+     -26.0,
+     -22.2
+    ],
+    [
+     26.0,
+     -22.2
+    ],
+    [
+     26.0,
+     25.8
+    ],
+    [
+     -26.0,
+     25.8
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      52,
+      81,
+      48,
+      1
+     ],
+     "at": [
+      11,
+      70
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      118,
+      54,
+      28,
+      11
+     ],
+     "at": [
+      27,
+      32
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      28,
+      54,
+      14,
+      25
+     ],
+     "at": [
+      43,
+      43
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      157,
+      0,
+      28,
+      35
+     ],
+     "at": [
+      18,
+      35
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      0,
+      0,
+      49,
+      52
+     ],
+     "at": [
+      11,
+      24
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 8,
+      "squeeze": 0.88
+     }
+    }
+   ]
+  },
+  {
+   "id": "rotor_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 195.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    0,
+    54,
+    26,
+    25
+   ],
+   "at": [
+    27,
+    34
+   ],
+   "centre": [
+    41.3,
+    44.1
+   ],
+   "outline": [
+    [
+     -10.3,
+     -10.1
+    ],
+    [
+     1.7,
+     -10.1
+    ],
+    [
+     5.7,
+     -8.1
+    ],
+    [
+     10.7,
+     -3.1
+    ],
+    [
+     11.7,
+     -0.1
+    ],
+    [
+     10.7,
+     4.9
+    ],
+    [
+     4.7,
+     13.9
+    ],
+    [
+     0.7,
+     14.9
+    ],
+    [
+     -8.3,
+     3.9
+    ],
+    [
+     -14.3,
+     -6.1
+    ]
+   ],
+   "partIndex": 3,
+   "shardOf": "rotor",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      212,
+      54,
+      26,
+      9
+     ],
+     "at": [
+      27,
+      35
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      148,
+      54,
+      8,
+      11
+     ],
+     "at": [
+      45,
+      43
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      58,
+      54,
+      16,
+      20
+     ],
+     "at": [
+      27,
+      36
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rotor_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 69.3,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    44,
+    54,
+    12,
+    23
+   ],
+   "at": [
+    42,
+    44
+   ],
+   "centre": [
+    49.0,
+    56.9
+   ],
+   "outline": [
+    [
+     -7.0,
+     2.1
+    ],
+    [
+     2.0,
+     -11.9
+    ],
+    [
+     4.0,
+     -12.9
+    ],
+    [
+     5.0,
+     -11.9
+    ],
+    [
+     5.0,
+     0.1
+    ],
+    [
+     3.0,
+     4.1
+    ],
+    [
+     -2.0,
+     9.1
+    ],
+    [
+     -5.0,
+     10.1
+    ],
+    [
+     -6.0,
+     8.1
+    ],
+    [
+     -7.0,
+     4.1
+    ]
+   ],
+   "partIndex": 4,
+   "shardOf": "rotor",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      76,
+      54,
+      9,
+      20
+     ],
+     "at": [
+      45,
+      45
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      104,
+      54,
+      12,
+      16
+     ],
+     "at": [
+      42,
+      45
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      245,
+      54,
+      4,
+      7
+     ],
+     "at": [
+      43,
+      59
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rotor_3",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 258.5,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    187,
+    0,
+    24,
+    31
+   ],
+   "at": [
+    20,
+    37
+   ],
+   "centre": [
+    30.5,
+    54.6
+   ],
+   "outline": [
+    [
+     -10.5,
+     -9.6
+    ],
+    [
+     -4.5,
+     -17.6
+    ],
+    [
+     0.5,
+     -16.6
+    ],
+    [
+     11.5,
+     2.4
+    ],
+    [
+     13.5,
+     10.4
+    ],
+    [
+     12.5,
+     13.4
+    ],
+    [
+     0.5,
+     13.4
+    ],
+    [
+     -3.5,
+     11.4
+    ],
+    [
+     -8.5,
+     6.4
+    ],
+    [
+     -10.5,
+     2.4
+    ]
+   ],
+   "partIndex": 5,
+   "shardOf": "rotor",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      213,
+      0,
+      23,
+      29
+     ],
+     "at": [
+      21,
+      38
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      87,
+      54,
+      15,
+      19
+     ],
+     "at": [
+      26,
+      38
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      240,
+      54,
+      3,
+      9
+     ],
+     "at": [
+      41,
+      58
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "mount_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 55.0,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    0,
+    81,
+    50,
+    2
+   ],
+   "at": [
+    12,
+    73
+   ],
+   "centre": [
+    37.0,
+    74.0
+   ],
+   "outline": [
+    [
+     -25.0,
+     -1.0
+    ],
+    [
+     25.0,
+     -1.0
+    ],
+    [
+     25.0,
+     1.0
+    ],
+    [
+     -25.0,
+     1.0
+    ]
+   ],
+   "partIndex": 6,
+   "what": "STAND-IN: the inside of mount",
+   "inner_of": "mount",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "housing_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 686.4,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    105,
+    0,
+    50,
+    46
+   ],
+   "at": [
+    12,
+    25
+   ],
+   "centre": [
+    37.0,
+    45.5
+   ],
+   "outline": [
+    [
+     -25.0,
+     -20.5
+    ],
+    [
+     25.0,
+     -20.5
+    ],
+    [
+     25.0,
+     25.5
+    ],
+    [
+     -25.0,
+     25.5
+    ]
+   ],
+   "partIndex": 7,
+   "what": "STAND-IN: the inside of housing",
+   "inner_of": "housing",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j02",
+   "a": "housing",
+   "b": "rotor_1",
+   "kind": "axle",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    39.9,
+    35.3
+   ],
+   "rapier": "revolute",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "housing",
+   "b": "rotor_2",
+   "kind": "axle",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    51.6,
+    55.9
+   ],
+   "rapier": "revolute",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "housing",
+   "b": "rotor_3",
+   "kind": "axle",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    26.1,
+    56.7
+   ],
+   "rapier": "revolute",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "rotor_1",
+   "b": "rotor_2",
+   "kind": "bolted",
+   "strength": 0.05,
+   "order": 2,
+   "at": [
+    47.6,
+    51.1
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "rotor_1",
+   "b": "rotor_3",
+   "kind": "bolted",
+   "strength": 0.05,
+   "order": 2,
+   "at": [
+    34.6,
+    46.3
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "rotor_2",
+   "b": "rotor_3",
+   "kind": "bolted",
+   "strength": 0.05,
+   "order": 2,
+   "at": [
+    43.0,
+    62.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "housing",
+   "b": "mount",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 3,
+   "at": [
+    60,
+    72
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "mount_in",
+   "b": "mount",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    37.0,
+    74.0
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "housing_in",
+   "b": "housing",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    37.0,
+    45.5
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    26,
+    36
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    30,
+    34
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    38,
+    33
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    42,
+    33
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "lift",
+   "at": [
+    53,
+    43
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    44,
+    67
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    48,
+    64
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    54,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    51,
+    61
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    53,
+    57
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    19,
+    45
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    20,
+    44
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    22,
+    40
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    25,
+    37
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "bolt",
+   "at": [
+    19,
+    56
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "bolt",
+   "at": [
+    21,
+    60
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    25,
+    64
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "bolt",
+   "at": [
+    29,
+    67
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    37,
+    68
+   ]
+  }
+ ],
+ "notes": [
+  "The intact sprite has 4 frames; the fracture map is cut from frame 0."
+ ]
+}
