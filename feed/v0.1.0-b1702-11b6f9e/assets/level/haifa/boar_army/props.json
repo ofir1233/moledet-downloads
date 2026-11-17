@@ -1,0 +1,90 @@
+{
+ "about": "STAND-IN: the Haifa boar army's props (src/render/paint/boarArmy.ts): helmets left behind, the bin, the pine, its cone, the digger's mound, the trap's net. Art px at world density (32 px a cell).",
+ "standin": true,
+ "rects": {
+  "helmet_boar_rifleman": [
+   0,
+   0,
+   30,
+   16
+  ],
+  "helmet_piglet": [
+   32,
+   0,
+   30,
+   16
+  ],
+  "helmet_tree_sniper": [
+   64,
+   0,
+   30,
+   16
+  ],
+  "helmet_bin_mortar": [
+   96,
+   0,
+   30,
+   16
+  ],
+  "helmet_radio_boar": [
+   128,
+   0,
+   30,
+   16
+  ],
+  "helmet_digger": [
+   160,
+   0,
+   30,
+   16
+  ],
+  "helmet_commander": [
+   192,
+   0,
+   30,
+   16
+  ],
+  "bin": [
+   224,
+   0,
+   13,
+   24
+  ],
+  "pine": [
+   239,
+   0,
+   218,
+   272
+  ],
+  "cone": [
+   459,
+   0,
+   13,
+   17
+  ],
+  "mound": [
+   474,
+   0,
+   39,
+   11
+  ],
+  "net": [
+   515,
+   0,
+   35,
+   9
+  ],
+  "net_up": [
+   552,
+   0,
+   31,
+   47
+  ],
+  "grenade": [
+   585,
+   0,
+   13,
+   15
+  ]
+ }
+}

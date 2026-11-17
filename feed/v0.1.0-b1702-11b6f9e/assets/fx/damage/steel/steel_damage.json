@@ -1,0 +1,266 @@
+{
+ "material": "steel",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "the regime's bunker plate, riveted by the lowest bidder: it dents like a biscuit tin, tears along its rivet lines with the torn edge curling out at you, and the rivets pop off like buttons off a general's coat. A beam melts a kerf that cools white, orange, red, then a blue-straw temper tint.",
+ "ramp": [
+  "#1a1f26",
+  "#2c3640",
+  "#3e4a56",
+  "#5a6a78",
+  "#a8b4bc"
+ ],
+ "rust": [
+  "#3a2218",
+  "#6a3a22",
+  "#9a5a30"
+ ],
+ "back": [
+  "#0b0c0e",
+  "#15171a"
+ ],
+ "hash": "h32 as concrete (tools/art_host/fx/hashrule.py); salt 202 torn, 203 cut",
+ "edges": {
+  "strips": {
+   "file": "steel_edge_strips.png",
+   "normal": "steel_edge_strips_n.png",
+   "slot": [
+    32,
+    28
+   ],
+   "halfDepth": 14,
+   "variants": 6,
+   "joinLevels": [
+    -4,
+    2,
+    6,
+    11
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -11,
+    14
+   ]
+  },
+  "corners": {
+   "file": "steel_edge_corners.png",
+   "normal": "steel_edge_corners_n.png",
+   "slot": [
+    21,
+    21
+   ],
+   "origin": [
+    10,
+    10
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 202
+ },
+ "cutEdges": {
+  "strips": {
+   "file": "steel_cut_edge_strips.png",
+   "normal": "steel_cut_edge_strips_n.png",
+   "slot": [
+    32,
+    28
+   ],
+   "halfDepth": 14,
+   "variants": 6,
+   "joinLevels": [
+    -11,
+    -9,
+    -7,
+    -5
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -13,
+    2
+   ]
+  },
+  "corners": {
+   "file": "steel_cut_edge_corners.png",
+   "normal": "steel_cut_edge_corners_n.png",
+   "slot": [
+    21,
+    21
+   ],
+   "origin": [
+    10,
+    10
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 4,
+    "inner": 4,
+    "pinch": 2
+   }
+  },
+  "salt": 203
+ },
+ "stages": {
+  "file": "steel_dents.png",
+  "normal": "steel_dents_n.png",
+  "canvas": 48,
+  "cellAt": [
+   8,
+   8
+  ],
+  "variants": 4,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "use": "columns = variants (h32(cx, cy, 71 + salt) % 4), rows = stages 25 / 50 / 75 % of dmg / threshold, cumulative. Centre the 48 px canvas on the cell and draw it over the neighbours clipped to steel matter: creases cross the cell border. 25: dents and scratches; 50: + a buckle crease, a popped rivet socket; 75: + a torn seam, two sockets (spawn a flying rivet per socket)."
+ },
+ "chips": {
+  "file": "steel_chips.png",
+  "normal": "steel_chips_n.png",
+  "slot": 6,
+  "anchor": [
+   2,
+   2
+  ],
+  "variants": 6,
+  "use": "one per pellet, anchor on the hit pixel, variant h32(x, y, 80 + salt) % 6; spawn 2-3 sliver fragments + sparks"
+ },
+ "rivets": {
+  "file": "steel_rivets.png",
+  "normal": "steel_rivets_n.png",
+  "slot": 5,
+  "rows": [
+   "flying head, 4 frames at 24 fps, loop while airborne",
+   "socket (col 0)"
+  ],
+  "use": "a stage 50 / 75 socket or a torn edge passing a rivet: the head pops out at 3-6 cells/s up and away, spins, lands, lies 1 s"
+ },
+ "hot": {
+  "ramp": {
+   "file": "steel_hot_ramp.png",
+   "normal": "steel_hot_ramp_n.png",
+   "rows": [
+    "0 just cut",
+    "1",
+    "2",
+    "cold (temper tint, stays)"
+   ],
+   "columns": "px into the matter from the cut edge (0 = the edge pixel)",
+   "stepStartsMs": [
+    0,
+    120,
+    300,
+    700
+   ],
+   "colours": [
+    [
+     "fffbe0",
+     "ffd25a",
+     "ff8a1e",
+     "b8401a"
+    ],
+    [
+     "ffc650",
+     "e8601c",
+     "9c3018",
+     null
+    ],
+    [
+     "c4461a",
+     "6e2616",
+     null,
+     null
+    ],
+    [
+     "8a7ab0",
+     "b89a5a",
+     null,
+     null
+    ]
+   ]
+  },
+  "drips": {
+   "file": "steel_hot_drips.png",
+   "normal": "steel_hot_drips_n.png",
+   "slot": [
+    4,
+    8
+   ],
+   "frames": 4,
+   "variants": 2,
+   "use": "on the LOWER lip of a beam cut (matter above the kerf edge is the upper lip; drips hang from the lower edge of the UPPER lip): one drip every 5 + h32 % 9 px during steps 0-1, frames at 12 fps, frame 3 falls at 6 cells/s and dies on the first matter"
+  },
+  "emissive": true,
+  "coldBreakup": "the cold row is drawn only where h32(x, y, 88 + salt) % 4 != 0 (d 0) / % 2 == 0 (d 1): a tint, not an outline",
+  "path": "the beam removed cells must be 4-connected (a supercover line: at each diagonal step add the cell on the inside of the turn), or the kerf breaks into separate slots",
+  "use": "a cell removed by a BEAM (the plasma / laser weapons): its edge uses cutEdges, then for each matter pixel within 4 px of the kerf (4-connected distance d, 0 = touching the hole) draw ramp[step][d] over the art (additive glow on top is the render side's; these colours are opaque). step = 0 / 1 / 2 / cold by the ms since that pixel was cut. A shader: one distance field from the kerf + this 4 x 4 lookup. The light the glow throws (a warm point light along the cut for 0-300 ms) is the render side's."
+ },
+ "chunks": {
+  "file": "steel_chunks.png",
+  "normal": "steel_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   "sliver",
+   "short_sliver",
+   "holed_shard",
+   "curled_shard",
+   "flange",
+   "torn_strip",
+   "tab",
+   "grit"
+  ],
+  "facets": {
+   "#ff0000": "bright torn edge RAMP[4]",
+   "#00ff00": "the plate face, cut from the cell art",
+   "#0000ff": "underside RAMP[0..1]",
+   "#ffdc00": "rivet / hole"
+  },
+  "use": "as concrete (chunks.use): 2-5 a removed cell; slivers 0-1 fly first with sparks; steel scrap does not pile high: repose 28 deg"
+ },
+ "slabs": {
+  "file": "steel_slabs.png",
+  "normal": "steel_slabs_n.png",
+  "slot": [
+   26,
+   10
+  ],
+  "variants": 4,
+  "facets": {
+   "#00ff00": "the wall's painted face kept AS IT IS (it reads as a piece of this wall)",
+   "#ff0000": "the broken top edge: the section, lit",
+   "#0000ff": "side / underside: RAMP[0..1]"
+  },
+  "use": "holes of 3+ cells: min(4, 1 + n // 2) slabs, cut from removed cell (i * 3) % n at hashed offsets (keys 64-66), leaning on the wall foot by a shear of one px every 2-3 rows (alternate sides), 1 in 3 stood on end; then the chunks on a 36 deg cone within +-min(32, 10 + 6n) px of the hole centre; grains at the toe"
+ },
+ "section": "a plate is 2 px thick: in a torn hole the lower lip shows its cut top RAMP[4] then RAMP[3]; the upper lip's underside RAMP[0]; the sides RAMP[2]",
+ "rim": "torn (blast / shot): the matter beside the hole CURLS OUT: 1 px RAMP[4] at the edge facing up / left, a second px RAMP[3] behind it on up-facing edges, RAMP[0] on down / right edges, 1 rust px in 6",
+ "kerf": {
+  "width": 11,
+  "melt": 1,
+  "ref": "tools/art_host/fx/hole_assemble.py kerf_mask(shape, x0, y0, x1, y1, 11, salt 203)",
+  "use": "a beam cut is drawn along the REAL line of the beam (any angle): the sim removes the cells the line passes; the picture is the kerf over them (matter outside the kerf stays drawn). cutEdges is the grid fallback for a renderer without a fine mask."
+ },
+ "cause": {
+  "blast": "edges",
+  "shot": "edges + chips",
+  "beam": "kerf (or cutEdges) + hot"
+ }
+}

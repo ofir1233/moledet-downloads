@@ -1,0 +1,823 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "note": "Tier A props (account D, art/level/tier_a/tools/bake_props.py). Keys beyond the contract: state.pxPerFrame (advance by travel), hinge (px, the topple pivot in the frame), render.normals. Phase B (12.11): cat_gag, cat_glass, bell, time_clock, placard_tea, placard_clock, camera_crew.",
+ "anims": {
+  "missile_topple": {
+   "on": {
+    "kind": "prop",
+    "prop": "missile_goal",
+    "mode": "replace",
+    "onStates": [
+     "topple",
+     "sled"
+    ]
+   },
+   "sheet": "tier_a/missile_topple.png",
+   "frame": [
+    424,
+    330
+   ],
+   "cells": [
+    13.25,
+    10.312
+   ],
+   "anchor": [
+    0.8773,
+    0.9757
+   ],
+   "dz": 0,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0.15,
+    "pxScale": 1,
+    "normals": "none: flat (0,0,1)"
+   },
+   "states": {
+    "stand": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "note": "frame 0 = the still intact missile (shadow re-baked)"
+    },
+    "topple": {
+     "row": 0,
+     "frames": 5,
+     "durations": [
+      17,
+      105,
+      61,
+      57,
+      55
+     ],
+     "loop": false,
+     "next": "topple_b",
+     "hold": 0,
+     "note": "tips to the LEFT (flip for right) about its base-left corner, angles 0,4,10,18,28"
+    },
+    "topple_b": {
+     "row": 1,
+     "frames": 4,
+     "durations": [
+      54,
+      54,
+      54,
+      59
+     ],
+     "loop": false,
+     "next": "sled",
+     "hold": 0,
+     "note": "angles 40,54,70,90; whole fall 30 ticks, angle ~ t^2 (a falling tree)"
+    },
+    "sled": {
+     "row": 2,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "note": "lying on its side; the game moves it (the sled); shake and squash are RENDER"
+    }
+   },
+   "default": "stand",
+   "phase": "sync",
+   "hinge": [
+    324,
+    324
+   ],
+   "note": "gag 5. Sim states topple and sled are NEW on missile_goal (GAMEPLAY adds them). The sheet is 3 rows because 9 frames in one row would pass 4096 px."
+  },
+  "crown_roll": {
+   "on": {
+    "kind": "spawned"
+   },
+   "sheet": "tier_a/crown_roll.png",
+   "frame": [
+    26,
+    26
+   ],
+   "cells": [
+    0.812,
+    0.812
+   ],
+   "anchor": [
+    0.5,
+    0.9231
+   ],
+   "z": 2,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "roll": {
+     "row": 0,
+     "frames": 8,
+     "fps": 18,
+     "loop": true,
+     "pxPerFrame": 7.0,
+     "note": "the crown entity moves it; advance one frame per pxPerFrame of travel (no slide); flip for rolling left"
+    },
+    "hop": {
+     "row": 0,
+     "frames": 8,
+     "fps": 24,
+     "loop": true,
+     "note": "the dodge and the hop over the corpse: the same spin, faster, in the air (shadow then drawn by the renderer)"
+    },
+    "settle": {
+     "row": 1,
+     "frames": 4,
+     "durations": [
+      70,
+      70,
+      90,
+      120
+     ],
+     "loop": false,
+     "next": "still",
+     "hold": 0
+    },
+    "still": {
+     "row": 2,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "note": "lying still, upright on its band, the shine up"
+    }
+   },
+   "default": "still",
+   "phase": "sync",
+   "note": "gag 12. Built from the king's OWN crown pixels (chars/king/idle_00, rows 19-28, cols 44-59): it matches his sprite exactly."
+  },
+  "samovar_whistle": {
+   "on": {
+    "kind": "prop",
+    "prop": "samovar_corner",
+    "mode": "replace",
+    "onStates": [
+     "whistle",
+     "lid_off"
+    ]
+   },
+   "sheet": "tier_a/samovar_whistle.png",
+   "frame": [
+    130,
+    80
+   ],
+   "cells": [
+    4.062,
+    2.5
+   ],
+   "anchor": [
+    0.4923,
+    0.9125
+   ],
+   "dz": 0,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0.3,
+    "pxScale": 1,
+    "srcScale": 0.152
+   },
+   "states": {
+    "rattle": {
+     "row": 0,
+     "frames": 4,
+     "durations": [
+      130,
+      100,
+      80,
+      60
+     ],
+     "loop": true,
+     "note": "the lid hops on the samovar; 30 ticks then lid_off"
+    },
+    "lid_off": {
+     "row": 1,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "spawn": [
+      {
+       "frame": 0,
+       "anim": "samovar_lid",
+       "at": [
+        -18,
+        -58
+       ]
+      }
+     ]
+    }
+   },
+   "default": "rattle",
+   "phase": "sync",
+   "note": "gag 5's end: sim states whistle and lid_off are NEW on samovar_corner. Cut from the level's own samovar_corner_intact (rows 0-14, cols 36-56): if that art is redrawn, re-run bake_props.py."
+  },
+  "samovar_lid": {
+   "on": {
+    "kind": "spawned"
+   },
+   "sheet": "tier_a/samovar_lid.png",
+   "frame": [
+    24,
+    24
+   ],
+   "cells": [
+    0.75,
+    0.75
+   ],
+   "anchor": [
+    0.5,
+    0.5
+   ],
+   "z": 2,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "fly": {
+     "row": 0,
+     "frames": 8,
+     "fps": 24,
+     "loop": true,
+     "move": {
+      "gravity": 40,
+      "vy0": -14.1,
+      "vx": 2.5,
+      "until": {
+       "ground": 4
+      }
+     },
+     "then": "samovar_lid",
+     "next": "still",
+     "note": "pops 2.5 cells up, 1.8 cells right (vx = cells/s along the samovar facing, a key beyond the contract); lands: one 8-tick bounce of 0.25 cell, then still"
+    },
+    "still": {
+     "row": 1,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "anchorStill": [
+      0.5,
+      0.9167
+     ],
+     "note": "lying on the ground, its contact shadow baked; anchor here = its foot"
+    }
+   },
+   "default": "fly",
+   "phase": "sync",
+   "note": "gag 5: the lid, its own piece. The win screen waits for lid landing + 60 ticks."
+  },
+  "cat_gag": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 30.2,
+      "y": 14,
+      "flip": false,
+      "beat": 1,
+      "note": "catwalk A, its right end: the glass goes off at x 31 (the samovar at 33)"
+     },
+     {
+      "x": 93.7,
+      "y": 14,
+      "flip": true,
+      "beat": 2,
+      "note": "catwalk B, its left end: the barrel goes off at x 93 onto the ambush clones at 90.5-92.5"
+     },
+     {
+      "x": 0,
+      "y": 0,
+      "flip": true,
+      "beat": 3,
+      "note": "the launch console by the missile: the level has none yet (the booth at 13.5 is far from the missile); LEVEL adds it"
+     }
+    ]
+   },
+   "sheet": "tier_a/cat_gag.png",
+   "frame": [
+    60,
+    32
+   ],
+   "cells": [
+    1.875,
+    1.0
+   ],
+   "anchor": [
+    0.2,
+    0.9531
+   ],
+   "z": 2,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "sit": {
+     "row": 0,
+     "frames": 2,
+     "durations": [
+      2400,
+      300
+     ],
+     "loop": true,
+     "note": "calm; the tail tip flicks now and then"
+    },
+    "stare": {
+     "row": 1,
+     "frames": 4,
+     "durations": [
+      200,
+      200,
+      200,
+      200
+     ],
+     "loop": true,
+     "note": "only the tail tip and one ear move; 48 ticks = one pass (proposal; the bible says 12)"
+    },
+    "push": {
+     "row": 2,
+     "frames": 9,
+     "durations": [
+      333,
+      146,
+      146,
+      146,
+      146,
+      146,
+      146,
+      146,
+      146
+     ],
+     "loop": false,
+     "next": "push_hold",
+     "hold": 0,
+     "pawTip": [
+      [
+       31,
+       25
+      ],
+      [
+       45,
+       29
+      ],
+      [
+       46,
+       29
+      ],
+      [
+       47,
+       29
+      ],
+      [
+       48,
+       29
+      ],
+      [
+       49,
+       29
+      ],
+      [
+       50,
+       29
+      ],
+      [
+       51,
+       29
+      ],
+      [
+       52,
+       29
+      ]
+     ],
+     "note": "paw lift 20 ticks, then the slow push: the cat creeps 1 px a step for 70 ticks, still staring (90 in all; the bible says 30). pawTip = the paw contact px per frame: the glass or barrel rides it"
+    },
+    "push_hold": {
+     "row": 2,
+     "frames": 1,
+     "start": 8,
+     "fps": 1,
+     "loop": true,
+     "note": "frame 8 of row 2 held (the paw still out) until GAMEPLAY moves on: keeps staring"
+    },
+    "lick": {
+     "row": 3,
+     "frames": 2,
+     "durations": [
+      200,
+      200
+     ],
+     "loop": false,
+     "repeat": true,
+     "hold": 1200,
+     "next": "sit",
+     "note": "after the boom: 3 licks"
+    },
+    "jump": {
+     "row": 4,
+     "frames": 3,
+     "durations": [
+      133,
+      233,
+      100
+     ],
+     "loop": false,
+     "next": "hover",
+     "hold": 0,
+     "note": "crouch 8, leap 14 (GAMEPLAY moves it along the arc; no shadow in the air), land 6"
+    },
+    "hover": {
+     "row": 5,
+     "frames": 2,
+     "durations": [
+      750,
+      750
+     ],
+     "loop": true,
+     "note": "the paw over the button: 90 ticks (proposal; bible 50), only the tail moves"
+    },
+    "press": {
+     "row": 6,
+     "frames": 1,
+     "durations": [
+      50
+     ],
+     "loop": false,
+     "next": "blink",
+     "hold": 333,
+     "note": "TOK on its first frame: cat:press"
+    },
+    "blink": {
+     "row": 7,
+     "frames": 3,
+     "durations": [
+      167,
+      500,
+      500
+     ],
+     "loop": false,
+     "next": "sit",
+     "hold": 0,
+     "note": "the slow blink afterwards"
+    }
+   },
+   "default": "sit",
+   "phase": "sync",
+   "invulnerable": true,
+   "note": "gag 2, the cat that is never hurt. From painted sheet 242 by majority colour into its own 15-colour palette (fur, stripe, cream, cool rim, eye, pink), 1 px outline; anchor = the ground under its hind feet. Keys beyond the contract: state.pawTip (px per frame), state.start (first frame of the row), invulnerable."
+  },
+  "bell": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 0,
+      "y": 0,
+      "note": "GAMEPLAY places it: a wall above the clones, by the 1:30 trigger"
+     }
+    ]
+   },
+   "sheet": "tier_a/bell.png",
+   "frame": [
+    54,
+    46
+   ],
+   "cells": [
+    1.688,
+    1.438
+   ],
+   "anchor": [
+    0.2222,
+    0.2826
+   ],
+   "z": -5,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0.1,
+    "pxScale": 1
+   },
+   "states": {
+    "still": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true
+    },
+    "ring": {
+     "row": 1,
+     "frames": 8,
+     "durations": [
+      67,
+      67,
+      67,
+      67,
+      67,
+      67,
+      67,
+      67
+     ],
+     "loop": false,
+     "repeat": true,
+     "hold": 733,
+     "next": "still",
+     "note": "the painted bell turns on its bracket (0, +-5, +-10 deg, RotSprite), the clapper one frame behind; 44 ticks then still"
+    }
+   },
+   "default": "still",
+   "phase": "sync",
+   "triggers": [
+    {
+     "event": "regime:teabreak",
+     "within": 999,
+     "state": "ring"
+    }
+   ],
+   "note": "gag 10. Anchor = the wall plate centre (bolt it to the rock). Its wall shadow is baked."
+  },
+  "time_clock": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 0,
+      "y": 0,
+      "note": "GAMEPLAY places it where the strike clones punch in"
+     }
+    ]
+   },
+   "sheet": "tier_a/time_clock.png",
+   "frame": [
+    60,
+    70
+   ],
+   "cells": [
+    1.875,
+    2.188
+   ],
+   "anchor": [
+    0.3333,
+    0.95
+   ],
+   "z": -2,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "idle": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "note": "a card waits half in the slot"
+    },
+    "punch": {
+     "row": 1,
+     "frames": 7,
+     "durations": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      167,
+      233
+     ],
+     "loop": false,
+     "next": "idle",
+     "hold": 500,
+     "note": "the card goes in 1 px a step, CLUNK on frame 5 (the lever dips): the strike clone may now explode"
+    }
+   },
+   "default": "idle",
+   "phase": "random",
+   "note": "gag 10. The clock face has hands only, no numbers."
+  },
+  "camera_crew": {
+   "on": {
+    "kind": "layer",
+    "layer": "wall",
+    "spots": [
+     [
+      1490,
+      596
+     ]
+    ],
+    "note": "on the wall layer floor (groundPx 596), in its haze; repeats with its tileX"
+   },
+   "sheet": "tier_a/camera_crew.png",
+   "frame": [
+    44,
+    41
+   ],
+   "cells": [
+    1.375,
+    1.281
+   ],
+   "anchor": [
+    0.5,
+    0.9634
+   ],
+   "render": {
+    "shadow": "baked",
+    "lampTint": false,
+    "hazeDepth": 0,
+    "pxScale": 1,
+    "note": "the wall haze is baked into its palette (30 % fog, 85 % value)"
+   },
+   "states": {
+    "stand": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true
+    },
+    "flinch": {
+     "row": 1,
+     "frames": 3,
+     "durations": [
+      60,
+      140,
+      120
+     ],
+     "loop": false,
+     "next": "stand",
+     "hold": 400,
+     "note": "duck, lower, hold; started by the blame bark (gag 1)"
+    }
+   },
+   "default": "stand",
+   "phase": "sync",
+   "triggers": [
+    {
+     "event": "king:blame",
+     "within": 999,
+     "state": "flinch",
+     "delay": 100
+    }
+   ],
+   "note": "gag 1: a tiny TV crew in the painted background, about half the hero height (it stands far back)"
+  },
+  "cat_glass": {
+   "on": {
+    "kind": "spawned"
+   },
+   "sheet": "tier_a/cat_glass.png",
+   "frame": [
+    14,
+    14
+   ],
+   "cells": [
+    0.438,
+    0.438
+   ],
+   "anchor": [
+    0.5,
+    0.8929
+   ],
+   "z": 2,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "still": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true,
+     "note": "on the ledge; while pushed GAMEPLAY keeps it at the cat push pawTip"
+    },
+    "fall": {
+     "row": 1,
+     "frames": 8,
+     "fps": 20,
+     "loop": true,
+     "anchorFall": [
+      0.5,
+      0.5
+     ],
+     "move": {
+      "gravity": 40,
+      "vy0": 0,
+      "until": {
+       "ground": 12
+      }
+     },
+     "then": "fx_glass_smash",
+     "note": "tumbles off the ledge; on the ground the chink and the smash (FX builder: fx_glass_smash)"
+    }
+   },
+   "default": "still",
+   "phase": "sync",
+   "note": "gag 2 beat 1: a tea glass, full; hand-placed pixels (7x9), its own 6 colours"
+  },
+  "placard_tea": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 0,
+      "y": 0,
+      "note": "GAMEPLAY: by the time clock during the strike"
+     }
+    ]
+   },
+   "sheet": "tier_a/placard_tea.png",
+   "frame": [
+    46,
+    58
+   ],
+   "cells": [
+    1.438,
+    1.812
+   ],
+   "anchor": [
+    0.5652,
+    0.8915
+   ],
+   "z": -3,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "lean": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true
+    }
+   },
+   "default": "lean",
+   "note": "gag 10 strike: a placard leaning on the wall (+7 deg), pictures only, its wall shadow baked"
+  },
+  "placard_clock": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 0,
+      "y": 0,
+      "note": "GAMEPLAY: by the time clock during the strike"
+     }
+    ]
+   },
+   "sheet": "tier_a/placard_clock.png",
+   "frame": [
+    46,
+    58
+   ],
+   "cells": [
+    1.438,
+    1.812
+   ],
+   "anchor": [
+    0.4348,
+    0.8881
+   ],
+   "z": -3,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1
+   },
+   "states": {
+    "lean": {
+     "row": 0,
+     "frames": 1,
+     "fps": 1,
+     "loop": true
+    }
+   },
+   "default": "lean",
+   "note": "gag 10 strike: a placard leaning on the wall (-6 deg), pictures only, its wall shadow baked"
+  }
+ }
+}

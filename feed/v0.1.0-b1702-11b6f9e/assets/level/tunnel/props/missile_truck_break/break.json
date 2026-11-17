@@ -1,0 +1,454 @@
+{
+ "id": "missile_truck",
+ "version": 1,
+ "form": "host-art break v1 (parseFracture-compatible: pieces[].atlas/at/centre/stays)",
+ "character": "A tired, overloaded regime truck: the cab lights up first, then the loose skin rips off along its bolt lines; what the factory welded stays as a charred frame.",
+ "source": {
+  "intact": "props/missile_truck_intact.png",
+  "w": 338,
+  "h": 149,
+  "pxPerCell": 32,
+  "facing": "right"
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "chassis": "chassis.png",
+  "chassisNormals": "chassis_n.png"
+ },
+ "flash": {
+  "files": [
+   "flash_0.png",
+   "flash_1.png",
+   "flash_2.png"
+  ],
+  "normals": [
+   "flash_0_n.png",
+   "flash_1_n.png",
+   "flash_2_n.png"
+  ],
+  "fps": 24,
+  "note": "full sprite size, drawn in place of the intact sprite for 3 frames; then the split (chassis + pieces at rest, thrown)"
+ },
+ "units": "sprite px, y down; pivot = the centre of mass inside the part picture; throw.dir x right / y up for the sprite facing right (mirror x for dir -1)",
+ "alpha": "0 or 255 only, every file",
+ "pieces": [
+  {
+   "id": "chassis",
+   "material": "steel",
+   "file": "chassis.png",
+   "normal": "chassis_n.png",
+   "at": [
+    8,
+    35
+   ],
+   "size": [
+    320,
+    95
+   ],
+   "atlas": [
+    0,
+    0,
+    320,
+    95
+   ],
+   "centre": [
+    168.0,
+    82.5
+   ],
+   "stays": true,
+   "settle": {
+    "dropPx": 14,
+    "afterMs": 90,
+    "note": "with its wheel pairs gone the chassis sits down on its wheel wells: drop it 14 sprite px (one step, a dust slam) 90 ms after the split"
+   },
+   "note": "the burnt chassis that stays: drawn at the sprite origin (chassis.png is full sprite size; atlas holds its bbox)",
+   "split": {
+    "at": [
+     122,
+     236
+    ],
+    "afterMs": [
+     90,
+     100,
+     110
+    ],
+    "spin": [
+     1.2,
+     -0.6,
+     -1.4
+    ],
+    "note": "the chassis in its own pieces (SKEPTIC 5): cut at the box's rib (x 122, where panel_rear meets panel_mid) and the cab's dark gap (x 236); rear box, front box, cab, each released whole and tipped as it drops (spin radians a second, sprite facing right)"
+   }
+  },
+  {
+   "id": "cab_door",
+   "material": "steel",
+   "file": "part_cab_door.png",
+   "normal": "part_cab_door_n.png",
+   "at": [
+    272,
+    41
+   ],
+   "size": [
+    36,
+    53
+   ],
+   "centre": [
+    289.2,
+    67.8
+   ],
+   "pivot": [
+    17.2,
+    26.8
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     0.9,
+     0.7
+    ],
+    "impulse": 42,
+    "spin": [
+     3,
+     6
+    ],
+    "delayMs": 0
+   },
+   "atlas": [
+    321,
+    0,
+    36,
+    53
+   ]
+  },
+  {
+   "id": "roof",
+   "material": "steel",
+   "file": "part_roof.png",
+   "normal": "part_roof_n.png",
+   "at": [
+    29,
+    42
+   ],
+   "size": [
+    205,
+    11
+   ],
+   "centre": [
+    138.4,
+    48.2
+   ],
+   "pivot": [
+    109.4,
+    6.2
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     -0.1,
+     1.0
+    ],
+    "impulse": 42,
+    "spin": [
+     2,
+     4
+    ],
+    "delayMs": 0
+   },
+   "atlas": [
+    257,
+    142,
+    205,
+    11
+   ]
+  },
+  {
+   "id": "panel_rear",
+   "material": "steel",
+   "file": "part_panel_rear.png",
+   "normal": "part_panel_rear_n.png",
+   "at": [
+    27,
+    49
+   ],
+   "size": [
+    98,
+    46
+   ],
+   "centre": [
+    75.7,
+    71.6
+   ],
+   "pivot": [
+    48.7,
+    22.6
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     -0.6,
+     0.8
+    ],
+    "impulse": 42,
+    "spin": [
+     2,
+     5
+    ],
+    "delayMs": 20
+   },
+   "atlas": [
+    358,
+    0,
+    98,
+    46
+   ]
+  },
+  {
+   "id": "panel_mid",
+   "material": "steel",
+   "file": "part_panel_mid.png",
+   "normal": "part_panel_mid_n.png",
+   "at": [
+    121,
+    49
+   ],
+   "size": [
+    79,
+    45
+   ],
+   "centre": [
+    160.8,
+    71.3
+   ],
+   "pivot": [
+    39.8,
+    22.3
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     0.0,
+     1.0
+    ],
+    "impulse": 42,
+    "spin": [
+     2,
+     5
+    ],
+    "delayMs": 0
+   },
+   "atlas": [
+    0,
+    96,
+    79,
+    45
+   ]
+  },
+  {
+   "id": "panel_vent",
+   "material": "steel",
+   "file": "part_panel_vent.png",
+   "normal": "part_panel_vent_n.png",
+   "at": [
+    196,
+    48
+   ],
+   "size": [
+    38,
+    45
+   ],
+   "centre": [
+    215.4,
+    70.8
+   ],
+   "pivot": [
+    19.4,
+    22.8
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     0.5,
+     0.85
+    ],
+    "impulse": 42,
+    "spin": [
+     3,
+     6
+    ],
+    "delayMs": 10
+   },
+   "atlas": [
+    80,
+    96,
+    38,
+    45
+   ]
+  },
+  {
+   "id": "rail",
+   "material": "steel",
+   "file": "part_rail.png",
+   "normal": "part_rail_n.png",
+   "at": [
+    9,
+    38
+   ],
+   "size": [
+    226,
+    11
+   ],
+   "centre": [
+    114.9,
+    42.6
+   ],
+   "pivot": [
+    105.9,
+    4.6
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     -0.4,
+     0.9
+    ],
+    "impulse": 42,
+    "spin": [
+     2,
+     3
+    ],
+    "delayMs": 30
+   },
+   "atlas": [
+    0,
+    181,
+    226,
+    11
+   ]
+  },
+  {
+   "id": "missile",
+   "material": "steel",
+   "file": "part_missile.png",
+   "normal": "part_missile_n.png",
+   "at": [
+    8,
+    2
+   ],
+   "size": [
+    256,
+    38
+   ],
+   "centre": [
+    123.1,
+    24.8
+   ],
+   "pivot": [
+    115.1,
+    22.8
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     -0.5,
+     0.85
+    ],
+    "impulse": 42,
+    "spin": [
+     2,
+     3
+    ],
+    "delayMs": 40
+   },
+   "atlas": [
+    0,
+    142,
+    256,
+    38
+   ]
+  },
+  {
+   "id": "wheels_rear",
+   "material": "rubber",
+   "file": "part_wheels_rear.png",
+   "normal": "part_wheels_rear_n.png",
+   "at": [
+    40,
+    100
+   ],
+   "size": [
+    99,
+    44
+   ],
+   "centre": [
+    89.0,
+    120.4
+   ],
+   "pivot": [
+    49.0,
+    20.4
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     -0.9,
+     0.35
+    ],
+    "impulse": 42,
+    "spin": [
+     4,
+     6
+    ],
+    "delayMs": 50
+   },
+   "atlas": [
+    119,
+    96,
+    99,
+    44
+   ]
+  },
+  {
+   "id": "wheels_front",
+   "material": "rubber",
+   "file": "part_wheels_front.png",
+   "normal": "part_wheels_front_n.png",
+   "at": [
+    190,
+    100
+   ],
+   "size": [
+    105,
+    44
+   ],
+   "centre": [
+    242.2,
+    120.4
+   ],
+   "pivot": [
+    52.2,
+    20.4
+   ],
+   "stays": false,
+   "throw": {
+    "dir": [
+     0.9,
+     0.35
+    ],
+    "impulse": 42,
+    "spin": [
+     4,
+     6
+    ],
+    "delayMs": 50
+   },
+   "atlas": [
+    219,
+    96,
+    105,
+    44
+   ]
+  }
+ ]
+}

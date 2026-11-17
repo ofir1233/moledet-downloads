@@ -1,0 +1,780 @@
+{
+ "id": "ammo_crate",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A regime ammunition crate nailed by a conscript in a hurry: the planks spring off their nails and the boxes inside spill out.",
+ "source": {
+  "intact": "props/ammo_crate_intact.png",
+  "crop": null,
+  "w": 62,
+  "h": 35,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "ammo_crate_col.png",
+   "n": "ammo_crate_n.png",
+   "mat": "ammo_crate_mat.png",
+   "parts": "ammo_crate_parts.png",
+   "grain": "ammo_crate_grain.png",
+   "inside": "ammo_crate_inside.png",
+   "under": {
+    "col": "ammo_crate_under_col.png",
+    "n": "ammo_crate_under_n.png",
+    "mat": "ammo_crate_under_mat.png",
+    "parts": "ammo_crate_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 nailed: the lid springs off",
+  "2 nailed: the front planks and the end board split off",
+  "3 resting: the boxes inside tumble out"
+ ],
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: split boards and a lifted lid",
+  "broken": "orders 1-3"
+ },
+ "pieces": [
+  {
+   "id": "bottom",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 40.9,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    151,
+    0,
+    30,
+    7
+   ],
+   "at": [
+    10,
+    23
+   ],
+   "centre": [
+    25.5,
+    26.0
+   ],
+   "outline": [
+    [
+     -15.5,
+     -2.0
+    ],
+    [
+     1.5,
+     -3.0
+    ],
+    [
+     13.5,
+     -3.0
+    ],
+    [
+     14.5,
+     -2.0
+    ],
+    [
+     14.5,
+     -0.0
+    ],
+    [
+     4.5,
+     3.0
+    ],
+    [
+     -1.5,
+     4.0
+    ],
+    [
+     -6.5,
+     4.0
+    ],
+    [
+     -15.5,
+     -1.0
+    ]
+   ],
+   "partIndex": 1,
+   "what": "bottom plank",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      153,
+      24,
+      2,
+      2
+     ],
+     "at": [
+      38,
+      23
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      201,
+      0,
+      29,
+      4
+     ],
+     "at": [
+      10,
+      21
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "lid",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 47.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    112,
+    0,
+    28,
+    8
+   ],
+   "at": [
+    12,
+    2
+   ],
+   "centre": [
+    28.7,
+    6.9
+   ],
+   "outline": [
+    [
+     -16.7,
+     1.1
+    ],
+    [
+     -12.7,
+     -0.9
+    ],
+    [
+     3.3,
+     -4.9
+    ],
+    [
+     11.3,
+     -4.9
+    ],
+    [
+     11.3,
+     -3.9
+    ],
+    [
+     10.3,
+     3.1
+    ],
+    [
+     -13.7,
+     3.1
+    ],
+    [
+     -16.7,
+     2.1
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      142,
+      0,
+      3,
+      8
+     ],
+     "at": [
+      37,
+      2
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      0,
+      24,
+      27,
+      4
+     ],
+     "at": [
+      12,
+      8
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "plank_1",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 74.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    46,
+    0,
+    31,
+    8
+   ],
+   "at": [
+    8,
+    9
+   ],
+   "centre": [
+    23.3,
+    13.2
+   ],
+   "outline": [
+    [
+     -15.3,
+     -3.2
+    ],
+    [
+     -14.3,
+     -4.2
+    ],
+    [
+     -3.3,
+     -4.2
+    ],
+    [
+     15.7,
+     -3.2
+    ],
+    [
+     15.7,
+     3.8
+    ],
+    [
+     -15.3,
+     3.8
+    ]
+   ],
+   "partIndex": 3,
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      193,
+      0,
+      2,
+      7
+     ],
+     "at": [
+      38,
+      10
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      124,
+      24,
+      27,
+      2
+     ],
+     "at": [
+      12,
+      9
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      29,
+      24,
+      30,
+      2
+     ],
+     "at": [
+      8,
+      15
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "plank_2",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 75.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    79,
+    0,
+    31,
+    8
+   ],
+   "at": [
+    8,
+    16
+   ],
+   "centre": [
+    22.7,
+    20.2
+   ],
+   "outline": [
+    [
+     -14.7,
+     -3.2
+    ],
+    [
+     -8.7,
+     -4.2
+    ],
+    [
+     4.3,
+     -4.2
+    ],
+    [
+     15.3,
+     -3.2
+    ],
+    [
+     16.3,
+     1.8
+    ],
+    [
+     16.3,
+     2.8
+    ],
+    [
+     10.3,
+     3.8
+    ],
+    [
+     -13.7,
+     3.8
+    ],
+    [
+     -14.7,
+     2.8
+    ]
+   ],
+   "partIndex": 4,
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      93,
+      24,
+      29,
+      2
+     ],
+     "at": [
+      10,
+      22
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      197,
+      0,
+      2,
+      6
+     ],
+     "at": [
+      37,
+      17
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      61,
+      24,
+      30,
+      2
+     ],
+     "at": [
+      8,
+      16
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "end_panel",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 85.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    0,
+    14,
+    22
+   ],
+   "at": [
+    38,
+    3
+   ],
+   "centre": [
+    44.7,
+    14.7
+   ],
+   "outline": [
+    [
+     -6.7,
+     -10.7
+    ],
+    [
+     -5.7,
+     -11.7
+    ],
+    [
+     -2.7,
+     -11.7
+    ],
+    [
+     6.3,
+     -6.7
+    ],
+    [
+     7.3,
+     -4.7
+    ],
+    [
+     7.3,
+     7.3
+    ],
+    [
+     1.3,
+     10.3
+    ],
+    [
+     -4.7,
+     10.3
+    ],
+    [
+     -5.7,
+     9.3
+    ],
+    [
+     -6.7,
+     7.3
+    ]
+   ],
+   "partIndex": 5,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      157,
+      24,
+      2,
+      2
+     ],
+     "at": [
+      39,
+      23
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      189,
+      0,
+      2,
+      7
+     ],
+     "at": [
+      38,
+      3
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      147,
+      0,
+      2,
+      8
+     ],
+     "at": [
+      38,
+      10
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      183,
+      0,
+      4,
+      7
+     ],
+     "at": [
+      36,
+      17
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "contents",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 280.0,
+   "layer": "inside",
+   "z": -1,
+   "atlas": [
+    16,
+    0,
+    28,
+    19
+   ],
+   "at": [
+    10,
+    9
+   ],
+   "centre": [
+    24.1,
+    18.1
+   ],
+   "outline": [
+    [
+     -14.1,
+     -9.1
+    ],
+    [
+     13.9,
+     -9.1
+    ],
+    [
+     13.9,
+     7.9
+    ],
+    [
+     7.9,
+     9.9
+    ],
+    [
+     -7.1,
+     9.9
+    ],
+    [
+     -10.1,
+     8.9
+    ],
+    [
+     -14.1,
+     6.9
+    ]
+   ],
+   "partIndex": 6,
+   "what": "STAND-IN: the cartridge boxes and the far planks inside",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j03",
+   "a": "end_panel",
+   "b": "lid",
+   "kind": "nailed",
+   "strength": 0.25,
+   "order": 1,
+   "at": [
+    38.7,
+    6.0
+   ],
+   "rapier": "fixed",
+   "hp": 25,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "lid",
+   "b": "plank_1",
+   "kind": "nailed",
+   "strength": 0.25,
+   "order": 1,
+   "at": [
+    25.0,
+    8.9
+   ],
+   "rapier": "fixed",
+   "hp": 25,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "bottom",
+   "b": "end_panel",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    38.5,
+    23.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "bottom",
+   "b": "plank_2",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    24.0,
+    23.8
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "end_panel",
+   "b": "plank_1",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    38.9,
+    13.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "end_panel",
+   "b": "plank_2",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    38.2,
+    19.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "plank_1",
+   "b": "plank_2",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    22.5,
+    15.6
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "contents",
+   "b": "bottom",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 3,
+   "at": [
+    24.1,
+    18.1
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j03",
+   "kind": "split",
+   "at": [
+    39,
+    8
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    12,
+    8
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    17,
+    9
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    27,
+    9
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    32,
+    9
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    37,
+    9
+   ]
+  }
+ ],
+ "notes": [
+  "weapon_crate has no art in the tunnel (RENDER B draws it as ammo_crate): it uses this map until its own sprite exists."
+ ]
+}

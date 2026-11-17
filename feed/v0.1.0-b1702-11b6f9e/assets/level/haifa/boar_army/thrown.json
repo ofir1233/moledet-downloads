@@ -1,0 +1,93 @@
+{
+ "about": "WHAT A DYING BOAR LETS GO OF, for the game to throw (16.11): each type's own helmet or cap (helmet_<type>, drawn by src/render/paint/boarArmy.ts in place of the stand-in props.png helmets) and the gear the painted death frames show flying for one frame (<type>_<thing>: not thrown by the game yet). Cut by tools/haifa/boar_atlas2.py from the painted loose pieces, as painted (no turn). texels = image px a shown art px (32 art px a cell); rects = [x, y, w, h] image px; lie = the turn in radians (counter-clockwise) at which the piece rests on the floor.",
+ "standin": true,
+ "texels": 2,
+ "rects": {
+  "helmet_boar_rifleman": [
+   2,
+   2,
+   49,
+   47
+  ],
+  "helmet_radio_boar": [
+   53,
+   2,
+   38,
+   41
+  ],
+  "radio_boar_rifle": [
+   93,
+   2,
+   82,
+   69
+  ],
+  "radio_boar_handset": [
+   177,
+   2,
+   51,
+   82
+  ],
+  "helmet_commander": [
+   230,
+   2,
+   42,
+   32
+  ],
+  "commander_map": [
+   274,
+   2,
+   44,
+   51
+  ],
+  "commander_crop": [
+   320,
+   2,
+   32,
+   44
+  ],
+  "helmet_bin_mortar": [
+   354,
+   2,
+   43,
+   43
+  ],
+  "bin_mortar_tube": [
+   399,
+   2,
+   84,
+   111
+  ],
+  "bin_mortar_bin": [
+   485,
+   2,
+   58,
+   59
+  ],
+  "helmet_digger": [
+   545,
+   2,
+   47,
+   35
+  ],
+  "digger_shovel": [
+   594,
+   2,
+   73,
+   83
+  ]
+ },
+ "lie": {
+  "helmet_boar_rifleman": 0,
+  "helmet_radio_boar": 0,
+  "radio_boar_rifle": 0,
+  "radio_boar_handset": 0,
+  "helmet_commander": 0,
+  "commander_map": 0,
+  "commander_crop": 0,
+  "helmet_bin_mortar": 0,
+  "bin_mortar_tube": 0,
+  "bin_mortar_bin": 0,
+  "helmet_digger": 0,
+  "digger_shovel": 0
+ }
+}

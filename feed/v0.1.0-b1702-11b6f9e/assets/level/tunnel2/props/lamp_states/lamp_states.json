@@ -1,0 +1,175 @@
+{
+ "about": "RUBBLE, account D, the cables builder, 12.11.2026 03:29: what belongs to the lamp but is NOT in its delivered folder (tunnel2/props/lamp/ is untouched). Colour files are alpha 0 or 255; a state's wall shadow ships alone.",
+ "files": {
+  "lamp_off": {
+   "col": "lamp_off.png",
+   "n": "lamp_off_n.png",
+   "shadow": "lamp_off_shadow.png",
+   "w": 33,
+   "h": 61,
+   "frames": 1,
+   "anchorPx": [
+    15.5,
+    2
+   ]
+  },
+  "lamp_dying": {
+   "col": "lamp_dying.png",
+   "n": "lamp_dying_n.png",
+   "shadow": "lamp_dying_shadow.png",
+   "w": 33,
+   "h": 61,
+   "frames": 3,
+   "anchorPx": [
+    15.5,
+    2
+   ],
+   "ticks": [
+    3,
+    4,
+    8
+   ]
+  },
+  "lamp_shot": {
+   "col": "lamp_shot.png",
+   "n": "lamp_shot_n.png",
+   "shadow": "lamp_shot_shadow.png",
+   "w": 73,
+   "h": 81,
+   "frames": 4,
+   "anchorPx": [
+    35.5,
+    10
+   ],
+   "ticks": [
+    2,
+    3,
+    4,
+    6
+   ]
+  },
+  "lamp_swing_lit": {
+   "col": "lamp_swing_lit.png",
+   "n": "lamp_swing_lit_n.png",
+   "shadow": "lamp_swing_lit_shadow.png",
+   "w": 49,
+   "h": 61,
+   "frames": 5,
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ]
+  },
+  "lamp_swing_off": {
+   "col": "lamp_swing_off.png",
+   "n": "lamp_swing_off_n.png",
+   "shadow": "lamp_swing_off_shadow.png",
+   "w": 49,
+   "h": 61,
+   "frames": 5,
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ]
+  },
+  "lamp_swing_broken": {
+   "col": "lamp_swing_broken.png",
+   "n": "lamp_swing_broken_n.png",
+   "shadow": "lamp_swing_broken_shadow.png",
+   "w": 49,
+   "h": 61,
+   "frames": 5,
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ]
+  },
+  "lamp_swing_wide_lit": {
+   "col": "lamp_swing_wide_lit.png",
+   "n": "lamp_swing_wide_lit_n.png",
+   "shadow": "lamp_swing_wide_lit_shadow.png",
+   "w": 91,
+   "h": 61,
+   "frames": 6,
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ]
+  },
+  "lamp_swing_wide_off": {
+   "col": "lamp_swing_wide_off.png",
+   "n": "lamp_swing_wide_off_n.png",
+   "shadow": "lamp_swing_wide_off_shadow.png",
+   "w": 91,
+   "h": 61,
+   "frames": 6,
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ]
+  },
+  "lamp_swing_wide_broken": {
+   "col": "lamp_swing_wide_broken.png",
+   "n": "lamp_swing_wide_broken_n.png",
+   "shadow": "lamp_swing_wide_broken_shadow.png",
+   "w": 91,
+   "h": 61,
+   "frames": 6,
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ]
+  }
+ },
+ "forTheLampsMap": [
+  "On a cable (cord > 0) the piece `bracket` is not anchored: join it to the cable's last segment (cable/parts.json `external`). For cord 0 it stays anchored; lamp_mount_short (install/tunnel/props) is drawn over it.",
+  "State off (power cut): lamp_off; no part breaks. Pieces glass_1, glass_2 and bulb carry `emit: dark` in the lamp's map: lamp_off is that state drawn whole.",
+  "State shot: the lamp's own order 1 (glass_1, glass_2, bulb go); lamp_shot is the drawn burst for a renderer that does not throw the parts; lamp_swing_broken is the cage that stays, with its floor hanging open."
+ ],
+ "timelines": "install/tunnel/cable.json `timelines` (cut, on, shot) and `swing`"
+}

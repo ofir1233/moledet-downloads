@@ -1,0 +1,209 @@
+{
+ "material": "ceiling",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "the regime's roof, poured thin to save money: a broken piece HANGS by its rebar, swings, sheds grit, then lets go",
+ "ramp": [
+  "#283335",
+  "#4b5352",
+  "#767870",
+  "#a09d8c",
+  "#c6bfa7"
+ ],
+ "inside": [
+  "#363d3e",
+  "#64665f",
+  "#8f8f86",
+  "#bab8ab",
+  "#dedacb"
+ ],
+ "rebar": [
+  "#3b2b23",
+  "#7a4024",
+  "#a65c2e"
+ ],
+ "back": [
+  "#1b2223",
+  "#283335"
+ ],
+ "section": [
+  "#64665f",
+  "#bab8ab"
+ ],
+ "hash": "h32 as concrete; salt 601",
+ "edges": {
+  "strips": {
+   "file": "ceiling_edge_strips.png",
+   "normal": "ceiling_edge_strips_n.png",
+   "slot": [
+    32,
+    32
+   ],
+   "halfDepth": 16,
+   "variants": 6,
+   "joinLevels": [
+    -2,
+    4,
+    9,
+    14
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -10,
+    16
+   ]
+  },
+  "corners": {
+   "file": "ceiling_edge_corners.png",
+   "normal": "ceiling_edge_corners_n.png",
+   "slot": [
+    41,
+    41
+   ],
+   "origin": [
+    20,
+    20
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 601
+ },
+ "stages": {
+  "file": "ceiling_stages.png",
+  "normal": "ceiling_stages_n.png",
+  "slot": [
+   48,
+   48
+  ],
+  "margin": 8,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "variants": 5,
+  "use": "opaque overlay at dmg/thr 25 / 50 / 75 %; variant h32(x, y, 71) % 5; clip to the body"
+ },
+ "bites": {
+  "file": "ceiling_bites.png",
+  "normal": "ceiling_bites_n.png",
+  "slot": 8,
+  "variants": 6,
+  "anchor": [
+   4,
+   4
+  ],
+  "use": "one per bullet hit, variant h32(x, y, 80 + salt) % 6, opaque; each hit also plays one dust drip"
+ },
+ "hang": {
+  "file": "ceiling_hang.png",
+  "normal": "ceiling_hang_n.png",
+  "frame": [
+   34,
+   40
+  ],
+  "frames": 6,
+  "variants": 5,
+  "anchor": [
+   17,
+   0
+  ],
+  "durations": [
+   140,
+   140,
+   140,
+   140,
+   120,
+   60
+  ],
+  "use": "a ceiling hole of 1-2 cells: one piece per removed cell hangs from the hole's UPPER... no: from the LOWER face of the kept roof at the hole's edge (anchor on the lip), variant h32(cx, cy, 95 + salt) % 5; play 0-3 for 2-4 swings (0.6-1.2 s, the hang time), then 4, then 5 and hand the piece (frame 0 minus the bars) to the falling-chunk sim; frame 5 (stubs) stays on the lip for ever. While hanging: a dust drip every 0.3 s from the anchor."
+ },
+ "drip": {
+  "file": "ceiling_drip.png",
+  "normal": "ceiling_drip_n.png",
+  "frame": [
+   5,
+   26
+  ],
+  "frames": 8,
+  "fps": 16,
+  "anchor": [
+   2,
+   0
+  ],
+  "use": "from a stage-50+ crack every 0.8-1.6 s (hash), from a hanging piece's anchor every 0.3 s; clip at the first matter"
+ },
+ "chunks": {
+  "file": "ceiling_chunks.png",
+  "normal": "ceiling_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   {
+    "name": "slab_bit",
+    "px": 78
+   },
+   {
+    "name": "wedge",
+    "px": 60
+   },
+   {
+    "name": "block",
+    "px": 78
+   },
+   {
+    "name": "sliver",
+    "px": 30
+   },
+   {
+    "name": "chunk",
+    "px": 88
+   },
+   {
+    "name": "shard",
+    "px": 66
+   },
+   {
+    "name": "small",
+    "px": 28
+   },
+   {
+    "name": "big",
+    "px": 83
+   }
+  ],
+  "facets": {
+   "#ff0000": "top: the art one ramp step lighter",
+   "#00ff00": "front: the art as it is",
+   "#0000ff": "side / underside: one step darker"
+  },
+  "use": "as concrete: a removed cell gives 3-6 chunks cut from its own art, turned by 90s, settling on a 36 deg cone with a 1 px contact shadow"
+ },
+ "slabs": {
+  "file": "ceiling_slabs.png",
+  "normal": "ceiling_slabs_n.png",
+  "slot": [
+   26,
+   10
+  ],
+  "variants": 4,
+  "facets": {
+   "#00ff00": "the wall's painted face kept AS IT IS (it reads as a piece of this wall)",
+   "#ff0000": "the broken top edge: the section, lit",
+   "#0000ff": "side / underside: RAMP[0..1]"
+  },
+  "use": "holes of 3+ cells: min(4, 1 + n // 2) slabs, cut from removed cell (i * 3) % n at hashed offsets (keys 64-66), leaning on the wall foot by a shear of one px every 2-3 rows (alternate sides), 1 in 3 stood on end; then the chunks on a 36 deg cone within +-min(32, 10 + 6n) px of the hole centre; grains at the toe"
+ },
+ "behind": "the rock above the roof: the rock painting two steps down with the 3 stepped tones of rock3.paint_back (lit from the hole edge), never a black void"
+}

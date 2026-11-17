@@ -1,0 +1,1558 @@
+{
+ "id": "sandbag_pile",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "Sandbags filled by people who were promised they would never be needed: the top bag slumps, the rest burst and pour.",
+ "source": {
+  "intact": "props/sandbag_pile_intact.png",
+  "crop": null,
+  "w": 82,
+  "h": 35,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "sandbag_pile_col.png",
+   "n": "sandbag_pile_n.png",
+   "mat": "sandbag_pile_mat.png",
+   "parts": "sandbag_pile_parts.png",
+   "grain": "sandbag_pile_grain.png",
+   "inside": "sandbag_pile_inside.png",
+   "under": {
+    "col": "sandbag_pile_under_col.png",
+    "n": "sandbag_pile_under_n.png",
+    "mat": "sandbag_pile_under_mat.png",
+    "parts": "sandbag_pile_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 resting: the top bag slumps off",
+  "2 resting: the middle row rolls",
+  "3 the bottom row splits; torn bags pour sand (granular, the engine)"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: tears with sand at them",
+  "broken": "orders 1-3"
+ },
+ "pieces": [
+  {
+   "id": "bag_b2",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "light",
+   "mass": 212.8,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    152,
+    0,
+    22,
+    11
+   ],
+   "at": [
+    30,
+    19
+   ],
+   "centre": [
+    41.3,
+    24.8
+   ],
+   "outline": [
+    [
+     -11.3,
+     4.2
+    ],
+    [
+     -9.3,
+     -2.8
+    ],
+    [
+     -8.3,
+     -3.8
+    ],
+    [
+     -6.3,
+     -4.8
+    ],
+    [
+     0.7,
+     -5.8
+    ],
+    [
+     1.7,
+     -5.8
+    ],
+    [
+     10.7,
+     -3.8
+    ],
+    [
+     10.7,
+     3.2
+    ],
+    [
+     -6.3,
+     5.2
+    ],
+    [
+     -11.3,
+     5.2
+    ]
+   ],
+   "partIndex": 1,
+   "emit": "sand",
+   "what": "the middle bottom bag and what is left",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      166,
+      15,
+      5,
+      8
+     ],
+     "at": [
+      29,
+      22
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      76,
+      26,
+      2,
+      6
+     ],
+     "at": [
+      50,
+      22
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      180,
+      26,
+      11,
+      4
+     ],
+     "at": [
+      32,
+      19
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      205,
+      26,
+      10,
+      4
+     ],
+     "at": [
+      42,
+      19
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      229,
+      15,
+      23,
+      6
+     ],
+     "at": [
+      29,
+      19
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_b1",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "light",
+   "mass": 260.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    125,
+    0,
+    25,
+    11
+   ],
+   "at": [
+    8,
+    19
+   ],
+   "centre": [
+    20.8,
+    25.2
+   ],
+   "outline": [
+    [
+     -12.8,
+     -3.2
+    ],
+    [
+     -7.8,
+     -6.2
+    ],
+    [
+     -4.8,
+     -6.2
+    ],
+    [
+     11.2,
+     -3.2
+    ],
+    [
+     12.2,
+     0.8
+    ],
+    [
+     11.2,
+     3.8
+    ],
+    [
+     9.2,
+     4.8
+    ],
+    [
+     -3.8,
+     4.8
+    ],
+    [
+     -8.8,
+     2.8
+    ],
+    [
+     -12.8,
+     -1.2
+    ]
+   ],
+   "partIndex": 2,
+   "emit": "sand",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      173,
+      15,
+      4,
+      8
+     ],
+     "at": [
+      29,
+      22
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      125,
+      26,
+      17,
+      4
+     ],
+     "at": [
+      15,
+      19
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      202,
+      15,
+      25,
+      6
+     ],
+     "at": [
+      8,
+      19
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_b3",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "light",
+   "mass": 170.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    143,
+    15,
+    21,
+    8
+   ],
+   "at": [
+    51,
+    21
+   ],
+   "centre": [
+    61.8,
+    25.0
+   ],
+   "outline": [
+    [
+     -9.8,
+     -3.0
+    ],
+    [
+     3.2,
+     -4.0
+    ],
+    [
+     8.2,
+     -4.0
+    ],
+    [
+     10.2,
+     -1.0
+    ],
+    [
+     10.2,
+     -0.0
+    ],
+    [
+     7.2,
+     3.0
+    ],
+    [
+     5.2,
+     4.0
+    ],
+    [
+     -2.8,
+     4.0
+    ],
+    [
+     -9.8,
+     3.0
+    ],
+    [
+     -10.8,
+     1.0
+    ]
+   ],
+   "partIndex": 3,
+   "emit": "sand",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      80,
+      26,
+      2,
+      6
+     ],
+     "at": [
+      51,
+      22
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      217,
+      26,
+      16,
+      3
+     ],
+     "at": [
+      52,
+      21
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      84,
+      26,
+      21,
+      5
+     ],
+     "at": [
+      51,
+      21
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_m1",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "medium",
+   "mass": 364.0,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    0,
+    0,
+    29,
+    13
+   ],
+   "at": [
+    13,
+    9
+   ],
+   "centre": [
+    27.0,
+    16.4
+   ],
+   "outline": [
+    [
+     -13.0,
+     -3.4
+    ],
+    [
+     -7.0,
+     -6.4
+    ],
+    [
+     -0.0,
+     -7.4
+    ],
+    [
+     14.0,
+     -3.4
+    ],
+    [
+     15.0,
+     3.6
+    ],
+    [
+     14.0,
+     4.6
+    ],
+    [
+     6.0,
+     5.6
+    ],
+    [
+     -8.0,
+     5.6
+    ],
+    [
+     -12.0,
+     2.6
+    ],
+    [
+     -14.0,
+     -0.4
+    ]
+   ],
+   "partIndex": 4,
+   "emit": "sand",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      21,
+      26,
+      17,
+      6
+     ],
+     "at": [
+      15,
+      18
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      193,
+      26,
+      10,
+      4
+     ],
+     "at": [
+      32,
+      19
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      70,
+      26,
+      4,
+      6
+     ],
+     "at": [
+      39,
+      13
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      40,
+      26,
+      15,
+      6
+     ],
+     "at": [
+      26,
+      9
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      0,
+      15,
+      30,
+      9
+     ],
+     "at": [
+      13,
+      9
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_m2",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "medium",
+   "mass": 303.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    66,
+    0,
+    28,
+    12
+   ],
+   "at": [
+    40,
+    11
+   ],
+   "centre": [
+    53.6,
+    17.2
+   ],
+   "outline": [
+    [
+     -12.6,
+     -4.2
+    ],
+    [
+     2.4,
+     -6.2
+    ],
+    [
+     6.4,
+     -5.2
+    ],
+    [
+     14.4,
+     1.8
+    ],
+    [
+     14.4,
+     3.8
+    ],
+    [
+     11.4,
+     4.8
+    ],
+    [
+     1.4,
+     5.8
+    ],
+    [
+     -7.6,
+     4.8
+    ],
+    [
+     -10.6,
+     2.8
+    ],
+    [
+     -13.6,
+     -0.2
+    ]
+   ],
+   "partIndex": 5,
+   "emit": "sand",
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      57,
+      26,
+      11,
+      6
+     ],
+     "at": [
+      42,
+      18
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      144,
+      26,
+      16,
+      4
+     ],
+     "at": [
+      52,
+      20
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      196,
+      15,
+      4,
+      7
+     ],
+     "at": [
+      39,
+      13
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      162,
+      26,
+      16,
+      4
+     ],
+     "at": [
+      41,
+      11
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      112,
+      15,
+      29,
+      8
+     ],
+     "at": [
+      39,
+      11
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_top",
+   "material": "sandbag",
+   "mat": 5,
+   "massClass": "medium",
+   "mass": 378.0,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    31,
+    0,
+    33,
+    12
+   ],
+   "at": [
+    24,
+    2
+   ],
+   "centre": [
+    40.5,
+    7.8
+   ],
+   "outline": [
+    [
+     -15.5,
+     -2.8
+    ],
+    [
+     -7.5,
+     -5.8
+    ],
+    [
+     8.5,
+     -4.8
+    ],
+    [
+     12.5,
+     -2.8
+    ],
+    [
+     16.5,
+     2.2
+    ],
+    [
+     15.5,
+     4.2
+    ],
+    [
+     2.5,
+     6.2
+    ],
+    [
+     -5.5,
+     6.2
+    ],
+    [
+     -13.5,
+     2.2
+    ],
+    [
+     -16.5,
+     -0.8
+    ]
+   ],
+   "partIndex": 6,
+   "emit": "sand",
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      179,
+      15,
+      15,
+      7
+     ],
+     "at": [
+      26,
+      8
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      107,
+      26,
+      16,
+      5
+     ],
+     "at": [
+      41,
+      10
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      77,
+      15,
+      33,
+      8
+     ],
+     "at": [
+      24,
+      2
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.0,
+      "ang": 0,
+      "squeeze": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "id": "bag_b2_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "light",
+   "mass": 158.4,
+   "layer": "inside",
+   "z": -0.5,
+   "atlas": [
+    57,
+    15,
+    18,
+    9
+   ],
+   "at": [
+    33,
+    20
+   ],
+   "centre": [
+    41.3,
+    24.7
+   ],
+   "outline": [
+    [
+     -8.3,
+     -2.7
+    ],
+    [
+     -6.3,
+     -3.7
+    ],
+    [
+     0.7,
+     -4.7
+    ],
+    [
+     1.7,
+     -4.7
+    ],
+    [
+     9.7,
+     -2.7
+    ],
+    [
+     9.7,
+     2.3
+    ],
+    [
+     -6.3,
+     4.3
+    ],
+    [
+     -8.3,
+     4.3
+    ]
+   ],
+   "partIndex": 7,
+   "what": "STAND-IN: the inside of bag_b2",
+   "inner_of": "bag_b2",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "bag_b1_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "light",
+   "mass": 212.8,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    32,
+    15,
+    23,
+    9
+   ],
+   "at": [
+    9,
+    20
+   ],
+   "centre": [
+    20.6,
+    25.2
+   ],
+   "outline": [
+    [
+     -11.6,
+     -2.2
+    ],
+    [
+     -9.6,
+     -4.2
+    ],
+    [
+     -7.6,
+     -5.2
+    ],
+    [
+     -4.6,
+     -5.2
+    ],
+    [
+     11.4,
+     -2.2
+    ],
+    [
+     11.4,
+     0.8
+    ],
+    [
+     9.4,
+     3.8
+    ],
+    [
+     -3.6,
+     3.8
+    ],
+    [
+     -8.6,
+     1.8
+    ],
+    [
+     -11.6,
+     -1.2
+    ]
+   ],
+   "partIndex": 8,
+   "what": "STAND-IN: the inside of bag_b1",
+   "inner_of": "bag_b1",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "bag_b3_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "light",
+   "mass": 124.8,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    0,
+    26,
+    19,
+    6
+   ],
+   "at": [
+    52,
+    22
+   ],
+   "centre": [
+    62.2,
+    25.1
+   ],
+   "outline": [
+    [
+     -10.2,
+     -1.1
+    ],
+    [
+     -9.2,
+     -2.1
+    ],
+    [
+     2.8,
+     -3.1
+    ],
+    [
+     7.8,
+     -3.1
+    ],
+    [
+     8.8,
+     -0.1
+    ],
+    [
+     6.8,
+     1.9
+    ],
+    [
+     4.8,
+     2.9
+    ],
+    [
+     -3.2,
+     2.9
+    ],
+    [
+     -9.2,
+     1.9
+    ],
+    [
+     -10.2,
+     0.9
+    ]
+   ],
+   "partIndex": 9,
+   "what": "STAND-IN: the inside of bag_b3",
+   "inner_of": "bag_b3",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "bag_m1_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "medium",
+   "mass": 315.2,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    96,
+    0,
+    27,
+    11
+   ],
+   "at": [
+    14,
+    10
+   ],
+   "centre": [
+    26.7,
+    16.4
+   ],
+   "outline": [
+    [
+     -12.7,
+     -2.4
+    ],
+    [
+     -6.7,
+     -5.4
+    ],
+    [
+     0.3,
+     -6.4
+    ],
+    [
+     12.3,
+     -2.4
+    ],
+    [
+     14.3,
+     1.6
+    ],
+    [
+     14.3,
+     3.6
+    ],
+    [
+     6.3,
+     4.6
+    ],
+    [
+     -7.7,
+     4.6
+    ],
+    [
+     -10.7,
+     2.6
+    ],
+    [
+     -12.7,
+     -0.4
+    ]
+   ],
+   "partIndex": 10,
+   "what": "STAND-IN: the inside of bag_m1",
+   "inner_of": "bag_m1",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "bag_m2_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "light",
+   "mass": 256.0,
+   "layer": "inside",
+   "z": 1.5,
+   "atlas": [
+    209,
+    0,
+    26,
+    10
+   ],
+   "at": [
+    41,
+    12
+   ],
+   "centre": [
+    53.6,
+    17.2
+   ],
+   "outline": [
+    [
+     -12.6,
+     -3.2
+    ],
+    [
+     2.4,
+     -5.2
+    ],
+    [
+     6.4,
+     -4.2
+    ],
+    [
+     13.4,
+     1.8
+    ],
+    [
+     11.4,
+     3.8
+    ],
+    [
+     4.4,
+     4.8
+    ],
+    [
+     1.4,
+     4.8
+    ],
+    [
+     -7.6,
+     3.8
+    ],
+    [
+     -10.6,
+     1.8
+    ],
+    [
+     -12.6,
+     -0.2
+    ]
+   ],
+   "partIndex": 11,
+   "what": "STAND-IN: the inside of bag_m2",
+   "inner_of": "bag_m2",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "bag_top_in",
+   "material": "sand",
+   "mat": 13,
+   "massClass": "medium",
+   "mass": 328.0,
+   "layer": "inside",
+   "z": 2.5,
+   "atlas": [
+    176,
+    0,
+    31,
+    10
+   ],
+   "at": [
+    25,
+    3
+   ],
+   "centre": [
+    40.4,
+    7.8
+   ],
+   "outline": [
+    [
+     -13.4,
+     -2.8
+    ],
+    [
+     -7.4,
+     -4.8
+    ],
+    [
+     1.6,
+     -4.8
+    ],
+    [
+     8.6,
+     -3.8
+    ],
+    [
+     12.6,
+     -1.8
+    ],
+    [
+     15.6,
+     3.2
+    ],
+    [
+     2.6,
+     5.2
+    ],
+    [
+     -5.4,
+     5.2
+    ],
+    [
+     -13.4,
+     1.2
+    ],
+    [
+     -15.4,
+     -0.8
+    ]
+   ],
+   "partIndex": 12,
+   "what": "STAND-IN: the inside of bag_top",
+   "inner_of": "bag_top",
+   "granular": true,
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j08",
+   "a": "bag_m1",
+   "b": "bag_top",
+   "kind": "resting",
+   "strength": 0,
+   "order": 1,
+   "at": [
+    33.0,
+    12.1
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "bag_m2",
+   "b": "bag_top",
+   "kind": "resting",
+   "strength": 0,
+   "order": 1,
+   "at": [
+    48.5,
+    12.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "bag_b1",
+   "b": "bag_m1",
+   "kind": "resting",
+   "strength": 0,
+   "order": 2,
+   "at": [
+    23.0,
+    21.6
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "bag_b2",
+   "b": "bag_m1",
+   "kind": "resting",
+   "strength": 0,
+   "order": 2,
+   "at": [
+    37.0,
+    20.6
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "bag_b2",
+   "b": "bag_m2",
+   "kind": "resting",
+   "strength": 0,
+   "order": 2,
+   "at": [
+    46.5,
+    20.9
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "bag_b3",
+   "b": "bag_m2",
+   "kind": "resting",
+   "strength": 0,
+   "order": 2,
+   "at": [
+    59.5,
+    22.0
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "bag_m1",
+   "b": "bag_m2",
+   "kind": "resting",
+   "strength": 0,
+   "order": 2,
+   "at": [
+    39.7,
+    15.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "bag_b1",
+   "b": "bag_b2",
+   "kind": "resting",
+   "strength": 0,
+   "order": 3,
+   "at": [
+    31.0,
+    25.8
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "bag_b2",
+   "b": "bag_b3",
+   "kind": "resting",
+   "strength": 0,
+   "order": 3,
+   "at": [
+    50.7,
+    24.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "bag_b2_in",
+   "b": "bag_b2",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    41.3,
+    24.7
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "bag_b1_in",
+   "b": "bag_b1",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    20.6,
+    25.2
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "bag_b3_in",
+   "b": "bag_b3",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    62.2,
+    25.1
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j13",
+   "a": "bag_m1_in",
+   "b": "bag_m1",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    26.7,
+    16.4
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j14",
+   "a": "bag_m2_in",
+   "b": "bag_m2",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    53.6,
+    17.2
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j15",
+   "a": "bag_top_in",
+   "b": "bag_top",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    40.4,
+    7.8
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j02",
+   "kind": "tear",
+   "at": [
+    15,
+    19
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "tear",
+   "at": [
+    21,
+    22
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "tear",
+   "at": [
+    48,
+    22
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "tear",
+   "at": [
+    52,
+    22
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "tear",
+   "at": [
+    58,
+    22
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "tear",
+   "at": [
+    64,
+    22
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "tear",
+   "at": [
+    32,
+    12
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "tear",
+   "at": [
+    38,
+    13
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "tear",
+   "at": [
+    41,
+    13
+   ]
+  },
+  {
+   "joint": "j09",
+   "kind": "tear",
+   "at": [
+    53,
+    12
+   ]
+  }
+ ],
+ "notes": [
+  "FORM (destruction_model 3.2/3.4): each bag = a burlap SKIN body (material sandbag, its own picture) over an inside part of SAND matter (`granular`: true, material sand, PROPOSED id 13) that is granular: where the skin is carved or torn, the sand pixels under it wake and pour (3.4) and pile at their angle of repose (kit: sandbag repose 32 deg). The emptied skin swaps to its bent[0] = a flattened, empty sack."
+ ]
+}
