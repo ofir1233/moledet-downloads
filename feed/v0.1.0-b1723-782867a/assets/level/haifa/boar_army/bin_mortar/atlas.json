@@ -1,0 +1,399 @@
+{
+ "about": "THE BIN MORTAR, painted (16.11; the same painter and sheets as the rifleman). Cut by tools/haifa/boar_atlas2.py from the painted sheets of art/boar_v3_1611 (table: tools/haifa/boar_atlas2_mortar.json). STAND-IN until the owner approves the look. src/game/haifa/boarArmy.ts",
+ "standin": true,
+ "canvas": [
+  235,
+  140
+ ],
+ "anchor": [
+  130,
+  130
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "density": 1.6,
+ "hd": "boar_atlas2.py: 2 texels a shown art px (64 a cell, as Eli); a frame px is shown at figure_scale.json boarShow (0.8), so he stands 82 art px on screen, hooves to the top of his helmet (Eli: 97)",
+ "look": "pixel",
+ "source": "art/boar_v3_1611/out (gpt-image-2 sheets from our own design picture); build: py -3.12 -I -B tools/haifa/boar_atlas2.py",
+ "filter": "lanczos",
+ "shownPx": 82.0,
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     235,
+     140
+    ],
+    [
+     235,
+     0,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    420,
+    420
+   ],
+   "loop": true
+  },
+  "walk": {
+   "frames": [
+    [
+     705,
+     0,
+     235,
+     140
+    ],
+    [
+     940,
+     0,
+     235,
+     140
+    ],
+    [
+     1175,
+     0,
+     235,
+     140
+    ],
+    [
+     1410,
+     0,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    150,
+    150,
+    150,
+    150
+   ],
+   "loop": true,
+   "stride": 0.607
+  },
+  "run": {
+   "frames": [
+    [
+     1645,
+     0,
+     235,
+     140
+    ],
+    [
+     1880,
+     0,
+     235,
+     140
+    ],
+    [
+     2115,
+     0,
+     235,
+     140
+    ],
+    [
+     0,
+     140,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    80,
+    80,
+    80,
+    80
+   ],
+   "loop": true,
+   "stride": 0.677
+  },
+  "hurt": {
+   "frames": [
+    [
+     235,
+     140,
+     235,
+     140
+    ],
+    [
+     470,
+     140,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    70,
+    140
+   ],
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     705,
+     140,
+     235,
+     140
+    ],
+    [
+     940,
+     140,
+     235,
+     140
+    ],
+    [
+     1175,
+     140,
+     235,
+     140
+    ],
+    [
+     1410,
+     140,
+     235,
+     140
+    ],
+    [
+     1645,
+     140,
+     235,
+     140
+    ],
+    [
+     1880,
+     140,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    70,
+    90,
+    110,
+    100,
+    110,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 2,
+   "helmet": [
+    140,
+    57
+   ]
+  },
+  "death_blast": {
+   "frames": [
+    [
+     2115,
+     140,
+     235,
+     140
+    ],
+    [
+     0,
+     280,
+     235,
+     140
+    ],
+    [
+     235,
+     280,
+     235,
+     140
+    ],
+    [
+     470,
+     280,
+     235,
+     140
+    ],
+    [
+     705,
+     280,
+     235,
+     140
+    ],
+    [
+     940,
+     280,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    80,
+    90,
+    90,
+    100,
+    130,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 0
+  },
+  "load": {
+   "frames": [
+    [
+     470,
+     0,
+     235,
+     140
+    ],
+    [
+     1175,
+     280,
+     235,
+     140
+    ],
+    [
+     1410,
+     280,
+     235,
+     140
+    ],
+    [
+     1645,
+     280,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    120,
+    120,
+    120,
+    120
+   ],
+   "loop": false
+  },
+  "lob": {
+   "frames": [
+    [
+     2115,
+     280,
+     235,
+     140
+    ],
+    [
+     1880,
+     280,
+     235,
+     140
+    ],
+    [
+     0,
+     420,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    90,
+    70,
+    90
+   ],
+   "loop": false,
+   "muzzle": [
+    [
+     200,
+     74
+    ],
+    [
+     202,
+     70
+    ],
+    [
+     200,
+     73
+    ]
+   ]
+  },
+  "reload": {
+   "frames": [
+    [
+     235,
+     420,
+     235,
+     140
+    ],
+    [
+     470,
+     420,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    300,
+    300
+   ],
+   "loop": true
+  },
+  "carry": {
+   "frames": [
+    [
+     705,
+     420,
+     235,
+     140
+    ],
+    [
+     940,
+     420,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    200,
+    200
+   ],
+   "loop": true
+  },
+  "fall": {
+   "frames": [
+    [
+     1175,
+     420,
+     235,
+     140
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  }
+ },
+ "aliases": {
+  "bolt": "run",
+  "alert": "idle",
+  "fire": "lob",
+  "shoot": "lob",
+  "aim": "load",
+  "jump": "fall",
+  "land": "idle",
+  "stun": "hurt",
+  "stagger": "hurt",
+  "recover": "idle"
+ },
+ "drawn": [
+  "carry",
+  "death",
+  "death_blast",
+  "fall",
+  "hurt",
+  "idle",
+  "load",
+  "lob",
+  "reload",
+  "run",
+  "walk"
+ ],
+ "points": "muzzle (lob): the mouth of the tube, frame px (the bin leaves from there). helmetOff (death, death_blast): the first frame his head is bare; helmet: where the thrown helmet starts on that frame. The game throws the helmet (boars:helmet), the loose painted helmet is not in the frames."
+}

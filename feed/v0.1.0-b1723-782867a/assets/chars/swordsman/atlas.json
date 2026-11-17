@@ -1,0 +1,1776 @@
+{
+ "canvas": [
+  200,
+  200
+ ],
+ "anchor": [
+  100,
+  179
+ ],
+ "scale": "3/8",
+ "palette": "swordsman_pixel",
+ "normal": "atlas_n.png",
+ "note": "gate 1: canvas 200 for the long ceremonial sword (same 3/8 grid; anchor (100,179) = the 96 anchor (48,90) + (52,89))",
+ "aliases": {
+  "sprint": "run",
+  "stagger": "hurt"
+ },
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     200,
+     200
+    ],
+    [
+     200,
+     0,
+     200,
+     200
+    ],
+    [
+     400,
+     0,
+     200,
+     200
+    ],
+    [
+     600,
+     0,
+     200,
+     200
+    ],
+    [
+     800,
+     0,
+     200,
+     200
+    ],
+    [
+     1000,
+     0,
+     200,
+     200
+    ],
+    [
+     1200,
+     0,
+     200,
+     200
+    ],
+    [
+     1400,
+     0,
+     200,
+     200
+    ],
+    [
+     1600,
+     0,
+     200,
+     200
+    ]
+   ],
+   "fps": 8,
+   "loop": true,
+   "durations": [
+    0.45,
+    0.45,
+    0.4,
+    0.4,
+    0.06,
+    0.06,
+    0.06,
+    0.45,
+    0.25
+   ]
+  },
+  "strut": {
+   "frames": [
+    [
+     0,
+     200,
+     200,
+     200
+    ],
+    [
+     200,
+     200,
+     200,
+     200
+    ],
+    [
+     400,
+     200,
+     200,
+     200
+    ],
+    [
+     600,
+     200,
+     200,
+     200
+    ]
+   ],
+   "fps": 6,
+   "loop": true
+  },
+  "run": {
+   "frames": [
+    [
+     0,
+     400,
+     200,
+     200
+    ],
+    [
+     200,
+     400,
+     200,
+     200
+    ],
+    [
+     400,
+     400,
+     200,
+     200
+    ],
+    [
+     600,
+     400,
+     200,
+     200
+    ],
+    [
+     800,
+     400,
+     200,
+     200
+    ],
+    [
+     1000,
+     400,
+     200,
+     200
+    ],
+    [
+     1200,
+     400,
+     200,
+     200
+    ],
+    [
+     1400,
+     400,
+     200,
+     200
+    ]
+   ],
+   "fps": 14,
+   "loop": true
+  },
+  "windup": {
+   "frames": [
+    [
+     0,
+     600,
+     200,
+     200
+    ],
+    [
+     200,
+     600,
+     200,
+     200
+    ],
+    [
+     400,
+     600,
+     200,
+     200
+    ]
+   ],
+   "fps": 10,
+   "loop": false,
+   "durations": [
+    0.1,
+    0.12,
+    0.2
+   ]
+  },
+  "slash": {
+   "frames": [
+    [
+     0,
+     800,
+     200,
+     200
+    ],
+    [
+     200,
+     800,
+     200,
+     200
+    ],
+    [
+     400,
+     800,
+     200,
+     200
+    ]
+   ],
+   "fps": 15,
+   "loop": false,
+   "durations": [
+    0.07,
+    0.1,
+    0.18
+   ],
+   "hit": {
+    "0": [
+     116,
+     110,
+     57,
+     28
+    ],
+    "1": [
+     126,
+     135,
+     63,
+     1
+    ]
+   }
+  },
+  "lunge": {
+   "frames": [
+    [
+     0,
+     1000,
+     200,
+     200
+    ],
+    [
+     200,
+     1000,
+     200,
+     200
+    ],
+    [
+     400,
+     1000,
+     200,
+     200
+    ],
+    [
+     600,
+     1000,
+     200,
+     200
+    ]
+   ],
+   "fps": 12,
+   "loop": false,
+   "durations": [
+    0.14,
+    0.06,
+    0.2,
+    0.12
+   ],
+   "hit": {
+    "1": [
+     129,
+     130,
+     63,
+     7
+    ],
+    "2": [
+     131,
+     139,
+     63,
+     4
+    ]
+   }
+  },
+  "recover": {
+   "frames": [
+    [
+     0,
+     1200,
+     200,
+     200
+    ],
+    [
+     200,
+     1200,
+     200,
+     200
+    ]
+   ],
+   "fps": 4,
+   "loop": true
+  },
+  "block": {
+   "frames": [
+    [
+     0,
+     1400,
+     200,
+     200
+    ],
+    [
+     200,
+     1400,
+     200,
+     200
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "hurt": {
+   "frames": [
+    [
+     0,
+     1600,
+     200,
+     200
+    ],
+    [
+     200,
+     1600,
+     200,
+     200
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     0,
+     1800,
+     200,
+     200
+    ],
+    [
+     200,
+     1800,
+     200,
+     200
+    ],
+    [
+     400,
+     1800,
+     200,
+     200
+    ]
+   ],
+   "fps": 12,
+   "loop": false,
+   "durations": [
+    0.08,
+    0.1,
+    0.5
+   ]
+  },
+  "twirl": {
+   "frames": [
+    [
+     0,
+     2000,
+     200,
+     200
+    ],
+    [
+     200,
+     2000,
+     200,
+     200
+    ],
+    [
+     400,
+     2000,
+     200,
+     200
+    ],
+    [
+     600,
+     2000,
+     200,
+     200
+    ],
+    [
+     800,
+     2000,
+     200,
+     200
+    ],
+    [
+     1000,
+     2000,
+     200,
+     200
+    ],
+    [
+     1200,
+     2000,
+     200,
+     200
+    ],
+    [
+     1400,
+     2000,
+     200,
+     200
+    ]
+   ],
+   "fps": 16,
+   "loop": false,
+   "durations": [
+    0.08,
+    0.05,
+    0.05,
+    0.06,
+    0.05,
+    0.06,
+    0.4,
+    0.3
+   ]
+  },
+  "pose": {
+   "frames": [
+    [
+     0,
+     2200,
+     200,
+     200
+    ],
+    [
+     200,
+     2200,
+     200,
+     200
+    ],
+    [
+     400,
+     2200,
+     200,
+     200
+    ],
+    [
+     600,
+     2200,
+     200,
+     200
+    ],
+    [
+     800,
+     2200,
+     200,
+     200
+    ],
+    [
+     1000,
+     2200,
+     200,
+     200
+    ]
+   ],
+   "fps": 8,
+   "loop": true,
+   "durations": [
+    0.2,
+    0.1,
+    0.1,
+    0.1,
+    0.3,
+    0.25
+   ]
+  },
+  "fall": {
+   "frames": [
+    [
+     600,
+     1800,
+     200,
+     200
+    ],
+    [
+     800,
+     1800,
+     200,
+     200
+    ],
+    [
+     1000,
+     1800,
+     200,
+     200
+    ]
+   ],
+   "fps": 10,
+   "loop": true,
+   "loopFrom": 1,
+   "durations": [
+    0.2,
+    0.083,
+    0.083
+   ],
+   "note": "in the air going down: 0 the beat, played ONCE (his held pose standing on nothing, the sabre on his shoulder, he looks down); 1-2 the fall, a LOOP (loopFrom 1): the sabre held straight up out of harm's way, its tassels trailing above the pommel, the robe blown up, the turban lifting a little and staying on. Durations in seconds, as in this set. Never lying, kneeling or bowing"
+  },
+  "taunt": {
+   "frames": [
+    [
+     0,
+     2200,
+     200,
+     200
+    ],
+    [
+     200,
+     2200,
+     200,
+     200
+    ],
+    [
+     400,
+     2200,
+     200,
+     200
+    ],
+    [
+     600,
+     2200,
+     200,
+     200
+    ],
+    [
+     800,
+     2200,
+     200,
+     200
+    ],
+    [
+     1000,
+     2200,
+     200,
+     200
+    ]
+   ],
+   "fps": 8,
+   "loop": true,
+   "durations": [
+    0.2,
+    0.1,
+    0.1,
+    0.1,
+    0.3,
+    0.25
+   ],
+   "note": "the same frame rects as `pose` (no new art): the name the game asks for"
+  },
+  "dazed_flipped": {
+   "frames": [
+    [
+     0,
+     2400,
+     200,
+     200
+    ],
+    [
+     200,
+     2400,
+     200,
+     200
+    ],
+    [
+     400,
+     2400,
+     200,
+     200
+    ],
+    [
+     600,
+     2400,
+     200,
+     200
+    ],
+    [
+     800,
+     2400,
+     200,
+     200
+    ],
+    [
+     1000,
+     2400,
+     200,
+     200
+    ]
+   ],
+   "loop": true,
+   "fps": 4,
+   "durations": [
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "note": "Host art 12.11 (gate 3 redraw): dazed_flipped, the 150 confused ticks of Ben-Gurion's headstand power (bomber phase stun, foes phase hurt, timer = confuseTicks): toppled onto his head on the floor, both hands planted, turban rolled off; his sabre is stuck in the floor beside him, quivering, and his foot keeps reaching for the hilt (never there). Loop 1.5 s. Drawn by hand (never a flip): alive, eyes open, never hanging, never kneeling or bowing; the head carries him on the floor at the anchor line."
+  },
+  "windup_glint": {
+   "frames": [
+    [
+     0,
+     2600,
+     200,
+     200
+    ],
+    [
+     200,
+     2600,
+     200,
+     200
+    ]
+   ],
+   "fps": 10,
+   "loop": false,
+   "durations": [
+    0.1,
+    0.1
+   ],
+   "ticks": [
+    6,
+    6
+   ],
+   "events": {
+    "0": [
+     "swordsman:windup",
+     "glint"
+    ]
+   },
+   "then": "windup",
+   "note": "Host art 12.11 (R1 telegraph): the first 12 of his 22 wind-up ticks: his wind-up frame 0 with a glint running up the blade (the middle, then near the tip; blade (117, 120)..(94, 72)), then `windup`"
+  }
+ },
+ "heads": {
+  "idle": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 71,
+    "y": 78,
+    "rot": 0,
+    "score": 0.169
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 71,
+    "y": 79,
+    "rot": 0,
+    "score": 0.181
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 70,
+    "y": 77,
+    "rot": 0,
+    "score": 0.221
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 70,
+    "y": 78,
+    "rot": 0,
+    "score": 0.23
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.203
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 71,
+    "y": 78,
+    "rot": 0,
+    "score": 0.169
+   }
+  ],
+  "strut": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.258
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 68,
+    "y": 74,
+    "rot": 0,
+    "score": 0.245
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.252
+   }
+  ],
+  "run": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 79,
+    "y": 72,
+    "rot": 0,
+    "score": 0.201
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 77,
+    "y": 78,
+    "rot": 0,
+    "score": 0.208
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 76,
+    "y": 72,
+    "rot": 0,
+    "score": 0.198
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 74,
+    "y": 68,
+    "rot": 0,
+    "score": 0.206
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 79,
+    "y": 74,
+    "rot": 0,
+    "score": 0.223
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 78,
+    "y": 78,
+    "rot": 0,
+    "score": 0.207
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 75,
+    "y": 73,
+    "rot": 0,
+    "score": 0.218
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 74,
+    "y": 68,
+    "rot": 0,
+    "score": 0.213
+   }
+  ],
+  "windup": [
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 71,
+    "y": 78,
+    "rot": 0,
+    "score": 0.22
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 71,
+    "y": 78,
+    "rot": 0,
+    "score": 0.22
+   }
+  ],
+  "slash": [
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 70,
+    "y": 76,
+    "rot": 0,
+    "score": 0.262
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 72,
+    "y": 74,
+    "rot": 0,
+    "score": 0.309
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 79,
+    "y": 80,
+    "rot": 0,
+    "score": 0.284
+   }
+  ],
+  "lunge": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 71,
+    "y": 76,
+    "rot": 0,
+    "score": 0.193
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 75,
+    "y": 77,
+    "rot": 0,
+    "score": 0.332
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 78,
+    "y": 82,
+    "rot": 0,
+    "score": 0.318
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 73,
+    "y": 76,
+    "rot": 0,
+    "score": 0.181
+   }
+  ],
+  "recover": [
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 77,
+    "y": 79,
+    "rot": 0,
+    "score": 0.179
+   },
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 77,
+    "y": 80,
+    "rot": 0,
+    "score": 0.174
+   }
+  ],
+  "block": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.203
+   },
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 72,
+    "y": 78,
+    "rot": 0,
+    "score": 0.201
+   }
+  ],
+  "hurt": [
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 60,
+    "y": 81,
+    "rot": 0,
+    "score": 0.287
+   },
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 59,
+    "y": 80,
+    "rot": 0,
+    "score": 0.289
+   }
+  ],
+  "death": [
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 60,
+    "y": 81,
+    "rot": 0,
+    "score": 0.287
+   },
+   {
+    "placed": true,
+    "expr": "hurt",
+    "x": 59,
+    "y": 81,
+    "rot": 0,
+    "score": 0.283
+   },
+   {
+    "placed": false,
+    "empty": true
+   }
+  ],
+  "twirl": [
+   {
+    "placed": true,
+    "expr": "neutral",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.203
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.203
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.203
+   }
+  ],
+  "pose": [
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   }
+  ],
+  "fall": [
+   {
+    "placed": true,
+    "expr": "startled_down",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.0,
+    "template": "clone_nobody/tools/parts/bomber_head_nobody.txt",
+    "turban_lift": 0
+   },
+   {
+    "placed": true,
+    "expr": "bare_scream",
+    "x": 73,
+    "y": 66,
+    "rot": 0,
+    "score": 0.0,
+    "template": "clone_nobody/tools/parts/bomber_head_nobody.txt",
+    "turban_lift": 1
+   },
+   {
+    "placed": true,
+    "expr": "bare_scream",
+    "x": 73,
+    "y": 66,
+    "rot": 0,
+    "score": 0.0,
+    "template": "clone_nobody/tools/parts/bomber_head_nobody.txt",
+    "turban_lift": 3
+   }
+  ],
+  "taunt": [
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 70,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   },
+   {
+    "placed": true,
+    "expr": "look_us",
+    "x": 69,
+    "y": 74,
+    "rot": 0,
+    "score": 0.242
+   }
+  ],
+  "dazed_flipped": [
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   },
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   },
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   },
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   },
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   },
+   {
+    "placed": false,
+    "drawn": "by hand, upside down (stun_clones.py)"
+   }
+  ],
+  "windup_glint": [
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   },
+   {
+    "placed": true,
+    "expr": "shout",
+    "x": 73,
+    "y": 78,
+    "rot": 0,
+    "score": 0.211
+   }
+  ]
+ },
+ "sword": {
+  "length_px": 71,
+  "grip_to_point_px": 63,
+  "frames": {
+   "idle": [
+    {
+     "grip": [
+      112.8,
+      159.1
+     ],
+     "angle": 42,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      112.8,
+      159.3
+     ],
+     "angle": 42,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      112.8,
+      159.1
+     ],
+     "angle": 42,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      112.8,
+      159.3
+     ],
+     "angle": 42,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 20,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 125,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      112.8,
+      159.1
+     ],
+     "angle": 42,
+     "layer": "front"
+    }
+   ],
+   "strut": [
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 112,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.1,
+      128.8
+     ],
+     "angle": 112,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      118.0,
+      129.5
+     ],
+     "angle": 112,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      118.4,
+      129.1
+     ],
+     "angle": 112,
+     "layer": "back"
+    }
+   ],
+   "run": [
+    {
+     "grip": [
+      120.6,
+      139.6
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.9,
+      144.5
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      102.2,
+      147.9
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      121.8,
+      129.5
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      121.4,
+      140.8
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      123.6,
+      143.8
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      106.8,
+      145.2
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      121.0,
+      130.2
+     ],
+     "angle": 24,
+     "layer": "front"
+    }
+   ],
+   "windup": [
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 108,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      120.6,
+      119.0
+     ],
+     "angle": 128,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      120.6,
+      119.0
+     ],
+     "angle": 134,
+     "layer": "back"
+    }
+   ],
+   "slash": [
+    {
+     "grip": [
+      116.5,
+      137.8
+     ],
+     "angle": 20,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      125.9,
+      135.5
+     ],
+     "angle": -6,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      121.0,
+      153.5
+     ],
+     "angle": -42,
+     "layer": "front"
+    }
+   ],
+   "lunge": [
+    {
+     "grip": [
+      114.2,
+      150.5
+     ],
+     "angle": 6,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      129.2,
+      137.4
+     ],
+     "angle": 0,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      131.1,
+      143.0
+     ],
+     "angle": -3,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      118.4,
+      144.1
+     ],
+     "angle": 28,
+     "layer": "front"
+    }
+   ],
+   "recover": [
+    {
+     "grip": [
+      114.7,
+      161.0
+     ],
+     "angle": -22,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      114.7,
+      161.5
+     ],
+     "angle": -21,
+     "layer": "front"
+    }
+   ],
+   "block": [
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 96,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      121.4,
+      129.1
+     ],
+     "angle": 96,
+     "layer": "front"
+    }
+   ],
+   "hurt": [
+    {
+     "grip": [
+      120.6,
+      141.9
+     ],
+     "angle": 70,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      118.4,
+      141.9
+     ],
+     "angle": 76,
+     "layer": "front"
+    }
+   ],
+   "death": [
+    {
+     "grip": [
+      120.6,
+      141.9
+     ],
+     "angle": 70,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      137.1,
+      63.9
+     ],
+     "angle": 125,
+     "layer": "front"
+    },
+    {}
+   ],
+   "twirl": [
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 24,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": -22,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 60,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 125,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      129.1
+     ],
+     "angle": 92,
+     "layer": "front"
+    }
+   ],
+   "pose": [
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.6
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.6
+     ],
+     "angle": 116,
+     "layer": "back"
+    }
+   ],
+   "fall": [
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      122.5,
+      117.1
+     ],
+     "angle": 96,
+     "layer": "front"
+    },
+    {
+     "grip": [
+      122.5,
+      117.1
+     ],
+     "angle": 90,
+     "layer": "front"
+    }
+   ],
+   "taunt": [
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.1
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.6
+     ],
+     "angle": 116,
+     "layer": "back"
+    },
+    {
+     "grip": [
+      119.5,
+      129.6
+     ],
+     "angle": 116,
+     "layer": "back"
+    }
+   ]
+  },
+  "prop": "../sword_prop",
+  "death_handoff": "death frame 2: the sword leaves the hand; the prop plays from there"
+ },
+ "look": "pixel",
+ "smear": "motion smears are laid on after the shared bake: 3 steel tones, no outline, flat normal (by design: the lint's outline gaps are all smear pixels)"
+}

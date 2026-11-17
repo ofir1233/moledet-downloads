@@ -1,0 +1,1476 @@
+{
+ "id": "oil_drum",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A blue oil drum, dented from years of being kicked: it bursts at its weakest seam and bleeds oil.",
+ "source": {
+  "intact": "props/oil_drum_intact.png",
+  "crop": null,
+  "w": 44,
+  "h": 47,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "oil_drum_col.png",
+   "n": "oil_drum_n.png",
+   "mat": "oil_drum_mat.png",
+   "parts": "oil_drum_parts.png",
+   "grain": "oil_drum_grain.png",
+   "inside": "oil_drum_inside.png",
+   "under": {
+    "col": "oil_drum_under_col.png",
+    "n": "oil_drum_under_n.png",
+    "mat": "oil_drum_under_mat.png",
+    "parts": "oil_drum_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 crimped/seamed: the lid pops and the side tears into four petals along the hoops (the inside shows dark and oily)",
+  "2 seamed: the petals leave the bottom chime, which stays"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: dents and a split seam",
+  "burst": "orders 1-2 broken"
+ },
+ "pieces": [
+  {
+   "id": "base",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 86.9,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    21,
+    26,
+    8
+   ],
+   "at": [
+    8,
+    34
+   ],
+   "centre": [
+    20.9,
+    38.2
+   ],
+   "outline": [
+    [
+     -11.9,
+     -3.2
+    ],
+    [
+     -4.9,
+     -4.2
+    ],
+    [
+     10.1,
+     -4.2
+    ],
+    [
+     13.1,
+     -2.2
+    ],
+    [
+     13.1,
+     0.8
+    ],
+    [
+     10.1,
+     2.8
+    ],
+    [
+     7.1,
+     3.8
+    ],
+    [
+     -6.9,
+     3.8
+    ],
+    [
+     -11.9,
+     1.8
+    ],
+    [
+     -12.9,
+     0.8
+    ]
+   ],
+   "partIndex": 1,
+   "what": "the bottom chime and floor of the drum",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      133,
+      21,
+      14,
+      3
+     ],
+     "at": [
+      9,
+      34
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      165,
+      21,
+      11,
+      3
+     ],
+     "at": [
+      22,
+      34
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "lid",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 31.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    107,
+    21,
+    24,
+    3
+   ],
+   "at": [
+    9,
+    2
+   ],
+   "centre": [
+    21.0,
+    3.7
+   ],
+   "outline": [
+    [
+     -12.0,
+     0.3
+    ],
+    [
+     -10.0,
+     -0.7
+    ],
+    [
+     -7.0,
+     -1.7
+    ],
+    [
+     7.0,
+     -1.7
+    ],
+    [
+     10.0,
+     -0.7
+    ],
+    [
+     12.0,
+     0.3
+    ],
+    [
+     12.0,
+     1.3
+    ],
+    [
+     -12.0,
+     1.3
+    ]
+   ],
+   "partIndex": 2,
+   "what": "the lid with its rim",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      214,
+      21,
+      10,
+      1
+     ],
+     "at": [
+      11,
+      3
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      203,
+      21,
+      9,
+      2
+     ],
+     "at": [
+      22,
+      3
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      28,
+      21,
+      22,
+      5
+     ],
+     "at": [
+      9,
+      2
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 12,
+      "squeeze": 0.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "shell_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 101.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    49,
+    0,
+    14,
+    18
+   ],
+   "at": [
+    8,
+    4
+   ],
+   "centre": [
+    14.7,
+    12.4
+   ],
+   "outline": [
+    [
+     -6.7,
+     -7.4
+    ],
+    [
+     6.3,
+     -8.4
+    ],
+    [
+     7.3,
+     -8.4
+    ],
+    [
+     7.3,
+     9.6
+    ],
+    [
+     6.3,
+     9.6
+    ],
+    [
+     -3.7,
+     8.6
+    ],
+    [
+     -5.7,
+     7.6
+    ],
+    [
+     -6.7,
+     5.6
+    ]
+   ],
+   "partIndex": 3,
+   "emit": "fuel",
+   "what": "the drum side, tearing into petals along its hoops",
+   "shardOf": "shell",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      191,
+      21,
+      10,
+      2
+     ],
+     "at": [
+      8,
+      5
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      199,
+      0,
+      3,
+      16
+     ],
+     "at": [
+      19,
+      5
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      52,
+      21,
+      13,
+      5
+     ],
+     "at": [
+      9,
+      17
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      65,
+      0,
+      14,
+      18
+     ],
+     "at": [
+      8,
+      4
+     ],
+     "crease": {
+      "dent": [
+       [
+        10,
+        9
+       ],
+       [
+        16,
+        14
+       ],
+       [
+        21,
+        21
+       ],
+       [
+        24,
+        30
+       ]
+      ],
+      "shade": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "atlas": [
+      0,
+      0,
+      12,
+      19
+     ],
+     "at": [
+      8,
+      5
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 14,
+      "squeeze": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "id": "shell_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 110.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    124,
+    0,
+    14,
+    17
+   ],
+   "at": [
+    20,
+    5
+   ],
+   "centre": [
+    27.0,
+    13.0
+   ],
+   "outline": [
+    [
+     -7.0,
+     -1.0
+    ],
+    [
+     -6.0,
+     -7.0
+    ],
+    [
+     -5.0,
+     -8.0
+    ],
+    [
+     7.0,
+     -8.0
+    ],
+    [
+     7.0,
+     5.0
+    ],
+    [
+     5.0,
+     8.0
+    ],
+    [
+     -1.0,
+     9.0
+    ],
+    [
+     -4.0,
+     9.0
+    ],
+    [
+     -6.0,
+     7.0
+    ],
+    [
+     -7.0,
+     4.0
+    ]
+   ],
+   "partIndex": 4,
+   "emit": "fuel",
+   "what": "the drum side, tearing into petals along its hoops",
+   "shardOf": "shell",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      226,
+      21,
+      10,
+      1
+     ],
+     "at": [
+      22,
+      6
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      204,
+      0,
+      3,
+      16
+     ],
+     "at": [
+      20,
+      5
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      178,
+      21,
+      11,
+      3
+     ],
+     "at": [
+      22,
+      19
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      140,
+      0,
+      14,
+      17
+     ],
+     "at": [
+      20,
+      5
+     ],
+     "crease": {
+      "dent": [
+       [
+        10,
+        9
+       ],
+       [
+        16,
+        14
+       ],
+       [
+        21,
+        21
+       ],
+       [
+        24,
+        30
+       ]
+      ],
+      "shade": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "atlas": [
+      156,
+      0,
+      12,
+      17
+     ],
+     "at": [
+      20,
+      5
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 14,
+      "squeeze": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "id": "shell_3",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 113.3,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    32,
+    0,
+    15,
+    18
+   ],
+   "at": [
+    8,
+    18
+   ],
+   "centre": [
+    15.8,
+    27.5
+   ],
+   "outline": [
+    [
+     -7.8,
+     -0.5
+    ],
+    [
+     -6.8,
+     -7.5
+    ],
+    [
+     2.2,
+     -9.5
+    ],
+    [
+     4.2,
+     -8.5
+    ],
+    [
+     7.2,
+     -4.5
+    ],
+    [
+     7.2,
+     7.5
+    ],
+    [
+     -2.8,
+     8.5
+    ],
+    [
+     -3.8,
+     8.5
+    ],
+    [
+     -6.8,
+     7.5
+    ],
+    [
+     -7.8,
+     1.5
+    ]
+   ],
+   "partIndex": 5,
+   "emit": "fuel",
+   "what": "the drum side, tearing into petals along its hoops",
+   "shardOf": "shell",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      149,
+      21,
+      14,
+      3
+     ],
+     "at": [
+      9,
+      33
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      67,
+      21,
+      13,
+      5
+     ],
+     "at": [
+      9,
+      18
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      247,
+      0,
+      3,
+      13
+     ],
+     "at": [
+      21,
+      22
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      14,
+      0,
+      16,
+      18
+     ],
+     "at": [
+      8,
+      18
+     ],
+     "crease": {
+      "dent": [
+       [
+        10,
+        9
+       ],
+       [
+        16,
+        14
+       ],
+       [
+        21,
+        21
+       ],
+       [
+        24,
+        30
+       ]
+      ],
+      "shade": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "atlas": [
+      81,
+      0,
+      14,
+      18
+     ],
+     "at": [
+      8,
+      19
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 14,
+      "squeeze": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "id": "shell_4",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 81.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    185,
+    0,
+    12,
+    16
+   ],
+   "at": [
+    22,
+    20
+   ],
+   "centre": [
+    28.0,
+    28.1
+   ],
+   "outline": [
+    [
+     -6.0,
+     -7.1
+    ],
+    [
+     -1.0,
+     -8.1
+    ],
+    [
+     5.0,
+     -8.1
+    ],
+    [
+     6.0,
+     -1.1
+    ],
+    [
+     6.0,
+     0.9
+    ],
+    [
+     5.0,
+     6.9
+    ],
+    [
+     1.0,
+     7.9
+    ],
+    [
+     -5.0,
+     7.9
+    ],
+    [
+     -6.0,
+     -5.1
+    ]
+   ],
+   "partIndex": 6,
+   "emit": "fuel",
+   "what": "the drum side, tearing into petals along its hoops",
+   "shardOf": "shell",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      95,
+      21,
+      10,
+      4
+     ],
+     "at": [
+      23,
+      33
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      82,
+      21,
+      11,
+      4
+     ],
+     "at": [
+      22,
+      19
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      252,
+      0,
+      2,
+      13
+     ],
+     "at": [
+      22,
+      22
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      97,
+      0,
+      12,
+      18
+     ],
+     "at": [
+      22,
+      19
+     ],
+     "crease": {
+      "dent": [
+       [
+        10,
+        9
+       ],
+       [
+        16,
+        14
+       ],
+       [
+        21,
+        21
+       ],
+       [
+        24,
+        30
+       ]
+      ],
+      "shade": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "atlas": [
+      111,
+      0,
+      11,
+      18
+     ],
+     "at": [
+      22,
+      19
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 14,
+      "squeeze": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "id": "shell_1_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 70.4,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    223,
+    0,
+    11,
+    14
+   ],
+   "at": [
+    9,
+    6
+   ],
+   "centre": [
+    14.5,
+    12.4
+   ],
+   "outline": [
+    [
+     -5.5,
+     -6.4
+    ],
+    [
+     5.5,
+     -6.4
+    ],
+    [
+     5.5,
+     5.6
+    ],
+    [
+     2.5,
+     6.6
+    ],
+    [
+     -1.5,
+     7.6
+    ],
+    [
+     -3.5,
+     7.6
+    ],
+    [
+     -5.5,
+     5.6
+    ]
+   ],
+   "partIndex": 7,
+   "what": "painted from the Host sheet level2_fracture_barrel_crate_insides (262, 640, 440, 830): the inside of shell_1",
+   "inner_of": "shell_1",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "shell_2_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 83.1,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    209,
+    0,
+    12,
+    15
+   ],
+   "at": [
+    21,
+    6
+   ],
+   "centre": [
+    26.9,
+    13.1
+   ],
+   "outline": [
+    [
+     -5.9,
+     -1.1
+    ],
+    [
+     -4.9,
+     -7.1
+    ],
+    [
+     6.1,
+     -7.1
+    ],
+    [
+     6.1,
+     4.9
+    ],
+    [
+     5.1,
+     6.9
+    ],
+    [
+     -0.9,
+     7.9
+    ],
+    [
+     -3.9,
+     7.9
+    ],
+    [
+     -4.9,
+     6.9
+    ],
+    [
+     -5.9,
+     3.9
+    ]
+   ],
+   "partIndex": 8,
+   "what": "painted from the Host sheet level2_fracture_barrel_crate_insides (262, 640, 440, 830): the inside of shell_2",
+   "inner_of": "shell_2",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "shell_3_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 84.7,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    170,
+    0,
+    13,
+    16
+   ],
+   "at": [
+    9,
+    19
+   ],
+   "centre": [
+    15.9,
+    27.5
+   ],
+   "outline": [
+    [
+     -6.9,
+     -0.5
+    ],
+    [
+     -5.9,
+     -6.5
+    ],
+    [
+     2.1,
+     -8.5
+    ],
+    [
+     3.1,
+     -8.5
+    ],
+    [
+     6.1,
+     -4.5
+    ],
+    [
+     6.1,
+     6.5
+    ],
+    [
+     -2.9,
+     7.5
+    ],
+    [
+     -3.9,
+     7.5
+    ],
+    [
+     -5.9,
+     6.5
+    ],
+    [
+     -6.9,
+     1.5
+    ]
+   ],
+   "partIndex": 9,
+   "what": "painted from the Host sheet level2_fracture_barrel_crate_insides (262, 640, 440, 830): the inside of shell_3",
+   "inner_of": "shell_3",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "shell_4_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 55.0,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    236,
+    0,
+    9,
+    14
+   ],
+   "at": [
+    24,
+    21
+   ],
+   "centre": [
+    28.0,
+    28.1
+   ],
+   "outline": [
+    [
+     -4.0,
+     -5.1
+    ],
+    [
+     -1.0,
+     -7.1
+    ],
+    [
+     1.0,
+     -7.1
+    ],
+    [
+     4.0,
+     -6.1
+    ],
+    [
+     5.0,
+     -1.1
+    ],
+    [
+     5.0,
+     0.9
+    ],
+    [
+     4.0,
+     5.9
+    ],
+    [
+     -0.0,
+     6.9
+    ],
+    [
+     -4.0,
+     6.9
+    ]
+   ],
+   "partIndex": 10,
+   "what": "painted from the Host sheet level2_fracture_barrel_crate_insides (262, 640, 440, 830): the inside of shell_4",
+   "inner_of": "shell_4",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j03",
+   "a": "lid",
+   "b": "shell_1",
+   "kind": "crimped",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    15.5,
+    3.9
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "lid",
+   "b": "shell_2",
+   "kind": "crimped",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    27.0,
+    4.0
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "shell_1",
+   "b": "shell_2",
+   "kind": "seamed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    19.8,
+    12.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "shell_1",
+   "b": "shell_3",
+   "kind": "seamed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    15.4,
+    19.1
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "shell_2",
+   "b": "shell_4",
+   "kind": "seamed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    27.0,
+    20.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "shell_3",
+   "b": "shell_4",
+   "kind": "seamed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    21.9,
+    28.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "base",
+   "b": "shell_3",
+   "kind": "seamed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    15.5,
+    34.9
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "base",
+   "b": "shell_4",
+   "kind": "seamed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    27.2,
+    35.3
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "shell_1_in",
+   "b": "shell_1",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    14.5,
+    12.4
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "shell_2_in",
+   "b": "shell_2",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    26.9,
+    13.1
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "shell_3_in",
+   "b": "shell_3",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    15.9,
+    27.5
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "shell_4_in",
+   "b": "shell_4",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    28.0,
+    28.1
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    9,
+    4
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    15,
+    4
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    22,
+    4
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    28,
+    4
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    20,
+    6
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    20,
+    10
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "bolt",
+   "at": [
+    20,
+    17
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "lift",
+   "at": [
+    9,
+    19
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "lift",
+   "at": [
+    15,
+    19
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "bolt",
+   "at": [
+    20,
+    20
+   ]
+  },
+  {
+   "joint": "j07",
+   "kind": "bolt",
+   "at": [
+    22,
+    20
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "lift",
+   "at": [
+    21,
+    22
+   ]
+  },
+  {
+   "joint": "j08",
+   "kind": "lift",
+   "at": [
+    22,
+    34
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "dent",
+   "at": [
+    20,
+    16
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "crack",
+   "at": [
+    26,
+    25
+   ]
+  }
+ ],
+ "notes": []
+}

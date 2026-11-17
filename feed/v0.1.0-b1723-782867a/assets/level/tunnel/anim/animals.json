@@ -1,0 +1,410 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "note": "J8b animals (drawn by code, art/level_anim/animals/tools). Keys beyond LEVEL_ANIM_CONTRACT (added, section 9.4): state.speed = cells/s along the facing on the ground (walk, flee, bolt); state.velocity = [x along facing, y up] cells/s (pigeon fly); state.duration = [min,max] ms a LOOPING state lasts before `next`; state.toHome = move back to the placement point, then go to `arrive`; state.hidden = draw nothing; trigger.face = \"away\": face away from the event x before the state; behavior.roam = cells left/right of the placement the calm walk may wander (keep it on the floor or ledge it stands on); behavior.fleeMax = cells a flee may run before it stops (stop early at a ledge end or a wall); variants = alternative sheets of the same layout, pick one per instance (hash of the placement); groundShadow = a small shadow the renderer draws on the floor below a flying bird (alpha falls to 0 at fadeCells above it). Every frame of a ground state carries its own baked contact shadow, which follows the pose (smaller and lighter when a foot leaves the ground, none in the air).",
+ "anims": {
+  "cat": {
+   "on": {
+    "kind": "prop",
+    "prop": "cat",
+    "mode": "replace"
+   },
+   "sheet": "animals/cat.png",
+   "frame": [
+    56,
+    32
+   ],
+   "cells": [
+    1.75,
+    1.0
+   ],
+   "anchor": [
+    0.4643,
+    0.7188
+   ],
+   "z": 2,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.0
+   },
+   "states": {
+    "sit": {
+     "row": 0,
+     "frames": 20,
+     "fps": 6,
+     "loop": true,
+     "note": "tail flick, ear twitch, slow blink, a look at the camera"
+    },
+    "walk": {
+     "row": 1,
+     "frames": 8,
+     "fps": 9,
+     "loop": true,
+     "speed": 0.4922,
+     "arrive": "sit"
+    },
+    "startle": {
+     "row": 2,
+     "frames": 2,
+     "durations": [
+      110,
+      170
+     ],
+     "loop": false,
+     "next": "flee",
+     "hold": 0
+    },
+    "flee": {
+     "row": 3,
+     "frames": 6,
+     "fps": 14,
+     "loop": true,
+     "speed": 3.0625,
+     "duration": [
+      900,
+      1500
+     ],
+     "next": "home"
+    },
+    "home": {
+     "row": 1,
+     "frames": 8,
+     "fps": 9,
+     "loop": true,
+     "speed": 0.4922,
+     "toHome": true,
+     "arrive": "sit",
+     "delay": [
+      4000,
+      9000
+     ],
+     "note": "after a wait off where it stopped (shown as sit), walk back home"
+    }
+   },
+   "default": "sit",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "weapon:fired",
+     "within": 6,
+     "state": "startle",
+     "face": "away"
+    },
+    {
+     "event": "fx:boom",
+     "within": 6,
+     "plusRadius": true,
+     "state": "startle",
+     "face": "away"
+    },
+    {
+     "event": "explosion",
+     "within": 6,
+     "plusRadius": true,
+     "state": "startle",
+     "face": "away"
+    }
+   ],
+   "ambient": [
+    {
+     "state": "walk",
+     "every": [
+      7000,
+      16000
+     ],
+     "chance": 0.45
+    }
+   ],
+   "behavior": {
+    "roam": 2.5,
+    "fleeMax": 7,
+    "calm": "sit"
+   }
+  },
+  "goat": {
+   "on": {
+    "kind": "prop",
+    "prop": "goat",
+    "mode": "replace"
+   },
+   "sheet": "animals/goat.png",
+   "frame": [
+    80,
+    56
+   ],
+   "cells": [
+    2.5,
+    1.75
+   ],
+   "anchor": [
+    0.475,
+    0.8036
+   ],
+   "z": 2,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.0
+   },
+   "states": {
+    "chew": {
+     "row": 0,
+     "frames": 16,
+     "fps": 8,
+     "loop": true,
+     "note": "jaw grinds, ear and tail flick, looks up at 12-15"
+    },
+    "walk": {
+     "row": 1,
+     "frames": 8,
+     "fps": 7,
+     "loop": true,
+     "speed": 0.4375,
+     "arrive": "chew"
+    },
+    "startle": {
+     "row": 2,
+     "frames": 2,
+     "durations": [
+      130,
+      200
+     ],
+     "loop": false,
+     "next": "bolt",
+     "hold": 0
+    },
+    "bolt": {
+     "row": 3,
+     "frames": 6,
+     "fps": 14,
+     "loop": true,
+     "speed": 2.625,
+     "duration": [
+      1100,
+      1700
+     ],
+     "next": "home"
+    },
+    "home": {
+     "row": 1,
+     "frames": 8,
+     "fps": 7,
+     "loop": true,
+     "speed": 0.4375,
+     "toHome": true,
+     "arrive": "chew",
+     "delay": [
+      5000,
+      10000
+     ]
+    }
+   },
+   "default": "chew",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "weapon:fired",
+     "within": 6,
+     "state": "startle",
+     "face": "away"
+    },
+    {
+     "event": "fx:boom",
+     "within": 6,
+     "plusRadius": true,
+     "state": "startle",
+     "face": "away"
+    },
+    {
+     "event": "explosion",
+     "within": 6,
+     "plusRadius": true,
+     "state": "startle",
+     "face": "away"
+    }
+   ],
+   "behavior": {
+    "roam": 0,
+    "fleeMax": 9,
+    "calm": "chew"
+   }
+  },
+  "pigeon": {
+   "on": {
+    "kind": "prop",
+    "prop": "pigeon",
+    "mode": "replace"
+   },
+   "sheet": "animals/pigeon.png",
+   "variants": [
+    "animals/pigeon.png",
+    "animals/pigeon_b.png",
+    "animals/pigeon_c.png"
+   ],
+   "frame": [
+    48,
+    48
+   ],
+   "cells": [
+    1.5,
+    1.5
+   ],
+   "anchor": [
+    0.4167,
+    0.9167
+   ],
+   "z": 2,
+   "facing": "right",
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.0
+   },
+   "states": {
+    "peck": {
+     "row": 0,
+     "frames": 12,
+     "fps": 12,
+     "loop": true
+    },
+    "walk": {
+     "row": 1,
+     "frames": 8,
+     "fps": 12,
+     "loop": true,
+     "speed": 0.3,
+     "duration": [
+      900,
+      2200
+     ],
+     "next": "peck"
+    },
+    "takeoff": {
+     "row": 2,
+     "frames": 6,
+     "fps": 16,
+     "loop": false,
+     "next": "fly",
+     "hold": 0,
+     "note": "the rise (13 px forward, 18 px up by the last frame) is baked in; the fly row draws the bird at that same offset"
+    },
+    "fly": {
+     "row": 3,
+     "frames": 4,
+     "fps": 14,
+     "loop": true,
+     "velocity": [
+      2.6,
+      1.7
+     ],
+     "duration": [
+      2200,
+      3200
+     ],
+     "next": "away"
+    },
+    "away": {
+     "hidden": true,
+     "loop": true,
+     "frames": 1,
+     "fps": 1,
+     "duration": [
+      9000,
+      18000
+     ],
+     "next": "approach"
+    },
+    "approach": {
+     "row": 3,
+     "frames": 4,
+     "fps": 14,
+     "loop": true,
+     "velocity": [
+      2.6,
+      -1.7
+     ],
+     "toHome": true,
+     "arrive": "land",
+     "note": "start 3.5 cells behind and 2.3 above home + the fly offset; glide in to it"
+    },
+    "land": {
+     "row": 4,
+     "frames": 6,
+     "fps": 14,
+     "loop": false,
+     "next": "peck",
+     "hold": 200
+    }
+   },
+   "default": "peck",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "weapon:fired",
+     "within": 8,
+     "state": "takeoff",
+     "face": "away",
+     "delay": [
+      0,
+      260
+     ]
+    },
+    {
+     "event": "fx:boom",
+     "within": 8,
+     "plusRadius": true,
+     "state": "takeoff",
+     "face": "away",
+     "delay": [
+      0,
+      260
+     ]
+    },
+    {
+     "event": "explosion",
+     "within": 8,
+     "plusRadius": true,
+     "state": "takeoff",
+     "face": "away",
+     "delay": [
+      0,
+      260
+     ]
+    }
+   ],
+   "ambient": [
+    {
+     "state": "walk",
+     "every": [
+      2500,
+      6000
+     ],
+     "chance": 0.6
+    }
+   ],
+   "groundShadow": {
+    "sheet": "animals/pigeon_shadow.png",
+    "frame": [
+     12,
+     4
+    ],
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "fadeCells": 3
+   },
+   "behavior": {
+    "roam": 1.5,
+    "calm": "peck",
+    "flock": "when one takes off, others within 3 cells follow 80-260 ms later"
+   }
+  }
+ }
+}

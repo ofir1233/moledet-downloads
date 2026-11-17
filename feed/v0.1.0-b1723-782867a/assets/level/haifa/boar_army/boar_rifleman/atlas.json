@@ -1,0 +1,709 @@
+{
+ "about": "THE BOAR RIFLEMAN, painted (16.11; the owner: the boars looked low-quality, Eli looked too small beside them, they die with blood). Cut by tools/haifa/boar_atlas2.py from the painted sheets of art/boar_v3_1611 (table: tools/haifa/boar_atlas2_rifleman.json). STAND-IN until the owner approves the look. src/game/haifa/boarArmy.ts",
+ "standin": true,
+ "canvas": [
+  230,
+  145
+ ],
+ "anchor": [
+  90,
+  135
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "density": 1.6,
+ "hd": "boar_atlas2.py: 2 texels a shown art px (64 a cell, as Eli); a frame px is shown at figure_scale.json boarShow (0.8), so he stands 82 art px on screen, hooves to the top of his helmet (Eli: 97)",
+ "look": "pixel",
+ "source": "art/boar_v3_1611/out (gpt-image-2 sheets from our own design picture); build: py -3.12 -I -B tools/haifa/boar_atlas2.py",
+ "filter": "lanczos",
+ "shownPx": 82.0,
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     230,
+     145
+    ],
+    [
+     230,
+     0,
+     230,
+     145
+    ],
+    [
+     460,
+     0,
+     230,
+     145
+    ],
+    [
+     230,
+     0,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    260,
+    180,
+    260,
+    180
+   ],
+   "loop": true
+  },
+  "walk": {
+   "frames": [
+    [
+     690,
+     0,
+     230,
+     145
+    ],
+    [
+     920,
+     0,
+     230,
+     145
+    ],
+    [
+     1150,
+     0,
+     230,
+     145
+    ],
+    [
+     1380,
+     0,
+     230,
+     145
+    ],
+    [
+     1610,
+     0,
+     230,
+     145
+    ],
+    [
+     1840,
+     0,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    110,
+    110,
+    110,
+    110,
+    110,
+    110
+   ],
+   "loop": true,
+   "stride": 0.575
+  },
+  "run": {
+   "frames": [
+    [
+     2070,
+     0,
+     230,
+     145
+    ],
+    [
+     2300,
+     0,
+     230,
+     145
+    ],
+    [
+     0,
+     145,
+     230,
+     145
+    ],
+    [
+     230,
+     145,
+     230,
+     145
+    ],
+    [
+     460,
+     145,
+     230,
+     145
+    ],
+    [
+     690,
+     145,
+     230,
+     145
+    ],
+    [
+     920,
+     145,
+     230,
+     145
+    ],
+    [
+     1150,
+     145,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+   ],
+   "loop": true,
+   "stride": 0.525
+  },
+  "run_hurt": {
+   "frames": [
+    [
+     1380,
+     145,
+     230,
+     145
+    ],
+    [
+     1610,
+     145,
+     230,
+     145
+    ],
+    [
+     1840,
+     145,
+     230,
+     145
+    ],
+    [
+     2070,
+     145,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    90,
+    90,
+    90,
+    90
+   ],
+   "loop": true,
+   "stride": 0.467
+  },
+  "alert": {
+   "frames": [
+    [
+     2300,
+     145,
+     230,
+     145
+    ],
+    [
+     0,
+     290,
+     230,
+     145
+    ],
+    [
+     230,
+     290,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    90,
+    110,
+    160
+   ],
+   "loop": false
+  },
+  "aim": {
+   "frames": [
+    [
+     460,
+     290,
+     230,
+     145
+    ],
+    [
+     690,
+     290,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    110,
+    200
+   ],
+   "loop": false,
+   "muzzle": [
+    [
+     165,
+     60
+    ],
+    [
+     165,
+     67
+    ]
+   ]
+  },
+  "fire": {
+   "frames": [
+    [
+     920,
+     290,
+     230,
+     145
+    ],
+    [
+     1150,
+     290,
+     230,
+     145
+    ],
+    [
+     1380,
+     290,
+     230,
+     145
+    ],
+    [
+     1610,
+     290,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    50,
+    50,
+    70,
+    90
+   ],
+   "loop": false,
+   "muzzle": [
+    [
+     160,
+     67
+    ],
+    [
+     166,
+     62
+    ],
+    [
+     162,
+     54
+    ],
+    [
+     162,
+     68
+    ]
+   ]
+  },
+  "reload": {
+   "frames": [
+    [
+     1840,
+     290,
+     230,
+     145
+    ],
+    [
+     2070,
+     290,
+     230,
+     145
+    ],
+    [
+     2300,
+     290,
+     230,
+     145
+    ],
+    [
+     0,
+     435,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    160,
+    160,
+    160,
+    160
+   ],
+   "loop": true
+  },
+  "cover": {
+   "frames": [
+    [
+     230,
+     435,
+     230,
+     145
+    ],
+    [
+     460,
+     435,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    520,
+    520
+   ],
+   "loop": true
+  },
+  "cover_peek": {
+   "frames": [
+    [
+     690,
+     435,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    400
+   ],
+   "loop": true,
+   "muzzle": [
+    [
+     170,
+     73
+    ]
+   ]
+  },
+  "cover_low": {
+   "frames": [
+    [
+     1150,
+     435,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    400
+   ],
+   "loop": true
+  },
+  "signal": {
+   "frames": [
+    [
+     1380,
+     435,
+     230,
+     145
+    ],
+    [
+     1610,
+     435,
+     230,
+     145
+    ],
+    [
+     1840,
+     435,
+     230,
+     145
+    ],
+    [
+     2070,
+     435,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    140,
+    140,
+    140,
+    140
+   ],
+   "loop": true
+  },
+  "throw": {
+   "frames": [
+    [
+     2300,
+     435,
+     230,
+     145
+    ],
+    [
+     0,
+     580,
+     230,
+     145
+    ],
+    [
+     230,
+     580,
+     230,
+     145
+    ],
+    [
+     460,
+     580,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    170,
+    230,
+    90,
+    140
+   ],
+   "loop": false,
+   "hand": [
+    [
+     97,
+     95
+    ],
+    [
+     39,
+     16
+    ],
+    [
+     160,
+     24
+    ],
+    [
+     152,
+     104
+    ]
+   ]
+  },
+  "hurt": {
+   "frames": [
+    [
+     690,
+     580,
+     230,
+     145
+    ],
+    [
+     920,
+     580,
+     230,
+     145
+    ],
+    [
+     1150,
+     580,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    60,
+    80,
+    140
+   ],
+   "loop": false
+  },
+  "fall": {
+   "frames": [
+    [
+     1380,
+     580,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "fall_hit": {
+   "frames": [
+    [
+     1610,
+     580,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "death": {
+   "frames": [
+    [
+     1840,
+     580,
+     230,
+     145
+    ],
+    [
+     2070,
+     580,
+     230,
+     145
+    ],
+    [
+     2300,
+     580,
+     230,
+     145
+    ],
+    [
+     0,
+     725,
+     230,
+     145
+    ],
+    [
+     230,
+     725,
+     230,
+     145
+    ],
+    [
+     460,
+     725,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    70,
+    90,
+    110,
+    100,
+    110,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 3,
+   "helmet": [
+    107,
+    71
+   ]
+  },
+  "death_blast": {
+   "frames": [
+    [
+     690,
+     725,
+     230,
+     145
+    ],
+    [
+     920,
+     725,
+     230,
+     145
+    ],
+    [
+     1150,
+     725,
+     230,
+     145
+    ],
+    [
+     1380,
+     725,
+     230,
+     145
+    ],
+    [
+     1610,
+     725,
+     230,
+     145
+    ],
+    [
+     1840,
+     725,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    80,
+    90,
+    90,
+    100,
+    130,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 0
+  },
+  "land": {
+   "frames": [
+    [
+     2070,
+     725,
+     230,
+     145
+    ]
+   ],
+   "durations": [
+    160
+   ],
+   "loop": false
+  }
+ },
+ "aliases": {
+  "spot": "alert",
+  "cover_aim": "cover_peek",
+  "cover_fire": "fire",
+  "cover_brick": "cover_low",
+  "panic": "run_hurt",
+  "aim_hold": "aim",
+  "shoot": "fire",
+  "jump": "fall",
+  "stun": "hurt",
+  "stagger": "hurt",
+  "empty_hands": "idle",
+  "look_camera": "idle",
+  "backpedal": "walk",
+  "dazed_flipped": "hurt"
+ },
+ "drawn": [
+  "aim",
+  "alert",
+  "cover",
+  "cover_low",
+  "cover_peek",
+  "death",
+  "death_blast",
+  "fall",
+  "fall_hit",
+  "fire",
+  "hurt",
+  "idle",
+  "land",
+  "reload",
+  "run",
+  "run_hurt",
+  "signal",
+  "throw",
+  "walk"
+ ],
+ "points": "muzzle (aim, fire, cover_peek): the rifle's tip, frame px. hand (throw): the hand that holds and lets go of the grenade (frame 2 is the release). helmetOff (death, death_blast): the first frame his head is bare; helmet: where the thrown helmet starts on that frame. The game throws the helmet (boars:helmet), the loose painted helmets are not in the frames."
+}

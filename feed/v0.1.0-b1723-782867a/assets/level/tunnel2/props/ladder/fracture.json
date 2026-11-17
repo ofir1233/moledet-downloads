@@ -1,0 +1,654 @@
+{
+ "id": "ladder",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A ladder tile knocked together from scrap timber: the rungs drop out one by one, the right rail follows, the left one stays nailed to the wall.",
+ "source": {
+  "intact": "props/ladder_intact.png",
+  "crop": null,
+  "w": 32,
+  "h": 32,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "ladder_col.png",
+   "n": "ladder_n.png",
+   "mat": "ladder_mat.png",
+   "parts": "ladder_parts.png",
+   "grain": "ladder_grain.png",
+   "inside": "ladder_inside.png",
+   "under": {
+    "col": "ladder_under_col.png",
+    "n": "ladder_under_n.png",
+    "mat": "ladder_under_mat.png",
+    "parts": "ladder_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 nailed: the lower rung lets go at the wall rail",
+  "2 nailed: it falls; the upper rung lets go of the wall rail",
+  "3 nailed: the right rail and the upper rung drop together"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png",
+  "broken_top/broken_bottom": "the tile above/below loses its rungs"
+ },
+ "pieces": [
+  {
+   "id": "rail_l",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 56.0,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    9,
+    0,
+    5,
+    32
+   ],
+   "at": [
+    0,
+    0
+   ],
+   "centre": [
+    2.5,
+    16.0
+   ],
+   "outline": [
+    [
+     -2.5,
+     -16.0
+    ],
+    [
+     2.5,
+     -16.0
+    ],
+    [
+     2.5,
+     16.0
+    ],
+    [
+     -2.5,
+     16.0
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "left rail, nailed to the wall (anchored)",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      59,
+      0,
+      1,
+      11
+     ],
+     "at": [
+      4,
+      0
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      36,
+      0,
+      1,
+      21
+     ],
+     "at": [
+      4,
+      11
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rail_r",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "light",
+   "mass": 78.4,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    0,
+    7,
+    32
+   ],
+   "at": [
+    25,
+    0
+   ],
+   "centre": [
+    28.5,
+    16.0
+   ],
+   "outline": [
+    [
+     -3.5,
+     -16.0
+    ],
+    [
+     3.5,
+     -16.0
+    ],
+    [
+     3.5,
+     16.0
+    ],
+    [
+     -3.5,
+     16.0
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      114,
+      0,
+      1,
+      5
+     ],
+     "at": [
+      25,
+      1
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      117,
+      0,
+      1,
+      5
+     ],
+     "at": [
+      25,
+      17
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rung_1_1",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "feather",
+   "mass": 23.1,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    39,
+    0,
+    12,
+    11
+   ],
+   "at": [
+    5,
+    0
+   ],
+   "centre": [
+    10.5,
+    3.8
+   ],
+   "outline": [
+    [
+     -5.5,
+     -3.8
+    ],
+    [
+     -4.5,
+     -3.8
+    ],
+    [
+     6.5,
+     -2.8
+    ],
+    [
+     6.5,
+     2.2
+    ],
+    [
+     -4.5,
+     7.2
+    ],
+    [
+     -5.5,
+     7.2
+    ]
+   ],
+   "partIndex": 3,
+   "shardOf": "rung_1",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      53,
+      0,
+      4,
+      11
+     ],
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      88,
+      0,
+      4,
+      5
+     ],
+     "at": [
+      16,
+      1
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rung_1_2",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "feather",
+   "mass": 14.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    62,
+    0,
+    8,
+    5
+   ],
+   "at": [
+    17,
+    1
+   ],
+   "centre": [
+    21.0,
+    3.5
+   ],
+   "outline": [
+    [
+     -4.0,
+     -2.5
+    ],
+    [
+     4.0,
+     -2.5
+    ],
+    [
+     4.0,
+     2.5
+    ],
+    [
+     -4.0,
+     2.5
+    ]
+   ],
+   "partIndex": 4,
+   "shardOf": "rung_1",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      82,
+      0,
+      4,
+      5
+     ],
+     "at": [
+      24,
+      1
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      99,
+      0,
+      3,
+      5
+     ],
+     "at": [
+      15,
+      1
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rung_2_1",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "feather",
+   "mass": 26.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    16,
+    0,
+    12,
+    21
+   ],
+   "at": [
+    5,
+    11
+   ],
+   "centre": [
+    9.8,
+    20.1
+   ],
+   "outline": [
+    [
+     -4.8,
+     -9.1
+    ],
+    [
+     -3.8,
+     -9.1
+    ],
+    [
+     7.2,
+     -3.1
+    ],
+    [
+     7.2,
+     1.9
+    ],
+    [
+     -3.8,
+     11.9
+    ],
+    [
+     -4.8,
+     11.9
+    ]
+   ],
+   "partIndex": 5,
+   "shardOf": "rung_2",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      30,
+      0,
+      4,
+      21
+     ],
+     "at": [
+      2,
+      11
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      104,
+      0,
+      3,
+      5
+     ],
+     "at": [
+      16,
+      17
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rung_2_2",
+   "material": "wood",
+   "mat": 4,
+   "massClass": "feather",
+   "mass": 14.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    72,
+    0,
+    8,
+    5
+   ],
+   "at": [
+    17,
+    17
+   ],
+   "centre": [
+    21.0,
+    19.5
+   ],
+   "outline": [
+    [
+     -4.0,
+     -2.5
+    ],
+    [
+     4.0,
+     -2.5
+    ],
+    [
+     4.0,
+     2.5
+    ],
+    [
+     -4.0,
+     2.5
+    ]
+   ],
+   "partIndex": 6,
+   "shardOf": "rung_2",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      94,
+      0,
+      3,
+      5
+     ],
+     "at": [
+      24,
+      17
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      109,
+      0,
+      3,
+      5
+     ],
+     "at": [
+      15,
+      17
+     ]
+    }
+   ],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j02",
+   "a": "rail_l",
+   "b": "rung_2_1",
+   "kind": "nailed",
+   "strength": 0.2,
+   "order": 1,
+   "at": [
+    4.0,
+    21.0
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "rung_2_1",
+   "b": "rung_2_2",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    16.0,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "rail_l",
+   "b": "rung_1_1",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    4.0,
+    5.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "rail_r",
+   "b": "rung_2_2",
+   "kind": "nailed",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    25.0,
+    19.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "rung_1_1",
+   "b": "rung_1_2",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 2,
+   "at": [
+    16.0,
+    3.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "rail_r",
+   "b": "rung_1_2",
+   "kind": "nailed",
+   "strength": 0.4,
+   "order": 3,
+   "at": [
+    25.0,
+    3.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j02",
+   "kind": "split",
+   "at": [
+    4,
+    11
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "split",
+   "at": [
+    4,
+    14
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "split",
+   "at": [
+    4,
+    17
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "split",
+   "at": [
+    4,
+    23
+   ]
+  },
+  {
+   "joint": "j02",
+   "kind": "split",
+   "at": [
+    4,
+    26
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    16,
+    17
+   ]
+  },
+  {
+   "joint": "j06",
+   "kind": "split",
+   "at": [
+    16,
+    20
+   ]
+  }
+ ],
+ "notes": [
+  "A tile of a stacked ladder; each tile breaks on its own; the anchored left rail is the wall fixing."
+ ]
+}

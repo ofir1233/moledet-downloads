@@ -2,6 +2,25 @@
  "schema": 1,
  "note": "Patch notes, written by hand at each release: one entry per release id (the folder name in builds/releases). kind: added | changed | fixed. Plain Hebrew a player reads. The feed tool (launcher2/tools/make_feed.mjs) copies this file into the feed beside latest.json; the launcher shows it in «מה חדש» and under the update question. docs/RELEASE_AND_LAUNCHER.md, section 4b.",
  "versions": {
+  "v0.1.0-b1723-782867a": {
+   "version": "0.1.0",
+   "date": "2026-11-17",
+   "title": "נמל חיפה בתפריט",
+   "items": [
+    {
+     "kind": "changed",
+     "text": "השלב החדש, נמל חיפה, נכנס לתפריט (קמפיין ומשחק חופשי)"
+    },
+    {
+     "kind": "changed",
+     "text": "המפות הישנות של חיפה כבר לא מופיעות בתפריט; משחק שמור ממשיך לנמל."
+    },
+    {
+     "kind": "changed",
+     "text": "בסוף הנמל חוזרים לתפריט (החלק השני של חיפה, המספנה עם הבוס, עוד בבנייה)."
+    }
+   ]
+  },
   "v0.1.0-b1702-11b6f9e": {
    "version": "0.1.0",
    "date": "2026-11-17",
