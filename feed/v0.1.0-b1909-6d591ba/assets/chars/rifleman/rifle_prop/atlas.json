@@ -1,0 +1,96 @@
+{
+ "id": "rifleman_rifle",
+ "cell": [
+  72,
+  72
+ ],
+ "pivot": [
+  36,
+  36
+ ],
+ "angles": [
+  282,
+  300,
+  325,
+  350,
+  0,
+  10
+ ],
+ "note": "the rifleman's rifle as a prop (the game drops it as Kind drop_rifle; his folder had no sprite for it). One ROW per angle; the last row (10 degrees: it rests on its butt and its magazine, the muzzle a little up) has two COLUMNS: 0 = in the air, 1 = lying on the floor with a contact shadow. The pivot is the grip pixel (where his fist held it). \"fall\" starts where death frame 2 leaves it (grip_dx/dy from the rifleman's anchor, canvas px, y down; flip dx with his facing): muzzle down, the muzzle meets the floor (clang), the butt comes over, it falls flat (clang = a clatter, 2-3 steel sparks), one flat hop, rest. It never stands upright and never sticks in the floor.",
+ "from": "death frame 2",
+ "fall": [
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 282,
+   "grip_dx": -31,
+   "grip_dy": -33,
+   "ms": 50
+  },
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 282,
+   "grip_dx": -31,
+   "grip_dy": -29,
+   "ms": 40,
+   "event": "clang"
+  },
+  {
+   "row": 1,
+   "col": 0,
+   "angle": 300,
+   "grip_dx": -28,
+   "grip_dy": -25,
+   "ms": 50
+  },
+  {
+   "row": 2,
+   "col": 0,
+   "angle": 325,
+   "grip_dx": -23,
+   "grip_dy": -15,
+   "ms": 50
+  },
+  {
+   "row": 3,
+   "col": 0,
+   "angle": 350,
+   "grip_dx": -18,
+   "grip_dy": -9,
+   "ms": 40
+  },
+  {
+   "row": 5,
+   "col": 1,
+   "angle": 10,
+   "grip_dx": -15,
+   "grip_dy": -5,
+   "ms": 60,
+   "event": "clang"
+  },
+  {
+   "row": 4,
+   "col": 0,
+   "angle": 0,
+   "grip_dx": -13,
+   "grip_dy": -10,
+   "ms": 50
+  },
+  {
+   "row": 5,
+   "col": 1,
+   "angle": 10,
+   "grip_dx": -11,
+   "grip_dy": -5,
+   "ms": 400,
+   "event": "rest"
+  }
+ ],
+ "fall_ms": 340,
+ "rest_row": 5,
+ "rest_col": 1,
+ "length_px": 46,
+ "normal": "atlas_n.png",
+ "look": "pixel"
+}

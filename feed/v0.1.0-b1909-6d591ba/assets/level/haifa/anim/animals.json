@@ -1,0 +1,7 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "note": "J8b animals (drawn by code, art/level_anim/animals/tools). Keys beyond LEVEL_ANIM_CONTRACT (added, section 9.4): state.speed = cells/s along the facing on the ground (walk, flee, bolt); state.velocity = [x along facing, y up] cells/s (pigeon fly); state.duration = [min,max] ms a LOOPING state lasts before `next`; state.toHome = move back to the placement point, then go to `arrive`; state.hidden = draw nothing; trigger.face = \"away\": face away from the event x before the state; behavior.roam = cells left/right of the placement the calm walk may wander (keep it on the floor or ledge it stands on); behavior.fleeMax = cells a flee may run before it stops (stop early at a ledge end or a wall); variants = alternative sheets of the same layout, pick one per instance (hash of the placement); groundShadow = a small shadow the renderer draws on the floor below a flying bird (alpha falls to 0 at fadeCells above it). Every frame of a ground state carries its own baked contact shadow, which follows the pose (smaller and lighter when a foot leaves the ground, none in the air).",
+ "anims": {},
+ "packNote": "haifa: tunnel anims off by data (build_pack.py ANIMS_OFF): cable_sparks, cat, drip_drop, drip_form, drip_splash, fan, goat, lamp, laundry, monitors, pigeon, steam"
+}

@@ -1,0 +1,190 @@
+{
+ "material": "wood",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "the regime's crates and pit props, cheap boards nailed in a hurry: they SNAP into combs of splinters and peel long slivers along the grain, fresh pale wood inside a grey-brown skin",
+ "ramp": [
+  "#29211f",
+  "#4c3527",
+  "#73502e",
+  "#9a703f",
+  "#bf9257"
+ ],
+ "inside": [
+  "#3a2a20",
+  "#9f7749",
+  "#d1a769",
+  "#ebc98b"
+ ],
+ "back": [
+  "#141110",
+  "#29211f"
+ ],
+ "section": [
+  "#9f7749",
+  "#d1a769"
+ ],
+ "hash": "h32 as concrete (tools/art_host/fx/hashrule.py); salt 401",
+ "edges": {
+  "strips": {
+   "file": "wood_edge_strips.png",
+   "normal": "wood_edge_strips_n.png",
+   "slot": [
+    32,
+    32
+   ],
+   "halfDepth": 16,
+   "variants": 6,
+   "joinLevels": [
+    -2,
+    4,
+    9,
+    14
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -11,
+    16
+   ]
+  },
+  "corners": {
+   "file": "wood_edge_corners.png",
+   "normal": "wood_edge_corners_n.png",
+   "slot": [
+    41,
+    41
+   ],
+   "origin": [
+    20,
+    20
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 401
+ },
+ "stages": {
+  "file": "wood_stages.png",
+  "normal": "wood_stages_n.png",
+  "slot": [
+   48,
+   48
+  ],
+  "margin": 8,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "variants": 4,
+  "grain": "authored for horizontal grain; rotate 90 deg for a vertical-grain cell",
+  "use": "opaque overlay over the cell art at dmg/thr crossing 25 / 50 / 75 %; variant h32(x, y, 71) % 4; clip to the body"
+ },
+ "bites": {
+  "file": "wood_bites.png",
+  "normal": "wood_bites_n.png",
+  "slot": [
+   10,
+   8
+  ],
+  "variants": 6,
+  "anchor": [
+   4,
+   3
+  ],
+  "grain": "horizontal; rotate 90 deg on a vertical-grain cell",
+  "use": "one per bullet hit on wood, variant h32(x, y, 80 + salt) % 6; opaque, clipped to the body"
+ },
+ "fibres": {
+  "file": "wood_fibres.png",
+  "normal": "wood_fibres_n.png",
+  "slot": [
+   36,
+   16
+  ],
+  "variants": 2,
+  "beamWidth": 32,
+  "anchor": [
+   2,
+   0
+  ],
+  "rows": [
+   "upper end (hang down)",
+   "lower end (stand up)"
+  ],
+  "use": "a beam / pit prop cut across: draw row 0 at the upper piece's broken end, row 1 at the lower; the gap between is the hole"
+ },
+ "chunks": {
+  "file": "wood_chunks.png",
+  "normal": "wood_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   {
+    "name": "sliver",
+    "px": 21
+   },
+   {
+    "name": "splinter",
+    "px": 45
+   },
+   {
+    "name": "board_end",
+    "px": 71
+   },
+   {
+    "name": "board_block",
+    "px": 109
+   },
+   {
+    "name": "wedge",
+    "px": 28
+   },
+   {
+    "name": "bent_chunk",
+    "px": 100
+   },
+   {
+    "name": "long_sliver",
+    "px": 26
+   },
+   {
+    "name": "board_piece",
+    "px": 76
+   }
+  ],
+  "facets": {
+   "#ff0000": "top: the art one ramp step lighter",
+   "#00ff00": "front: the art as it is",
+   "#0000ff": "side / underside: one step darker"
+  },
+  "use": "as concrete: a removed cell gives 3-6 chunks cut from its own art, turned by 90s, settling on a 36 deg cone with a 1 px contact shadow"
+ },
+ "slabs": {
+  "file": "wood_slabs.png",
+  "normal": "wood_slabs_n.png",
+  "slot": [
+   30,
+   8
+  ],
+  "variants": 4,
+  "facets": {
+   "#00ff00": "the crate's painted face kept AS IT IS",
+   "#ff0000": "top edge, lit",
+   "#0000ff": "underside / snapped end"
+  },
+  "use": "as concrete slabs (holes of 3+ cells): boards leaning at the foot"
+ },
+ "behind": "the level back plane two steps darker with a contact shadow (as concrete); a crate shows its own dark inside (#3a2a20) first",
+ "dust": "no dust cloud: 3-6 slivers (chunks 0, 1, 6) thrown per hit, spinning, landing as floor scatter; sawdust = dust_puff_mat in #d1a769"
+}

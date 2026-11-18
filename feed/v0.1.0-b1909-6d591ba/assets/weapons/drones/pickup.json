@@ -1,0 +1,48 @@
+{
+ "file": "pickup.png",
+ "cell": [
+  36,
+  34
+ ],
+ "anchor": "bottom centre of each cell (lying: the floor line; falling: the renderer puts the pickup point 6 px above the cell's bottom)",
+ "states": {
+  "lying": {
+   "cols": [
+    0,
+    1
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "it sits on the floor as a bag does, straps up; the beacon winks"
+  },
+  "falling": {
+   "cols": [
+    2,
+    3
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "a courier drone twice the swarm's size brings it down, hooked into both strap loops; its rotors blur, it bobs a pixel"
+  }
+ },
+ "grip": [
+  [
+   11,
+   16
+  ],
+  [
+   11,
+   16
+  ],
+  [
+   11,
+   16
+  ],
+  [
+   11,
+   16
+  ]
+ ],
+ "grip_note": "per cell: where the weapon's grip point is in the cell (px, y down), for a hand-over or a catch",
+ "star": "the pack's own roundel (the blue interlaced star on ivory, sewn on its side) is upright and whole in all four cells"
+}

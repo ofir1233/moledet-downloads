@@ -1,0 +1,1747 @@
+{
+ "canvas": [
+  96,
+  96
+ ],
+ "anchor": [
+  48,
+  90
+ ],
+ "scale": "3/8",
+ "palette": "rifleman_pixel",
+ "normal": "atlas_n.png",
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     96,
+     96
+    ],
+    [
+     96,
+     0,
+     96,
+     96
+    ],
+    [
+     192,
+     0,
+     96,
+     96
+    ],
+    [
+     288,
+     0,
+     96,
+     96
+    ],
+    [
+     384,
+     0,
+     96,
+     96
+    ],
+    [
+     480,
+     0,
+     96,
+     96
+    ],
+    [
+     576,
+     0,
+     96,
+     96
+    ],
+    [
+     672,
+     0,
+     96,
+     96
+    ]
+   ],
+   "fps": 2.67,
+   "loop": true,
+   "durations": [
+    500,
+    300,
+    450,
+    300,
+    250,
+    550,
+    350,
+    300
+   ]
+  },
+  "walk": {
+   "frames": [
+    [
+     0,
+     96,
+     96,
+     96
+    ],
+    [
+     96,
+     96,
+     96,
+     96
+    ],
+    [
+     192,
+     96,
+     96,
+     96
+    ],
+    [
+     288,
+     96,
+     96,
+     96
+    ],
+    [
+     384,
+     96,
+     96,
+     96
+    ],
+    [
+     480,
+     96,
+     96,
+     96
+    ],
+    [
+     576,
+     96,
+     96,
+     96
+    ],
+    [
+     672,
+     96,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": true
+  },
+  "run": {
+   "frames": [
+    [
+     0,
+     192,
+     96,
+     96
+    ],
+    [
+     96,
+     192,
+     96,
+     96
+    ],
+    [
+     192,
+     192,
+     96,
+     96
+    ],
+    [
+     288,
+     192,
+     96,
+     96
+    ],
+    [
+     384,
+     192,
+     96,
+     96
+    ],
+    [
+     480,
+     192,
+     96,
+     96
+    ],
+    [
+     576,
+     192,
+     96,
+     96
+    ],
+    [
+     672,
+     192,
+     96,
+     96
+    ]
+   ],
+   "fps": 14,
+   "loop": true
+  },
+  "spot": {
+   "frames": [
+    [
+     0,
+     288,
+     96,
+     96
+    ],
+    [
+     96,
+     288,
+     96,
+     96
+    ],
+    [
+     192,
+     288,
+     96,
+     96
+    ],
+    [
+     288,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 5.71,
+   "loop": false,
+   "durations": [
+    80,
+    160,
+    140,
+    320
+   ]
+  },
+  "cover": {
+   "frames": [
+    [
+     0,
+     384,
+     96,
+     96
+    ],
+    [
+     96,
+     384,
+     96,
+     96
+    ],
+    [
+     192,
+     384,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "cover_peek": {
+   "frames": [
+    [
+     0,
+     480,
+     96,
+     96
+    ],
+    [
+     96,
+     480,
+     96,
+     96
+    ]
+   ],
+   "fps": 6,
+   "loop": true
+  },
+  "aim": {
+   "frames": [
+    [
+     0,
+     576,
+     96,
+     96
+    ],
+    [
+     96,
+     576,
+     96,
+     96
+    ],
+    [
+     192,
+     576,
+     96,
+     96
+    ],
+    [
+     288,
+     576,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": true,
+   "muzzle": [
+    [
+     91,
+     41
+    ],
+    [
+     91,
+     40
+    ],
+    [
+     91,
+     41
+    ],
+    [
+     91,
+     42
+    ]
+   ]
+  },
+  "fire": {
+   "frames": [
+    [
+     0,
+     672,
+     96,
+     96
+    ],
+    [
+     96,
+     672,
+     96,
+     96
+    ],
+    [
+     192,
+     672,
+     96,
+     96
+    ],
+    [
+     288,
+     672,
+     96,
+     96
+    ],
+    [
+     384,
+     672,
+     96,
+     96
+    ]
+   ],
+   "fps": 17.24,
+   "loop": false,
+   "durations": [
+    40,
+    50,
+    60,
+    60,
+    80
+   ],
+   "muzzle": [
+    [
+     89,
+     41
+    ],
+    [
+     89,
+     31
+    ],
+    [
+     88,
+     31
+    ],
+    [
+     90,
+     41
+    ],
+    [
+     91,
+     41
+    ]
+   ]
+  },
+  "cover_aim": {
+   "frames": [
+    [
+     0,
+     768,
+     96,
+     96
+    ],
+    [
+     96,
+     768,
+     96,
+     96
+    ]
+   ],
+   "fps": 8,
+   "loop": true,
+   "muzzle": [
+    [
+     92,
+     50
+    ],
+    [
+     92,
+     49
+    ]
+   ]
+  },
+  "cover_fire": {
+   "frames": [
+    [
+     0,
+     864,
+     96,
+     96
+    ],
+    [
+     96,
+     864,
+     96,
+     96
+    ],
+    [
+     192,
+     864,
+     96,
+     96
+    ],
+    [
+     288,
+     864,
+     96,
+     96
+    ]
+   ],
+   "fps": 16.67,
+   "loop": false,
+   "durations": [
+    40,
+    60,
+    60,
+    80
+   ],
+   "muzzle": [
+    [
+     90,
+     50
+    ],
+    [
+     89,
+     34
+    ],
+    [
+     88,
+     34
+    ],
+    [
+     92,
+     50
+    ]
+   ]
+  },
+  "reload": {
+   "frames": [
+    [
+     0,
+     960,
+     96,
+     96
+    ],
+    [
+     96,
+     960,
+     96,
+     96
+    ],
+    [
+     192,
+     960,
+     96,
+     96
+    ],
+    [
+     288,
+     960,
+     96,
+     96
+    ],
+    [
+     384,
+     960,
+     96,
+     96
+    ],
+    [
+     480,
+     960,
+     96,
+     96
+    ]
+   ],
+   "fps": 4.76,
+   "loop": false,
+   "durations": [
+    180,
+    300,
+    200,
+    160,
+    220,
+    200
+   ]
+  },
+  "panic": {
+   "frames": [
+    [
+     0,
+     1056,
+     96,
+     96
+    ],
+    [
+     96,
+     1056,
+     96,
+     96
+    ],
+    [
+     192,
+     1056,
+     96,
+     96
+    ],
+    [
+     288,
+     1056,
+     96,
+     96
+    ]
+   ],
+   "fps": 12,
+   "loop": true
+  },
+  "hurt": {
+   "frames": [
+    [
+     0,
+     1152,
+     96,
+     96
+    ],
+    [
+     96,
+     1152,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     0,
+     1248,
+     96,
+     96
+    ],
+    [
+     96,
+     1248,
+     96,
+     96
+    ],
+    [
+     192,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": false,
+   "ticks": [
+    6,
+    7,
+    5
+   ],
+   "durations": [
+    100,
+    117,
+    83
+   ],
+   "note": "NO BODY (the Host's ruling, gate 1): 0 the take (both feet off the floor, arms out, eyes wide, the cap popped); 1 the cap lifts off and the rifle is let go; 2 EMPTY. The props (cap_prop, rifle_prop) play from where frame 1 leaves them; the forms burst is the effects pack's (death_rifleman)"
+  },
+  "fall": {
+   "frames": [
+    [
+     288,
+     1248,
+     96,
+     96
+    ],
+    [
+     384,
+     1248,
+     96,
+     96
+    ],
+    [
+     480,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": true,
+   "loopFrom": 1,
+   "ticks": [
+    11,
+    5,
+    5
+   ],
+   "durations": [
+    183,
+    83,
+    83
+   ],
+   "note": "in the air going down: 0 the beat, played ONCE (he stands on nothing, the rifle hugged to his chest, and looks down); 1-2 the fall, a LOOP (loopFrom 1): arms up with the rifle, knees up, the tunic's hem blown up, the cap lifting a little and staying on. Never lying, kneeling or bowing"
+  },
+  "cover_steps": {
+   "frames": [
+    [
+     0,
+     1344,
+     96,
+     96
+    ],
+    [
+     96,
+     1344,
+     96,
+     96
+    ],
+    [
+     192,
+     1344,
+     96,
+     96
+    ],
+    [
+     288,
+     1344,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    8,
+    8,
+    8,
+    8
+   ],
+   "loop": false,
+   "events": {},
+   "note": "one frame per cover step (cover_hi, cover_mid, cover_lo, cover_brick): play frame n and HOLD it",
+   "durations": [
+    133,
+    133,
+    133,
+    133
+   ],
+   "fps": 12
+  },
+  "brick": {
+   "frames": [
+    [
+     384,
+     1344,
+     96,
+     96
+    ],
+    [
+     480,
+     1344,
+     96,
+     96
+    ],
+    [
+     576,
+     1344,
+     96,
+     96
+    ],
+    [
+     672,
+     1344,
+     96,
+     96
+    ],
+    [
+     0,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    10,
+    12,
+    10,
+    12,
+    10
+   ],
+   "loop": false,
+   "events": {
+    "0": [
+     "brick_tick"
+    ]
+   },
+   "note": "loops frames 1-4 while the brick prop lives; the brick here is part of the frame",
+   "durations": [
+    167,
+    200,
+    167,
+    200,
+    167
+   ],
+   "fps": 12
+  },
+  "empty_hands": {
+   "frames": [
+    [
+     96,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    20
+   ],
+   "loop": false,
+   "events": {},
+   "note": "the brick is shot: he stares, SILENT",
+   "durations": [
+    333
+   ],
+   "fps": 12
+  },
+  "camera_look": {
+   "frames": [
+    [
+     192,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    24
+   ],
+   "loop": false,
+   "events": {},
+   "note": "the hand-drawn FRONT head, held 24 (silent), then rifleman:panic",
+   "durations": [
+    400
+   ],
+   "fps": 12
+  },
+  "reload_manual": {
+   "frames": [
+    [
+     288,
+     1440,
+     96,
+     96
+    ],
+    [
+     384,
+     1440,
+     96,
+     96
+    ],
+    [
+     480,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "ticks": [
+    12,
+    26,
+    8
+   ],
+   "loop": false,
+   "events": {
+    "1": [
+     "bark"
+    ],
+    "2": [
+     "page"
+    ]
+   },
+   "note": "his installed reload 2-4 with a plain manual in the front hand; no licked finger yet",
+   "durations": [
+    200,
+    433,
+    133
+   ],
+   "fps": 12
+  },
+  "dazed_flipped": {
+   "frames": [
+    [
+     0,
+     1536,
+     96,
+     96
+    ],
+    [
+     96,
+     1536,
+     96,
+     96
+    ],
+    [
+     192,
+     1536,
+     96,
+     96
+    ],
+    [
+     288,
+     1536,
+     96,
+     96
+    ],
+    [
+     384,
+     1536,
+     96,
+     96
+    ],
+    [
+     480,
+     1536,
+     96,
+     96
+    ]
+   ],
+   "loop": true,
+   "fps": 4,
+   "durations": [
+    250,
+    250,
+    250,
+    250,
+    250,
+    250
+   ],
+   "note": "Host art 12.11 (gate 3 redraw): dazed_flipped, the 150 confused ticks of Ben-Gurion's headstand power (bomber phase stun, foes phase hurt, timer = confuseTicks): toppled onto his head on the floor, one hand planted, SALUTING THE FLOOR with the other; the rifle lies behind him, the cap rocks in front; his jacket slid down to the chin, the legs march on the spot. Loop 1.5 s. Drawn by hand (never a flip): alive, eyes open, never hanging, never kneeling or bowing; the head carries him on the floor at the anchor line.",
+   "ticks": [
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+   ]
+  },
+  "aim_hold": {
+   "frames": [
+    [
+     0,
+     1632,
+     96,
+     96
+    ]
+   ],
+   "fps": 10,
+   "loop": true,
+   "durations": [
+    600
+   ],
+   "ticks": [
+    36
+   ],
+   "muzzle": [
+    [
+     91,
+     41
+    ]
+   ],
+   "events": {
+    "0": [
+     "rifleman:aim"
+    ]
+   },
+   "note": "Host art 12.11 (R1 telegraph): the aim held dead still for the 36 aim ticks, so the painted aim line starts at a fixed muzzle [91, 41] (his `aim` loop sways the barrel 1 px)"
+  }
+ },
+ "heads": {
+  "walk": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 22,
+     "rot": 0,
+     "score": 0.07,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 43,
+     "y": 25,
+     "rot": 0,
+     "score": 0.115,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 23,
+     "rot": 0,
+     "score": 0.112,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 41,
+     "y": 21,
+     "rot": 0,
+     "score": 0.018,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 20,
+     "rot": 0,
+     "score": 0.085,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 24,
+     "rot": 0,
+     "score": 0.091,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 20,
+     "rot": 0,
+     "score": 0.115,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 18,
+     "rot": 0,
+     "score": 0.049,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "cover_peek": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 30,
+     "rot": 0,
+     "score": 0.104,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 29,
+     "rot": 0,
+     "score": 0.104,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "aim": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "fire": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 36,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 34,
+     "y": 20,
+     "rot": 0,
+     "score": 0.166,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 33,
+     "y": 20,
+     "rot": 0,
+     "score": 0.166,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 37,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "reload": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 23,
+     "rot": 0,
+     "score": 0.202,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 20,
+     "rot": 0,
+     "score": 0.073,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 21,
+     "rot": 0,
+     "score": 0.073,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 42,
+     "y": 23,
+     "rot": 0,
+     "score": 0.202,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 37,
+     "y": 19,
+     "rot": 0,
+     "score": 0.08,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 35,
+     "y": 19,
+     "rot": 0,
+     "score": 0.064,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "idle": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 19,
+     "rot": 0,
+     "score": 0.16,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 20,
+     "rot": 0,
+     "score": 0.163,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 19,
+     "rot": 0,
+     "score": 0.227,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 39,
+     "y": 20,
+     "rot": 0,
+     "score": 0.227,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 19,
+     "rot": 0,
+     "score": 0.16,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 44,
+     "y": 21,
+     "rot": 0,
+     "score": 0.206,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 44,
+     "y": 22,
+     "rot": 0,
+     "score": 0.206,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "neutral",
+     "x": 40,
+     "y": 20,
+     "rot": 0,
+     "score": 0.163,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "run": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 46,
+     "y": 28,
+     "rot": 0,
+     "score": 0.121,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 47,
+     "y": 34,
+     "rot": 0,
+     "score": 0.168,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 46,
+     "y": 29,
+     "rot": 0,
+     "score": 0.16,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 45,
+     "y": 26,
+     "rot": 0,
+     "score": 0.16,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 46,
+     "y": 26,
+     "rot": 0,
+     "score": 0.175,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 47,
+     "y": 31,
+     "rot": 0,
+     "score": 0.189,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 46,
+     "y": 27,
+     "rot": 0,
+     "score": 0.173,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 45,
+     "y": 25,
+     "rot": 0,
+     "score": 0.14,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "spot": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 40,
+     "y": 21,
+     "rot": 0,
+     "score": 0.16,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 36,
+     "y": 20,
+     "rot": 0,
+     "score": 0.285,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 20,
+     "rot": 0,
+     "score": 0.217,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 21,
+     "rot": 0,
+     "score": 0.217,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "cover": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 49,
+     "y": 32,
+     "rot": 0,
+     "score": 0.285,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 42,
+     "y": 36,
+     "rot": 0,
+     "score": 0.268,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 42,
+     "y": 37,
+     "rot": 0,
+     "score": 0.266,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "cover_aim": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 35,
+     "y": 32,
+     "rot": 0,
+     "score": 0.187,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 35,
+     "y": 32,
+     "rot": 0,
+     "score": 0.187,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "cover_fire": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 33,
+     "y": 32,
+     "rot": 0,
+     "score": 0.187,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 36,
+     "y": 28,
+     "rot": 0,
+     "score": 0.151,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 35,
+     "y": 28,
+     "rot": 0,
+     "score": 0.147,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 35,
+     "y": 32,
+     "rot": 0,
+     "score": 0.187,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "panic": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 43,
+     "y": 22,
+     "rot": 0,
+     "score": 0.333,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 42,
+     "y": 20,
+     "rot": 0,
+     "score": 0.185,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 43,
+     "y": 20,
+     "rot": 0,
+     "score": 0.333,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "scared",
+     "x": 42,
+     "y": 19,
+     "rot": 0,
+     "score": 0.185,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "hurt": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "pain",
+     "x": 31,
+     "y": 20,
+     "rot": 0,
+     "score": 0.292,
+     "template": "rifleman_head.txt"
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "pain",
+     "x": 31,
+     "y": 21,
+     "rot": 0,
+     "score": 0.292,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ],
+  "death": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled",
+     "x": 42,
+     "y": 16,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/rifleman_head_nobody.txt"
+    },
+    "cap": {
+     "placed": true,
+     "part": "clone_nobody/tools/parts/rifleman_cap.txt",
+     "pivot": [
+      52,
+      19
+     ],
+     "angle": 0
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled",
+     "x": 42,
+     "y": 18,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/rifleman_head_nobody.txt"
+    },
+    "props": {
+     "cap": {
+      "at": [
+       52,
+       13
+      ],
+      "angle": 340
+     },
+     "rifle": {
+      "at": [
+       17,
+       57
+      ],
+      "angle": 282
+     }
+    }
+   },
+   {
+    "head": {
+     "placed": false,
+     "empty": true
+    }
+   }
+  ],
+  "fall": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled_down",
+     "x": 40,
+     "y": 19,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/rifleman_head_nobody.txt"
+    },
+    "cap": {
+     "placed": true,
+     "part": "clone_nobody/tools/parts/rifleman_cap.txt",
+     "pivot": [
+      50,
+      23
+     ],
+     "angle": 0
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled",
+     "x": 43,
+     "y": 20,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/rifleman_head_nobody.txt"
+    },
+    "cap": {
+     "placed": true,
+     "part": "clone_nobody/tools/parts/rifleman_cap.txt",
+     "pivot": [
+      53,
+      24
+     ],
+     "angle": 0
+    }
+   },
+   {
+    "head": {
+     "placed": true,
+     "expr": "bare_startled",
+     "x": 43,
+     "y": 18,
+     "rot": 0,
+     "score": 0.0,
+     "template": "clone_nobody/tools/parts/rifleman_head_nobody.txt"
+    },
+    "cap": {
+     "placed": true,
+     "part": "clone_nobody/tools/parts/rifleman_cap.txt",
+     "pivot": [
+      53,
+      21
+     ],
+     "angle": 0
+    }
+   }
+  ],
+  "aim_hold": [
+   {
+    "head": {
+     "placed": true,
+     "expr": "squint",
+     "x": 38,
+     "y": 23,
+     "rot": 0,
+     "score": 0.122,
+     "template": "rifleman_head.txt"
+    }
+   }
+  ]
+ },
+ "source": "paid sheets 183-187 (gemini-3-pro-image), cells in work/cells; build: py -3 art/chars/v3/rifleman/tools/build.py",
+ "families": {
+  "baked": [
+   "idle",
+   "walk",
+   "run",
+   "spot",
+   "cover",
+   "cover_peek",
+   "aim",
+   "fire",
+   "cover_aim",
+   "cover_fire",
+   "reload",
+   "panic",
+   "hurt",
+   "death",
+   "fall"
+  ],
+  "gags": [
+   "cover_steps",
+   "brick",
+   "empty_hands",
+   "camera_look",
+   "reload_manual"
+  ]
+ },
+ "look": "pixel"
+}

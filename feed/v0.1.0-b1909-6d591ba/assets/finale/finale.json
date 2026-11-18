@@ -1,0 +1,58 @@
+{
+  "about": "THE EXTRACTION FINALE's sprite set (src/render/paint/finaleView.ts). Sizes in cells. A sprite not named here is drawn as the plain STAND-IN shape (never to the owner). The painted set (art/skins_c/finale/) drops in by copying its files beside this file and naming them: body {file,w,h}, rotor [{file,w,h}, ...] (frames), ladder {file,w,h} (one segment, tiled), dust {file,w,h}. No maker name on any of them.",
+  "set": "v3 yasur (art/skins_c/finale, account C 12.11)",
+  "sprites": {
+    "body": {
+      "file": "heli_body_v3_plain.png",
+      "w": 11,
+      "h": 3.67
+    },
+    "bodyMark": {
+      "file": "heli_body_v3.png",
+      "w": 11,
+      "h": 3.67
+    },
+    "rotor": [
+      {
+        "file": "heli_rotor_v3_main_0.png",
+        "w": 13.2,
+        "h": 0.74
+      },
+      {
+        "file": "heli_rotor_v3_main_1.png",
+        "w": 13.2,
+        "h": 0.74
+      },
+      {
+        "file": "heli_rotor_v3_main_2.png",
+        "w": 13.2,
+        "h": 0.74
+      }
+    ],
+    "ladder": {
+      "file": "ladder_seg.png",
+      "w": 0.78,
+      "h": 0.35
+    },
+    "dust": {
+      "file": "dust_0.png",
+      "w": 0.7,
+      "h": 0.65
+    },
+    "hero": {
+      "file": "eli_ladder.png",
+      "w": 1.5,
+      "h": 1.5,
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "hand": [
+        98,
+        60
+      ]
+    }
+  }
+}

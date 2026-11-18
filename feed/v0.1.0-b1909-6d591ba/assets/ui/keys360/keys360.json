@@ -1,0 +1,806 @@
+{
+ "note": "key caps for the 360-tall UI canvas; frames: up, down (sunk 1 px); what each shows: src/content/keycaps.json (no Latin on screen, the owner 14.11: Hebrew keyboard letters and pictograms)",
+ "h": 18,
+ "caps": {
+  "KeyA": {
+   "file": "keys360/KeyA.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyD": {
+   "file": "keys360/KeyD.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyW": {
+   "file": "keys360/KeyW.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyS": {
+   "file": "keys360/KeyS.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyJ": {
+   "file": "keys360/KeyJ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyK": {
+   "file": "keys360/KeyK.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyL": {
+   "file": "keys360/KeyL.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyF": {
+   "file": "keys360/KeyF.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyG": {
+   "file": "keys360/KeyG.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyH": {
+   "file": "keys360/KeyH.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyZ": {
+   "file": "keys360/KeyZ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyX": {
+   "file": "keys360/KeyX.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyC": {
+   "file": "keys360/KeyC.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyV": {
+   "file": "keys360/KeyV.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyB": {
+   "file": "keys360/KeyB.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyI": {
+   "file": "keys360/KeyI.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyE": {
+   "file": "keys360/KeyE.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyQ": {
+   "file": "keys360/KeyQ.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyP": {
+   "file": "keys360/KeyP.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyR": {
+   "file": "keys360/KeyR.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyT": {
+   "file": "keys360/KeyT.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyY": {
+   "file": "keys360/KeyY.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyU": {
+   "file": "keys360/KeyU.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyO": {
+   "file": "keys360/KeyO.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyN": {
+   "file": "keys360/KeyN.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "KeyM": {
+   "file": "keys360/KeyM.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Semicolon": {
+   "file": "keys360/Semicolon.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Quote": {
+   "file": "keys360/Quote.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "BracketLeft": {
+   "file": "keys360/BracketLeft.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "BracketRight": {
+   "file": "keys360/BracketRight.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Backslash": {
+   "file": "keys360/Backslash.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Backquote": {
+   "file": "keys360/Backquote.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit0": {
+   "file": "keys360/Digit0.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit1": {
+   "file": "keys360/Digit1.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit2": {
+   "file": "keys360/Digit2.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit3": {
+   "file": "keys360/Digit3.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit4": {
+   "file": "keys360/Digit4.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit5": {
+   "file": "keys360/Digit5.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit6": {
+   "file": "keys360/Digit6.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit7": {
+   "file": "keys360/Digit7.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit8": {
+   "file": "keys360/Digit8.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Digit9": {
+   "file": "keys360/Digit9.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad5": {
+   "file": "keys360/Numpad5.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad6": {
+   "file": "keys360/Numpad6.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad7": {
+   "file": "keys360/Numpad7.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad8": {
+   "file": "keys360/Numpad8.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad9": {
+   "file": "keys360/Numpad9.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ShiftLeft": {
+   "file": "keys360/ShiftLeft.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ShiftRight": {
+   "file": "keys360/ShiftRight.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Tab": {
+   "file": "keys360/Tab.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "AltLeft": {
+   "file": "keys360/AltLeft.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "AltRight": {
+   "file": "keys360/AltRight.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Slash": {
+   "file": "keys360/Slash.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Period": {
+   "file": "keys360/Period.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Comma": {
+   "file": "keys360/Comma.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad0": {
+   "file": "keys360/Numpad0.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad1": {
+   "file": "keys360/Numpad1.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad2": {
+   "file": "keys360/Numpad2.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad3": {
+   "file": "keys360/Numpad3.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Numpad4": {
+   "file": "keys360/Numpad4.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Space": {
+   "file": "keys360/Space.png",
+   "w": 42,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Enter": {
+   "file": "keys360/Enter.png",
+   "w": 38,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Escape": {
+   "file": "keys360/Escape.png",
+   "w": 25,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "Backspace": {
+   "file": "keys360/Backspace.png",
+   "w": 22,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowLeft": {
+   "file": "keys360/ArrowLeft.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowRight": {
+   "file": "keys360/ArrowRight.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowUp": {
+   "file": "keys360/ArrowUp.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ArrowDown": {
+   "file": "keys360/ArrowDown.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadA": {
+   "file": "keys360/PadA.png",
+   "w": 17,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadB": {
+   "file": "keys360/PadB.png",
+   "w": 17,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadX": {
+   "file": "keys360/PadX.png",
+   "w": 17,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadY": {
+   "file": "keys360/PadY.png",
+   "w": 17,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadRT": {
+   "file": "keys360/PadRT.png",
+   "w": 19,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadLT": {
+   "file": "keys360/PadLT.png",
+   "w": 19,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadLB": {
+   "file": "keys360/PadLB.png",
+   "w": 19,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadRB": {
+   "file": "keys360/PadRB.png",
+   "w": 19,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadDpad": {
+   "file": "keys360/PadDpad.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "PadStart": {
+   "file": "keys360/PadStart.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ControlLeft": {
+   "file": "keys360/ControlLeft.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  },
+  "ControlRight": {
+   "file": "keys360/ControlRight.png",
+   "w": 16,
+   "h": 18,
+   "frames": 2,
+   "names": [
+    "up",
+    "down"
+   ]
+  }
+ }
+}

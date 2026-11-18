@@ -1,16 +1,16 @@
 {
- "id": "v0.1.0-b1898-351ed77",
- "build": 1898,
+ "id": "v0.1.0-b1909-6d591ba",
+ "build": 1909,
  "version": "0.1.0",
  "protocol": 1,
  "minLauncher": 1,
- "path": "v0.1.0-b1898-351ed77/",
- "date": "2026-11-18T06:02:45.905Z",
+ "path": "v0.1.0-b1909-6d591ba/",
+ "date": "2026-11-18T09:14:26.800Z",
  "archive": {
-  "url": "https://github.com/ofir1233/moledet-downloads/releases/download/v0.1.0-b1898-351ed77/v0.1.0-b1898-351ed77.zip",
-  "file": "v0.1.0-b1898-351ed77.zip",
-  "size": 195400613,
-  "sha256": "6751fe4bc1915c931d6eb95dacf0ab3282d045f612b28f187f90283efb13b084"
+  "url": "https://github.com/ofir1233/moledet-downloads/releases/download/v0.1.0-b1909-6d591ba/v0.1.0-b1909-6d591ba.zip",
+  "file": "v0.1.0-b1909-6d591ba.zip",
+  "size": 212193835,
+  "sha256": "f8ee62eb3070ad90d59e7cf264e43ba1c5123f8e5c524902fb39f716390eb073"
  },
  "installer": {
   "file": "MoledetAhuva_Setup.exe",

@@ -1,0 +1,257 @@
+{
+ "sizes": [
+  13,
+  17,
+  21,
+  25,
+  33
+ ],
+ "styles": [
+  "emboss",
+  "plain",
+  "outline",
+  "blue",
+  "white",
+  "steel",
+  "gold"
+ ],
+ "means": {
+  "emboss": "gold",
+  "plain": "blue",
+  "outline": "blue",
+  "blue": "blue",
+  "white": "white",
+  "steel": "steel",
+  "gold": "gold"
+ },
+ "note": "ALL interlaced outline (gate 1 ruling 5). The smallest star is 13 px (gate 3: 7 and 9 deleted); the weave shows at every size. Never on an enemy, never damaged, never filled.",
+ "files": {
+  "13": {
+   "emboss": {
+    "file": "stars/star_emboss_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "gold"
+   },
+   "plain": {
+    "file": "stars/star_plain_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "blue"
+   },
+   "outline": {
+    "file": "stars/star_outline_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "blue"
+   },
+   "blue": {
+    "file": "stars/star_blue_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "blue"
+   },
+   "white": {
+    "file": "stars/star_white_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "white"
+   },
+   "steel": {
+    "file": "stars/star_steel_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "steel"
+   },
+   "gold": {
+    "file": "stars/star_gold_13.png",
+    "w": 13,
+    "h": 15,
+    "style": "gold"
+   }
+  },
+  "17": {
+   "emboss": {
+    "file": "stars/star_emboss_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "gold"
+   },
+   "plain": {
+    "file": "stars/star_plain_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "blue"
+   },
+   "outline": {
+    "file": "stars/star_outline_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "blue"
+   },
+   "blue": {
+    "file": "stars/star_blue_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "blue"
+   },
+   "white": {
+    "file": "stars/star_white_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "white"
+   },
+   "steel": {
+    "file": "stars/star_steel_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "steel"
+   },
+   "gold": {
+    "file": "stars/star_gold_17.png",
+    "w": 17,
+    "h": 19,
+    "style": "gold"
+   }
+  },
+  "21": {
+   "emboss": {
+    "file": "stars/star_emboss_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "gold"
+   },
+   "plain": {
+    "file": "stars/star_plain_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "blue"
+   },
+   "outline": {
+    "file": "stars/star_outline_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "blue"
+   },
+   "blue": {
+    "file": "stars/star_blue_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "blue"
+   },
+   "white": {
+    "file": "stars/star_white_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "white"
+   },
+   "steel": {
+    "file": "stars/star_steel_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "steel"
+   },
+   "gold": {
+    "file": "stars/star_gold_21.png",
+    "w": 21,
+    "h": 23,
+    "style": "gold"
+   }
+  },
+  "25": {
+   "emboss": {
+    "file": "stars/star_emboss_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "gold"
+   },
+   "plain": {
+    "file": "stars/star_plain_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "blue"
+   },
+   "outline": {
+    "file": "stars/star_outline_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "blue"
+   },
+   "blue": {
+    "file": "stars/star_blue_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "blue"
+   },
+   "white": {
+    "file": "stars/star_white_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "white"
+   },
+   "steel": {
+    "file": "stars/star_steel_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "steel"
+   },
+   "gold": {
+    "file": "stars/star_gold_25.png",
+    "w": 23,
+    "h": 27,
+    "style": "gold"
+   }
+  },
+  "33": {
+   "emboss": {
+    "file": "stars/star_emboss_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "gold"
+   },
+   "plain": {
+    "file": "stars/star_plain_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "blue"
+   },
+   "outline": {
+    "file": "stars/star_outline_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "blue"
+   },
+   "blue": {
+    "file": "stars/star_blue_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "blue"
+   },
+   "white": {
+    "file": "stars/star_white_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "white"
+   },
+   "steel": {
+    "file": "stars/star_steel_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "steel"
+   },
+   "gold": {
+    "file": "stars/star_gold_33.png",
+    "w": 31,
+    "h": 35,
+    "style": "gold"
+   }
+  }
+ },
+ "deleted": {
+  "sizes": [
+   7,
+   9
+  ],
+  "note": "gate 3: no 7 or 9 px star exists any more; these file names hold the 13 px star for old code (RENDER: use the _13 names)"
+ }
+}

@@ -1,0 +1,3012 @@
+{
+ "canvas": [
+  96,
+  96
+ ],
+ "anchor": [
+  48,
+  90
+ ],
+ "scale": 0.375,
+ "palette": "bengurion_pixel",
+ "normal": "atlas_n.png",
+ "facing": "right",
+ "height_px": 60,
+ "weapon_default": "ben_rifle",
+ "contract": "docs/CHAR_WEAPON_CONTRACT.md",
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     96,
+     96
+    ],
+    [
+     96,
+     0,
+     96,
+     96
+    ],
+    [
+     192,
+     0,
+     96,
+     96
+    ],
+    [
+     288,
+     0,
+     96,
+     96
+    ],
+    [
+     384,
+     0,
+     96,
+     96
+    ],
+    [
+     480,
+     0,
+     96,
+     96
+    ],
+    [
+     576,
+     0,
+     96,
+     96
+    ],
+    [
+     672,
+     0,
+     96,
+     96
+    ],
+    [
+     768,
+     0,
+     96,
+     96
+    ],
+    [
+     864,
+     0,
+     96,
+     96
+    ],
+    [
+     960,
+     0,
+     96,
+     96
+    ],
+    [
+     1056,
+     0,
+     96,
+     96
+    ]
+   ],
+   "fps": 4.0,
+   "loop": true,
+   "durations": [
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250,
+    250
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      61
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      61
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      61
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      61
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    [
+     0,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     16,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     32,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     48,
+     2400,
+     7,
+     6,
+     61,
+     58
+    ],
+    [
+     64,
+     2400,
+     7,
+     6,
+     61,
+     58
+    ],
+    [
+     80,
+     2400,
+     7,
+     6,
+     61,
+     58
+    ],
+    [
+     96,
+     2400,
+     7,
+     6,
+     61,
+     58
+    ],
+    [
+     112,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     128,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     144,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     160,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     176,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ],
+   "play": "loop; armed: the rifle in his front fist at port (aim 20), the rear fist on his hip ON PURPOSE"
+  },
+  "idle_fidget": {
+   "frames": [
+    [
+     0,
+     96,
+     96,
+     96
+    ],
+    [
+     96,
+     96,
+     96,
+     96
+    ],
+    [
+     192,
+     96,
+     96,
+     96
+    ],
+    [
+     288,
+     96,
+     96,
+     96
+    ],
+    [
+     384,
+     96,
+     96,
+     96
+    ],
+    [
+     480,
+     96,
+     96,
+     96
+    ],
+    [
+     576,
+     96,
+     96,
+     96
+    ],
+    [
+     672,
+     96,
+     96,
+     96
+    ],
+    [
+     768,
+     96,
+     96,
+     96
+    ],
+    [
+     864,
+     96,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.77,
+   "loop": false,
+   "durations": [
+    120,
+    90,
+    70,
+    70,
+    70,
+    120,
+    110,
+    80,
+    260,
+    150
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      68,
+      46
+     ],
+     "aim": 70
+    },
+    {
+     "hand": [
+      68,
+      45
+     ],
+     "aim": 70
+    },
+    {
+     "hand": [
+      68,
+      46
+     ],
+     "aim": 70
+    },
+    {
+     "hand": [
+      68,
+      45
+     ],
+     "aim": 70
+    },
+    {
+     "hand": [
+      68,
+      46
+     ],
+     "aim": 70
+    },
+    {
+     "hand": [
+      65,
+      63
+     ],
+     "aim": -20
+    },
+    {
+     "hand": [
+      65,
+      64
+     ],
+     "aim": -20
+    },
+    {
+     "hand": [
+      65,
+      63
+     ],
+     "aim": -20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    [
+     192,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     208,
+     2400,
+     6,
+     7,
+     65,
+     44
+    ],
+    [
+     224,
+     2400,
+     6,
+     7,
+     65,
+     43
+    ],
+    [
+     240,
+     2400,
+     6,
+     7,
+     65,
+     44
+    ],
+    [
+     256,
+     2400,
+     6,
+     7,
+     65,
+     43
+    ],
+    [
+     272,
+     2400,
+     6,
+     7,
+     65,
+     44
+    ],
+    [
+     288,
+     2400,
+     7,
+     6,
+     61,
+     61
+    ],
+    [
+     304,
+     2400,
+     7,
+     6,
+     61,
+     62
+    ],
+    [
+     320,
+     2400,
+     7,
+     6,
+     61,
+     61
+    ],
+    [
+     336,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ],
+   "events": [
+    {
+     "frame": 7,
+     "event": "stamp_dust",
+     "at": [
+      52,
+      90
+     ]
+    }
+   ],
+   "play": "after 3 s of idle; any input cuts it"
+  },
+  "run": {
+   "frames": [
+    [
+     0,
+     192,
+     96,
+     96
+    ],
+    [
+     96,
+     192,
+     96,
+     96
+    ],
+    [
+     192,
+     192,
+     96,
+     96
+    ],
+    [
+     288,
+     192,
+     96,
+     96
+    ],
+    [
+     384,
+     192,
+     96,
+     96
+    ],
+    [
+     480,
+     192,
+     96,
+     96
+    ],
+    [
+     576,
+     192,
+     96,
+     96
+    ],
+    [
+     672,
+     192,
+     96,
+     96
+    ]
+   ],
+   "fps": 24,
+   "loop": true,
+   "durations": [
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42,
+    42
+   ],
+   "weapon": [
+    {
+     "hand": [
+      64,
+      60
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      64,
+      60
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      64,
+      58
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      64,
+      59
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      67,
+      60
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      61,
+      60
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      64,
+      58
+     ],
+     "aim": 5
+    },
+    {
+     "hand": [
+      64,
+      59
+     ],
+     "aim": 5
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "stride": 0.203,
+   "play": "by runPhase: one frame per 0.203 cells (24 fps at 4.9 cells/s); per leg contact, pass, flight up, flight down"
+  },
+  "jump": {
+   "frames": [
+    [
+     0,
+     288,
+     96,
+     96
+    ],
+    [
+     288,
+     288,
+     96,
+     96
+    ],
+    [
+     384,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 16.67,
+   "loop": false,
+   "durations": [
+    40,
+    60,
+    80
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      68
+     ],
+     "aim": 10
+    },
+    {
+     "hand": [
+      44,
+      26
+     ],
+     "hand2": [
+      63,
+      23
+     ],
+     "aim": 0
+    },
+    {
+     "hand": [
+      43,
+      32
+     ],
+     "hand2": [
+      62,
+      29
+     ],
+     "aim": 0
+    }
+   ],
+   "front": [
+    [
+     352,
+     2400,
+     5,
+     5,
+     61,
+     67
+    ],
+    [
+     1024,
+     2400,
+     8,
+     5,
+     40,
+     23
+    ],
+    [
+     1042,
+     2400,
+     8,
+     5,
+     39,
+     29
+    ]
+   ],
+   "front2": [
+    null,
+    [
+     1033,
+     2400,
+     8,
+     4,
+     59,
+     21
+    ],
+    [
+     1051,
+     2400,
+     8,
+     4,
+     58,
+     27
+    ]
+   ]
+  },
+  "fall": {
+   "frames": [
+    [
+     192,
+     384,
+     96,
+     96
+    ],
+    [
+     288,
+     384,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.33,
+   "loop": true,
+   "durations": [
+    120,
+    120
+   ],
+   "weapon": [
+    {
+     "hand": [
+      46,
+      59
+     ],
+     "hand2": [
+      58,
+      52
+     ],
+     "aim": 25
+    },
+    {
+     "hand": [
+      46,
+      55
+     ],
+     "hand2": [
+      58,
+      48
+     ],
+     "aim": 25
+    }
+   ],
+   "front": [
+    [
+     1060,
+     2400,
+     10,
+     6,
+     39,
+     55
+    ],
+    [
+     1078,
+     2400,
+     10,
+     6,
+     39,
+     51
+    ]
+   ],
+   "front2": [
+    [
+     1071,
+     2400,
+     6,
+     7,
+     55,
+     49
+    ],
+    [
+     1089,
+     2400,
+     6,
+     7,
+     55,
+     45
+    ]
+   ]
+  },
+  "land": {
+   "frames": [
+    [
+     0,
+     480,
+     96,
+     96
+    ],
+    [
+     96,
+     480,
+     96,
+     96
+    ],
+    [
+     192,
+     480,
+     96,
+     96
+    ]
+   ],
+   "fps": 15.79,
+   "loop": false,
+   "durations": [
+    60,
+    50,
+    80
+   ],
+   "weapon": [
+    {
+     "hand": [
+      64,
+      68
+     ],
+     "aim": 0
+    },
+    {
+     "hand": [
+      66,
+      71
+     ],
+     "aim": 0
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    [
+     400,
+     2400,
+     5,
+     5,
+     60,
+     65
+    ],
+    [
+     416,
+     2400,
+     5,
+     4,
+     62,
+     68
+    ],
+    [
+     432,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ]
+  },
+  "shoot": {
+   "frames": [
+    [
+     0,
+     576,
+     96,
+     96
+    ],
+    [
+     96,
+     576,
+     96,
+     96
+    ],
+    [
+     192,
+     576,
+     96,
+     96
+    ]
+   ],
+   "fps": 16.67,
+   "loop": false,
+   "durations": [
+    40,
+    60,
+    80
+   ],
+   "weapon": [
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      46,
+      55
+     ],
+     "aim": 7,
+     "hand2": [
+      64,
+      55
+     ]
+    },
+    {
+     "hand": [
+      47,
+      55
+     ],
+     "aim": 3,
+     "hand2": [
+      65,
+      55
+     ]
+    }
+   ],
+   "front": [
+    [
+     448,
+     2400,
+     9,
+     9,
+     44,
+     51
+    ],
+    [
+     480,
+     2400,
+     9,
+     9,
+     42,
+     51
+    ],
+    [
+     512,
+     2400,
+     9,
+     9,
+     43,
+     51
+    ]
+   ],
+   "front2": [
+    [
+     464,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     496,
+     2400,
+     7,
+     5,
+     60,
+     52
+    ],
+    [
+     528,
+     2400,
+     7,
+     5,
+     61,
+     52
+    ]
+   ],
+   "recoil": "pose",
+   "events": [
+    {
+     "frame": 0,
+     "event": "shot"
+    }
+   ]
+  },
+  "reload": {
+   "frames": [
+    [
+     0,
+     672,
+     96,
+     96
+    ],
+    [
+     96,
+     672,
+     96,
+     96
+    ],
+    [
+     192,
+     672,
+     96,
+     96
+    ],
+    [
+     288,
+     672,
+     96,
+     96
+    ],
+    [
+     384,
+     672,
+     96,
+     96
+    ],
+    [
+     480,
+     672,
+     96,
+     96
+    ]
+   ],
+   "fps": 18.18,
+   "loop": false,
+   "durations": [
+    50,
+    50,
+    70,
+    50,
+    50,
+    60
+   ],
+   "weapon": [
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    }
+   ],
+   "front": [
+    [
+     544,
+     2400,
+     9,
+     9,
+     48,
+     49
+    ],
+    [
+     576,
+     2400,
+     9,
+     9,
+     46,
+     49
+    ],
+    [
+     608,
+     2400,
+     9,
+     9,
+     42,
+     49
+    ],
+    [
+     640,
+     2400,
+     9,
+     9,
+     46,
+     49
+    ],
+    [
+     672,
+     2400,
+     9,
+     9,
+     48,
+     49
+    ],
+    [
+     704,
+     2400,
+     9,
+     9,
+     44,
+     51
+    ]
+   ],
+   "front2": [
+    [
+     560,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     592,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     624,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     656,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     688,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ],
+    [
+     720,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ]
+   ],
+   "events": [
+    {
+     "frame": 0,
+     "event": "weapon:bolt"
+    },
+    {
+     "frame": 2,
+     "event": "shell_out"
+    },
+    {
+     "frame": 5,
+     "event": "ready"
+    }
+   ],
+   "play": "after each shot: the weapon plays its reload state (cols 1-5, 0) with it; the grip-hand overlay rides the knob",
+   "weapon_cols": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    0
+   ]
+  },
+  "shove": {
+   "frames": [
+    [
+     0,
+     768,
+     96,
+     96
+    ],
+    [
+     96,
+     768,
+     96,
+     96
+    ],
+    [
+     192,
+     768,
+     96,
+     96
+    ],
+    [
+     288,
+     768,
+     96,
+     96
+    ]
+   ],
+   "fps": 10.81,
+   "loop": false,
+   "durations": [
+    60,
+    140,
+    80,
+    90
+   ],
+   "weapon": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "hit": {
+    "frame": 1,
+    "point": [
+     71,
+     60
+    ],
+    "dir": [
+     1,
+     0
+    ]
+   },
+   "play": "his unarmed move (state 'shove'); the blow lands on frame 1 at hit.point"
+  },
+  "hurt": {
+   "frames": [
+    [
+     0,
+     864,
+     96,
+     96
+    ],
+    [
+     96,
+     864,
+     96,
+     96
+    ],
+    [
+     192,
+     864,
+     96,
+     96
+    ]
+   ],
+   "fps": 11.54,
+   "loop": false,
+   "durations": [
+    60,
+    90,
+    110
+   ],
+   "weapon": [
+    {
+     "hand": [
+      67,
+      56
+     ],
+     "aim": -35
+    },
+    {
+     "hand": [
+      66,
+      55
+     ],
+     "aim": -35
+    },
+    {
+     "hand": [
+      67,
+      56
+     ],
+     "aim": -35
+    }
+   ],
+   "front": [
+    [
+     736,
+     2400,
+     8,
+     7,
+     63,
+     53
+    ],
+    [
+     752,
+     2400,
+     8,
+     7,
+     62,
+     52
+    ],
+    [
+     768,
+     2400,
+     8,
+     7,
+     63,
+     53
+    ]
+   ]
+  },
+  "death": {
+   "frames": [
+    [
+     0,
+     960,
+     96,
+     96
+    ],
+    [
+     96,
+     960,
+     96,
+     96
+    ],
+    [
+     192,
+     960,
+     96,
+     96
+    ],
+    [
+     288,
+     960,
+     96,
+     96
+    ],
+    [
+     384,
+     960,
+     96,
+     96
+    ],
+    [
+     480,
+     960,
+     96,
+     96
+    ],
+    [
+     576,
+     960,
+     96,
+     96
+    ]
+   ],
+   "fps": 2.81,
+   "loop": false,
+   "durations": [
+    120,
+    80,
+    90,
+    60,
+    80,
+    60,
+    2000
+   ],
+   "weapon": [
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      60,
+      88
+     ],
+     "aim": 0
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "events": [
+    {
+     "frame": 4,
+     "event": "dust_puff",
+     "at": [
+      48,
+      88
+     ]
+    }
+   ],
+   "play": "once, the last frame stays; comic, no wound, no blood"
+  },
+  "headstand_in": {
+   "frames": [
+    [
+     0,
+     1056,
+     96,
+     96
+    ],
+    [
+     96,
+     1056,
+     96,
+     96
+    ],
+    [
+     192,
+     1056,
+     96,
+     96
+    ],
+    [
+     288,
+     1056,
+     96,
+     96
+    ]
+   ],
+   "fps": 12.12,
+   "loop": false,
+   "durations": [
+    90,
+    70,
+    70,
+    100
+   ],
+   "weapon": [
+    {
+     "hand": [
+      64,
+      68
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      34,
+      50
+     ],
+     "aim": 70
+    },
+    {
+     "prop": [
+      50,
+      34
+     ],
+     "aim": 20
+    },
+    {
+     "prop": [
+      48,
+      26
+     ],
+     "aim": 0
+    }
+   ],
+   "front": [
+    [
+     400,
+     2400,
+     5,
+     5,
+     60,
+     65
+    ],
+    null,
+    null,
+    null
+   ],
+   "play": "power:headstand start (Host art 12.11): he crouches, tips over head first, tucks, and stands on his head with his arms folded; armed: the rifle is flipped up and lands across his soles (prop)",
+   "events": [
+    {
+     "frame": 2,
+     "event": "dust_puff",
+     "at": [
+      48,
+      89
+     ]
+    }
+   ]
+  },
+  "headstand": {
+   "frames": [
+    [
+     0,
+     1152,
+     96,
+     96
+    ],
+    [
+     96,
+     1152,
+     96,
+     96
+    ],
+    [
+     192,
+     1152,
+     96,
+     96
+    ],
+    [
+     288,
+     1152,
+     96,
+     96
+    ],
+    [
+     384,
+     1152,
+     96,
+     96
+    ],
+    [
+     480,
+     1152,
+     96,
+     96
+    ]
+   ],
+   "fps": 6.0,
+   "loop": true,
+   "durations": [
+    180,
+    160,
+    160,
+    160,
+    180,
+    160
+   ],
+   "weapon": [
+    {
+     "prop": [
+      48,
+      25
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      48,
+      24
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      48,
+      24
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      48,
+      24
+     ],
+     "aim": 5
+    },
+    {
+     "prop": [
+      48,
+      24
+     ],
+     "aim": 0
+    },
+    {
+     "prop": [
+      48,
+      24
+     ],
+     "aim": 0
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "play": "loop while power:headstand (60 ticks = one turn): upside down, arms folded, perfectly calm; the shirt slips and bares his belly (0-1), he goes on lecturing with a finger out of the folded arms (2-4), the legs sway one pixel (3); armed: the rifle balanced across his soles (prop)"
+  },
+  "headstand_out": {
+   "frames": [
+    [
+     0,
+     1248,
+     96,
+     96
+    ],
+    [
+     96,
+     1248,
+     96,
+     96
+    ],
+    [
+     192,
+     1248,
+     96,
+     96
+    ],
+    [
+     288,
+     1248,
+     96,
+     96
+    ],
+    [
+     384,
+     1248,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.47,
+   "loop": false,
+   "durations": [
+    80,
+    80,
+    90,
+    90,
+    160
+   ],
+   "weapon": [
+    {
+     "prop": [
+      54,
+      22
+     ],
+     "aim": 30
+    },
+    {
+     "prop": [
+      62,
+      40
+     ],
+     "aim": 60
+    },
+    {
+     "hand": [
+      64,
+      68
+     ],
+     "aim": 0
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    null,
+    null,
+    [
+     400,
+     2400,
+     5,
+     5,
+     60,
+     65
+    ],
+    [
+     432,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ],
+    [
+     0,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ],
+   "events": [
+    {
+     "frame": 2,
+     "event": "dust_puff",
+     "at": [
+      48,
+      89
+     ]
+    }
+   ],
+   "play": "power end: the knees come down, he rolls over, lands in a crouch catching the rifle, rises, and gives the room his \"as I said\" grin"
+  },
+  "catch": {
+   "frames": [
+    [
+     0,
+     1344,
+     96,
+     96
+    ],
+    [
+     96,
+     1344,
+     96,
+     96
+    ],
+    [
+     192,
+     1344,
+     96,
+     96
+    ],
+    [
+     288,
+     1344,
+     96,
+     96
+    ],
+    [
+     384,
+     1344,
+     96,
+     96
+    ]
+   ],
+   "fps": 7.35,
+   "loop": false,
+   "durations": [
+    150,
+    150,
+    100,
+    120,
+    160
+   ],
+   "weapon": [
+    null,
+    null,
+    null,
+    {
+     "hand": [
+      48,
+      58
+     ],
+     "aim": 0,
+     "hand2": [
+      67,
+      58
+     ]
+    },
+    {
+     "hand": [
+      48,
+      55
+     ],
+     "aim": 0,
+     "hand2": [
+      66,
+      55
+     ]
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    [
+     784,
+     2400,
+     9,
+     9,
+     44,
+     54
+    ],
+    [
+     816,
+     2400,
+     9,
+     9,
+     44,
+     51
+    ]
+   ],
+   "front2": [
+    null,
+    null,
+    null,
+    [
+     800,
+     2400,
+     7,
+     5,
+     63,
+     55
+    ],
+    [
+     832,
+     2400,
+     7,
+     5,
+     62,
+     52
+    ]
+   ],
+   "play": "weapon:picked of the starter; frame 3 = the catch (the weapon appears in his hands); hands off to reveal"
+  },
+  "reveal": {
+   "frames": [
+    [
+     0,
+     1440,
+     96,
+     96
+    ],
+    [
+     96,
+     1440,
+     96,
+     96
+    ]
+   ],
+   "fps": 3.33,
+   "loop": true,
+   "durations": [
+    300,
+    300
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      31
+     ],
+     "aim": 80
+    }
+   ],
+   "front": [
+    [
+     848,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     864,
+     2400,
+     5,
+     7,
+     62,
+     29
+    ]
+   ],
+   "play": "weapon:revealed to weapon:revealEnd: the new weapon held up"
+  },
+  "victory": {
+   "frames": [
+    [
+     0,
+     1536,
+     96,
+     96
+    ],
+    [
+     96,
+     1536,
+     96,
+     96
+    ],
+    [
+     192,
+     1536,
+     96,
+     96
+    ],
+    [
+     288,
+     1536,
+     96,
+     96
+    ],
+    [
+     384,
+     1536,
+     96,
+     96
+    ],
+    [
+     480,
+     1536,
+     96,
+     96
+    ]
+   ],
+   "fps": 3.57,
+   "loop": false,
+   "durations": [
+    150,
+    110,
+    150,
+    110,
+    260,
+    900
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      31
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      31
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      57,
+      60
+     ],
+     "aim": 70
+    }
+   ],
+   "front": [
+    [
+     880,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     896,
+     2400,
+     5,
+     7,
+     62,
+     29
+    ],
+    [
+     912,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     928,
+     2400,
+     5,
+     7,
+     62,
+     29
+    ],
+    [
+     944,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     1111,
+     2400,
+     13,
+     7,
+     47,
+     55
+    ]
+   ],
+   "play": "once, the last frame held (arms folded, the rifle cradled in them)"
+  },
+  "ladder_on": {
+   "frames": [
+    [
+     0,
+     1632,
+     96,
+     96
+    ],
+    [
+     96,
+     1632,
+     96,
+     96
+    ]
+   ],
+   "fps": 9.09,
+   "loop": false,
+   "durations": [
+    120,
+    100
+   ],
+   "weapon": [
+    {
+     "hand": [
+      65,
+      39
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    }
+   ],
+   "front": [
+    [
+     1096,
+     2400,
+     6,
+     6,
+     62,
+     36
+    ],
+    null
+   ],
+   "play": "grabbing the ladder from the floor"
+  },
+  "ladder_off": {
+   "frames": [
+    [
+     0,
+     1728,
+     96,
+     96
+    ],
+    [
+     96,
+     1728,
+     96,
+     96
+    ],
+    [
+     192,
+     1728,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.33,
+   "loop": false,
+   "durations": [
+    120,
+    140,
+    100
+   ],
+   "weapon": [
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      44,
+      60
+     ],
+     "aim": 70,
+     "layer": "back"
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    null,
+    null,
+    [
+     960,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ],
+   "play": "leaving the ladder at the TOP: over the edge, crawl, stand"
+  },
+  "ladder_on_top": {
+   "frames": [
+    [
+     0,
+     1824,
+     96,
+     96
+    ],
+    [
+     96,
+     1824,
+     96,
+     96
+    ],
+    [
+     192,
+     1824,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.82,
+   "loop": false,
+   "durations": [
+    120,
+    120,
+    100
+   ],
+   "weapon": [
+    {
+     "hand": [
+      44,
+      60
+     ],
+     "aim": 70,
+     "layer": "back"
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null
+   ],
+   "play": "getting on at the top: the crawl and the climb-over reversed"
+  },
+  "ladder_off_bottom": {
+   "frames": [
+    [
+     0,
+     1920,
+     96,
+     96
+    ],
+    [
+     96,
+     1920,
+     96,
+     96
+    ],
+    [
+     192,
+     1920,
+     96,
+     96
+    ]
+   ],
+   "fps": 9.38,
+   "loop": false,
+   "durations": [
+    100,
+    120,
+    100
+   ],
+   "weapon": [
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      65,
+      39
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      60
+     ],
+     "aim": 20
+    }
+   ],
+   "front": [
+    null,
+    [
+     1096,
+     2400,
+     6,
+     6,
+     62,
+     36
+    ],
+    [
+     976,
+     2400,
+     7,
+     6,
+     61,
+     57
+    ]
+   ],
+   "play": "stepping off at the bottom"
+  },
+  "climb_up": {
+   "frames": [
+    [
+     0,
+     2016,
+     96,
+     96
+    ],
+    [
+     96,
+     2016,
+     96,
+     96
+    ],
+    [
+     192,
+     2016,
+     96,
+     96
+    ],
+    [
+     288,
+     2016,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.33,
+   "loop": true,
+   "durations": [
+    120,
+    120,
+    120,
+    120
+   ],
+   "weapon": [
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "play": "by runPhase: one rung (1 cell) per 2 frames; the high fist meets a rung on frames 0 and 2"
+  },
+  "climb_down": {
+   "frames": [
+    [
+     0,
+     2112,
+     96,
+     96
+    ],
+    [
+     96,
+     2112,
+     96,
+     96
+    ],
+    [
+     192,
+     2112,
+     96,
+     96
+    ],
+    [
+     288,
+     2112,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.33,
+   "loop": true,
+   "durations": [
+    120,
+    120,
+    120,
+    120
+   ],
+   "weapon": [
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    }
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "climb_idle": {
+   "frames": [
+    [
+     0,
+     2208,
+     96,
+     96
+    ],
+    [
+     96,
+     2208,
+     96,
+     96
+    ]
+   ],
+   "fps": 2.5,
+   "loop": true,
+   "durations": [
+    400,
+    400
+   ],
+   "weapon": [
+    {
+     "hand": [
+      42,
+      74
+     ],
+     "aim": 62,
+     "slung": true
+    },
+    {
+     "hand": [
+      42,
+      75
+     ],
+     "aim": 62,
+     "slung": true
+    }
+   ],
+   "front": [
+    null,
+    null
+   ]
+  },
+  "climb_shoot": {
+   "frames": [
+    [
+     0,
+     2304,
+     96,
+     96
+    ],
+    [
+     96,
+     2304,
+     96,
+     96
+    ],
+    [
+     192,
+     2304,
+     96,
+     96
+    ]
+   ],
+   "fps": 16.67,
+   "loop": false,
+   "durations": [
+    40,
+    60,
+    80
+   ],
+   "weapon": [
+    {
+     "hand": [
+      73,
+      54
+     ],
+     "aim": 0
+    },
+    {
+     "hand": [
+      72,
+      54
+     ],
+     "aim": 4
+    },
+    {
+     "hand": [
+      73,
+      54
+     ],
+     "aim": 0
+    }
+   ],
+   "front": [
+    [
+     992,
+     2400,
+     7,
+     4,
+     69,
+     52
+    ],
+    [
+     1103,
+     2400,
+     7,
+     4,
+     68,
+     52
+    ],
+    [
+     1008,
+     2400,
+     7,
+     4,
+     69,
+     52
+    ]
+   ],
+   "recoil": "pose",
+   "play": "unarmed: he shakes his fist from the ladder; armed: the weapon in that fist, the other hand on the rung"
+  },
+  "unarmed_jump": {
+   "frames": [
+    [
+     0,
+     288,
+     96,
+     96
+    ],
+    [
+     96,
+     288,
+     96,
+     96
+    ],
+    [
+     192,
+     288,
+     96,
+     96
+    ]
+   ],
+   "fps": 16.67,
+   "loop": false,
+   "durations": [
+    40,
+    60,
+    80
+   ],
+   "gunless": true,
+   "play": "empty hands (before the starter arrives): the delivered jump frames, unchanged; the renderer takes unarmed_<state> first for an unarmed hero"
+  },
+  "unarmed_fall": {
+   "frames": [
+    [
+     0,
+     384,
+     96,
+     96
+    ],
+    [
+     96,
+     384,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.33,
+   "loop": true,
+   "durations": [
+    120,
+    120
+   ],
+   "gunless": true,
+   "play": "empty hands (before the starter arrives): the delivered fall frames, unchanged; the renderer takes unarmed_<state> first for an unarmed hero"
+  },
+  "knockout": {
+   "frames": [
+    [
+     0,
+     2416,
+     96,
+     96
+    ],
+    [
+     96,
+     2416,
+     96,
+     96
+    ],
+    [
+     192,
+     2416,
+     96,
+     96
+    ],
+    [
+     288,
+     2416,
+     96,
+     96
+    ],
+    [
+     384,
+     2416,
+     96,
+     96
+    ],
+    [
+     480,
+     2416,
+     96,
+     96
+    ],
+    [
+     576,
+     2416,
+     96,
+     96
+    ],
+    [
+     672,
+     2416,
+     96,
+     96
+    ]
+   ],
+   "fps": 8.0,
+   "loop": true,
+   "durations": [
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125,
+    125
+   ],
+   "weapon": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "front": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "play": "the hero's defeat (gate 3 redraw, 12.11; never a body): FRONTAL, a straining tripod headstand on the floor, the face red with effort (gritted teeth, one eye popped, one squeezed), sweat drops flying, the shirt slid to the chin, the bare legs scissoring wide, the rifle fallen on the floor beside him and rocking (painted in the frame: NO weapon layer and no mark beside a knocked-out hero), dust at the head; no sparks, no stars. Loops for the 72-tick hold. Distinct at x1 from the POWER (side view, arms folded, calm, the rifle balanced on his soles)."
+  },
+  "pose": {
+   "frames": [
+    [
+     0,
+     2512,
+     96,
+     96
+    ],
+    [
+     96,
+     2512,
+     96,
+     96
+    ],
+    [
+     192,
+     2512,
+     96,
+     96
+    ],
+    [
+     288,
+     2512,
+     96,
+     96
+    ],
+    [
+     384,
+     2512,
+     96,
+     96
+    ],
+    [
+     480,
+     2512,
+     96,
+     96
+    ]
+   ],
+   "loop": true,
+   "fps": 6.67,
+   "durations": [
+    140,
+    120,
+    120,
+    120,
+    140,
+    260
+   ],
+   "note": "STANDARD SCREEN STATE (ONE MODEL A CHARACTER, 12.11): pose, Ben-Gurion raises his fist, then folds his arms: \"as I said\" (his victory 0-5). Game size, a loop.",
+   "weapon": [
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      31
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      31
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      65,
+      32
+     ],
+     "aim": 80
+    },
+    {
+     "hand": [
+      57,
+      60
+     ],
+     "aim": 70
+    }
+   ],
+   "front": [
+    [
+     880,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     896,
+     2400,
+     5,
+     7,
+     62,
+     29
+    ],
+    [
+     912,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     928,
+     2400,
+     5,
+     7,
+     62,
+     29
+    ],
+    [
+     944,
+     2400,
+     5,
+     7,
+     62,
+     30
+    ],
+    [
+     1111,
+     2400,
+     13,
+     7,
+     47,
+     55
+    ]
+   ]
+  }
+ },
+ "look": "pixel",
+ "baked_by": "art/chars/px72/pxlook.py bake ... --char bengurion --look both (shared bake); plain input = tools/build_set.py",
+ "rifle_fix": "12.11 rifle fix (art/chars/v3/bengurion/rifle_fix): jump 1-2 and fall 0-1 redrawn to hold the rifle, in new cells; the delivered air frames stay as unarmed_jump / unarmed_fall for empty hands; weapon data added to ladder_on 0, ladder_off_bottom 1, climb_shoot 1, victory 5 and the headstand set"
+}

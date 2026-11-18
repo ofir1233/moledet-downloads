@@ -1,0 +1,442 @@
+{
+ "about": "THE DIGGER, painted (16.11; the same painter and sheets as the rifleman). Cut by tools/haifa/boar_atlas2.py from the painted sheets of art/boar_v3_1611 (table: tools/haifa/boar_atlas2_digger.json). STAND-IN until the owner approves the look. src/game/haifa/boarArmy.ts",
+ "standin": true,
+ "canvas": [
+  230,
+  135
+ ],
+ "anchor": [
+  125,
+  125
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "density": 1.6,
+ "hd": "boar_atlas2.py: 2 texels a shown art px (64 a cell, as Eli); a frame px is shown at figure_scale.json boarShow (0.8), so he stands 83.5 art px on screen, hooves to the top of his helmet (Eli: 97)",
+ "look": "pixel",
+ "source": "art/boar_v3_1611/out (gpt-image-2 sheets from our own design picture); build: py -3.12 -I -B tools/haifa/boar_atlas2.py",
+ "filter": "lanczos",
+ "shownPx": 83.5,
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     230,
+     135
+    ],
+    [
+     230,
+     0,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    420,
+    420
+   ],
+   "loop": true
+  },
+  "walk": {
+   "frames": [
+    [
+     460,
+     0,
+     230,
+     135
+    ],
+    [
+     690,
+     0,
+     230,
+     135
+    ],
+    [
+     920,
+     0,
+     230,
+     135
+    ],
+    [
+     1150,
+     0,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    150,
+    150,
+    150,
+    150
+   ],
+   "loop": true,
+   "stride": 0.319
+  },
+  "run": {
+   "frames": [
+    [
+     1380,
+     0,
+     230,
+     135
+    ],
+    [
+     1610,
+     0,
+     230,
+     135
+    ],
+    [
+     1840,
+     0,
+     230,
+     135
+    ],
+    [
+     2070,
+     0,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    80,
+    80,
+    80,
+    80
+   ],
+   "loop": true,
+   "stride": 0.984
+  },
+  "hurt": {
+   "frames": [
+    [
+     2300,
+     0,
+     230,
+     135
+    ],
+    [
+     0,
+     135,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    70,
+    140
+   ],
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     230,
+     135,
+     230,
+     135
+    ],
+    [
+     460,
+     135,
+     230,
+     135
+    ],
+    [
+     690,
+     135,
+     230,
+     135
+    ],
+    [
+     920,
+     135,
+     230,
+     135
+    ],
+    [
+     1150,
+     135,
+     230,
+     135
+    ],
+    [
+     1380,
+     135,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    70,
+    90,
+    110,
+    100,
+    110,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 3,
+   "helmet": [
+    84,
+    55
+   ]
+  },
+  "death_blast": {
+   "frames": [
+    [
+     1610,
+     135,
+     230,
+     135
+    ],
+    [
+     1840,
+     135,
+     230,
+     135
+    ],
+    [
+     2070,
+     135,
+     230,
+     135
+    ],
+    [
+     2300,
+     135,
+     230,
+     135
+    ],
+    [
+     0,
+     270,
+     230,
+     135
+    ],
+    [
+     230,
+     270,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    80,
+    90,
+    90,
+    100,
+    130,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 0
+  },
+  "dig": {
+   "frames": [
+    [
+     460,
+     270,
+     230,
+     135
+    ],
+    [
+     690,
+     270,
+     230,
+     135
+    ],
+    [
+     920,
+     270,
+     230,
+     135
+    ],
+    [
+     1150,
+     270,
+     230,
+     135
+    ],
+    [
+     1380,
+     270,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    100,
+    100,
+    100,
+    100,
+    100
+   ],
+   "loop": false
+  },
+  "burrow": {
+   "frames": [
+    [
+     1610,
+     270,
+     230,
+     135
+    ],
+    [
+     1840,
+     270,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    160,
+    160
+   ],
+   "loop": true
+  },
+  "pop_tell": {
+   "frames": [
+    [
+     2070,
+     270,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "pop": {
+   "frames": [
+    [
+     2300,
+     270,
+     230,
+     135
+    ],
+    [
+     0,
+     405,
+     230,
+     135
+    ],
+    [
+     230,
+     405,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    45,
+    110,
+    80
+   ],
+   "loop": false
+  },
+  "windup": {
+   "frames": [
+    [
+     460,
+     405,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  },
+  "swing": {
+   "frames": [
+    [
+     690,
+     405,
+     230,
+     135
+    ],
+    [
+     920,
+     405,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    60,
+    110
+   ],
+   "loop": false
+  },
+  "recover": {
+   "frames": [
+    [
+     920,
+     405,
+     230,
+     135
+    ],
+    [
+     1150,
+     405,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    220,
+    300
+   ],
+   "loop": false
+  },
+  "fall": {
+   "frames": [
+    [
+     1380,
+     405,
+     230,
+     135
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  }
+ },
+ "aliases": {
+  "bolt": "run",
+  "alert": "idle",
+  "aim": "windup",
+  "fire": "swing",
+  "jump": "fall",
+  "land": "idle",
+  "stun": "hurt",
+  "stagger": "hurt"
+ },
+ "drawn": [
+  "burrow",
+  "death",
+  "death_blast",
+  "dig",
+  "fall",
+  "hurt",
+  "idle",
+  "pop",
+  "pop_tell",
+  "recover",
+  "run",
+  "swing",
+  "walk",
+  "windup"
+ ],
+ "points": "helmetOff (death, death_blast): the first frame his head is bare; helmet: where the thrown helmet starts on that frame. The game throws the helmet (boars:helmet), the loose painted helmet is not in the frames."
+}

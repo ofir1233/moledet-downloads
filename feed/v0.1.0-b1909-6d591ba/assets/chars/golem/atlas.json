@@ -1,0 +1,257 @@
+{
+ "about": "THE GOLEM (the rabbi's special, specials.json golem): CODE-DRAWN STAND-IN by tools/art_host/chars/golem_px.py (no AI, no paint). The forehead word is NOT in the art: the HUD text layer writes it (src/main.ts worldLabels). The art lane's spec: art/specs/golem.spec.json.",
+ "standin": true,
+ "canvas": [
+  192,
+  192
+ ],
+ "anchor": [
+  96,
+  186
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "look": "pixel",
+ "facing": "right",
+ "tick_hz": 60,
+ "anims": {
+  "golem_clay": {
+   "frames": [
+    [
+     0,
+     0,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    700
+   ],
+   "loop": true
+  },
+  "golem_rise": {
+   "frames": [
+    [
+     192,
+     0,
+     192,
+     192
+    ],
+    [
+     384,
+     0,
+     192,
+     192
+    ],
+    [
+     576,
+     0,
+     192,
+     192
+    ],
+    [
+     768,
+     0,
+     192,
+     192
+    ],
+    [
+     960,
+     0,
+     192,
+     192
+    ],
+    [
+     1152,
+     0,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    150,
+    150,
+    150,
+    150,
+    150,
+    150
+   ],
+   "loop": false
+  },
+  "golem_walk": {
+   "frames": [
+    [
+     1344,
+     0,
+     192,
+     192
+    ],
+    [
+     0,
+     192,
+     192,
+     192
+    ],
+    [
+     192,
+     192,
+     192,
+     192
+    ],
+    [
+     384,
+     192,
+     192,
+     192
+    ],
+    [
+     576,
+     192,
+     192,
+     192
+    ],
+    [
+     768,
+     192,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+   ],
+   "loop": true
+  },
+  "golem_stomp": {
+   "frames": [
+    [
+     960,
+     192,
+     192,
+     192
+    ],
+    [
+     1152,
+     192,
+     192,
+     192
+    ],
+    [
+     1344,
+     192,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    67,
+    50,
+    50
+   ],
+   "loop": false
+  },
+  "golem_wipe": {
+   "frames": [
+    [
+     0,
+     384,
+     192,
+     192
+    ],
+    [
+     192,
+     384,
+     192,
+     192
+    ],
+    [
+     384,
+     384,
+     192,
+     192
+    ],
+    [
+     576,
+     384,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    167,
+    167,
+    167,
+    167
+   ],
+   "loop": false
+  },
+  "golem_crumble": {
+   "frames": [
+    [
+     768,
+     384,
+     192,
+     192
+    ],
+    [
+     960,
+     384,
+     192,
+     192
+    ],
+    [
+     1152,
+     384,
+     192,
+     192
+    ],
+    [
+     1344,
+     384,
+     192,
+     192
+    ],
+    [
+     0,
+     576,
+     192,
+     192
+    ],
+    [
+     192,
+     576,
+     192,
+     192
+    ],
+    [
+     384,
+     576,
+     192,
+     192
+    ],
+    [
+     576,
+     576,
+     192,
+     192
+    ]
+   ],
+   "durations": [
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104,
+    104
+   ],
+   "loop": false
+  }
+ }
+}

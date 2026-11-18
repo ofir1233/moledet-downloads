@@ -1,0 +1,212 @@
+{
+ "version": 3,
+ "pxPerCell": 32,
+ "size": [
+  5120,
+  1088
+ ],
+ "frame": "px, origin top-left of the level, y down",
+ "materials": [
+  {
+   "id": 0,
+   "name": "painted_air",
+   "maskColour": "#000000"
+  },
+  {
+   "id": 1,
+   "name": "carved_air",
+   "maskColour": "#ff00ff"
+  },
+  {
+   "id": 2,
+   "name": "rock",
+   "maskColour": "#7d6a55"
+  },
+  {
+   "id": 3,
+   "name": "packed_earth",
+   "maskColour": "#6b4a2e"
+  },
+  {
+   "id": 4,
+   "name": "gravel",
+   "maskColour": "#8a8580"
+  },
+  {
+   "id": 5,
+   "name": "sand",
+   "maskColour": "#c2b07a"
+  },
+  {
+   "id": 6,
+   "name": "concrete",
+   "maskColour": "#a8a59c"
+  },
+  {
+   "id": 7,
+   "name": "rebar_concrete",
+   "maskColour": "#9c9a92"
+  },
+  {
+   "id": 8,
+   "name": "brick",
+   "maskColour": "#9a4a3a"
+  },
+  {
+   "id": 9,
+   "name": "mortar",
+   "maskColour": "#b8b0a0"
+  },
+  {
+   "id": 10,
+   "name": "timber",
+   "maskColour": "#a7773f"
+  },
+  {
+   "id": 11,
+   "name": "planks",
+   "maskColour": "#b58a4c"
+  },
+  {
+   "id": 12,
+   "name": "sheet_steel",
+   "maskColour": "#6d7b88"
+  },
+  {
+   "id": 13,
+   "name": "girder_steel",
+   "maskColour": "#5d6b78"
+  },
+  {
+   "id": 14,
+   "name": "glass",
+   "maskColour": "#a9d8e8"
+  },
+  {
+   "id": 15,
+   "name": "rubber",
+   "maskColour": "#202020"
+  },
+  {
+   "id": 16,
+   "name": "cloth",
+   "maskColour": "#8a7a5a"
+  },
+  {
+   "id": 17,
+   "name": "fuel",
+   "maskColour": "#d8a21b"
+  },
+  {
+   "id": 18,
+   "name": "slag",
+   "maskColour": "#3a3036"
+  },
+  {
+   "id": 19,
+   "name": "ash",
+   "maskColour": "#6a6a6a"
+  },
+  {
+   "id": 20,
+   "name": "plaster",
+   "maskColour": "#d0c8b8"
+  },
+  {
+   "id": 21,
+   "name": "bedrock",
+   "maskColour": "#3a3632"
+  }
+ ],
+ "materials_provisional": true,
+ "panels": [
+  {
+   "id": "p00",
+   "rect": [
+    0,
+    0,
+    1024,
+    1088
+   ],
+   "col": "panels/p00_col.png",
+   "mat": "panels/p00_mat.png",
+   "grain": "panels/p00_grain.png",
+   "n": "panels/p00_n.png",
+   "back": "panels/p00_back.png",
+   "backmat": "panels/p00_backmat.png"
+  },
+  {
+   "id": "p01",
+   "rect": [
+    1024,
+    0,
+    1024,
+    1088
+   ],
+   "col": "panels/p01_col.png",
+   "mat": "panels/p01_mat.png",
+   "grain": "panels/p01_grain.png",
+   "n": "panels/p01_n.png",
+   "back": "panels/p01_back.png",
+   "backmat": "panels/p01_backmat.png"
+  },
+  {
+   "id": "p02",
+   "rect": [
+    2048,
+    0,
+    1024,
+    1088
+   ],
+   "col": "panels/p02_col.png",
+   "mat": "panels/p02_mat.png",
+   "grain": "panels/p02_grain.png",
+   "n": "panels/p02_n.png",
+   "back": "panels/p02_back.png",
+   "backmat": "panels/p02_backmat.png"
+  },
+  {
+   "id": "p03",
+   "rect": [
+    3072,
+    0,
+    1024,
+    1088
+   ],
+   "col": "panels/p03_col.png",
+   "mat": "panels/p03_mat.png",
+   "grain": "panels/p03_grain.png",
+   "n": "panels/p03_n.png",
+   "back": "panels/p03_back.png",
+   "backmat": "panels/p03_backmat.png"
+  },
+  {
+   "id": "p04",
+   "rect": [
+    4096,
+    0,
+    1024,
+    1088
+   ],
+   "col": "panels/p04_col.png",
+   "mat": "panels/p04_mat.png",
+   "grain": "panels/p04_grain.png",
+   "n": "panels/p04_n.png",
+   "back": "panels/p04_back.png",
+   "backmat": "panels/p04_backmat.png"
+  }
+ ],
+ "back": {
+  "parallax": 1.0,
+  "source": "today's painted wall layer (layers/wall.png) with the far layer in its openings, rev 2.4"
+ },
+ "planes": {
+  "col": "RGBA8 painting, alpha 0|255 = painted air|matter",
+  "mat": "indexed: engine material id (0 painted air, never 1)",
+  "grain": "L8 strength 0..255, low breaks first",
+  "n": "RGBA8 normal (R,G used; +X right, +Y up)",
+  "back": "RGB8 back plane colour",
+  "backmat": "indexed: back plane material"
+ },
+ "version_note": "first version for the prototype (J16, 12.11): floor and road from the painted fields 247 and 245; D:/bs/rubble_d/art/level2/panels/fields_paid"
+}

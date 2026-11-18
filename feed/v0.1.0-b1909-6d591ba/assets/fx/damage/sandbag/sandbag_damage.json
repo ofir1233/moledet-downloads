@@ -1,0 +1,214 @@
+{
+ "material": "sandbag",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "the regime's sandbag walls, never refilled: they SLUMP and POUR: a torn bag sags, sand runs from the rip, the bag goes flat as an empty sack, the sand piles at the foot",
+ "ramp": [
+  "#3a3225",
+  "#6d5e42",
+  "#9b8961",
+  "#c1af79",
+  "#dbca93"
+ ],
+ "sand": [
+  "#59492f",
+  "#9f875f",
+  "#ccb381",
+  "#e5d19f"
+ ],
+ "tie": "#2f281e",
+ "back": [
+  "#16130e",
+  "#2a241b"
+ ],
+ "section": [
+  "#6d5e42",
+  "#9f875f"
+ ],
+ "hash": "h32 as concrete (tools/art_host/fx/hashrule.py); salt 501",
+ "edges": {
+  "strips": {
+   "file": "sandbag_edge_strips.png",
+   "normal": "sandbag_edge_strips_n.png",
+   "slot": [
+    32,
+    32
+   ],
+   "halfDepth": 16,
+   "variants": 6,
+   "joinLevels": [
+    -1,
+    5,
+    10,
+    14
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -10,
+    16
+   ]
+  },
+  "corners": {
+   "file": "sandbag_edge_corners.png",
+   "normal": "sandbag_edge_corners_n.png",
+   "slot": [
+    41,
+    41
+   ],
+   "origin": [
+    20,
+    20
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 501
+ },
+ "stages": {
+  "file": "sandbag_stages.png",
+  "normal": "sandbag_stages_n.png",
+  "slot": [
+   48,
+   48
+  ],
+  "margin": 8,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "variants": 6,
+  "use": "opaque overlay over the cell at dmg/thr crossing 25 / 50 / 75 %; variant h32(x, y, 71) % 4; clip to the body; from 25 % on, the pour stream plays under the rip (pour)"
+ },
+ "bites": {
+  "file": "sandbag_bites.png",
+  "normal": "sandbag_bites_n.png",
+  "slot": 8,
+  "variants": 6,
+  "anchor": [
+   4,
+   2
+  ],
+  "use": "one per bullet hit, variant h32(x, y, 80 + salt) % 6, opaque, clipped to the body; each hit also adds sand to the pile"
+ },
+ "pour": {
+  "file": "sandbag_pour.png",
+  "normal": "sandbag_pour_n.png",
+  "frame": [
+   6,
+   28
+  ],
+  "frames": 6,
+  "fps": 12,
+  "loop": true,
+  "anchor": [
+   2,
+   0
+  ],
+  "use": "under every rip from stage 25 until the bag is empty; stop the loop when the cell is gone; clip the bottom at the first matter or the pile top"
+ },
+ "pile": {
+  "file": "sandbag_pile.png",
+  "normal": "sandbag_pile_n.png",
+  "frame": [
+   96,
+   26
+  ],
+  "stages": 6,
+  "anchor": [
+   48,
+   25
+  ],
+  "shapes": [
+   {
+    "stage": 0,
+    "heightPx": 4,
+    "halfWidthPx": 10
+   },
+   {
+    "stage": 1,
+    "heightPx": 8,
+    "halfWidthPx": 17
+   },
+   {
+    "stage": 2,
+    "heightPx": 12,
+    "halfWidthPx": 24
+   },
+   {
+    "stage": 3,
+    "heightPx": 16,
+    "halfWidthPx": 31
+   },
+   {
+    "stage": 4,
+    "heightPx": 20,
+    "halfWidthPx": 38
+   },
+   {
+    "stage": 5,
+    "heightPx": 24,
+    "halfWidthPx": 45
+   }
+  ],
+  "use": "stage = min(5, cells emptied + hits // 6) of the wall above; swap stages as it grows (no tween); the pile sits on the floor under the wall and may be a slope for actors (alpha = the mask)"
+ },
+ "chunks": {
+  "file": "sandbag_chunks.png",
+  "normal": "sandbag_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   {
+    "name": "clod",
+    "px": 62
+   },
+   {
+    "name": "burlap_flap",
+    "px": 66
+   },
+   {
+    "name": "bag_lump",
+    "px": 85
+   },
+   {
+    "name": "sack_strip",
+    "px": 39
+   },
+   {
+    "name": "small_clod",
+    "px": 27
+   },
+   {
+    "name": "sack_corner",
+    "px": 72
+   },
+   {
+    "name": "clod_b",
+    "px": 27
+   },
+   {
+    "name": "deflated_bag",
+    "px": 82
+   }
+  ],
+  "facets": {
+   "#ff0000": "top: the art one ramp step lighter",
+   "#00ff00": "front: the art as it is",
+   "#0000ff": "side / underside: one step darker"
+  },
+  "use": "as concrete: a removed cell gives 3-6 chunks cut from its own art, turned by 90s, settling on a 36 deg cone with a 1 px contact shadow"
+ },
+ "behind": "the level back plane two steps darker with a contact shadow (as concrete); the first 2 px inside the edge are the burlap's dark inside (#3a3225)",
+ "heap": "no slabs: the removed bags become the PILE (pile stages) plus 1-3 empty sacks (chunks 1, 5, 7) on it"
+}

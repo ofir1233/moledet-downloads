@@ -1,0 +1,221 @@
+{
+ "id": "missile_truck_v2",
+ "source": "props/missile_truck_break/break.json (the parts, their pivots and throws stay as they are)",
+ "angles": [
+  0,
+  45,
+  90,
+  135,
+  180,
+  225,
+  270,
+  315
+ ],
+ "angleNote": "frame i = the part turned i x 45 deg COUNTER-CLOCKWISE on screen, relit; pick the frame nearest the body angle, never rotate the sprite; mirror x for a truck facing left (and mirror the angle)",
+ "parts": {
+  "cab_door": {
+   "file": "angles_cab_door.png",
+   "normal": "angles_cab_door_n.png",
+   "frame": [
+    60,
+    62
+   ],
+   "frames": 8,
+   "pivot": [
+    30.0,
+    31.0
+   ]
+  },
+  "roof": {
+   "file": "angles_roof.png",
+   "normal": "angles_roof_n.png",
+   "frame": [
+    218,
+    218
+   ],
+   "frames": 8,
+   "pivot": [
+    109.0,
+    109.0
+   ]
+  },
+  "panel_rear": {
+   "file": "angles_panel_rear.png",
+   "normal": "angles_panel_rear_n.png",
+   "frame": [
+    98,
+    98
+   ],
+   "frames": 8,
+   "pivot": [
+    49.0,
+    49.0
+   ]
+  },
+  "panel_mid": {
+   "file": "angles_panel_mid.png",
+   "normal": "angles_panel_mid_n.png",
+   "frame": [
+    82,
+    82
+   ],
+   "frames": 8,
+   "pivot": [
+    41.0,
+    41.0
+   ]
+  },
+  "panel_vent": {
+   "file": "angles_panel_vent.png",
+   "normal": "angles_panel_vent_n.png",
+   "frame": [
+    54,
+    54
+   ],
+   "frames": 8,
+   "pivot": [
+    27.0,
+    27.0
+   ]
+  },
+  "rail": {
+   "file": "angles_rail.png",
+   "normal": "angles_rail_n.png",
+   "frame": [
+    240,
+    240
+   ],
+   "frames": 8,
+   "pivot": [
+    120.0,
+    120.0
+   ]
+  },
+  "missile": {
+   "file": "angles_missile.png",
+   "normal": "angles_missile_n.png",
+   "frame": [
+    282,
+    282
+   ],
+   "frames": 8,
+   "pivot": [
+    141.0,
+    141.0
+   ]
+  },
+  "wheels_rear": {
+   "file": "angles_wheels_rear.png",
+   "normal": "angles_wheels_rear_n.png",
+   "frame": [
+    100,
+    100
+   ],
+   "frames": 8,
+   "pivot": [
+    50.0,
+    50.0
+   ]
+  },
+  "wheels_front": {
+   "file": "angles_wheels_front.png",
+   "normal": "angles_wheels_front_n.png",
+   "frame": [
+    106,
+    106
+   ],
+   "frames": 8,
+   "pivot": [
+    53.0,
+    53.0
+   ]
+  }
+ },
+ "flash": {
+  "files": [
+   "flash_all_0.png",
+   "flash_all_1.png",
+   "flash_all_2.png"
+  ],
+  "normals": [
+   "flash_all_0_n.png",
+   "flash_all_1_n.png",
+   "flash_all_2_n.png"
+  ],
+  "fps": 24,
+  "size": [
+   338,
+   149
+  ],
+  "note": "the WHOLE truck, in place of the intact sprite: 0 white-hot, 1 glowing on the hot ramp, 2 cooling (the painting returns, warm); then the split. Replaces the cab-only flash_0..2 of missile_truck_break."
+ },
+ "wreck": {
+  "frame": [
+   338,
+   269
+  ],
+  "origin": "drawn with its top-left at the chassis top-left minus 120 px up (the chassis at [0, 120] in the frame)",
+  "glow": {
+   "file": "wreck_glow.png",
+   "normal": "wreck_glow_n.png",
+   "frames": 4,
+   "fps": 8,
+   "loop": true,
+   "layer": "over the chassis",
+   "note": "torn edges glowing in the ramp's red steps, flickering; unlit (emissive)"
+  },
+  "fire": {
+   "file": "wreck_fire.png",
+   "normal": "wreck_fire_n.png",
+   "frames": 8,
+   "fps": 12,
+   "loop": true,
+   "layer": "fxFront",
+   "note": "three small fires (cab, bed, rear) in D's banded lobes; emissive"
+  },
+  "smoke": {
+   "file": "wreck_smoke.png",
+   "normal": "wreck_smoke_n.png",
+   "frames": 12,
+   "fps": 10,
+   "loop": true,
+   "layer": "fxBehind",
+   "note": "two smoke columns in D's 3-tone puffs, drifting right, the belly fire-lit near the base"
+  },
+  "light": {
+   "note": "a flicker light at each fire spot, 1 cell above it",
+   "color": "#ff9a40",
+   "radiusCells": 3.0,
+   "intensity": [
+    0.35,
+    0.42,
+    0.3,
+    0.45,
+    0.38,
+    0.28,
+    0.44,
+    0.33
+   ],
+   "fps": 12,
+   "spots": [
+    [
+     0.12,
+     0.34
+    ],
+    [
+     0.45,
+     0.3
+    ],
+    [
+     0.78,
+     0.28
+    ]
+   ]
+  },
+  "lifeS": "the rest of the fight (no fade); after 20 s the fire may drop to the glow and the smoke alone"
+ },
+ "gag": {
+  "fx": "gag_wheel_tea",
+  "spawn": "from the cab at the split (the cab door's centre), thrown up and forward at impulse 30, fluttering; see fx.json gag_wheel_tea"
+ }
+}
