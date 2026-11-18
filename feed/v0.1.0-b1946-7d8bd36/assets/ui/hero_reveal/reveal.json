@@ -1,0 +1,17 @@
+{
+  "about": "THE HERO REVEAL v2 (docs/design/HERO_REVEAL_V2.md; the owner 13.11 ~21:00): the cut-in title card that plays when a hero joins. Drawn by src/render/paint/heroReveal.ts. A new hero is one entry under heroes: his words (every visible word is here, drawn through the text.ts roles), the announcer's voice group (silent when not recorded), his layers and pivots (face: the reveal-only expression patch, a lifted level brow and a slight smirk, ?revface=0 for the face as made; eli: cut by art/hero_reveal/cut_eli.py from the paid reveal figure raw/97_97_reveal_eli_figure, made by art/specs/reveal_eli_figure.json from the owner-approved sheet3 pose 1) and his colours. A titleRun ({text, cutAt 0..1, everyF}) replaces the name punch with the title-run gag (the plate grows, runs off the screen, the announcer runs out of breath at cutAt). standIns.titleRun is the debug stand-in (?herorev=eli&revtitle=1), never shown without the flag.",
+  "kicker": "מצטרף לקרב!",
+  "heroes": {
+    "eli": {
+      "name": ["אלי", "קופטר"],
+      "tagline": "גיבור העל של ישראל",
+      "shout": "announcer_hero_eli",
+      "art": "eli/eli.json",
+      "layers": { "body": "eli/body.png", "tug": "eli/tug.png", "blink": "eli/blink.png", "brow": "eli/brow.png", "brow0": "eli/brow0.png", "face": "eli/face.png" },
+      "colours": { "panelA": "#141a33", "panelB": "#22305c", "rayA": "#18214a", "rayB": "#2e4290", "accent": "#a50f0b", "edge": "#f0c060", "skyFar": "#2c3a66", "skyNear": "#0b1022" }
+    }
+  },
+  "standIns": {
+    "titleRun": { "text": "הרב האדמו\"ר הגאון הצדיק שליט\"א", "cutAt": 0.7, "everyF": 12, "about": "the coming rabbi's title, exactly as the owner gave it (13.11, corrected: no personal name after it); tested on Eli's slot only behind ?revtitle=1" }
+  }
+}

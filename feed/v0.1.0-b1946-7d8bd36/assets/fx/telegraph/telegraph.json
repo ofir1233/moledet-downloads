@@ -1,0 +1,172 @@
+{
+ "version": 1,
+ "by": "HOST ART effects, fourth builder (12.11.2026); tools/art_host/fx/telegraph.py",
+ "lit": false,
+ "note": "All telegraph art is UNLIT (emissive). *_glow files are ADDITIVE (colour = strength; alpha 0/255; draw on fxGlow with opacity 1). The rest is opaque (normal blend, alphaTest 0.5). The _n.png files are flat +Z pairs only.",
+ "colours": {
+  "hot": "#ffd9c2",
+  "hi": "#ff6650",
+  "mid": "#ed211f",
+  "lo": "#a3121b",
+  "glow": [
+   "#8a1d14",
+   "#4c0f0b",
+   "#260706"
+  ],
+  "glowBlink": [
+   "#c22e1c",
+   "#761811",
+   "#3c0b08"
+  ],
+  "floorGlow": [
+   "#b0281a",
+   "#681510",
+   "#34090a"
+  ],
+  "floorPulse": [
+   "#e0402a",
+   "#8c1e14",
+   "#461008"
+  ],
+  "bandWidthsPx": [
+   1,
+   2,
+   2
+  ]
+ },
+ "floorRemapNote": "RENDER (render C2, 12.11.2026): the floor pieces (tank_floor_glow, tank_floor_mark: the tank's landing zone, a primed barrel's and a lit belt's reach) are recoloured at load from the drawn blood reds to a hot hazard amber (a glowing target, not a liquid), exact colour to colour, alpha kept: a red pool on the floor beside a charred heap read as blood by a body (docs/trailer/CUT1_REVIEW.md, shots 17-18). The PNGs are untouched; the aim line in the air keeps its reds.",
+ "floorRemap": {
+  "#b0281a": "#d9821a",
+  "#681510": "#7a420c",
+  "#34090a": "#3a2008",
+  "#e0402a": "#ffa52a",
+  "#8c1e14": "#9c560f",
+  "#461008": "#4a2a09",
+  "#ed211f": "#ffbe1c",
+  "#ff6650": "#fff07a",
+  "#a3121b": "#e8860e",
+  "#ffd9c2": "#fffbe0"
+ },
+ "aimLine": {
+  "method": "PREFERRED: per pixel. Rasterise the 1-px centre line (lineRuns / Bresenham), thicken to 2 px ACROSS the major axis (shallow |dx|>=|dy|: the pixel + the one below; steep: the pixel + the one to the right; the integrator code draws n x 2 runs, which thins a steep aim to 1 px wide), core tones HI (upper/left row) and MID, a 2-px HOT bead every 16 px marching 1 px a sim tick toward the target; then every empty pixel within chebyshev 5 of the core takes aim_glow_ramp[d] (row 0 steady, row 1 blink), ONCE (max, never a sum: overlapping per-run glow quads double up at every step). Reference: telegraph.aim_line_pixels.",
+  "ramp": {
+   "file": "telegraph/aim_glow_ramp.png",
+   "size": [
+    6,
+    2
+   ],
+   "col": "chebyshev distance d (0 = under the core)",
+   "row": "0 steady, 1 blink"
+  },
+  "tiles": {
+   "h": {
+    "file": "telegraph/aim_tile_h.png",
+    "glow": "telegraph/aim_tile_h_glow.png",
+    "frame": [
+     16,
+     12
+    ],
+    "frames": 2,
+    "coreRows": [
+     5,
+     6
+    ],
+    "repeat": "x"
+   },
+   "v": {
+    "file": "telegraph/aim_tile_v.png",
+    "glow": "telegraph/aim_tile_v_glow.png",
+    "frame": [
+     12,
+     16
+    ],
+    "frames": 2,
+    "coreCols": [
+     5,
+     6
+    ],
+    "repeat": "y"
+   },
+   "d45": {
+    "file": "telegraph/aim_tile_d.png",
+    "glow": "telegraph/aim_tile_d_glow.png",
+    "frame": [
+     16,
+     16
+    ],
+    "frames": 2,
+    "repeat": "diagonal (down-right; mirror x for up-right)"
+   }
+  },
+  "frames": {
+   "0": "steady (whole aim)",
+   "1": "BLINK (last 12 ticks, alternate 0/1 at 12 Hz: the line never goes off, it flashes hot; if RENDER keeps an off phase, draw frame 1 in the on phase)"
+  },
+  "muzzle": {
+   "file": "telegraph/aim_muzzle.png",
+   "glow": "telegraph/aim_muzzle_glow.png",
+   "frame": [
+    5,
+    5
+   ],
+   "glowFrame": [
+    11,
+    11
+   ],
+   "frames": 2,
+   "anchor": [
+    2,
+    2
+   ],
+   "at": "the line start (the muzzle)"
+  },
+  "point": {
+   "file": "telegraph/aim_point.png",
+   "glow": "telegraph/aim_point_glow.png",
+   "frame": [
+    11,
+    11
+   ],
+   "glowFrame": [
+    15,
+    15
+   ],
+   "frames": 2,
+   "anchor": [
+    5,
+    4
+   ],
+   "at": "the aim point (the line end)"
+  }
+ },
+ "tankFloor": {
+  "glow": {
+   "file": "telegraph/tank_floor_glow.png",
+   "frame": [
+    96,
+    12
+   ],
+   "frames": 2,
+   "anchor": [
+    48,
+    8
+   ],
+   "floorRow": 8,
+   "note": "additive; anchor x = landing x, row 8 = the floor top row (rows 0-7 air, 8-11 the floor face); frame 1 = the pulse (alternate 0/1 at 5 Hz, the integrator code pulses at 3 Hz: either)"
+  },
+  "mark": {
+   "file": "telegraph/tank_floor_mark.png",
+   "frame": [
+    34,
+    3
+   ],
+   "frames": 2,
+   "anchor": [
+    17,
+    2
+   ],
+   "note": "opaque, row 2 on the floor top row; frame 1 with the glow pulse"
+  }
+ },
+ "star": "no star or symbol of any kind in any telegraph piece (an enemy triggers them)"
+}

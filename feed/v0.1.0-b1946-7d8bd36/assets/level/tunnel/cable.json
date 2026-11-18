@@ -1,0 +1,517 @@
+{
+ "about": "RUBBLE, account D, 12.11.2026 03:29: how the cable kit of install/tunnel/props_dressing_cables.json goes together. Units: art px, 32 a cell; world y up, picture y down. tools/cb_place.py is this file as code, and every preview was drawn by it.",
+ "version": 1,
+ "character": {
+  "cable": "State Flex No. 3, issued by the metre and signed for in triplicate. Too thin for the lamp it feeds, so a second, thinner copper wire was wound round it \"temporarily\" at the first inspection. Cut once and spliced by laying the ends side by side under two wads of sticking plaster; every repair got a clerk's paper tag on a string (the tag is stamped, the splice is not insulated). Always a metre too long: the spare is looped and taped, because nobody is authorised to shorten state property. Idle: it hangs dead straight under the lamp's weight and follows it as one sheared line.",
+  "mount": "A ceiling plate drilled for four bolts and fixed with two; the third hole weeps rust, the fourth holds a bent nail. The hook is an S of rebar; the feed wire comes through its own hole, stapled once, with a slack arc. Idle: still; the hook is the swing's pivot.",
+  "lamp_mount_short": "A G-clamp from the motor pool, never returned: it bites girder and bracket together through a folded card wedge; the bar's other end is lashed to a rivet with wire. Idle: still.",
+  "loudspeaker": "The censor's cable: one kink, a strain relief of plaster, and a blob of red sealing wax so nobody plugs in another voice. Under a girder: the same office's plate cut down, one bolt, one nail, a ring.",
+  "cut": "The frayed end: the rubber peeled back, copper strands splayed like a dead flower, the wound wire sprung loose; it spits a spark now and then because nobody threw the breaker.",
+  "lamp": "The tunnel's one honest worker (the fracture builder's line). Off, it sulks: the glass goes the grey-green of cold tea, the filament a dead grey hair. Shot, it is an empty birdcage with its floor hanging open.",
+  "content": "No words and no letters anywhere (the tags carry a stamp blot and ruled lines), no star, no religious sign."
+ },
+ "palette": {
+  "outline": "#0c0a10",
+  "flex": {
+   "shadow": "#221a16",
+   "body": "#43352a",
+   "lit": "#7d6a52"
+  },
+  "copper_rust": [
+   "#45271a",
+   "#764125",
+   "#a56538",
+   "#cc935a"
+  ],
+  "plaster": [
+   "#746f5e",
+   "#9f9580",
+   "#c6bba2"
+  ],
+  "paper": [
+   "#9b8961",
+   "#c1af79",
+   "#dbca93"
+  ],
+  "string": [
+   "#5f4428",
+   "#86643a"
+  ],
+  "stamp_wax": [
+   "#7a2410",
+   "#a03a28"
+  ],
+  "steel": [
+   "#1c1613",
+   "#38302c",
+   "#5c4c38",
+   "#8c8468"
+  ],
+  "spark": [
+   "#f29a2e",
+   "#ffd66a",
+   "#fff4c8"
+  ],
+  "deadGlass": [
+   "#232e2a",
+   "#42544a",
+   "#86a08c"
+  ],
+  "warmGlass": [
+   "#402410",
+   "#5c3818",
+   "#704014"
+  ],
+  "steppedLine": "a cable can also be drawn as a stepped line 3 px wide: per row, left to right, flex.lit, flex.body, flex.shadow (the light comes from the upper left); every 4th to 6th row the body pixel takes flex.shadow or the lit pixel takes flex.body (the twist); the outline colour only where a 4th pixel is wanted on the shadow side. From the hook (13 px under the ceiling line) to the lamp's anchor, x = mountX + round(topDx * t).",
+  "sources": "outline = the level kit's (kit_palette.json); copper_rust = its rebar ramp; plaster, paper = the level's gravel and sand ramps (palette_level2.json); steel = the lamp's own bracket; spark = the kit's fire ramp"
+ },
+ "anchorRule": "A lamp or loudspeaker stands at (x, y) = its top; its mount point is (x, y + cord): the underside of the matter it hangs from. Every piece's anchor x is the CENTRE of its axis column (anchorPx x = k + 0.5), exactly as lamp_intact.png (15.5): place the cable with the same rounding as the lamp and its axis column is the lamp's column 15.",
+ "cord": {
+  "0": {
+   "lamp": "lamp_mount_short, its anchor on the lamp's anchor, drawn over the tiles and over the lamp. No cable.",
+   "loudspeaker": "horn_mount_short, its anchor on the horn's anchor, drawn over the tiles; the horn's own clamp starts on the anchor line under it."
+  },
+  "1": "cable_one, its anchor on the mount point (lamp: its knot rows lie over the lamp's bracket)",
+  "n": "top cell: cable_mount, its anchor on the mount point (x, y + n). Cells 1 .. n - 2 (from the top): one cable_seg tile each, top centre at (x, y + n - i). Bottom cell: cable_join (lamp) or cable_join_horn (loudspeaker), its anchor on the lamp's / horn's own anchor (x, y)."
+ },
+ "tiling": {
+  "cell": 32,
+  "tileAnchor": "top centre (column 8 of 17)",
+  "cycle": [
+   "cable_seg_a",
+   "cable_seg_d",
+   "cable_seg_b",
+   "cable_seg_e",
+   "cable_seg_f",
+   "cable_seg_a",
+   "cable_seg_d",
+   "cable_seg_c",
+   "cable_seg_e",
+   "cable_seg_f"
+  ],
+  "rule": "cell i (1 .. n - 2) takes cycle[(start + i - 1) mod 10]. No tile follows itself and each comes back only after 5 cells; the tag (b) and the splice (c) come once in 10 cells, so a cord of up to 11 cells never shows either twice. Every tile begins and ends on the plain flex (columns 7-9) with the wound wire behind it, so any tile joins any tile.",
+  "start": "per cable, set by hand for the level (`level` below) so no two cables that can share a screen are alike; for a lamp the level adds later: ((Math.imul(Math.floor(x), 2654435761) >>> 8) % 10)",
+  "noFlip": "never mirror or flip a tile: the lit edge is on the left, and a tag hangs down"
+ },
+ "drawOrder": [
+  "shadow files (_sh) of the mount or clamp, under everything of the cable",
+  "the middle tiles (z -4)",
+  "the lamp or loudspeaker (z -3), its own shadow under it",
+  "cable_join (z -2): it wraps the lamp's bracket",
+  "the tiles (z 0)",
+  "cable_mount / cable_one / lamp_mount_short / horn_mount_short (z 1): they lie on the matter's face"
+ ],
+ "swing": {
+  "about": "NO filtered rotation anywhere: the lamp is one of its drawn tilts, the cable is the straight kit sheared by whole pixels. props.lamp `hangs` (the renderer's sway by rotation) must not act on a lamp that has this kit.",
+  "input": "dxBulb = (lampLightPos(ctx, lamp).x - lamp.x) * 32, px (lamps.ts)",
+  "pendulum": "L = cord * 32 + 44 (px from the mount point to the middle of the glass); theta = asin(dxBulb / L)",
+  "lampTop": "the lamp's anchor moves to (mountX + topDx, lampY - topDy): topDx = round(cord * 32 * sin(theta)), topDy = round(cord * 32 * (1 - cos(theta))) (0 or 1 px on the level's cords)",
+  "lampFrame": "the frame of lamp_swing_<state> whose tilt is nearest theta (tilts [-12, -6, 0, 6, 12]). cord 0 and |theta| > 15: the nearest frame of lamp_swing_wide_<state> (tilts [-30, -24, -18, 18, 24, 30]). All frames share one anchor; the tilt turns about the chain's top link, 3 px under the anchor.",
+  "shear": {
+   "rule": "cable row r (0 = the first row under the ceiling line, r < cord * 32) is drawn moved by off(r) whole px: off = 0 for r < pivot; off = topDx for r >= cord * 32 - rigid; else off = round(topDx * (r - pivot) / (cord * 32 - rigid - pivot)). Rows above the line (the plate) never move; cable_join's rows under the lamp's anchor line move with the lamp (topDx).",
+   "pivot": 13,
+   "rigid": 19,
+   "why": "pivot = the hook's lower curl, where the flex turns; rigid = the spare loop and the knot, which travel with the lamp as one piece",
+   "rise": "when topDy > 0 drop that many rows from the plain stretch (between r = pivot + 20 and cord * 32 - rigid - 4), spread evenly; or ignore a rise of 1 px"
+  },
+  "theLevelsSwingingLamp": "the tank gate's lamp (148.5, 13) has cord 0, swing 0.7 cells, period 150 ticks: there is no cable to shear, its whole swing is in its own chain: theta reaches 30 degrees: lamp_swing_wide_lit."
+ },
+ "timelines": {
+  "cut": {
+   "on": "lamp:out cause cut (cutLamps: the trench ambush)",
+   "frames": [
+    [
+     "lamp_dying",
+     0,
+     3
+    ],
+    [
+     "lamp_dying",
+     1,
+     4
+    ],
+    [
+     "lamp_dying",
+     2,
+     8
+    ]
+   ],
+   "then": "lamp_off",
+   "pool": "frame 0: the two inner steps; after it none",
+   "note": "[piece, frame, ticks]; 15 ticks of the 40 the power is out"
+  },
+  "on": {
+   "on": "lamp:on",
+   "frames": [
+    [
+     "lamp_dying",
+     2,
+     2
+    ],
+    [
+     "lamp_dying",
+     1,
+     2
+    ],
+    [
+     "lamp_intact",
+     0,
+     3
+    ],
+    [
+     "lamp_dying",
+     0,
+     2
+    ],
+    [
+     "lamp_dying",
+     1,
+     2
+    ]
+   ],
+   "then": "lamp_intact",
+   "note": "it stutters back: ember, afterglow, lit, dim, afterglow, lit"
+  },
+  "shot": {
+   "on": "lamp:out cause shot",
+   "frames": [
+    [
+     "lamp_shot",
+     0,
+     2
+    ],
+    [
+     "lamp_shot",
+     1,
+     3
+    ],
+    [
+     "lamp_shot",
+     2,
+     4
+    ],
+    [
+     "lamp_shot",
+     3,
+     6
+    ]
+   ],
+   "then": "lamp_swing_broken, by tilt",
+   "swing": {
+    "x(t)": "ampPx * exp(-t / decayTicks) * sin(2 * pi * t / periodTicks), px of the bulb, t in ticks from the hit",
+    "ampPx": 28,
+    "ampPxCord0": 18,
+    "decayTicks": 170,
+    "periodTicks": "round(9 * sqrt(cord * 32 + 44))",
+    "stop": "when the envelope falls under 1 px: lamp_swing_broken frame 2 (its rest)"
+   },
+   "note": "the shot frames are drawn on the swinging lamp top too (same anchor rule); no pool from frame 1 on"
+  },
+  "mount": {
+   "on": "lamp:out cause mount",
+   "do": "the matter the mount was on is gone: draw nothing of this cable any more (it fell with its plate). Today the game breaks the lamp where it hangs: play the fixture's own break there."
+  },
+  "cableCut": {
+   "when": "a fixture on a cord is destroyed and leaves its cable (a loudspeaker blown off), or the new engine cuts a cord",
+   "do": "keep the cells above the cut; cable_cut with its top on that cell boundary; cable_spark centred on the cut piece's tip (px [7, 13] of cable_cut) every 70 to 110 ticks for about 8 s, frame ticks [2, 2, 3, 4]"
+  },
+  "loudspeakerDangling": "face `dangling` (shot under half): the cable stays whole; the horn's own art leans on its clamp. Under a girder (cord 0) the horn hangs from horn_mount_short's ring."
+ },
+ "lamp": {
+  "file": "props/lamp_intact.png (unchanged)",
+  "anchorPx": [
+   15.5,
+   2
+  ],
+  "bracketRows": [
+   2,
+   4
+  ],
+  "bracketColumns": [
+   9,
+   19
+  ],
+  "chainTopPx": [
+   15.5,
+   5
+  ],
+  "middleOfGlassPx": [
+   15.5,
+   46
+  ],
+  "bulbUnderAnchor": 44,
+  "note": "the game puts the light 1 cell (32 px) under the anchor (lampLightPos); the glass is 44 px under it and the old glow's offset is 39: a pool drawn at the game's point sits 12 px above the glass."
+ },
+ "level": {
+  "lamps": [
+   {
+    "x": 12.5,
+    "y": 15,
+    "cord": 9,
+    "start": 3,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 21.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "lamp_mount_short"
+    ]
+   },
+   {
+    "x": 33.5,
+    "y": 14,
+    "cord": 10,
+    "start": 6,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 47.5,
+    "y": 17,
+    "cord": 7,
+    "start": 0,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 61.5,
+    "y": 14,
+    "cord": 10,
+    "start": 9,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 70.5,
+    "y": 13,
+    "cord": 11,
+    "start": 2,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 91.5,
+    "y": 14,
+    "cord": 10,
+    "start": 8,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 104.5,
+    "y": 14,
+    "cord": 10,
+    "start": 1,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 116.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "lamp_mount_short"
+    ]
+   },
+   {
+    "x": 121.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "lamp_mount_short"
+    ]
+   },
+   {
+    "x": 130.5,
+    "y": 17,
+    "cord": 7,
+    "start": 4,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 140.5,
+    "y": 14,
+    "cord": 10,
+    "start": 7,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_join"
+    ]
+   },
+   {
+    "x": 148.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "lamp_mount_short"
+    ]
+   },
+   {
+    "x": 157.5,
+    "y": 18,
+    "cord": 6,
+    "start": 3,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_join"
+    ]
+   }
+  ],
+  "loudspeakers": [
+   {
+    "x": 25.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "horn_mount_short"
+    ]
+   },
+   {
+    "x": 84.5,
+    "y": 13,
+    "cord": 11,
+    "start": 5,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_c",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_join_horn"
+    ]
+   },
+   {
+    "x": 119.5,
+    "y": 13,
+    "cord": 0,
+    "start": null,
+    "pieces": [
+     "horn_mount_short"
+    ]
+   },
+   {
+    "x": 143.5,
+    "y": 16,
+    "cord": 8,
+    "start": 0,
+    "pieces": [
+     "cable_mount",
+     "cable_seg_a",
+     "cable_seg_d",
+     "cable_seg_b",
+     "cable_seg_e",
+     "cable_seg_f",
+     "cable_seg_a",
+     "cable_join_horn"
+    ]
+   }
+  ],
+  "note": "pieces from the top down; a loudspeaker's own art (pa_horn) is another builder's"
+ },
+ "forTheLevel": [
+  "The lamp at (157.5, 18, cord 6), the goal missile's, stands in column 157, which is rock from y 8 to 23 (tunnel.json rows): lamp and cable hang INSIDE the rock. Column 156 is air.",
+  "The only swinging lamp (148.5, 13) has cord 0: on a cord it would swing as a sheared cable (previews/swing_cord7_sheared_*).",
+  "level_art.json props.lamp has `hangs: true`: the renderer sways it by a filtered rotation of up to 3.4 degrees."
+ ],
+ "newPlayfield": "install/tunnel2/props/cable/ (the same kit as parts and joints, for the engine to swing and cut) and install/tunnel2/props/lamp_states/."
+}

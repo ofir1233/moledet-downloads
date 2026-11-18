@@ -1,0 +1,83 @@
+{
+ "version": 3,
+ "pxPerCell": 32,
+ "size": [
+  16352,
+  1152
+ ],
+ "frame": "px, origin top-left of the level, y down",
+ "made": "tools/haifa/fine_art.py (16.11): the longer harbour's panels as pixel matter for the destruction engine",
+ "materials": [
+  {
+   "id": 0,
+   "name": "painted_air",
+   "maskColour": "#000000"
+  },
+  {
+   "id": 1,
+   "name": "carved_air",
+   "maskColour": "#ff00ff"
+  },
+  {
+   "id": 2,
+   "name": "pier",
+   "maskColour": "#8b6a44"
+  },
+  {
+   "id": 3,
+   "name": "masonry",
+   "maskColour": "#8d877c"
+  },
+  {
+   "id": 4,
+   "name": "plate",
+   "maskColour": "#7a6f62"
+  },
+  {
+   "id": 5,
+   "name": "shell",
+   "maskColour": "#3c3c46"
+  },
+  {
+   "id": 6,
+   "name": "bedrock",
+   "maskColour": "#282830"
+  },
+  {
+   "id": 7,
+   "name": "quaystone",
+   "maskColour": "#8f7f66"
+  },
+  {
+   "id": 8,
+   "name": "sandbag",
+   "maskColour": "#96825a"
+  }
+ ],
+ "panels": [
+  {
+   "id": "harbour_00",
+   "rect": [
+    0,
+    0,
+    3392,
+    1152
+   ],
+   "col": "col_00.webp",
+   "mat": "mat_00.png",
+   "back": "back_00.webp"
+  },
+  {
+   "id": "harbour_01",
+   "rect": [
+    3392,
+    0,
+    12960,
+    1152
+   ],
+   "col": "col_01.webp",
+   "mat": "mat_01.png",
+   "back": "back_01.webp"
+  }
+ ]
+}

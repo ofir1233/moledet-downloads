@@ -1,0 +1,972 @@
+{
+ "about": "RUBBLE, account D, 12.11.2026 03:29: the cables of the lamps and loudspeakers, and the lamp's missing states. `props` is ready to merge into level_art.json `props` (same schema; paths relative to public/assets/level/tunnel). New keys beside the contract's: anchorPx (the anchor in px: x is the CENTRE of a pixel column, as the lamp's own 15.5), shadow (its own file, never baked: every colour picture here is alpha 0 or 255), ticks (frame times in sim ticks), frameBy (time | tilt), tilts (degrees per frame, + = the bulb swings right), stateOf. How the pieces go together: cable.json. Nothing here needs `hangs` (the renderer's filtered sway): a swinging lamp is drawn from its tilt frames and its cable sheared.",
+ "version": 1,
+ "pxPerCell": 32,
+ "props": {
+  "cable_mount": {
+   "states": {
+    "intact": "props/cable_mount.png"
+   },
+   "w": 23,
+   "h": 42,
+   "cells": [
+    0.72,
+    1.31
+   ],
+   "anchor": [
+    0.4565,
+    0.2381
+   ],
+   "anchorPx": [
+    10.5,
+    10
+   ],
+   "z": 1,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_mount_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the top cell of a cord: the ceiling plate (10 rows lie on the ceiling's face, above the anchor line), the rebar hook, the feed wire, the first stretch of flex. Draw it over the tiles.",
+   "shadow": {
+    "file": "props/cable_mount_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   }
+  },
+  "cable_seg_a": {
+   "states": {
+    "intact": "props/cable_seg_a.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_a_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell: the wound wire and a wrap of sticking plaster"
+  },
+  "cable_seg_b": {
+   "states": {
+    "intact": "props/cable_seg_b.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_b_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell: the clerk's paper tag on a string"
+  },
+  "cable_seg_c": {
+   "states": {
+    "intact": "props/cable_seg_c.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_c_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell: the sagging splice, tagged and stamped"
+  },
+  "cable_seg_d": {
+   "states": {
+    "intact": "props/cable_seg_d.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_d_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell, calm: one turn of the wire hangs loose"
+  },
+  "cable_seg_e": {
+   "states": {
+    "intact": "props/cable_seg_e.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_e_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell, calm: a kink the coil left"
+  },
+  "cable_seg_f": {
+   "states": {
+    "intact": "props/cable_seg_f.png"
+   },
+   "w": 17,
+   "h": 32,
+   "cells": [
+    0.53,
+    1.0
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_seg_f_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "middle cell, calm: the wire slid down and bunched"
+  },
+  "cable_join": {
+   "states": {
+    "intact": "props/cable_join.png"
+   },
+   "w": 23,
+   "h": 36,
+   "cells": [
+    0.72,
+    1.12
+   ],
+   "anchor": [
+    0.4565,
+    0.8889
+   ],
+   "anchorPx": [
+    10.5,
+    32
+   ],
+   "z": -2,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_join_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the bottom cell of a lamp's cord: the spare loop, the knot round the lamp's bracket. Rows under the anchor line lie over the lamp's bracket: draw it after the lamp."
+  },
+  "cable_join_horn": {
+   "states": {
+    "intact": "props/cable_join_horn.png"
+   },
+   "w": 17,
+   "h": 34,
+   "cells": [
+    0.53,
+    1.06
+   ],
+   "anchor": [
+    0.5,
+    0.9412
+   ],
+   "anchorPx": [
+    8.5,
+    32
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_join_horn_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the bottom cell of a loudspeaker's cord: a kink, the plaster strain relief, the censor's wax seal; it ends on the horn's own 5 px clamp"
+  },
+  "cable_one": {
+   "states": {
+    "intact": "props/cable_one.png"
+   },
+   "w": 23,
+   "h": 46,
+   "cells": [
+    0.72,
+    1.44
+   ],
+   "anchor": [
+    0.4565,
+    0.2174
+   ],
+   "anchorPx": [
+    10.5,
+    10
+   ],
+   "z": 1,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_one_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "a cord of exactly one cell: hook and knot in one piece (the mount's frame)",
+   "shadow": {
+    "file": "props/cable_one_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   }
+  },
+  "cable_cut": {
+   "states": {
+    "intact": "props/cable_cut.png"
+   },
+   "w": 17,
+   "h": 16,
+   "cells": [
+    0.53,
+    0.5
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "anchorPx": [
+    8.5,
+    0
+   ],
+   "z": -4,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/cable_cut_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the frayed end left hanging: its top joins any cell boundary of the cord"
+  },
+  "cable_spark": {
+   "states": {
+    "intact": "props/cable_spark.png"
+   },
+   "w": 15,
+   "h": 15,
+   "cells": [
+    0.47,
+    0.47
+   ],
+   "anchor": [
+    0.5,
+    0.4667
+   ],
+   "anchorPx": [
+    7.5,
+    7
+   ],
+   "z": 3,
+   "facing": "right",
+   "frames": 4,
+   "fps": 21.8,
+   "render": {
+    "shadow": "none",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "the whole spark is light: draw it unlit"
+   },
+   "normals": {
+    "intact": "props/cable_spark_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the cut end spits: 4 frames, hard, three tones; centred on the cut piece's tip",
+   "ticks": [
+    2,
+    2,
+    3,
+    4
+   ],
+   "loop": false,
+   "frameBy": "time"
+  },
+  "lamp_mount_short": {
+   "states": {
+    "intact": "props/lamp_mount_short.png"
+   },
+   "w": 23,
+   "h": 22,
+   "cells": [
+    0.72,
+    0.69
+   ],
+   "anchor": [
+    0.5,
+    0.4091
+   ],
+   "anchorPx": [
+    11.5,
+    9
+   ],
+   "z": 1,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/lamp_mount_short_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "cord 0, lamp: a G-clamp bites girder and bracket; 9 rows lie on the girder's face. Draw it over the tiles and over the lamp.",
+   "shadow": {
+    "file": "props/lamp_mount_short_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   }
+  },
+  "horn_mount_short": {
+   "states": {
+    "intact": "props/horn_mount_short.png"
+   },
+   "w": 17,
+   "h": 12,
+   "cells": [
+    0.53,
+    0.38
+   ],
+   "anchor": [
+    0.5,
+    0.8333
+   ],
+   "anchorPx": [
+    8.5,
+    10
+   ],
+   "z": 1,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": true,
+    "hazeDepth": 0.2,
+    "pxScale": 1
+   },
+   "normals": {
+    "intact": "props/horn_mount_short_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "cord 0, loudspeaker: a small plate and a ring the horn's clamp hooks into; 10 rows lie on the girder's face.",
+   "shadow": {
+    "file": "props/horn_mount_short_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   }
+  },
+  "lamp_off": {
+   "states": {
+    "intact": "props/lamp_off.png"
+   },
+   "w": 33,
+   "h": 61,
+   "cells": [
+    1.03,
+    1.91
+   ],
+   "anchor": [
+    0.4697,
+    0.0328
+   ],
+   "anchorPx": [
+    15.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 1,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_off_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the lamp whole and dark (power cut). Same size and anchor as props.lamp: it can go into props.lamp.states as `off`; its wall shadow is in lamp_off_sh.png (the lamp's own three states carry theirs baked in).",
+   "shadow": {
+    "file": "props/lamp_off_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "stateOf": "lamp"
+  },
+  "lamp_dying": {
+   "states": {
+    "intact": "props/lamp_dying.png"
+   },
+   "w": 33,
+   "h": 61,
+   "cells": [
+    1.03,
+    1.91
+   ],
+   "anchor": [
+    0.4697,
+    0.0328
+   ],
+   "anchorPx": [
+    15.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 3,
+   "fps": 12.0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_dying_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "lit -> off in 3 frames: dimmed; the afterglow (dark glass, the filament still burns); one ember. Then lamp_off.",
+   "shadow": {
+    "file": "props/lamp_dying_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "ticks": [
+    3,
+    4,
+    8
+   ],
+   "loop": false,
+   "frameBy": "time",
+   "stateOf": "lamp"
+  },
+  "lamp_shot": {
+   "states": {
+    "intact": "props/lamp_shot.png"
+   },
+   "w": 73,
+   "h": 81,
+   "cells": [
+    2.28,
+    2.53
+   ],
+   "anchor": [
+    0.4863,
+    0.1235
+   ],
+   "anchorPx": [
+    35.5,
+    10
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 4,
+   "fps": 16.0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_shot_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the moment it is shot, 4 frames: the glass stars white, bursts in lit shards, the shards fall dark, the last of them. Then lamp_swing_broken.",
+   "shadow": {
+    "file": "props/lamp_shot_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "ticks": [
+    2,
+    3,
+    4,
+    6
+   ],
+   "loop": false,
+   "frameBy": "time",
+   "stateOf": "lamp"
+  },
+  "lamp_swing_lit": {
+   "states": {
+    "intact": "props/lamp_swing_lit.png"
+   },
+   "w": 49,
+   "h": 61,
+   "cells": [
+    1.53,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 5,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_lit_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the lit lamp at 5 tilts (frame 2 = lamp_intact.png, pixel for pixel)",
+   "shadow": {
+    "file": "props/lamp_swing_lit_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    24.5,
+    5
+   ],
+   "stateOf": "lamp"
+  },
+  "lamp_swing_wide_lit": {
+   "states": {
+    "intact": "props/lamp_swing_wide_lit.png"
+   },
+   "w": 91,
+   "h": 61,
+   "cells": [
+    2.84,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 6,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_wide_lit_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the lit lamp at 6 steep tilts, for a lamp fixed under a girder (cord 0), whose whole swing is in its own chain",
+   "shadow": {
+    "file": "props/lamp_swing_wide_lit_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    45.5,
+    5
+   ],
+   "stateOf": "lamp"
+  },
+  "lamp_swing_off": {
+   "states": {
+    "intact": "props/lamp_swing_off.png"
+   },
+   "w": 49,
+   "h": 61,
+   "cells": [
+    1.53,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 5,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_off_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the dark whole lamp at 5 tilts (frame 2 = lamp_off.png)",
+   "shadow": {
+    "file": "props/lamp_swing_off_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    24.5,
+    5
+   ],
+   "stateOf": "lamp"
+  },
+  "lamp_swing_wide_off": {
+   "states": {
+    "intact": "props/lamp_swing_wide_off.png"
+   },
+   "w": 91,
+   "h": 61,
+   "cells": [
+    2.84,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 6,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_wide_off_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the dark whole lamp at the 6 steep tilts",
+   "shadow": {
+    "file": "props/lamp_swing_wide_off_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    45.5,
+    5
+   ],
+   "stateOf": "lamp"
+  },
+  "lamp_swing_broken": {
+   "states": {
+    "intact": "props/lamp_swing_broken.png"
+   },
+   "w": 49,
+   "h": 61,
+   "cells": [
+    1.53,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    24.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 5,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_broken_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the shot lamp at 5 tilts: glass gone but for its teeth, the floor hanging open, the right post sprung. Frame 2 is its rest.",
+   "shadow": {
+    "file": "props/lamp_swing_broken_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -12,
+    -6,
+    0,
+    6,
+    12
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    24.5,
+    5
+   ],
+   "stateOf": "lamp"
+  },
+  "lamp_swing_wide_broken": {
+   "states": {
+    "intact": "props/lamp_swing_wide_broken.png"
+   },
+   "w": 91,
+   "h": 61,
+   "cells": [
+    2.84,
+    1.91
+   ],
+   "anchor": [
+    0.5,
+    0.0328
+   ],
+   "anchorPx": [
+    45.5,
+    2
+   ],
+   "z": -3,
+   "facing": "right",
+   "frames": 6,
+   "fps": 0,
+   "render": {
+    "shadow": "separate",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1,
+    "emissive": "as props.lamp: the renderer keeps the lamp bright; the lit glass and the filament are the light"
+   },
+   "normals": {
+    "intact": "props/lamp_swing_wide_broken_n.png",
+    "convention": "OpenGL (green = up)"
+   },
+   "note": "the shot lamp at the 6 steep tilts",
+   "shadow": {
+    "file": "props/lamp_swing_wide_broken_sh.png",
+    "note": "same size and frames; flat steps of #0a0c0c at alpha 47 / 94 / 140; draw it under the piece"
+   },
+   "tilts": [
+    -30,
+    -24,
+    -18,
+    18,
+    24,
+    30
+   ],
+   "frameBy": "tilt",
+   "pivotPx": [
+    45.5,
+    5
+   ],
+   "stateOf": "lamp"
+  }
+ },
+ "glow": {
+  "proposal": "props/lamp_glow_px.png",
+  "w": 128,
+  "h": 128,
+  "offset": [
+   0,
+   44
+  ],
+  "note": "the light pool as 3 flat steps with hard edges, in the place of props.lamp.glow (lamp_glow.png, soft, made for additive). Its centre = the middle of the glass, 44 px under the lamp's anchor. Each step is one colour and one density: ['#ffd27a', '#ffb54a', '#d98a3a'] at alpha [150, 92, 48]. The pool hangs low (the cap keeps the light off the ceiling). dying frame 0 = the two inner steps only; afterglow, ember, off, broken = no pool.",
+  "variant": {
+   "file": "props/lamp_glow_px_dither.png",
+   "note": "the same zones with alpha 0 or 255 only: lit pixels in three fixed patterns (1 in 2, 1 in 4, 1 in 8). A purist's form; it may read as a stippled band and shimmer on a swinging lamp."
+  }
+ }
+}

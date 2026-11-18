@@ -1,0 +1,158 @@
+{
+ "body": "art/chars/v3/king/unarmed/out/unarmed96/pixel/unarmed_fragment_96.json#catch (its ticks)",
+ "sprites": {
+  "file": "catch.png",
+  "cell": [
+   60,
+   56
+  ],
+  "cells": [
+   "falling a",
+   "falling b",
+   "the canopy folding",
+   "the canopy flat on the floor"
+  ],
+  "anchor": "the cell's TOP-left at `at` (frame px; the sprite stands on the cell's bottom, centred)"
+ },
+ "frames": [
+  {
+   "ticks": 8,
+   "sprite": 0,
+   "at": [
+    20,
+    -60
+   ],
+   "weapon": null,
+   "events": [
+    "weapon:arrives"
+   ]
+  },
+  {
+   "ticks": 6,
+   "sprite": 1,
+   "at": [
+    22,
+    -46
+   ],
+   "weapon": null,
+   "events": []
+  },
+  {
+   "ticks": 10,
+   "sprite": 0,
+   "at": [
+    20,
+    -32
+   ],
+   "weapon": null,
+   "events": []
+  },
+  {
+   "ticks": 3,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     38,
+     28
+    ],
+    "aim": -1.1,
+    "layer": "back"
+   },
+   "events": [
+    "catch",
+    "weapon:picked"
+   ],
+   "sprite": 2,
+   "at": [
+    16,
+    -31
+   ]
+  },
+  {
+   "ticks": 3,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     41,
+     60
+    ],
+    "aim": 3.3,
+    "layer": "front"
+   },
+   "events": [],
+   "sprite": 3,
+   "at": [
+    19,
+    1
+   ]
+  },
+  {
+   "ticks": 7,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     42,
+     63
+    ],
+    "aim": 3.3,
+    "layer": "front"
+   },
+   "events": []
+  },
+  {
+   "ticks": 5,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     40,
+     58
+    ],
+    "aim": 3.0,
+    "layer": "front"
+   },
+   "events": []
+  },
+  {
+   "ticks": 6,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": []
+  },
+  {
+   "ticks": 12,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": []
+  },
+  {
+   "ticks": 30,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": [
+    "reveal"
+   ]
+  }
+ ],
+ "note": "the weapon's side of the unarmed set's catch, on the same ticks and hand points as the shotgun's catch.json (the body is one builder's): frames 0-2 it comes down, 3 the catch (its grip lands on the hand), 3-4 what carried it lets go, 5-6 in the hands, 7-9 held up behind his head (layer back), the reveal from 9. Its carrier is the parachute: on the catch it folds, then lies on the floor."
+}

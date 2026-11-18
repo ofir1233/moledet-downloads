@@ -1,0 +1,592 @@
+{
+ "id": "cargo_lift",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A cargo lift rated for 'enough': one chain lets go and the cage swings on the other, then the whole thing comes down and the floor drops out.",
+ "source": {
+  "intact": "props/cargo_lift_intact.png",
+  "crop": null,
+  "w": 118,
+  "h": 223,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "cargo_lift_col.png",
+   "n": "cargo_lift_n.png",
+   "mat": "cargo_lift_mat.png",
+   "parts": "cargo_lift_parts.png",
+   "grain": "cargo_lift_grain.png",
+   "inside": "cargo_lift_inside.png",
+   "under": {
+    "col": "cargo_lift_under_col.png",
+    "n": "cargo_lift_under_n.png",
+    "mat": "cargo_lift_under_mat.png",
+    "parts": "cargo_lift_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 chained: the left chain lets go of the beam; the cage swings on the right chain",
+  "3 chained: the right chain goes, it falls",
+  "4 chained/bolted: chains and floor come off the cage on landing"
+ ],
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png: a stretched link",
+  "broken": "orders 1-4 (drop)"
+ },
+ "pieces": [
+  {
+   "id": "beam",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 215.6,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    198,
+    98,
+    4
+   ],
+   "at": [
+    9,
+    2
+   ],
+   "centre": [
+    58.0,
+    4.0
+   ],
+   "outline": [
+    [
+     -49.0,
+     -2.0
+    ],
+    [
+     49.0,
+     -2.0
+    ],
+    [
+     49.0,
+     2.0
+    ],
+    [
+     -49.0,
+     2.0
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "the top beam (anchored)",
+   "stays": true,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "chain_l",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 368.5,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    14,
+    0,
+    11,
+    116
+   ],
+   "at": [
+    14,
+    10
+   ],
+   "centre": [
+    20.9,
+    67.9
+   ],
+   "outline": [
+    [
+     -6.9,
+     -55.9
+    ],
+    [
+     -4.9,
+     -57.9
+    ],
+    [
+     -1.9,
+     -57.9
+    ],
+    [
+     4.1,
+     -51.9
+    ],
+    [
+     4.1,
+     58.1
+    ],
+    [
+     -3.9,
+     58.1
+    ],
+    [
+     -6.9,
+     -53.9
+    ]
+   ],
+   "partIndex": 2,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      125,
+      204,
+      2,
+      1
+     ],
+     "at": [
+      17,
+      124
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "chain_r",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 377.9,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    0,
+    12,
+    116
+   ],
+   "at": [
+    90,
+    10
+   ],
+   "centre": [
+    95.0,
+    69.3
+   ],
+   "outline": [
+    [
+     -5.0,
+     12.7
+    ],
+    [
+     -4.0,
+     -53.3
+    ],
+    [
+     2.0,
+     -59.3
+    ],
+    [
+     5.0,
+     -59.3
+    ],
+    [
+     7.0,
+     -57.3
+    ],
+    [
+     7.0,
+     -55.3
+    ],
+    [
+     4.0,
+     56.7
+    ],
+    [
+     -5.0,
+     56.7
+    ]
+   ],
+   "partIndex": 3,
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      115,
+      204,
+      8,
+      2
+     ],
+     "at": [
+      91,
+      124
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cage",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 2645.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    124,
+    0,
+    100,
+    80
+   ],
+   "at": [
+    8,
+    126
+   ],
+   "centre": [
+    56.9,
+    176.7
+   ],
+   "outline": [
+    [
+     -48.9,
+     -28.7
+    ],
+    [
+     -39.9,
+     -50.7
+    ],
+    [
+     42.1,
+     -50.7
+    ],
+    [
+     51.1,
+     -1.7
+    ],
+    [
+     51.1,
+     29.3
+    ],
+    [
+     -43.9,
+     29.3
+    ],
+    [
+     -45.9,
+     26.3
+    ],
+    [
+     -48.9,
+     21.3
+    ]
+   ],
+   "partIndex": 4,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      95,
+      204,
+      8,
+      2
+     ],
+     "at": [
+      17,
+      127
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      105,
+      204,
+      8,
+      2
+     ],
+     "at": [
+      91,
+      127
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      100,
+      198,
+      94,
+      3
+     ],
+     "at": [
+      14,
+      203
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      27,
+      0,
+      95,
+      85
+     ],
+     "at": [
+      8,
+      126
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 6,
+      "squeeze": 0.9
+     }
+    }
+   ]
+  },
+  {
+   "id": "floor",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 605.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    100,
+    118,
+    94,
+    13
+   ],
+   "at": [
+    14,
+    205
+   ],
+   "centre": [
+    62.4,
+    211.9
+   ],
+   "outline": [
+    [
+     -48.4,
+     -5.9
+    ],
+    [
+     -23.4,
+     -6.9
+    ],
+    [
+     15.6,
+     -6.9
+    ],
+    [
+     45.6,
+     -5.9
+    ],
+    [
+     45.6,
+     6.1
+    ],
+    [
+     -41.4,
+     6.1
+    ],
+    [
+     -45.4,
+     2.1
+    ],
+    [
+     -48.4,
+     -3.9
+    ]
+   ],
+   "partIndex": 5,
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      0,
+      204,
+      93,
+      2
+     ],
+     "at": [
+      14,
+      206
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cage_in",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 2068.0,
+   "layer": "inside",
+   "z": 0.5,
+   "atlas": [
+    0,
+    118,
+    98,
+    78
+   ],
+   "at": [
+    9,
+    127
+   ],
+   "centre": [
+    56.0,
+    179.3
+   ],
+   "outline": [
+    [
+     -47.0,
+     -31.3
+    ],
+    [
+     -38.0,
+     -52.3
+    ],
+    [
+     42.0,
+     -52.3
+    ],
+    [
+     51.0,
+     -4.3
+    ],
+    [
+     51.0,
+     25.7
+    ],
+    [
+     -42.0,
+     25.7
+    ],
+    [
+     -44.0,
+     23.7
+    ],
+    [
+     -47.0,
+     18.7
+    ]
+   ],
+   "partIndex": 6,
+   "what": "STAND-IN: the inside of cage",
+   "inner_of": "cage",
+   "standIn": true,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j04",
+   "a": "chain_l",
+   "b": "beam",
+   "kind": "chained",
+   "strength": 0.3,
+   "order": 1,
+   "at": [
+    14,
+    8
+   ],
+   "rapier": "rope",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "chain_r",
+   "b": "beam",
+   "kind": "chained",
+   "strength": 0.6,
+   "order": 1,
+   "at": [
+    89,
+    9
+   ],
+   "rapier": "rope",
+   "hp": 60,
+   "radius": 8,
+   "note": "held as a hinge for 2 s, then it lets go (order 3 in game terms)"
+  },
+  {
+   "id": "j01",
+   "a": "cage",
+   "b": "chain_l",
+   "kind": "chained",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    20.5,
+    126.0
+   ],
+   "rapier": "rope",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "cage",
+   "b": "chain_r",
+   "kind": "chained",
+   "strength": 0.6,
+   "order": 4,
+   "at": [
+    94.5,
+    126.0
+   ],
+   "rapier": "rope",
+   "hp": 60,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "cage",
+   "b": "floor",
+   "kind": "bolted",
+   "strength": 0.4,
+   "order": 4,
+   "at": [
+    60.5,
+    204.9
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "cage_in",
+   "b": "cage",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    56.0,
+    179.3
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [],
+ "notes": []
+}

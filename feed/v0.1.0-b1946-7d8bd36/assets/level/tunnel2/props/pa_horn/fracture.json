@@ -1,0 +1,2163 @@
+{
+ "id": "pa_horn",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "The regime's mouth, a parade horn two sizes too big for its bracket with its own cable down its throat: the pivot bolt shears and it falls out of the clamp, it hangs mouth-up by the cable and goes on announcing, the cable snaps and it drops; on the floor the bell splits, the can lets go of its cap and the coil springs out.",
+ "source": {
+  "intact": "props/pa_horn_mounted.png",
+  "crop": [
+   0,
+   0,
+   65,
+   72
+  ],
+  "w": 65,
+  "h": 72,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "pa_horn_col.png",
+   "n": "pa_horn_n.png",
+   "mat": "pa_horn_mat.png",
+   "parts": "pa_horn_parts.png",
+   "grain": "pa_horn_grain.png",
+   "inside": "pa_horn_inside.png",
+   "under": {
+    "col": "pa_horn_under_col.png",
+    "n": "pa_horn_under_n.png",
+    "mat": "pa_horn_under_mat.png",
+    "parts": "pa_horn_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 bolted/threaded: the pivot bolt of the clamp shears (and the loose nut drops): the horn falls out of its bracket and dangles on its cable, still talking",
+  "2 tied: the cable snaps at the grommet: it drops",
+  "3 threaded/crimped/glazed: on the floor the bell and the can come apart, the cap comes off, the lamp breaks",
+  "4 seamed/tied: the bell splits along its length, the plug rolls away, the coil and the tape wad spring out of the can, the tag goes",
+  "5 bolted/strapped: the repair plate and the clamp band come off the bell",
+  "6 hinged: the safety strap lets go of the bracket; 8 never in a normal break: the magnet stays in the can; the bracket stays anchored"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "the mounted face (animated; faces in tunnel/props_dressing_pa_horn.json)",
+  "damaged": "damaged.png here; in play the dangling face (order 1 gone)",
+  "broken": "the silent face; sparks"
+ },
+ "pieces": [
+  {
+   "id": "bracket",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 108.4,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    81,
+    0,
+    25,
+    18
+   ],
+   "at": [
+    20,
+    0
+   ],
+   "centre": [
+    31.7,
+    5.6
+   ],
+   "outline": [
+    [
+     -11.7,
+     -4.6
+    ],
+    [
+     -10.7,
+     -5.6
+    ],
+    [
+     12.3,
+     -5.6
+    ],
+    [
+     13.3,
+     -4.6
+    ],
+    [
+     13.3,
+     -1.6
+    ],
+    [
+     2.3,
+     11.4
+    ],
+    [
+     1.3,
+     12.4
+    ],
+    [
+     -2.7,
+     12.4
+    ],
+    [
+     -11.7,
+     0.4
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "the clamp plate bolted under the girder, the strap of the clamp, the cable grommet (anchored: it stays)",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      250,
+      22,
+      2,
+      1
+     ],
+     "at": [
+      31,
+      16
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      8,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      42,
+      2
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      12,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      24,
+      2
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "bolt_loose",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 9.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    151,
+    22,
+    5,
+    5
+   ],
+   "at": [
+    40,
+    4
+   ],
+   "centre": [
+    42.5,
+    6.9
+   ],
+   "outline": [
+    [
+     -2.5,
+     -0.9
+    ],
+    [
+     -0.5,
+     -2.9
+    ],
+    [
+     0.5,
+     -2.9
+    ],
+    [
+     2.5,
+     -0.9
+    ],
+    [
+     2.5,
+     1.1
+    ],
+    [
+     1.5,
+     2.1
+    ],
+    [
+     -1.5,
+     2.1
+    ],
+    [
+     -2.5,
+     1.1
+    ]
+   ],
+   "partIndex": 2,
+   "what": "the nut that was never tightened: it goes first",
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      4,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      42,
+      5
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "strap",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 23.7,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    208,
+    0,
+    5,
+    12
+   ],
+   "at": [
+    22,
+    4
+   ],
+   "centre": [
+    25.0,
+    10.3
+   ],
+   "outline": [
+    [
+     -3.0,
+     3.7
+    ],
+    [
+     -2.0,
+     -3.3
+    ],
+    [
+     -1.0,
+     -6.3
+    ],
+    [
+     1.0,
+     -6.3
+    ],
+    [
+     2.0,
+     -5.3
+    ],
+    [
+     2.0,
+     4.7
+    ],
+    [
+     0.0,
+     5.7
+    ],
+    [
+     -2.0,
+     5.7
+    ],
+    [
+     -3.0,
+     4.7
+    ]
+   ],
+   "partIndex": 3,
+   "what": "the perforated safety strap that was never bolted to the horn: it swings on its one bolt",
+   "edges": [
+    {
+     "joint": "j06",
+     "atlas": [
+      16,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      25,
+      5
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      52,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      23,
+      14
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cone_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 142.5,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    152,
+    0,
+    31,
+    15
+   ],
+   "at": [
+    26,
+    12
+   ],
+   "centre": [
+    44.6,
+    19.6
+   ],
+   "outline": [
+    [
+     -18.6,
+     -1.6
+    ],
+    [
+     1.4,
+     -7.6
+    ],
+    [
+     9.4,
+     -7.6
+    ],
+    [
+     11.4,
+     -1.6
+    ],
+    [
+     12.4,
+     4.4
+    ],
+    [
+     12.4,
+     7.4
+    ],
+    [
+     10.4,
+     7.4
+    ],
+    [
+     -4.6,
+     6.4
+    ],
+    [
+     -18.6,
+     3.4
+    ]
+   ],
+   "partIndex": 4,
+   "what": "the bell, its rolled rim and what is seen of its inside: it splits along its length on the floor",
+   "shardOf": "cone",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      141,
+      22,
+      8,
+      5
+     ],
+     "at": [
+      29,
+      17
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      24,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      46,
+      12
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      47,
+      22,
+      31,
+      6
+     ],
+     "at": [
+      26,
+      22
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      243,
+      22,
+      1,
+      2
+     ],
+     "at": [
+      27,
+      18
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      192,
+      22,
+      7,
+      3
+     ],
+     "at": [
+      35,
+      22
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      28,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      50,
+      21
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      36,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      47,
+      12
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      115,
+      0,
+      31,
+      16
+     ],
+     "at": [
+      26,
+      12
+     ],
+     "crease": {
+      "dent": [
+       [
+        41,
+        22
+       ],
+       [
+        46,
+        20
+       ],
+       [
+        51,
+        23
+       ]
+      ],
+      "shade": [
+       0,
+       1
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "cone_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 149.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    0,
+    0,
+    31,
+    20
+   ],
+   "at": [
+    26,
+    23
+   ],
+   "centre": [
+    45.3,
+    32.3
+   ],
+   "outline": [
+    [
+     -19.3,
+     -9.3
+    ],
+    [
+     -15.3,
+     -9.3
+    ],
+    [
+     3.7,
+     -7.3
+    ],
+    [
+     9.7,
+     -6.3
+    ],
+    [
+     11.7,
+     -5.3
+    ],
+    [
+     11.7,
+     -1.3
+    ],
+    [
+     9.7,
+     7.7
+    ],
+    [
+     6.7,
+     10.7
+    ],
+    [
+     3.7,
+     10.7
+    ],
+    [
+     -19.3,
+     -3.3
+    ]
+   ],
+   "partIndex": 5,
+   "what": "the bell, its rolled rim and what is seen of its inside: it splits along its length on the floor",
+   "shardOf": "cone",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      240,
+      0,
+      9,
+      8
+     ],
+     "at": [
+      28,
+      23
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      94,
+      22,
+      31,
+      5
+     ],
+     "at": [
+      26,
+      23
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      40,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      27,
+      23
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      228,
+      0,
+      10,
+      8
+     ],
+     "at": [
+      34,
+      25
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      165,
+      22,
+      8,
+      4
+     ],
+     "at": [
+      47,
+      25
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      33,
+      0,
+      31,
+      20
+     ],
+     "at": [
+      26,
+      23
+     ],
+     "crease": {
+      "dent": [
+       [
+        41,
+        22
+       ],
+       [
+        46,
+        20
+       ],
+       [
+        51,
+        23
+       ]
+      ],
+      "shade": [
+       0,
+       1
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "patch",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 21.5,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    23,
+    22,
+    7,
+    7
+   ],
+   "at": [
+    34,
+    24
+   ],
+   "centre": [
+    37.4,
+    27.5
+   ],
+   "outline": [
+    [
+     -3.4,
+     -3.5
+    ],
+    [
+     -0.4,
+     -3.5
+    ],
+    [
+     2.6,
+     -2.5
+    ],
+    [
+     3.6,
+     -1.5
+    ],
+    [
+     3.6,
+     2.5
+    ],
+    [
+     2.6,
+     3.5
+    ],
+    [
+     -0.4,
+     3.5
+    ],
+    [
+     -2.4,
+     2.5
+    ],
+    [
+     -3.4,
+     1.5
+    ]
+   ],
+   "partIndex": 6,
+   "what": "the riveted repair plate: the one honest piece of work on it",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      0,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      35,
+      24
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      201,
+      22,
+      7,
+      3
+     ],
+     "at": [
+      34,
+      24
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      210,
+      22,
+      7,
+      3
+     ],
+     "at": [
+      34,
+      27
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "plug",
+   "material": "brass",
+   "mat": 12,
+   "massClass": "feather",
+   "mass": 11.9,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    32,
+    22,
+    3,
+    7
+   ],
+   "at": [
+    49,
+    23
+   ],
+   "centre": [
+    50.5,
+    26.5
+   ],
+   "outline": [
+    [
+     -1.5,
+     -2.5
+    ],
+    [
+     -0.5,
+     -3.5
+    ],
+    [
+     0.5,
+     -3.5
+    ],
+    [
+     1.5,
+     -2.5
+    ],
+    [
+     1.5,
+     2.5
+    ],
+    [
+     0.5,
+     3.5
+    ],
+    [
+     -0.5,
+     3.5
+    ],
+    [
+     -1.5,
+     2.5
+    ]
+   ],
+   "partIndex": 7,
+   "what": "the brass plug in the throat (the uvula): it rolls away",
+   "edges": [
+    {
+     "joint": "j12",
+     "atlas": [
+      32,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      50,
+      24
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      44,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      49,
+      24
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "driver",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 112.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    66,
+    0,
+    13,
+    19
+   ],
+   "at": [
+    14,
+    14
+   ],
+   "centre": [
+    20.2,
+    23.3
+   ],
+   "outline": [
+    [
+     -6.2,
+     -9.3
+    ],
+    [
+     -3.2,
+     -9.3
+    ],
+    [
+     6.8,
+     -8.3
+    ],
+    [
+     6.8,
+     8.7
+    ],
+    [
+     5.8,
+     9.7
+    ],
+    [
+     3.8,
+     9.7
+    ],
+    [
+     -6.2,
+     7.7
+    ]
+   ],
+   "partIndex": 8,
+   "what": "the can: the driver body with the regime badge, and its flange",
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      148,
+      0,
+      2,
+      16
+     ],
+     "at": [
+      15,
+      14
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      42,
+      22,
+      3,
+      7
+     ],
+     "at": [
+      24,
+      16
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      215,
+      0,
+      2,
+      10
+     ],
+     "at": [
+      25,
+      22
+     ]
+    },
+    {
+     "joint": "j17",
+     "atlas": [
+      182,
+      22,
+      8,
+      3
+     ],
+     "at": [
+      15,
+      14
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      48,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      21,
+      15
+     ]
+    },
+    {
+     "joint": "j19",
+     "atlas": [
+      227,
+      22,
+      4,
+      3
+     ],
+     "at": [
+      18,
+      29
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cap",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 39.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    108,
+    0,
+    5,
+    17
+   ],
+   "at": [
+    9,
+    14
+   ],
+   "centre": [
+    11.8,
+    22.1
+   ],
+   "outline": [
+    [
+     -2.8,
+     -5.1
+    ],
+    [
+     -1.8,
+     -7.1
+    ],
+    [
+     -0.8,
+     -8.1
+    ],
+    [
+     2.2,
+     -8.1
+    ],
+    [
+     2.2,
+     8.9
+    ],
+    [
+     0.2,
+     8.9
+    ],
+    [
+     -0.8,
+     7.9
+    ],
+    [
+     -2.8,
+     3.9
+    ]
+   ],
+   "partIndex": 9,
+   "what": "the back cap of the can (black iron)",
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      192,
+      0,
+      2,
+      15
+     ],
+     "at": [
+      12,
+      14
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "lamp",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 5.8,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    80,
+    22,
+    6,
+    6
+   ],
+   "at": [
+    16,
+    10
+   ],
+   "centre": [
+    19.1,
+    13.0
+   ],
+   "outline": [
+    [
+     -3.1,
+     -1.0
+    ],
+    [
+     -1.1,
+     -3.0
+    ],
+    [
+     0.9,
+     -3.0
+    ],
+    [
+     1.9,
+     -2.0
+    ],
+    [
+     2.9,
+     0.0
+    ],
+    [
+     2.9,
+     2.0
+    ],
+    [
+     1.9,
+     3.0
+    ],
+    [
+     0.9,
+     3.0
+    ],
+    [
+     -2.1,
+     2.0
+    ],
+    [
+     -3.1,
+     1.0
+    ]
+   ],
+   "partIndex": 10,
+   "emit": "dark",
+   "what": "the ON AIR lamp",
+   "edges": [
+    {
+     "joint": "j17",
+     "atlas": [
+      219,
+      22,
+      6,
+      3
+     ],
+     "at": [
+      16,
+      13
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "band",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 25.9,
+   "layer": "shell",
+   "z": 5,
+   "atlas": [
+    185,
+    0,
+    5,
+    15
+   ],
+   "at": [
+    30,
+    17
+   ],
+   "centre": [
+    32.5,
+    24.7
+   ],
+   "outline": [
+    [
+     -2.5,
+     -2.7
+    ],
+    [
+     -1.5,
+     -6.7
+    ],
+    [
+     0.5,
+     -7.7
+    ],
+    [
+     1.5,
+     -7.7
+    ],
+    [
+     2.5,
+     -2.7
+    ],
+    [
+     2.5,
+     -0.7
+    ],
+    [
+     1.5,
+     7.3
+    ],
+    [
+     -1.5,
+     7.3
+    ],
+    [
+     -2.5,
+     -0.7
+    ]
+   ],
+   "partIndex": 11,
+   "what": "the clamp band round the throat with its wing nut: it goes down with the horn",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      246,
+      22,
+      2,
+      1
+     ],
+     "at": [
+      31,
+      19
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      88,
+      22,
+      4,
+      6
+     ],
+     "at": [
+      30,
+      18
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      17,
+      22,
+      4,
+      8
+     ],
+     "at": [
+      30,
+      22
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      37,
+      22,
+      3,
+      7
+     ],
+     "at": [
+      32,
+      22
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cable",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 5.4,
+   "layer": "shell",
+   "z": 6,
+   "atlas": [
+    127,
+    22,
+    12,
+    5
+   ],
+   "at": [
+    36,
+    7
+   ],
+   "centre": [
+    42.0,
+    10.1
+   ],
+   "outline": [
+    [
+     -6.0,
+     -3.1
+    ],
+    [
+     -5.0,
+     -3.1
+    ],
+    [
+     6.0,
+     0.9
+    ],
+    [
+     6.0,
+     1.9
+    ],
+    [
+     2.0,
+     1.9
+    ],
+    [
+     -1.0,
+     0.9
+    ],
+    [
+     -5.0,
+     -1.1
+    ],
+    [
+     -6.0,
+     -2.1
+    ]
+   ],
+   "partIndex": 12,
+   "what": "State Flex: the cable from the grommet to the lip (it runs on down the throat to the plug)",
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      20,
+      32,
+      2,
+      1
+     ],
+     "at": [
+      46,
+      11
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "tape",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 0.8,
+   "layer": "shell",
+   "z": 6,
+   "atlas": [
+    175,
+    22,
+    5,
+    4
+   ],
+   "at": [
+    48,
+    8
+   ],
+   "centre": [
+    50.5,
+    10.5
+   ],
+   "outline": [
+    [
+     -2.5,
+     -0.5
+    ],
+    [
+     -0.5,
+     -2.5
+    ],
+    [
+     0.5,
+     -2.5
+    ],
+    [
+     2.5,
+     -0.5
+    ],
+    [
+     2.5,
+     1.5
+    ],
+    [
+     -2.5,
+     1.5
+    ]
+   ],
+   "partIndex": 13,
+   "what": "the wad of old tape that holds the cable on the lip",
+   "edges": [
+    {
+     "joint": "j13",
+     "atlas": [
+      158,
+      22,
+      5,
+      5
+     ],
+     "at": [
+      48,
+      11
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "tag",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 2.8,
+   "layer": "shell",
+   "z": 6,
+   "atlas": [
+    219,
+    0,
+    7,
+    9
+   ],
+   "at": [
+    16,
+    30
+   ],
+   "centre": [
+    19.4,
+    35.1
+   ],
+   "outline": [
+    [
+     -3.4,
+     -2.1
+    ],
+    [
+     -0.4,
+     -5.1
+    ],
+    [
+     0.6,
+     -5.1
+    ],
+    [
+     3.6,
+     -2.1
+    ],
+    [
+     3.6,
+     1.9
+    ],
+    [
+     1.6,
+     3.9
+    ],
+    [
+     -2.4,
+     3.9
+    ],
+    [
+     -3.4,
+     2.9
+    ]
+   ],
+   "partIndex": 14,
+   "what": "the stamped inspection tag on its string (paper)",
+   "edges": [
+    {
+     "joint": "j19",
+     "atlas": [
+      233,
+      22,
+      4,
+      3
+     ],
+     "at": [
+      18,
+      30
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "magnet",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 37.4,
+   "layer": "inside",
+   "z": 1.0,
+   "atlas": [
+    196,
+    0,
+    10,
+    12
+   ],
+   "at": [
+    14,
+    17
+   ],
+   "centre": [
+    19.0,
+    22.9
+   ],
+   "outline": [
+    [
+     -5.0,
+     -4.9
+    ],
+    [
+     -4.0,
+     -5.9
+    ],
+    [
+     1.0,
+     -5.9
+    ],
+    [
+     4.0,
+     -4.9
+    ],
+    [
+     5.0,
+     -3.9
+    ],
+    [
+     5.0,
+     5.1
+    ],
+    [
+     4.0,
+     6.1
+    ],
+    [
+     1.0,
+     6.1
+    ],
+    [
+     -4.0,
+     5.1
+    ],
+    [
+     -5.0,
+     4.1
+    ]
+   ],
+   "partIndex": 15,
+   "what": "the magnet: a ring of dark iron",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "coil",
+   "material": "brass",
+   "mat": 12,
+   "massClass": "feather",
+   "mass": 23.1,
+   "layer": "inside",
+   "z": 1.2,
+   "atlas": [
+    9,
+    22,
+    6,
+    8
+   ],
+   "at": [
+    16,
+    19
+   ],
+   "centre": [
+    19.0,
+    22.9
+   ],
+   "outline": [
+    [
+     -3.0,
+     -2.9
+    ],
+    [
+     -2.0,
+     -3.9
+    ],
+    [
+     1.0,
+     -3.9
+    ],
+    [
+     3.0,
+     -1.9
+    ],
+    [
+     3.0,
+     3.1
+    ],
+    [
+     2.0,
+     4.1
+    ],
+    [
+     1.0,
+     4.1
+    ],
+    [
+     -2.0,
+     3.1
+    ],
+    [
+     -3.0,
+     2.1
+    ]
+   ],
+   "partIndex": 16,
+   "what": "the voice coil, copper",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "tape_wad",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 0.3,
+   "layer": "inside",
+   "z": 1.4,
+   "atlas": [
+    239,
+    22,
+    2,
+    3
+   ],
+   "at": [
+    18,
+    21
+   ],
+   "centre": [
+    19.1,
+    22.3
+   ],
+   "outline": [
+    [
+     -1.1,
+     -1.3
+    ],
+    [
+     0.9,
+     -1.3
+    ],
+    [
+     0.9,
+     1.7
+    ],
+    [
+     -0.1,
+     1.7
+    ],
+    [
+     -1.1,
+     0.7
+    ]
+   ],
+   "partIndex": 17,
+   "what": "a wad of old tape holding the lead in",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "throat_face",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 27.0,
+   "layer": "inside",
+   "z": 1.0,
+   "atlas": [
+    0,
+    22,
+    7,
+    8
+   ],
+   "at": [
+    23,
+    20
+   ],
+   "centre": [
+    26.5,
+    23.8
+   ],
+   "outline": [
+    [
+     -3.5,
+     -3.8
+    ],
+    [
+     1.5,
+     -3.8
+    ],
+    [
+     3.5,
+     -2.8
+    ],
+    [
+     3.5,
+     4.2
+    ],
+    [
+     1.5,
+     4.2
+    ],
+    [
+     -3.5,
+     3.2
+    ]
+   ],
+   "partIndex": 18,
+   "what": "the red-leaded throat mouth of the can, seen when the bell comes off",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j01",
+   "a": "band",
+   "b": "bracket",
+   "kind": "bolted",
+   "strength": 0.1,
+   "order": 1,
+   "at": [
+    32,
+    24
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8,
+   "note": "THE planned weak line: the pivot bolt of the clamp. It shears and the horn falls out of its bracket"
+  },
+  {
+   "id": "j05",
+   "a": "bolt_loose",
+   "b": "bracket",
+   "kind": "threaded",
+   "strength": 0.04,
+   "order": 1,
+   "at": [
+    42.0,
+    4.7
+   ],
+   "rapier": "fixed",
+   "hp": 4,
+   "radius": 8
+  },
+  {
+   "id": "j18",
+   "a": "driver",
+   "b": "strap",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 1,
+   "at": [
+    24.0,
+    15.4
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j20",
+   "a": "cable",
+   "b": "bracket",
+   "kind": "tied",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    35,
+    6
+   ],
+   "rapier": "rope",
+   "hp": 30,
+   "radius": 8,
+   "note": "the horn dangles here on its cable (a rope joint) and keeps talking; then the cable snaps and it drops"
+  },
+  {
+   "id": "j08",
+   "a": "cap",
+   "b": "driver",
+   "kind": "crimped",
+   "strength": 0.3,
+   "order": 3,
+   "at": [
+    13.0,
+    22.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j10",
+   "a": "cone_1",
+   "b": "driver",
+   "kind": "threaded",
+   "strength": 0.4,
+   "order": 3,
+   "at": [
+    26.0,
+    20.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8,
+   "note": "on the floor the bell and the can come apart at the flange"
+  },
+  {
+   "id": "j14",
+   "a": "cone_2",
+   "b": "driver",
+   "kind": "threaded",
+   "strength": 0.4,
+   "order": 3,
+   "at": [
+    26.0,
+    25.5
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8,
+   "note": "on the floor the bell and the can come apart at the flange"
+  },
+  {
+   "id": "j17",
+   "a": "driver",
+   "b": "lamp",
+   "kind": "glazed",
+   "strength": 0.1,
+   "order": 3,
+   "at": [
+    18.5,
+    15.0
+   ],
+   "rapier": "fixed",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "cone_1",
+   "b": "cone_2",
+   "kind": "seamed",
+   "strength": 0.05,
+   "order": 4,
+   "at": [
+    43.1,
+    24.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "cone_1",
+   "b": "plug",
+   "kind": "threaded",
+   "strength": 0.3,
+   "order": 4,
+   "at": [
+    50.3,
+    23.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j16",
+   "a": "cone_2",
+   "b": "plug",
+   "kind": "threaded",
+   "strength": 0.3,
+   "order": 4,
+   "at": [
+    49.8,
+    27.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j19",
+   "a": "driver",
+   "b": "tag",
+   "kind": "tied",
+   "strength": 0.2,
+   "order": 4,
+   "at": [
+    19.6,
+    30.2
+   ],
+   "rapier": "rope",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j23",
+   "a": "coil",
+   "b": "magnet",
+   "kind": "tied",
+   "strength": 0.2,
+   "order": 4,
+   "at": [
+    19.0,
+    22.9
+   ],
+   "rapier": "rope",
+   "hp": 20,
+   "radius": 8
+  },
+  {
+   "id": "j24",
+   "a": "tape_wad",
+   "b": "coil",
+   "kind": "tied",
+   "strength": 0.1,
+   "order": 4,
+   "at": [
+    19.1,
+    22.3
+   ],
+   "rapier": "rope",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "band",
+   "b": "cone_1",
+   "kind": "strapped",
+   "strength": 0.6,
+   "order": 5,
+   "at": [
+    32.2,
+    20.0
+   ],
+   "rapier": "fixed",
+   "hp": 60,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "band",
+   "b": "cone_2",
+   "kind": "strapped",
+   "strength": 0.6,
+   "order": 5,
+   "at": [
+    31.5,
+    27.5
+   ],
+   "rapier": "fixed",
+   "hp": 60,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "band",
+   "b": "patch",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 5,
+   "at": [
+    33.2,
+    25.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j11",
+   "a": "cone_1",
+   "b": "patch",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 5,
+   "at": [
+    37.5,
+    23.8
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j15",
+   "a": "cone_2",
+   "b": "patch",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 5,
+   "at": [
+    38.5,
+    29.3
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "bracket",
+   "b": "strap",
+   "kind": "hinged",
+   "strength": 0.5,
+   "order": 6,
+   "at": [
+    24,
+    5
+   ],
+   "rapier": "revolute",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "cable",
+   "b": "cone_1",
+   "kind": "tied",
+   "strength": 0.8,
+   "order": 7,
+   "at": [
+    46.5,
+    11.0
+   ],
+   "rapier": "rope",
+   "hp": 80,
+   "radius": 8
+  },
+  {
+   "id": "j13",
+   "a": "cone_1",
+   "b": "tape",
+   "kind": "strapped",
+   "strength": 0.8,
+   "order": 7,
+   "at": [
+    50.0,
+    12.0
+   ],
+   "rapier": "fixed",
+   "hp": 80,
+   "radius": 8
+  },
+  {
+   "id": "j21",
+   "a": "cable",
+   "b": "tape",
+   "kind": "tied",
+   "strength": 0.8,
+   "order": 7,
+   "at": [
+    50.5,
+    10.5
+   ],
+   "rapier": "rope",
+   "hp": 80,
+   "radius": 8
+  },
+  {
+   "id": "j22",
+   "a": "magnet",
+   "b": "driver",
+   "kind": "bolted",
+   "strength": 0.9,
+   "order": 8,
+   "at": [
+    19.0,
+    22.9
+   ],
+   "rapier": "fixed",
+   "hp": 90,
+   "radius": 8
+  },
+  {
+   "id": "j25",
+   "a": "throat_face",
+   "b": "driver",
+   "kind": "backed",
+   "strength": 1.0,
+   "order": 99,
+   "at": [
+    26.5,
+    23.8
+   ],
+   "rapier": "fixed",
+   "hp": 100,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j18",
+   "kind": "lift",
+   "at": [
+    22,
+    15
+   ]
+  },
+  {
+   "joint": "j18",
+   "kind": "lift",
+   "at": [
+    25,
+    15
+   ]
+  }
+ ],
+ "notes": [
+  "cut from the mounted face, frame 0 (pa_horn_mounted.png, crop 0 0 65 72); the baked wall shadow of form A ships alone as shadow.png",
+  "anchor of the sprite: the middle of pixel column 32, row 0",
+  "mount: cord 0: the clamp plate bolted under a girder",
+  "the cable is a rope joint between the bracket (at the grommet) and the horn: while it holds, the horn hangs mouth-up; the animated faces of that state are the dangling strips of form A",
+  "insides (magnet, coil, tape wad, throat face) are hand-placed pixels in the horn's own palette, not stand-ins"
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "file": "pickup.png",
+ "cell": [
+  52,
+  57
+ ],
+ "anchor": "bottom centre of each cell (lying: the floor line; falling: the renderer puts the pickup point 6 px above the cell's bottom)",
+ "states": {
+  "lying": {
+   "cols": [
+    0,
+    1
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "it rests on its grip butt and its swivel (the row 15 degrees down), the tag flat on the floor before it; the stamp taps once a loop"
+  },
+  "falling": {
+   "cols": [
+    2,
+    3
+   ],
+   "fps": 4,
+   "loop": true,
+   "note": "it comes down under an approved form bowed like a canopy, on four strands of red tape; the form sways a pixel, the tag swings"
+  }
+ },
+ "grip": [
+  [
+   12,
+   47
+  ],
+  [
+   12,
+   47
+  ],
+  [
+   12,
+   35
+  ],
+  [
+   12,
+   35
+  ]
+ ],
+ "grip_note": "per cell: where the weapon's grip point is in the cell (px, y down), for a hand-over or a catch",
+ "star": "lying frames: the blue interlaced star on an ivory roundel floats over it, whole, bobbing a pixel (as the shotgun's pickup); falling frames: the gun's own tag hangs under it with the star"
+}

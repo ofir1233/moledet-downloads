@@ -1,0 +1,1041 @@
+{
+ "version": 1,
+ "pxPerCell": 32,
+ "include": [
+  "animals.json"
+ ],
+ "contract": "docs/LEVEL_ANIM_CONTRACT.md",
+ "builder": "art/level_anim/make_level_anim.py (J8a, account D)",
+ "anims": {
+  "cable_sparks": {
+   "on": {
+    "kind": "world",
+    "level": "tunnel",
+    "spots": [
+     {
+      "x": 24.5,
+      "y": 13.0
+     },
+     {
+      "x": 99.0,
+      "y": 13.0,
+      "flip": true
+     }
+    ],
+    "note": "hanging from the undersides of the two catwalks (row 13), over the main corridor"
+   },
+   "sheet": "cable_sparks.png",
+   "frame": [
+    48,
+    112
+   ],
+   "cells": [
+    1.5,
+    3.5
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "z": -1.5,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.4,
+    "emissive": "the sparks (self-lit)"
+   },
+   "states": {
+    "idle": {
+     "row": 0,
+     "frames": 12,
+     "fps": 8,
+     "loop": true,
+     "note": "a torn cable swaying, the copper end glints"
+    },
+    "spark": {
+     "row": 1,
+     "frames": 12,
+     "fps": 20,
+     "loop": false,
+     "next": "idle",
+     "hold": 0,
+     "lightLevels": [
+      1.0,
+      0.7,
+      0.45,
+      0.3,
+      0.2,
+      0.12,
+      0.08,
+      0.05,
+      0.03,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "default": "idle",
+   "phase": "random",
+   "glow": {
+    "sheet": "cable_sparks_glow.png",
+    "frame": [
+     64,
+     64
+    ],
+    "cells": [
+     4.0,
+     4.0
+    ],
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "at": [
+     0,
+     59
+    ],
+    "blend": "additive",
+    "layer": "fxGlow",
+    "rows": "states"
+   },
+   "light": {
+    "color": "#aad8ff",
+    "radius": 4,
+    "intensity": 1.0
+   },
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 10,
+     "plusRadius": true,
+     "state": "spark",
+     "delay": "distance",
+     "msPerCell": 20
+    },
+    {
+     "event": "projectile:hit",
+     "within": 1.5,
+     "state": "spark"
+    }
+   ],
+   "ambient": [
+    {
+     "state": "spark",
+     "every": [
+      1800,
+      6500
+     ],
+     "chance": 0.8
+    }
+   ],
+   "note": "the cable, its clamp and its shadow are in the sheet; the rubber takes the scene tint, the sparks are self-lit (bright enough to survive a tint if the renderer tints the whole quad)."
+  },
+  "drip_drop": {
+   "on": {
+    "kind": "spawned"
+   },
+   "sheet": "drip_drop.png",
+   "frame": [
+    3,
+    6
+   ],
+   "cells": [
+    0.09375,
+    0.1875
+   ],
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.4
+   },
+   "states": {
+    "fall": {
+     "row": 0,
+     "frames": 2,
+     "fps": 12,
+     "loop": true,
+     "move": {
+      "gravity": 30,
+      "vy0": 0,
+      "until": {
+       "px": "spot"
+      }
+     },
+     "then": "drip_splash"
+    }
+   },
+   "default": "fall"
+  },
+  "drip_form": {
+   "on": {
+    "kind": "layer",
+    "layer": "wall",
+    "spots": [
+     {
+      "at": [
+       632,
+       258
+      ],
+      "fall": 172,
+      "note": "the burst pipe, onto the tool board"
+     },
+     {
+      "at": [
+       747,
+       486
+      ],
+      "fall": 37,
+      "note": "the pipe end, onto the floor line"
+     },
+     {
+      "at": [
+       171,
+       152
+      ],
+      "fall": 52,
+      "note": "under the left wall fan, onto the pipe"
+     }
+    ]
+   },
+   "sheet": "drip_form.png",
+   "frame": [
+    7,
+    10
+   ],
+   "cells": [
+    0.21875,
+    0.3125
+   ],
+   "anchor": [
+    0.5,
+    0.0
+   ],
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.4
+   },
+   "states": {
+    "form": {
+     "row": 0,
+     "frames": 10,
+     "fps": 7,
+     "loop": false,
+     "next": "form",
+     "hold": [
+      600,
+      3200
+     ],
+     "spawn": [
+      {
+       "frame": 9,
+       "anim": "drip_drop",
+       "at": [
+        0,
+        6
+       ]
+      }
+     ]
+    }
+   },
+   "default": "form",
+   "phase": "random",
+   "note": "teal water of the painted drip stains; a drop leaves on frame 9 and falls the spot's `fall` px"
+  },
+  "drip_splash": {
+   "on": {
+    "kind": "spawned"
+   },
+   "sheet": "drip_splash.png",
+   "frame": [
+    15,
+    9
+   ],
+   "cells": [
+    0.46875,
+    0.28125
+   ],
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.4
+   },
+   "states": {
+    "splash": {
+     "row": 0,
+     "frames": 8,
+     "durations": [
+      40,
+      50,
+      60,
+      60,
+      70,
+      300,
+      600,
+      900
+     ],
+     "loop": false,
+     "final": true
+    }
+   },
+   "default": "splash",
+   "note": "removed after its last frame"
+  },
+  "fan": {
+   "on": {
+    "kind": "prop",
+    "prop": "fan",
+    "mode": "replace"
+   },
+   "sheet": "fan.png",
+   "frame": [
+    75,
+    81
+   ],
+   "cells": [
+    2.344,
+    2.531
+   ],
+   "anchor": [
+    0.4933,
+    0.4568
+   ],
+   "dz": 0,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0.35,
+    "pxScale": 1.4
+   },
+   "states": {
+    "idle": {
+     "row": 0,
+     "frames": 6,
+     "fps": 8,
+     "loop": true,
+     "note": "12 deg a frame, 5 blades: a slow turn"
+    },
+    "spin": {
+     "row": 1,
+     "frames": 4,
+     "fps": 24,
+     "loop": false,
+     "repeat": true,
+     "hold": [
+      3000,
+      7000
+     ],
+     "next": "idle",
+     "note": "motion-smeared blades; plays looped for `hold` ms then back to idle"
+    }
+   },
+   "default": "idle",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 10,
+     "plusRadius": true,
+     "state": "spin",
+     "delay": "distance",
+     "msPerCell": 25
+    }
+   ],
+   "ambient": [
+    {
+     "state": "spin",
+     "every": [
+      20000,
+      45000
+     ],
+     "chance": 0.35
+    }
+   ],
+   "note": "replaces the still fan (same frame size and anchor). The housing, recess and wall stains are the still art; the blades and their shadow on the duct plate are redrawn per frame."
+  },
+  "lamp": {
+   "on": {
+    "kind": "prop",
+    "prop": "lamp",
+    "mode": "replace"
+   },
+   "sheet": "lamp.png",
+   "frame": [
+    49,
+    64
+   ],
+   "cells": [
+    1.531,
+    2.0
+   ],
+   "anchor": [
+    0.4796,
+    0.0312
+   ],
+   "dz": 0,
+   "render": {
+    "shadow": "baked",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1.4,
+    "emissive": "the lantern glass"
+   },
+   "states": {
+    "sway": {
+     "row": 0,
+     "frames": 16,
+     "fps": 10,
+     "loop": true,
+     "note": "the draught: +-3 px at the lantern, chain sheared from the bracket"
+    },
+    "sway_off": {
+     "row": 1,
+     "frames": 16,
+     "fps": 10,
+     "loop": true,
+     "sync": "sway"
+    },
+    "swing": {
+     "row": 2,
+     "frames": 24,
+     "fps": 14,
+     "loop": false,
+     "next": "sway",
+     "hold": 0,
+     "note": "a blast throws it: 7.5 px, dying out"
+    },
+    "swing_off": {
+     "row": 3,
+     "frames": 24,
+     "fps": 14,
+     "loop": false,
+     "next": "sway_off",
+     "hold": 0,
+     "sync": "swing"
+    }
+   },
+   "default": "sway",
+   "phase": "random",
+   "glow": {
+    "sheet": "lamp_glow.png",
+    "frame": [
+     128,
+     128
+    ],
+    "cells": [
+     4.0,
+     4.0
+    ],
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "at": [
+     0,
+     39
+    ],
+    "blend": "additive",
+    "layer": "fxGlow",
+    "rows": "states",
+    "note": "the pool on the wall moves with the lantern; same art as props/lamp_glow.png"
+   },
+   "light": {
+    "color": "#ffb54a",
+    "radius": 6,
+    "intensity": 1.0,
+    "darkState": {
+     "sway": "sway_off",
+     "swing": "swing_off"
+    },
+    "curves": {
+     "flicker": {
+      "durations": [
+       70,
+       50,
+       110,
+       40,
+       60,
+       160
+      ],
+      "levels": [
+       0.3,
+       1,
+       0.15,
+       0.9,
+       0.4,
+       1
+      ]
+     },
+     "buzz": {
+      "durations": [
+       40,
+       40,
+       40,
+       40,
+       40,
+       40,
+       40,
+       40,
+       40,
+       40
+      ],
+      "levels": [
+       0.7,
+       1,
+       0.6,
+       1,
+       0.75,
+       1,
+       0.55,
+       1,
+       0.8,
+       1
+      ]
+     },
+     "blast": {
+      "durations": [
+       40,
+       70,
+       50,
+       140,
+       60,
+       260,
+       90,
+       120
+      ],
+      "levels": [
+       0,
+       1,
+       0,
+       0.25,
+       1,
+       0.1,
+       0.7,
+       1
+      ]
+     }
+    }
+   },
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 14,
+     "plusRadius": true,
+     "curve": "blast",
+     "state": "swing",
+     "delay": "distance",
+     "msPerCell": 22
+    },
+    {
+     "event": "chunk:landed",
+     "within": 6,
+     "curve": "flicker",
+     "state": "swing"
+    }
+   ],
+   "ambient": [
+    {
+     "curve": "flicker",
+     "every": [
+      9000,
+      26000
+     ],
+     "chance": 0.5
+    },
+    {
+     "curve": "buzz",
+     "every": [
+      5000,
+      14000
+     ],
+     "chance": 0.4
+    }
+   ],
+   "note": "replaces the still lamp; anchor = the top of the ceiling bracket as before (the frame is 8 px wider each side for the swing). Baked drop shadow (3 alpha steps) moves with it."
+  },
+  "laundry": {
+   "on": {
+    "kind": "prop",
+    "prop": "laundry_line",
+    "mode": "replace"
+   },
+   "sheet": "laundry.png",
+   "frame": [
+    146,
+    110
+   ],
+   "cells": [
+    4.562,
+    3.438
+   ],
+   "anchor": [
+    0.4932,
+    0.9364
+   ],
+   "dz": 0,
+   "render": {
+    "shadow": "baked",
+    "lampTint": true,
+    "hazeDepth": 0.3,
+    "pxScale": 1.4
+   },
+   "states": {
+    "breath": {
+     "row": 0,
+     "frames": 12,
+     "fps": 6,
+     "loop": true,
+     "note": "pinned at the line, hems move most; each garment its own phase"
+    },
+    "gust": {
+     "row": 1,
+     "frames": 10,
+     "fps": 12,
+     "loop": false,
+     "next": "breath",
+     "hold": 0
+    }
+   },
+   "default": "breath",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 14,
+     "plusRadius": true,
+     "state": "gust",
+     "delay": "distance",
+     "msPerCell": 25
+    }
+   ],
+   "note": "replaces the still laundry line; the garments' drop shadows on the wall move with them"
+  },
+  "monitors": {
+   "on": {
+    "kind": "prop",
+    "prop": "control_booth",
+    "mode": "overlay",
+    "at": [
+     0,
+     0
+    ]
+   },
+   "sheet": "monitors.png",
+   "frame": [
+    126,
+    144
+   ],
+   "cells": [
+    3.938,
+    4.5
+   ],
+   "anchor": [
+    0.5,
+    0.9236
+   ],
+   "dz": 0.01,
+   "render": {
+    "shadow": "none",
+    "lampTint": false,
+    "hazeDepth": 0.3,
+    "pxScale": 1.4,
+    "emissive": "the screens"
+   },
+   "screens": [
+    [
+     94,
+     41,
+     106,
+     51
+    ],
+    [
+     29,
+     47,
+     41,
+     56
+    ],
+    [
+     52,
+     48,
+     81,
+     69
+    ],
+    [
+     99,
+     63,
+     112,
+     77
+    ],
+    [
+     54,
+     66,
+     56,
+     69
+    ],
+    [
+     25,
+     69,
+     36,
+     79
+    ],
+    [
+     53,
+     80,
+     58,
+     85
+    ],
+    [
+     63,
+     80,
+     80,
+     85
+    ],
+    [
+     96,
+     84,
+     113,
+     95
+    ]
+   ],
+   "states": {
+    "on": {
+     "row": 0,
+     "frames": 16,
+     "fps": 8,
+     "loop": true,
+     "note": "a scope trace, scrolling text, a scan line"
+    },
+    "glitch": {
+     "row": 1,
+     "frames": 8,
+     "fps": 16,
+     "loop": false,
+     "next": "on",
+     "hold": 0
+    },
+    "dead": {
+     "row": 2,
+     "frames": 6,
+     "durations": [
+      60,
+      70,
+      90,
+      160,
+      400,
+      1000
+     ],
+     "loop": false,
+     "final": true,
+     "note": "the tube collapses to a line, a dot, then cracked dark glass, for good"
+    }
+   },
+   "default": "on",
+   "phase": "random",
+   "glow": {
+    "sheet": "monitors_glow.png",
+    "frame": [
+     126,
+     144
+    ],
+    "cells": [
+     3.938,
+     4.5
+    ],
+    "anchor": [
+     0.5,
+     0.9236
+    ],
+    "at": [
+     0,
+     0
+    ],
+    "blend": "additive",
+    "layer": "fxGlow",
+    "rows": "one"
+   },
+   "light": {
+    "at": [0, -65],
+    "color": "#5cff9a",
+    "radius": 3,
+    "intensity": 0.5,
+    "curves": {
+     "glitch": {
+      "durations": [
+       60,
+       60,
+       80,
+       60,
+       120
+      ],
+      "levels": [
+       0.4,
+       1,
+       0.1,
+       1.2,
+       0.7
+      ]
+     },
+     "die": {
+      "durations": [
+       60,
+       70,
+       90,
+       160,
+       400
+      ],
+      "levels": [
+       1.6,
+       0.8,
+       0.4,
+       0.15,
+       0.05
+      ],
+      "end": 0
+     }
+    }
+   },
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 3,
+     "plusRadius": true,
+     "state": "dead",
+     "curve": "die"
+    },
+    {
+     "event": "projectile:hit",
+     "within": 1.2,
+     "state": "dead",
+     "curve": "die",
+     "chance": 0.5
+    },
+    {
+     "event": "fx:boom",
+     "within": 14,
+     "plusRadius": true,
+     "state": "glitch",
+     "curve": "glitch",
+     "delay": "distance",
+     "msPerCell": 25
+    }
+   ],
+   "ambient": [
+    {
+     "state": "glitch",
+     "curve": "glitch",
+     "every": [
+      12000,
+      30000
+     ],
+     "chance": 0.4
+    }
+   ],
+   "note": "overlay: only the screen pixels of the booth (found by colour, listed in `screens` as x0,y0,x1,y1); everything else alpha 0. The booth itself is unchanged."
+  },
+  "steam": {
+   "on": {
+    "kind": "layer",
+    "layer": "wall",
+    "spots": [
+     [
+      630,
+      236
+     ],
+     [
+      690,
+      248
+     ]
+    ],
+    "note": "the two leaks painted on the wall layer; the painted puffs stay as the dense core"
+   },
+   "sheet": "steam.png",
+   "frame": [
+    48,
+    72
+   ],
+   "cells": [
+    1.5,
+    2.25
+   ],
+   "anchor": [
+    0.2188,
+    0.9236
+   ],
+   "render": {
+    "shadow": "none",
+    "lampTint": true,
+    "hazeDepth": 0,
+    "pxScale": 1.4
+   },
+   "states": {
+    "hiss": {
+     "row": 0,
+     "frames": 16,
+     "fps": 12,
+     "loop": true,
+     "note": "puffs rise and lean right with the draught"
+    },
+    "burst": {
+     "row": 1,
+     "frames": 16,
+     "fps": 14,
+     "loop": false,
+     "repeat": true,
+     "hold": [
+      1500,
+      2500
+     ],
+     "next": "hiss"
+    }
+   },
+   "default": "hiss",
+   "phase": "random",
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 12,
+     "plusRadius": true,
+     "state": "burst",
+     "delay": "distance",
+     "msPerCell": 25
+    }
+   ],
+   "note": "hard pixels, 4 neutral greys lit from above; the scene light tints them as it tints the props."
+  },
+  "weld": {
+   "on": {
+    "kind": "prop",
+    "prop": "cargo_lift",
+    "mode": "overlay",
+    "at": [
+     0,
+     0
+    ]
+   },
+   "sheet": "weld.png",
+   "frame": [
+    118,
+    223
+   ],
+   "cells": [
+    3.688,
+    6.969
+   ],
+   "anchor": [
+    0.4915,
+    0.9686
+   ],
+   "dz": 0.01,
+   "render": {
+    "shadow": "none",
+    "lampTint": false,
+    "hazeDepth": 0.2,
+    "pxScale": 1.4,
+    "emissive": "the arc and sparks"
+   },
+   "states": {
+    "burst": {
+     "row": 0,
+     "frames": 14,
+     "fps": 24,
+     "loop": false,
+     "repeat": true,
+     "hold": [
+      1400,
+      3200
+     ],
+     "next": "rest",
+     "lightLevels": [
+      0.85,
+      0.81,
+      0.76,
+      0.86,
+      0.81,
+      0.93,
+      0.95,
+      0.93,
+      0.86,
+      0.81,
+      0.85,
+      0.87,
+      0.91,
+      0.99
+     ]
+    },
+    "rest": {
+     "row": 1,
+     "frames": 4,
+     "durations": [
+      200,
+      300,
+      400,
+      600
+     ],
+     "loop": false,
+     "next": "burst",
+     "hold": [
+      900,
+      2600
+     ],
+     "lightLevels": [
+      0.12,
+      0.08,
+      0.04,
+      0
+     ]
+    }
+   },
+   "default": "burst",
+   "phase": "random",
+   "glow": {
+    "sheet": "weld_glow.png",
+    "frame": [
+     96,
+     96
+    ],
+    "cells": [
+     6.0,
+     6.0
+    ],
+    "anchor": [
+     0.5,
+     0.5
+    ],
+    "at": [
+     6,
+     -45
+    ],
+    "blend": "additive",
+    "layer": "fxGlow",
+    "rows": "states"
+   },
+   "light": {
+    "color": "#a8d4ff",
+    "radius": 5,
+    "intensity": 1.2
+   },
+   "triggers": [
+    {
+     "event": "fx:boom",
+     "within": 8,
+     "plusRadius": true,
+     "state": "rest"
+    }
+   ],
+   "note": "a welder at work INSIDE the cage, hidden by its lower panel: the arc and sparks show only between the bars (drawn where the lift is not opaque); the blue light spills out through the glow and the point light."
+  }
+ }
+}

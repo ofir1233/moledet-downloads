@@ -1,0 +1,5735 @@
+{
+ "id": "missile_truck",
+ "version": 1,
+ "form": "J17 fracture v1 (account D; draft until docs/methods/destruction_model.md lands)",
+ "character": "A tired, overloaded regime truck held together by paperwork and paint: the door was always loose, the glass is cheap, the bolts were never torqued; only the welds the factory was proud of hold, and the missile sits on its bed under one tired strap.",
+ "source": {
+  "intact": "props/missile_truck_intact.png",
+  "crop": null,
+  "w": 338,
+  "h": 149,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "missile_truck_col.png",
+   "n": "missile_truck_n.png",
+   "mat": "missile_truck_mat.png",
+   "parts": "missile_truck_parts.png",
+   "grain": "missile_truck_grain.png",
+   "inside": "missile_truck_inside.png",
+   "under": {
+    "col": "missile_truck_under_col.png",
+    "n": "missile_truck_under_n.png",
+    "mat": "missile_truck_under_mat.png",
+    "parts": "missile_truck_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 glazed + hinged: the cab glass shatters and the loose door swings on its last hinge, then drops",
+  "2 bolted: the side panels peel off the body frame (the frame's insides show); the rear wheels come off",
+  "3 bolted/strapped: the front wheels, the stabiliser leg, the fuel box under its strap; the chassis drops on its hubs",
+  "4 bolted/strapped: the bumper, the exhaust stack, the rear erector",
+  "5 strapped: the clamp strap snaps",
+  "6 welded: the cab tears off the frame (the engine shows), the tow hook goes with the bumper",
+  "7 resting: nothing holds the missile, it rolls off its bed",
+  "8-9 welded: rail, roof, frame and chassis stay as the burning wreck"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "the intact sprite (or every piece in place)",
+  "damaged": "damaged.png: cracks and lifted lips on the order 1-3 seams, the door sprung",
+  "burning": "damaged.png + fire FX (not this lane)",
+  "wrecked": "joints of order <= 7 broken; the pieces with stays/order 8-9 remain in place"
+ },
+ "pieces": [
+  {
+   "id": "chassis",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 1690.7,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    0,
+    75,
+    298,
+    55
+   ],
+   "at": [
+    27,
+    70
+   ],
+   "centre": [
+    167.0,
+    100.6
+   ],
+   "outline": [
+    [
+     -137.0,
+     -8.6
+    ],
+    [
+     151.0,
+     -30.6
+    ],
+    [
+     156.0,
+     -23.6
+    ],
+    [
+     158.0,
+     -10.6
+    ],
+    [
+     158.0,
+     0.4
+    ],
+    [
+     139.0,
+     19.4
+    ],
+    [
+     130.0,
+     22.4
+    ],
+    [
+     -80.0,
+     24.4
+    ],
+    [
+     -126.0,
+     9.4
+    ],
+    [
+     -140.0,
+     -6.6
+    ]
+   ],
+   "partIndex": 1,
+   "what": "ladder frame, sill, fender arches and rear end: the wreck that stays",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      366,
+      334,
+      21,
+      14
+     ],
+     "at": [
+      304,
+      99
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      277,
+      266,
+      86,
+      33
+     ],
+     "at": [
+      239,
+      70
+     ]
+    },
+    {
+     "joint": "j21",
+     "atlas": [
+      259,
+      370,
+      3,
+      8
+     ],
+     "at": [
+      231,
+      92
+     ]
+    },
+    {
+     "joint": "j22",
+     "atlas": [
+      187,
+      393,
+      73,
+      2
+     ],
+     "at": [
+      122,
+      92
+     ]
+    },
+    {
+     "joint": "j23",
+     "atlas": [
+      406,
+      393,
+      90,
+      1
+     ],
+     "at": [
+      30,
+      93
+     ]
+    },
+    {
+     "joint": "j24",
+     "atlas": [
+      299,
+      393,
+      32,
+      2
+     ],
+     "at": [
+      197,
+      92
+     ]
+    },
+    {
+     "joint": "j25",
+     "atlas": [
+      454,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      31,
+      92
+     ]
+    },
+    {
+     "joint": "j26",
+     "atlas": [
+      389,
+      334,
+      15,
+      14
+     ],
+     "at": [
+      29,
+      93
+     ]
+    },
+    {
+     "joint": "j27",
+     "atlas": [
+      214,
+      334,
+      55,
+      19
+     ],
+     "at": [
+      144,
+      97
+     ]
+    },
+    {
+     "joint": "j28",
+     "atlas": [
+      479,
+      380,
+      10,
+      4
+     ],
+     "at": [
+      296,
+      119
+     ]
+    },
+    {
+     "joint": "j29",
+     "atlas": [
+      332,
+      305,
+      49,
+      24
+     ],
+     "at": [
+      42,
+      101
+     ]
+    },
+    {
+     "joint": "j30",
+     "atlas": [
+      224,
+      305,
+      53,
+      24
+     ],
+     "at": [
+      89,
+      101
+     ]
+    },
+    {
+     "joint": "j31",
+     "atlas": [
+      295,
+      334,
+      43,
+      16
+     ],
+     "at": [
+      197,
+      101
+     ]
+    },
+    {
+     "joint": "j32",
+     "atlas": [
+      383,
+      305,
+      54,
+      22
+     ],
+     "at": [
+      244,
+      101
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rear_erector",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 258.5,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    161,
+    132,
+    22,
+    46
+   ],
+   "at": [
+    8,
+    47
+   ],
+   "centre": [
+    22.1,
+    63.9
+   ],
+   "outline": [
+    [
+     -14.1,
+     -7.9
+    ],
+    [
+     -9.1,
+     -16.9
+    ],
+    [
+     6.9,
+     -16.9
+    ],
+    [
+     7.9,
+     -13.9
+    ],
+    [
+     7.9,
+     29.1
+    ],
+    [
+     4.9,
+     29.1
+    ],
+    [
+     0.9,
+     24.1
+    ],
+    [
+     -14.1,
+     -3.9
+    ]
+   ],
+   "partIndex": 2,
+   "what": "blast deflector plate and the erector ram",
+   "edges": [
+    {
+     "joint": "j06",
+     "atlas": [
+      450,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      27,
+      47
+     ]
+    },
+    {
+     "joint": "j25",
+     "atlas": [
+      458,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      27,
+      91
+     ]
+    },
+    {
+     "joint": "j46",
+     "atlas": [
+      433,
+      397,
+      11,
+      1
+     ],
+     "at": [
+      13,
+      48
+     ]
+    },
+    {
+     "joint": "j49",
+     "atlas": [
+      389,
+      223,
+      3,
+      41
+     ],
+     "at": [
+      27,
+      50
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "rear_outrigger",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 206.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    258,
+    266,
+    17,
+    35
+   ],
+   "at": [
+    24,
+    95
+   ],
+   "centre": [
+    33.7,
+    109.0
+   ],
+   "outline": [
+    [
+     -9.7,
+     -6.0
+    ],
+    [
+     -8.7,
+     -8.0
+    ],
+    [
+     -4.7,
+     -14.0
+    ],
+    [
+     7.3,
+     -14.0
+    ],
+    [
+     7.3,
+     4.0
+    ],
+    [
+     4.3,
+     19.0
+    ],
+    [
+     3.3,
+     21.0
+    ],
+    [
+     -0.7,
+     21.0
+    ],
+    [
+     -9.7,
+     2.0
+    ]
+   ],
+   "partIndex": 3,
+   "what": "stabiliser leg",
+   "edges": [
+    {
+     "joint": "j26",
+     "atlas": [
+      57,
+      358,
+      11,
+      10
+     ],
+     "at": [
+      30,
+      96
+     ]
+    },
+    {
+     "joint": "j50",
+     "atlas": [
+      403,
+      393,
+      1,
+      2
+     ],
+     "at": [
+      40,
+      109
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "launch_rail",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 832.7,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    92,
+    358,
+    224,
+    9
+   ],
+   "at": [
+    9,
+    38
+   ],
+   "centre": [
+    113.2,
+    42.6
+   ],
+   "outline": [
+    [
+     -104.2,
+     -3.6
+    ],
+    [
+     115.8,
+     -4.6
+    ],
+    [
+     119.8,
+     -4.6
+    ],
+    [
+     119.8,
+     -1.6
+    ],
+    [
+     114.8,
+     0.4
+    ],
+    [
+     109.8,
+     1.4
+    ],
+    [
+     84.8,
+     4.4
+    ],
+    [
+     -100.2,
+     4.4
+    ],
+    [
+     -103.2,
+     -0.6
+    ],
+    [
+     -104.2,
+     -2.6
+    ]
+   ],
+   "partIndex": 4,
+   "what": "the launch rail the missile rests on",
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      0,
+      380,
+      200,
+      6
+     ],
+     "at": [
+      28,
+      42
+     ]
+    },
+    {
+     "joint": "j33",
+     "atlas": [
+      0,
+      388,
+      26,
+      3
+     ],
+     "at": [
+      169,
+      39
+     ]
+    },
+    {
+     "joint": "j35",
+     "atlas": [
+      466,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      231,
+      38
+     ]
+    },
+    {
+     "joint": "j45",
+     "atlas": [
+      264,
+      388,
+      223,
+      2
+     ],
+     "at": [
+      10,
+      39
+     ]
+    },
+    {
+     "joint": "j46",
+     "atlas": [
+      383,
+      397,
+      17,
+      1
+     ],
+     "at": [
+      13,
+      45
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "box_roof",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 570.9,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    370,
+    204,
+    8
+   ],
+   "at": [
+    29,
+    43
+   ],
+   "centre": [
+    139.8,
+    48.3
+   ],
+   "outline": [
+    [
+     -110.8,
+     -2.3
+    ],
+    [
+     61.2,
+     -5.3
+    ],
+    [
+     88.2,
+     -5.3
+    ],
+    [
+     90.2,
+     -4.3
+    ],
+    [
+     93.2,
+     -1.3
+    ],
+    [
+     93.2,
+     2.7
+    ],
+    [
+     -109.8,
+     2.7
+    ],
+    [
+     -110.8,
+     1.7
+    ]
+   ],
+   "partIndex": 5,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      397,
+      393,
+      1,
+      2
+     ],
+     "at": [
+      232,
+      47
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      202,
+      380,
+      199,
+      6
+     ],
+     "at": [
+      29,
+      42
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      166,
+      397,
+      72,
+      1
+     ],
+     "at": [
+      123,
+      49
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      0,
+      393,
+      95,
+      2
+     ],
+     "at": [
+      30,
+      49
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      310,
+      397,
+      35,
+      1
+     ],
+     "at": [
+      198,
+      49
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      446,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      29,
+      46
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "panel_rear",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 2119.7,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    180,
+    94,
+    41
+   ],
+   "at": [
+    29,
+    51
+   ],
+   "centre": [
+    76.0,
+    71.5
+   ],
+   "outline": [
+    [
+     -47.0,
+     -20.5
+    ],
+    [
+     47.0,
+     -20.5
+    ],
+    [
+     47.0,
+     20.5
+    ],
+    [
+     -47.0,
+     20.5
+    ]
+   ],
+   "partIndex": 6,
+   "what": "side panel, four slots",
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      97,
+      393,
+      88,
+      2
+     ],
+     "at": [
+      29,
+      51
+     ]
+    },
+    {
+     "joint": "j23",
+     "atlas": [
+      0,
+      397,
+      88,
+      1
+     ],
+     "at": [
+      30,
+      90
+     ]
+    },
+    {
+     "joint": "j47",
+     "atlas": [
+      398,
+      223,
+      2,
+      40
+     ],
+     "at": [
+      121,
+      51
+     ]
+    },
+    {
+     "joint": "j49",
+     "atlas": [
+      402,
+      223,
+      2,
+      40
+     ],
+     "at": [
+      30,
+      51
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      96,
+      180,
+      94,
+      41
+     ],
+     "at": [
+      29,
+      51
+     ],
+     "crease": {
+      "dent": [
+       [
+        38,
+        57
+       ],
+       [
+        55,
+        66
+       ],
+       [
+        72,
+        76
+       ],
+       [
+        86,
+        90
+       ]
+      ],
+      "shade": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "atlas": [
+      0,
+      132,
+      88,
+      46
+     ],
+     "at": [
+      29,
+      51
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.55,
+      "ang": 7,
+      "squeeze": 0.85
+     }
+    },
+    {
+     "atlas": [
+      192,
+      180,
+      94,
+      41
+     ],
+     "at": [
+      29,
+      51
+     ],
+     "crease": {
+      "sheet": "level2_fracture_truck_insides",
+      "box": [
+       91,
+       112,
+       829,
+       433
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "panel_mid",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 1691.3,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    288,
+    180,
+    75,
+    41
+   ],
+   "at": [
+    123,
+    51
+   ],
+   "centre": [
+    160.5,
+    71.5
+   ],
+   "outline": [
+    [
+     -37.5,
+     -20.5
+    ],
+    [
+     37.5,
+     -20.5
+    ],
+    [
+     37.5,
+     20.5
+    ],
+    [
+     -37.5,
+     20.5
+    ]
+   ],
+   "partIndex": 7,
+   "what": "side panel, two hatches",
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      240,
+      397,
+      68,
+      1
+     ],
+     "at": [
+      123,
+      52
+     ]
+    },
+    {
+     "joint": "j22",
+     "atlas": [
+      90,
+      397,
+      74,
+      1
+     ],
+     "at": [
+      123,
+      90
+     ]
+    },
+    {
+     "joint": "j47",
+     "atlas": [
+      410,
+      223,
+      2,
+      39
+     ],
+     "at": [
+      124,
+      51
+     ]
+    },
+    {
+     "joint": "j48",
+     "atlas": [
+      394,
+      223,
+      2,
+      41
+     ],
+     "at": [
+      196,
+      51
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      365,
+      180,
+      75,
+      41
+     ],
+     "at": [
+      123,
+      51
+     ],
+     "crease": {
+      "dent": [
+       [
+        136,
+        55
+       ],
+       [
+        152,
+        66
+       ],
+       [
+        162,
+        78
+       ],
+       [
+        155,
+        90
+       ]
+      ],
+      "shade": [
+       1,
+       0
+      ]
+     }
+    },
+    {
+     "atlas": [
+      90,
+      132,
+      69,
+      46
+     ],
+     "at": [
+      123,
+      51
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 8,
+      "squeeze": 0.85
+     }
+    },
+    {
+     "atlas": [
+      0,
+      223,
+      75,
+      41
+     ],
+     "at": [
+      123,
+      51
+     ],
+     "crease": {
+      "sheet": "level2_fracture_truck_insides",
+      "box": [
+       883,
+       112,
+       1766,
+       433
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "panel_vent",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 789.3,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    278,
+    223,
+    35,
+    41
+   ],
+   "at": [
+    198,
+    51
+   ],
+   "centre": [
+    215.5,
+    71.5
+   ],
+   "outline": [
+    [
+     -17.5,
+     -20.5
+    ],
+    [
+     17.5,
+     -20.5
+    ],
+    [
+     17.5,
+     20.5
+    ],
+    [
+     -17.5,
+     20.5
+    ]
+   ],
+   "partIndex": 8,
+   "what": "grille panel",
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      262,
+      393,
+      35,
+      2
+     ],
+     "at": [
+      198,
+      52
+     ]
+    },
+    {
+     "joint": "j24",
+     "atlas": [
+      347,
+      397,
+      34,
+      1
+     ],
+     "at": [
+      198,
+      90
+     ]
+    },
+    {
+     "joint": "j37",
+     "atlas": [
+      406,
+      223,
+      2,
+      39
+     ],
+     "at": [
+      231,
+      51
+     ]
+    },
+    {
+     "joint": "j48",
+     "atlas": [
+      414,
+      223,
+      2,
+      39
+     ],
+     "at": [
+      199,
+      51
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      315,
+      223,
+      35,
+      41
+     ],
+     "at": [
+      198,
+      51
+     ],
+     "crease": {
+      "dent": [
+       [
+        201,
+        62
+       ],
+       [
+        214,
+        70
+       ],
+       [
+        229,
+        84
+       ]
+      ],
+      "shade": [
+       1,
+       1
+      ]
+     }
+    },
+    {
+     "atlas": [
+      352,
+      223,
+      35,
+      41
+     ],
+     "at": [
+      198,
+      51
+     ],
+     "crease": {
+      "sheet": "level2_fracture_truck_insides",
+      "box": [
+       963,
+       1102,
+       1819,
+       1423
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "side_box",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 581.9,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    279,
+    305,
+    51,
+    24
+   ],
+   "at": [
+    146,
+    99
+   ],
+   "centre": [
+    169.0,
+    110.0
+   ],
+   "outline": [
+    [
+     -23.0,
+     -11.0
+    ],
+    [
+     28.0,
+     -11.0
+    ],
+    [
+     28.0,
+     -7.0
+    ],
+    [
+     21.0,
+     6.0
+    ],
+    [
+     17.0,
+     11.0
+    ],
+    [
+     16.0,
+     12.0
+    ],
+    [
+     0.0,
+     13.0
+    ],
+    [
+     -8.0,
+     13.0
+    ],
+    [
+     -23.0,
+     12.0
+    ]
+   ],
+   "partIndex": 9,
+   "emit": "fuel",
+   "what": "stowage box / fuel tank between the axles",
+   "edges": [
+    {
+     "joint": "j27",
+     "atlas": [
+      49,
+      334,
+      45,
+      21
+     ],
+     "at": [
+      147,
+      100
+     ]
+    },
+    {
+     "joint": "j51",
+     "atlas": [
+      492,
+      334,
+      8,
+      11
+     ],
+     "at": [
+      189,
+      101
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "exhaust",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 218.9,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    257,
+    0,
+    8,
+    61
+   ],
+   "at": [
+    233,
+    38
+   ],
+   "centre": [
+    236.8,
+    71.7
+   ],
+   "outline": [
+    [
+     -3.8,
+     -33.7
+    ],
+    [
+     2.2,
+     -33.7
+    ],
+    [
+     3.2,
+     -29.7
+    ],
+    [
+     4.2,
+     -23.7
+    ],
+    [
+     4.2,
+     26.3
+    ],
+    [
+     3.2,
+     27.3
+    ],
+    [
+     -3.8,
+     27.3
+    ]
+   ],
+   "partIndex": 10,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      400,
+      393,
+      1,
+      2
+     ],
+     "at": [
+      233,
+      51
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      273,
+      0,
+      4,
+      61
+     ],
+     "at": [
+      237,
+      38
+     ]
+    },
+    {
+     "joint": "j21",
+     "atlas": [
+      316,
+      370,
+      4,
+      7
+     ],
+     "at": [
+      233,
+      91
+     ]
+    },
+    {
+     "joint": "j35",
+     "atlas": [
+      462,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      234,
+      38
+     ]
+    },
+    {
+     "joint": "j36",
+     "atlas": [
+      470,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      233,
+      39
+     ]
+    },
+    {
+     "joint": "j37",
+     "atlas": [
+      418,
+      223,
+      3,
+      38
+     ],
+     "at": [
+      233,
+      50
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "missile",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 3714.7,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    0,
+    266,
+    256,
+    37
+   ],
+   "at": [
+    8,
+    2
+   ],
+   "centre": [
+    122.6,
+    24.8
+   ],
+   "outline": [
+    [
+     -114.6,
+     -21.8
+    ],
+    [
+     -113.6,
+     -22.8
+    ],
+    [
+     -82.6,
+     -22.8
+    ],
+    [
+     83.4,
+     -12.8
+    ],
+    [
+     102.4,
+     -9.8
+    ],
+    [
+     131.4,
+     -2.8
+    ],
+    [
+     141.4,
+     5.2
+    ],
+    [
+     131.4,
+     10.2
+    ],
+    [
+     106.4,
+     14.2
+    ],
+    [
+     -114.6,
+     14.2
+    ]
+   ],
+   "partIndex": 11,
+   "emit": "warhead",
+   "what": "the missile; its skin under the clamp is painted back",
+   "hiddenSurfacePainted": true,
+   "edges": [
+    {
+     "joint": "j20",
+     "atlas": [
+      354,
+      393,
+      9,
+      2
+     ],
+     "at": [
+      240,
+      34
+     ]
+    },
+    {
+     "joint": "j34",
+     "atlas": [
+      475,
+      266,
+      27,
+      27
+     ],
+     "at": [
+      168,
+      12
+     ]
+    },
+    {
+     "joint": "j36",
+     "atlas": [
+      474,
+      397,
+      2,
+      1
+     ],
+     "at": [
+      233,
+      36
+     ]
+    },
+    {
+     "joint": "j45",
+     "atlas": [
+      37,
+      388,
+      225,
+      2
+     ],
+     "at": [
+      9,
+      36
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "clamp_band",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 345.4,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    451,
+    266,
+    22,
+    31
+   ],
+   "at": [
+    170,
+    9
+   ],
+   "centre": [
+    181.3,
+    25.1
+   ],
+   "outline": [
+    [
+     -11.3,
+     2.9
+    ],
+    [
+     -10.3,
+     -13.1
+    ],
+    [
+     -9.3,
+     -15.1
+    ],
+    [
+     -7.3,
+     -16.1
+    ],
+    [
+     4.7,
+     -16.1
+    ],
+    [
+     9.7,
+     -13.1
+    ],
+    [
+     10.7,
+     -12.1
+    ],
+    [
+     10.7,
+     14.9
+    ],
+    [
+     -10.3,
+     14.9
+    ],
+    [
+     -11.3,
+     6.9
+    ]
+   ],
+   "partIndex": 12,
+   "what": "the strap clamp",
+   "edges": [
+    {
+     "joint": "j33",
+     "atlas": [
+      402,
+      397,
+      16,
+      1
+     ],
+     "at": [
+      171,
+      38
+     ]
+    },
+    {
+     "joint": "j34",
+     "atlas": [
+      0,
+      305,
+      21,
+      27
+     ],
+     "at": [
+      171,
+      12
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "cab_shell",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 1556.0,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    79,
+    0,
+    85,
+    67
+   ],
+   "at": [
+    239,
+    35
+   ],
+   "centre": [
+    273.2,
+    72.4
+   ],
+   "outline": [
+    [
+     -34.2,
+     -34.4
+    ],
+    [
+     -26.2,
+     -37.4
+    ],
+    [
+     20.8,
+     -34.4
+    ],
+    [
+     29.8,
+     -31.4
+    ],
+    [
+     34.8,
+     -25.4
+    ],
+    [
+     46.8,
+     1.6
+    ],
+    [
+     50.8,
+     27.6
+    ],
+    [
+     32.8,
+     29.6
+    ],
+    [
+     -32.2,
+     29.6
+    ],
+    [
+     -34.2,
+     12.6
+    ]
+   ],
+   "partIndex": 13,
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      420,
+      397,
+      11,
+      1
+     ],
+     "at": [
+      306,
+      99
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      300,
+      75,
+      39,
+      53
+     ],
+     "at": [
+      271,
+      41
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      365,
+      266,
+      84,
+      32
+     ],
+     "at": [
+      240,
+      70
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      267,
+      0,
+      4,
+      61
+     ],
+     "at": [
+      240,
+      38
+     ]
+    },
+    {
+     "joint": "j17",
+     "atlas": [
+      226,
+      370,
+      9,
+      8
+     ],
+     "at": [
+      257,
+      61
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      287,
+      334,
+      6,
+      18
+     ],
+     "at": [
+      248,
+      51
+     ]
+    },
+    {
+     "joint": "j19",
+     "atlas": [
+      294,
+      370,
+      12,
+      7
+     ],
+     "at": [
+      254,
+      51
+     ]
+    },
+    {
+     "joint": "j20",
+     "atlas": [
+      28,
+      388,
+      7,
+      3
+     ],
+     "at": [
+      240,
+      36
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      166,
+      0,
+      89,
+      63
+     ],
+     "at": [
+      239,
+      35
+     ],
+     "crease": {
+      "axis": "h",
+      "at": 0.45,
+      "ang": 6,
+      "squeeze": 0.88
+     }
+    },
+    {
+     "atlas": [
+      0,
+      0,
+      77,
+      73
+     ],
+     "at": [
+      239,
+      35
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.55,
+      "ang": 10,
+      "squeeze": 0.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "cab_door",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 689.7,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    374,
+    75,
+    34,
+    49
+   ],
+   "at": [
+    273,
+    43
+   ],
+   "centre": [
+    289.9,
+    70.4
+   ],
+   "outline": [
+    [
+     -16.9,
+     -27.4
+    ],
+    [
+     11.1,
+     -27.4
+    ],
+    [
+     12.1,
+     -26.4
+    ],
+    [
+     15.1,
+     -21.4
+    ],
+    [
+     16.1,
+     -19.4
+    ],
+    [
+     17.1,
+     1.6
+    ],
+    [
+     17.1,
+     21.6
+    ],
+    [
+     -16.9,
+     21.6
+    ]
+   ],
+   "partIndex": 14,
+   "what": "the loose door",
+   "edges": [
+    {
+     "joint": "j10",
+     "atlas": [
+      446,
+      75,
+      33,
+      47
+     ],
+     "at": [
+      274,
+      44
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      271,
+      334,
+      14,
+      19
+     ],
+     "at": [
+      289,
+      50
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      206,
+      370,
+      18,
+      8
+     ],
+     "at": [
+      275,
+      61
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      458,
+      334,
+      17,
+      12
+     ],
+     "at": [
+      274,
+      50
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      253,
+      370,
+      4,
+      8
+     ],
+     "at": [
+      274,
+      50
+     ]
+    }
+   ],
+   "bent": [
+    {
+     "atlas": [
+      410,
+      75,
+      34,
+      49
+     ],
+     "at": [
+      273,
+      43
+     ],
+     "crease": {
+      "dent": [
+       [
+        277,
+        72
+       ],
+       [
+        290,
+        66
+       ],
+       [
+        302,
+        64
+       ]
+      ],
+      "shade": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "atlas": [
+      341,
+      75,
+      31,
+      52
+     ],
+     "at": [
+      273,
+      43
+     ],
+     "crease": {
+      "axis": "v",
+      "at": 0.5,
+      "ang": 9,
+      "squeeze": 0.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "bumper",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 215.6,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    190,
+    334,
+    22,
+    20
+   ],
+   "at": [
+    306,
+    101
+   ],
+   "centre": [
+    316.4,
+    110.2
+   ],
+   "outline": [
+    [
+     -10.4,
+     -9.2
+    ],
+    [
+     8.6,
+     -9.2
+    ],
+    [
+     11.6,
+     -7.2
+    ],
+    [
+     11.6,
+     4.8
+    ],
+    [
+     9.6,
+     6.8
+    ],
+    [
+     1.6,
+     10.8
+    ],
+    [
+     -0.4,
+     10.8
+    ],
+    [
+     -10.4,
+     9.8
+    ]
+   ],
+   "partIndex": 15,
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      333,
+      393,
+      19,
+      2
+     ],
+     "at": [
+      306,
+      101
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      427,
+      334,
+      20,
+      13
+     ],
+     "at": [
+      306,
+      101
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      365,
+      393,
+      8,
+      2
+     ],
+     "at": [
+      306,
+      119
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "tow_hook",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 63.3,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    23,
+    358,
+    17,
+    10
+   ],
+   "at": [
+    297,
+    120
+   ],
+   "centre": [
+    304.6,
+    125.0
+   ],
+   "outline": [
+    [
+     -7.6,
+     -5.0
+    ],
+    [
+     9.4,
+     -5.0
+    ],
+    [
+     9.4,
+     -4.0
+    ],
+    [
+     7.4,
+     2.0
+    ],
+    [
+     4.4,
+     5.0
+    ],
+    [
+     -6.6,
+     5.0
+    ],
+    [
+     -7.6,
+     3.0
+    ]
+   ],
+   "partIndex": 16,
+   "edges": [
+    {
+     "joint": "j09",
+     "atlas": [
+      375,
+      393,
+      8,
+      2
+     ],
+     "at": [
+      306,
+      119
+     ]
+    },
+    {
+     "joint": "j28",
+     "atlas": [
+      491,
+      380,
+      9,
+      4
+     ],
+     "at": [
+      297,
+      119
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_side_1",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 6.8,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    403,
+    380,
+    5,
+    6
+   ],
+   "at": [
+    258,
+    61
+   ],
+   "centre": [
+    260.5,
+    64.3
+   ],
+   "outline": [
+    [
+     -2.5,
+     -2.3
+    ],
+    [
+     -1.5,
+     -3.3
+    ],
+    [
+     0.5,
+     -3.3
+    ],
+    [
+     2.5,
+     -2.3
+    ],
+    [
+     2.5,
+     2.7
+    ],
+    [
+     -2.5,
+     2.7
+    ]
+   ],
+   "partIndex": 17,
+   "emit": "glass",
+   "shardOf": "glass_side",
+   "edges": [
+    {
+     "joint": "j17",
+     "atlas": [
+      466,
+      380,
+      5,
+      5
+     ],
+     "at": [
+      258,
+      62
+     ]
+    },
+    {
+     "joint": "j42",
+     "atlas": [
+      431,
+      380,
+      2,
+      6
+     ],
+     "at": [
+      258,
+      61
+     ]
+    },
+    {
+     "joint": "j43",
+     "atlas": [
+      385,
+      393,
+      4,
+      2
+     ],
+     "at": [
+      259,
+      61
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_side_2",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 24.5,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    406,
+    334,
+    9,
+    14
+   ],
+   "at": [
+    250,
+    53
+   ],
+   "centre": [
+    253.7,
+    60.8
+   ],
+   "outline": [
+    [
+     -3.7,
+     -7.8
+    ],
+    [
+     0.3,
+     -7.8
+    ],
+    [
+     1.3,
+     -6.8
+    ],
+    [
+     5.3,
+     -0.8
+    ],
+    [
+     5.3,
+     1.2
+    ],
+    [
+     4.3,
+     6.2
+    ],
+    [
+     -3.7,
+     6.2
+    ]
+   ],
+   "partIndex": 18,
+   "emit": "glass",
+   "shardOf": "glass_side",
+   "edges": [
+    {
+     "joint": "j18",
+     "atlas": [
+      417,
+      334,
+      8,
+      14
+     ],
+     "at": [
+      250,
+      53
+     ]
+    },
+    {
+     "joint": "j42",
+     "atlas": [
+      435,
+      380,
+      2,
+      6
+     ],
+     "at": [
+      257,
+      61
+     ]
+    },
+    {
+     "joint": "j44",
+     "atlas": [
+      237,
+      370,
+      6,
+      8
+     ],
+     "at": [
+      253,
+      53
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_side_3",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 14.2,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    318,
+    358,
+    9,
+    9
+   ],
+   "at": [
+    254,
+    53
+   ],
+   "centre": [
+    259.5,
+    56.7
+   ],
+   "outline": [
+    [
+     -5.5,
+     -3.7
+    ],
+    [
+     3.5,
+     -3.7
+    ],
+    [
+     3.5,
+     5.3
+    ],
+    [
+     1.5,
+     5.3
+    ],
+    [
+     -0.5,
+     4.3
+    ],
+    [
+     -4.5,
+     0.3
+    ],
+    [
+     -5.5,
+     -2.7
+    ]
+   ],
+   "partIndex": 19,
+   "emit": "glass",
+   "shardOf": "glass_side",
+   "edges": [
+    {
+     "joint": "j19",
+     "atlas": [
+      329,
+      358,
+      9,
+      9
+     ],
+     "at": [
+      254,
+      53
+     ]
+    },
+    {
+     "joint": "j43",
+     "atlas": [
+      391,
+      393,
+      4,
+      2
+     ],
+     "at": [
+      259,
+      60
+     ]
+    },
+    {
+     "joint": "j44",
+     "atlas": [
+      245,
+      370,
+      6,
+      8
+     ],
+     "at": [
+      254,
+      53
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_front_1",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 31.8,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    340,
+    334,
+    11,
+    15
+   ],
+   "at": [
+    289,
+    52
+   ],
+   "centre": [
+    295.4,
+    58.2
+   ],
+   "outline": [
+    [
+     -6.4,
+     -6.2
+    ],
+    [
+     4.6,
+     -6.2
+    ],
+    [
+     4.6,
+     8.8
+    ],
+    [
+     1.6,
+     8.8
+    ],
+    [
+     -0.4,
+     7.8
+    ],
+    [
+     -4.4,
+     2.8
+    ],
+    [
+     -6.4,
+     -0.2
+    ]
+   ],
+   "partIndex": 20,
+   "emit": "glass",
+   "shardOf": "glass_front",
+   "edges": [
+    {
+     "joint": "j11",
+     "atlas": [
+      353,
+      334,
+      11,
+      15
+     ],
+     "at": [
+      289,
+      52
+     ]
+    },
+    {
+     "joint": "j38",
+     "atlas": [
+      70,
+      358,
+      9,
+      10
+     ],
+     "at": [
+      289,
+      57
+     ]
+    },
+    {
+     "joint": "j39",
+     "atlas": [
+      473,
+      380,
+      1,
+      5
+     ],
+     "at": [
+      289,
+      52
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_front_2",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 29.0,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    0,
+    358,
+    21,
+    10
+   ],
+   "at": [
+    276,
+    57
+   ],
+   "centre": [
+    286.1,
+    63.8
+   ],
+   "outline": [
+    [
+     -10.1,
+     -1.8
+    ],
+    [
+     1.9,
+     -6.8
+    ],
+    [
+     2.9,
+     -6.8
+    ],
+    [
+     6.9,
+     -2.8
+    ],
+    [
+     10.9,
+     2.2
+    ],
+    [
+     10.9,
+     3.2
+    ],
+    [
+     -10.1,
+     3.2
+    ]
+   ],
+   "partIndex": 21,
+   "emit": "glass",
+   "shardOf": "glass_front",
+   "edges": [
+    {
+     "joint": "j12",
+     "atlas": [
+      443,
+      380,
+      21,
+      5
+     ],
+     "at": [
+      276,
+      62
+     ]
+    },
+    {
+     "joint": "j38",
+     "atlas": [
+      81,
+      358,
+      9,
+      10
+     ],
+     "at": [
+      288,
+      57
+     ]
+    },
+    {
+     "joint": "j40",
+     "atlas": [
+      264,
+      370,
+      13,
+      7
+     ],
+     "at": [
+      276,
+      57
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_front_3",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 22.5,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    477,
+    334,
+    13,
+    11
+   ],
+   "at": [
+    276,
+    52
+   ],
+   "centre": [
+    282.9,
+    57.2
+   ],
+   "outline": [
+    [
+     -6.9,
+     0.8
+    ],
+    [
+     -1.9,
+     -5.2
+    ],
+    [
+     6.1,
+     -5.2
+    ],
+    [
+     6.1,
+     -0.2
+    ],
+    [
+     4.1,
+     2.8
+    ],
+    [
+     3.1,
+     3.8
+    ],
+    [
+     -3.9,
+     5.8
+    ],
+    [
+     -5.9,
+     5.8
+    ],
+    [
+     -6.9,
+     4.8
+    ]
+   ],
+   "partIndex": 22,
+   "emit": "glass",
+   "shardOf": "glass_front",
+   "edges": [
+    {
+     "joint": "j13",
+     "atlas": [
+      42,
+      358,
+      13,
+      10
+     ],
+     "at": [
+      276,
+      52
+     ]
+    },
+    {
+     "joint": "j39",
+     "atlas": [
+      476,
+      380,
+      1,
+      5
+     ],
+     "at": [
+      288,
+      52
+     ]
+    },
+    {
+     "joint": "j40",
+     "atlas": [
+      279,
+      370,
+      13,
+      7
+     ],
+     "at": [
+      276,
+      56
+     ]
+    },
+    {
+     "joint": "j41",
+     "atlas": [
+      308,
+      370,
+      6,
+      7
+     ],
+     "at": [
+      276,
+      52
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "glass_front_4",
+   "material": "glass",
+   "mat": 7,
+   "massClass": "feather",
+   "mass": 6.8,
+   "layer": "shell",
+   "z": 4,
+   "atlas": [
+    410,
+    380,
+    5,
+    6
+   ],
+   "at": [
+    276,
+    52
+   ],
+   "centre": [
+    278.3,
+    54.8
+   ],
+   "outline": [
+    [
+     -2.3,
+     -2.8
+    ],
+    [
+     2.7,
+     -2.8
+    ],
+    [
+     2.7,
+     1.2
+    ],
+    [
+     0.7,
+     3.2
+    ],
+    [
+     -2.3,
+     3.2
+    ]
+   ],
+   "partIndex": 23,
+   "emit": "glass",
+   "shardOf": "glass_front",
+   "edges": [
+    {
+     "joint": "j14",
+     "atlas": [
+      417,
+      380,
+      5,
+      6
+     ],
+     "at": [
+      276,
+      52
+     ]
+    },
+    {
+     "joint": "j41",
+     "atlas": [
+      424,
+      380,
+      5,
+      6
+     ],
+     "at": [
+      276,
+      52
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wheel_1",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "medium",
+   "mass": 722.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    128,
+    223,
+    48,
+    41
+   ],
+   "at": [
+    40,
+    103
+   ],
+   "centre": [
+    63.7,
+    121.8
+   ],
+   "outline": [
+    [
+     -23.7,
+     -8.8
+    ],
+    [
+     -21.7,
+     -13.8
+    ],
+    [
+     -17.7,
+     -18.8
+    ],
+    [
+     17.3,
+     -18.8
+    ],
+    [
+     21.3,
+     -13.8
+    ],
+    [
+     24.3,
+     -4.8
+    ],
+    [
+     24.3,
+     2.2
+    ],
+    [
+     18.3,
+     13.2
+    ],
+    [
+     13.3,
+     18.2
+    ],
+    [
+     10.3,
+     20.2
+    ],
+    [
+     4.3,
+     22.2
+    ],
+    [
+     -4.7,
+     22.2
+    ],
+    [
+     -8.7,
+     21.2
+    ],
+    [
+     -14.7,
+     18.2
+    ],
+    [
+     -19.7,
+     12.2
+    ],
+    [
+     -22.7,
+     4.2
+    ]
+   ],
+   "partIndex": 24,
+   "circle": 24.2,
+   "what": "wheel: tyre and rim, rolls",
+   "edges": [
+    {
+     "joint": "j29",
+     "atlas": [
+      0,
+      334,
+      47,
+      22
+     ],
+     "at": [
+      41,
+      103
+     ]
+    },
+    {
+     "joint": "j50",
+     "atlas": [
+      439,
+      380,
+      2,
+      6
+     ],
+     "at": [
+      40,
+      110
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wheel_2",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "medium",
+   "mass": 718.2,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    178,
+    223,
+    48,
+    41
+   ],
+   "at": [
+    91,
+    103
+   ],
+   "centre": [
+    114.5,
+    121.9
+   ],
+   "outline": [
+    [
+     -23.5,
+     -4.9
+    ],
+    [
+     -20.5,
+     -13.9
+    ],
+    [
+     -16.5,
+     -18.9
+    ],
+    [
+     18.5,
+     -18.9
+    ],
+    [
+     22.5,
+     -13.9
+    ],
+    [
+     24.5,
+     -8.9
+    ],
+    [
+     24.5,
+     -5.9
+    ],
+    [
+     21.5,
+     7.1
+    ],
+    [
+     17.5,
+     14.1
+    ],
+    [
+     13.5,
+     18.1
+    ],
+    [
+     4.5,
+     22.1
+    ],
+    [
+     -5.5,
+     22.1
+    ],
+    [
+     -11.5,
+     20.1
+    ],
+    [
+     -18.5,
+     14.1
+    ],
+    [
+     -20.5,
+     11.1
+    ],
+    [
+     -23.5,
+     2.1
+    ]
+   ],
+   "partIndex": 25,
+   "circle": 24.2,
+   "what": "wheel: tyre and rim, rolls",
+   "edges": [
+    {
+     "joint": "j30",
+     "atlas": [
+      439,
+      305,
+      48,
+      22
+     ],
+     "at": [
+      91,
+      103
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wheel_3",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "medium",
+   "mass": 723.6,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    228,
+    223,
+    48,
+    41
+   ],
+   "at": [
+    190,
+    103
+   ],
+   "centre": [
+    213.4,
+    121.8
+   ],
+   "outline": [
+    [
+     -23.4,
+     -8.8
+    ],
+    [
+     -21.4,
+     -13.8
+    ],
+    [
+     -17.4,
+     -18.8
+    ],
+    [
+     17.6,
+     -18.8
+    ],
+    [
+     21.6,
+     -13.8
+    ],
+    [
+     24.6,
+     -4.8
+    ],
+    [
+     24.6,
+     1.2
+    ],
+    [
+     17.6,
+     14.2
+    ],
+    [
+     11.6,
+     19.2
+    ],
+    [
+     4.6,
+     22.2
+    ],
+    [
+     -5.4,
+     22.2
+    ],
+    [
+     -11.4,
+     20.2
+    ],
+    [
+     -14.4,
+     18.2
+    ],
+    [
+     -19.4,
+     13.2
+    ],
+    [
+     -22.4,
+     7.2
+    ],
+    [
+     -23.4,
+     -5.8
+    ]
+   ],
+   "partIndex": 26,
+   "circle": 24.2,
+   "what": "wheel: tyre and rim, rolls",
+   "edges": [
+    {
+     "joint": "j31",
+     "atlas": [
+      147,
+      334,
+      41,
+      20
+     ],
+     "at": [
+      197,
+      103
+     ]
+    },
+    {
+     "joint": "j51",
+     "atlas": [
+      449,
+      334,
+      7,
+      13
+     ],
+     "at": [
+      190,
+      103
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "wheel_4",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "medium",
+   "mass": 730.8,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    77,
+    223,
+    49,
+    41
+   ],
+   "at": [
+    246,
+    103
+   ],
+   "centre": [
+    270.7,
+    121.8
+   ],
+   "outline": [
+    [
+     -24.7,
+     -4.8
+    ],
+    [
+     -21.7,
+     -13.8
+    ],
+    [
+     -17.7,
+     -18.8
+    ],
+    [
+     17.3,
+     -18.8
+    ],
+    [
+     21.3,
+     -13.8
+    ],
+    [
+     24.3,
+     -4.8
+    ],
+    [
+     24.3,
+     1.2
+    ],
+    [
+     22.3,
+     7.2
+    ],
+    [
+     18.3,
+     14.2
+    ],
+    [
+     14.3,
+     18.2
+    ],
+    [
+     4.3,
+     22.2
+    ],
+    [
+     -4.7,
+     22.2
+    ],
+    [
+     -8.7,
+     21.2
+    ],
+    [
+     -13.7,
+     18.2
+    ],
+    [
+     -19.7,
+     11.2
+    ],
+    [
+     -24.7,
+     1.2
+    ]
+   ],
+   "partIndex": 27,
+   "circle": 24.2,
+   "what": "wheel: tyre and rim, rolls",
+   "edges": [
+    {
+     "joint": "j32",
+     "atlas": [
+      96,
+      334,
+      49,
+      20
+     ],
+     "at": [
+      246,
+      103
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "body_frame",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 4801.0,
+   "layer": "inside",
+   "z": -2,
+   "atlas": [
+    185,
+    132,
+    203,
+    43
+   ],
+   "at": [
+    30,
+    50
+   ],
+   "centre": [
+    131.5,
+    71.5
+   ],
+   "outline": [
+    [
+     -101.5,
+     -21.5
+    ],
+    [
+     101.5,
+     -21.5
+    ],
+    [
+     101.5,
+     21.5
+    ],
+    [
+     -101.5,
+     21.5
+    ]
+   ],
+   "partIndex": 28,
+   "what": "painted from sheet 253 (frame, hoses, gas bottle, control box) over a code back wall; was STAND-IN: ribs, stringer, gas bottle, hydraulic lines, cable, control box, cooler fins",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "engine",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "heavy",
+   "mass": 1766.6,
+   "layer": "inside",
+   "z": -2,
+   "atlas": [
+    390,
+    132,
+    79,
+    42
+   ],
+   "at": [
+    241,
+    62
+   ],
+   "centre": [
+    279.4,
+    83.4
+   ],
+   "outline": [
+    [
+     -38.4,
+     -21.4
+    ],
+    [
+     21.6,
+     -21.4
+    ],
+    [
+     36.6,
+     -16.4
+    ],
+    [
+     38.6,
+     -14.4
+    ],
+    [
+     39.6,
+     -6.4
+    ],
+    [
+     40.6,
+     11.6
+    ],
+    [
+     40.6,
+     20.6
+    ],
+    [
+     -38.4,
+     20.6
+    ]
+   ],
+   "partIndex": 29,
+   "what": "painted from sheet 253 (engine, manifold, radiator) beside a code pedal box; was STAND-IN: engine block, manifold, air cleaner, radiator, pedal box",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "well_1",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 629.2,
+   "layer": "inside",
+   "z": -1,
+   "atlas": [
+    74,
+    305,
+    48,
+    26
+   ],
+   "at": [
+    40,
+    103
+   ],
+   "centre": [
+    63.8,
+    116.4
+   ],
+   "outline": [
+    [
+     -23.8,
+     -3.4
+    ],
+    [
+     -21.8,
+     -8.4
+    ],
+    [
+     -17.8,
+     -13.4
+    ],
+    [
+     17.2,
+     -13.4
+    ],
+    [
+     21.2,
+     -8.4
+    ],
+    [
+     24.2,
+     0.6
+    ],
+    [
+     24.2,
+     7.6
+    ],
+    [
+     21.2,
+     12.6
+    ],
+    [
+     -21.8,
+     12.6
+    ],
+    [
+     -22.8,
+     9.6
+    ]
+   ],
+   "partIndex": 30,
+   "what": "painted from sheet 253 (arch, leaf spring, hub); was STAND-IN: wheel well, hub stub, leaf spring",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "well_2",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 621.0,
+   "layer": "inside",
+   "z": -1,
+   "atlas": [
+    124,
+    305,
+    48,
+    26
+   ],
+   "at": [
+    91,
+    103
+   ],
+   "centre": [
+    114.6,
+    116.3
+   ],
+   "outline": [
+    [
+     -23.6,
+     0.7
+    ],
+    [
+     -20.6,
+     -8.3
+    ],
+    [
+     -16.6,
+     -13.3
+    ],
+    [
+     18.4,
+     -13.3
+    ],
+    [
+     22.4,
+     -8.3
+    ],
+    [
+     24.4,
+     -3.3
+    ],
+    [
+     24.4,
+     -0.3
+    ],
+    [
+     21.4,
+     12.7
+    ],
+    [
+     -21.6,
+     12.7
+    ],
+    [
+     -23.6,
+     7.7
+    ]
+   ],
+   "partIndex": 31,
+   "what": "painted from sheet 253 (arch, leaf spring, hub); was STAND-IN: wheel well, hub stub, leaf spring",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "well_3",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 628.1,
+   "layer": "inside",
+   "z": -1,
+   "atlas": [
+    174,
+    305,
+    48,
+    26
+   ],
+   "at": [
+    190,
+    103
+   ],
+   "centre": [
+    213.6,
+    116.3
+   ],
+   "outline": [
+    [
+     -23.6,
+     -3.3
+    ],
+    [
+     -21.6,
+     -8.3
+    ],
+    [
+     -17.6,
+     -13.3
+    ],
+    [
+     17.4,
+     -13.3
+    ],
+    [
+     21.4,
+     -8.3
+    ],
+    [
+     24.4,
+     0.7
+    ],
+    [
+     24.4,
+     6.7
+    ],
+    [
+     20.4,
+     12.7
+    ],
+    [
+     -22.6,
+     12.7
+    ],
+    [
+     -23.6,
+     -0.3
+    ]
+   ],
+   "partIndex": 32,
+   "what": "painted from sheet 253 (arch, leaf spring, hub); was STAND-IN: wheel well, hub stub, leaf spring",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "well_4",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "medium",
+   "mass": 635.2,
+   "layer": "inside",
+   "z": -1,
+   "atlas": [
+    23,
+    305,
+    49,
+    26
+   ],
+   "at": [
+    246,
+    103
+   ],
+   "centre": [
+    270.6,
+    116.4
+   ],
+   "outline": [
+    [
+     -24.6,
+     0.6
+    ],
+    [
+     -21.6,
+     -8.4
+    ],
+    [
+     -17.6,
+     -13.4
+    ],
+    [
+     17.4,
+     -13.4
+    ],
+    [
+     21.4,
+     -8.4
+    ],
+    [
+     24.4,
+     0.6
+    ],
+    [
+     24.4,
+     6.6
+    ],
+    [
+     22.4,
+     12.6
+    ],
+    [
+     -20.6,
+     12.6
+    ],
+    [
+     -24.6,
+     6.6
+    ]
+   ],
+   "partIndex": 33,
+   "what": "painted from sheet 253 (arch, leaf spring, hub); was STAND-IN: wheel well, hub stub, leaf spring",
+   "standIn": false,
+   "edges": [],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j10",
+   "a": "cab_door",
+   "b": "cab_shell",
+   "kind": "hinged",
+   "strength": 0.15,
+   "order": 1,
+   "at": [
+    301,
+    47
+   ],
+   "rapier": "revolute",
+   "hp": 15,
+   "radius": 8,
+   "note": "the last hinge: the door swings on it, then drops"
+  },
+  {
+   "id": "j11",
+   "a": "cab_door",
+   "b": "glass_front_1",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    297.5,
+    56.8
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j12",
+   "a": "cab_door",
+   "b": "glass_front_2",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    283.9,
+    66.4
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j13",
+   "a": "cab_door",
+   "b": "glass_front_3",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    281.3,
+    53.8
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j14",
+   "a": "cab_door",
+   "b": "glass_front_4",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    276.4,
+    52.9
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j17",
+   "a": "cab_shell",
+   "b": "glass_side_1",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    261.5,
+    65.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j18",
+   "a": "cab_shell",
+   "b": "glass_side_2",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    250.8,
+    60.7
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j19",
+   "a": "cab_shell",
+   "b": "glass_side_3",
+   "kind": "glazed",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    260.5,
+    54.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j38",
+   "a": "glass_front_1",
+   "b": "glass_front_2",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    293.0,
+    61.7
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j39",
+   "a": "glass_front_1",
+   "b": "glass_front_3",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    289.0,
+    54.0
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j40",
+   "a": "glass_front_2",
+   "b": "glass_front_3",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    282.4,
+    60.9
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j41",
+   "a": "glass_front_3",
+   "b": "glass_front_4",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    279.3,
+    55.7
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j42",
+   "a": "glass_side_1",
+   "b": "glass_side_2",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    258.2,
+    63.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j43",
+   "a": "glass_side_1",
+   "b": "glass_side_3",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    260.5,
+    61.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j44",
+   "a": "glass_side_2",
+   "b": "glass_side_3",
+   "kind": "cracked",
+   "strength": 0.05,
+   "order": 1,
+   "at": [
+    255.1,
+    56.5
+   ],
+   "rapier": "fixed",
+   "hp": 5,
+   "radius": 8
+  },
+  {
+   "id": "j03",
+   "a": "box_roof",
+   "b": "panel_mid",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    160.0,
+    50.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j04",
+   "a": "box_roof",
+   "b": "panel_rear",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    76.0,
+    50.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j05",
+   "a": "box_roof",
+   "b": "panel_vent",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    215.0,
+    50.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j22",
+   "a": "chassis",
+   "b": "panel_mid",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    160.0,
+    92.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j23",
+   "a": "chassis",
+   "b": "panel_rear",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    76.0,
+    92.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j24",
+   "a": "chassis",
+   "b": "panel_vent",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    215.0,
+    92.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j29",
+   "a": "chassis",
+   "b": "wheel_1",
+   "kind": "axle",
+   "strength": 0.35,
+   "order": 2,
+   "at": [
+    68.7,
+    106.4
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j30",
+   "a": "chassis",
+   "b": "wheel_2",
+   "kind": "axle",
+   "strength": 0.35,
+   "order": 2,
+   "at": [
+    111.8,
+    106.9
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j37",
+   "a": "exhaust",
+   "b": "panel_vent",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    233.0,
+    71.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j47",
+   "a": "panel_mid",
+   "b": "panel_rear",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    123.0,
+    71.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j48",
+   "a": "panel_mid",
+   "b": "panel_vent",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    197.0,
+    71.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j49",
+   "a": "panel_rear",
+   "b": "rear_erector",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    29.0,
+    71.0
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j50",
+   "a": "rear_outrigger",
+   "b": "wheel_1",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 2,
+   "at": [
+    39.5,
+    112.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j52",
+   "a": "panel_rear",
+   "b": "body_frame",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    131.5,
+    71.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j53",
+   "a": "panel_mid",
+   "b": "body_frame",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    131.5,
+    71.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j54",
+   "a": "panel_vent",
+   "b": "body_frame",
+   "kind": "bolted",
+   "strength": 0.3,
+   "order": 2,
+   "at": [
+    131.5,
+    71.5
+   ],
+   "rapier": "fixed",
+   "hp": 30,
+   "radius": 8
+  },
+  {
+   "id": "j26",
+   "a": "chassis",
+   "b": "rear_outrigger",
+   "kind": "bolted",
+   "strength": 0.4,
+   "order": 3,
+   "at": [
+    38.1,
+    98.4
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j27",
+   "a": "chassis",
+   "b": "side_box",
+   "kind": "strapped",
+   "strength": 0.35,
+   "order": 3,
+   "at": [
+    164.9,
+    101.4
+   ],
+   "rapier": "fixed",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j31",
+   "a": "chassis",
+   "b": "wheel_3",
+   "kind": "axle",
+   "strength": 0.35,
+   "order": 3,
+   "at": [
+    221.8,
+    105.9
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j32",
+   "a": "chassis",
+   "b": "wheel_4",
+   "kind": "axle",
+   "strength": 0.35,
+   "order": 3,
+   "at": [
+    270.0,
+    107.6
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8
+  },
+  {
+   "id": "j51",
+   "a": "side_box",
+   "b": "wheel_3",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 3,
+   "at": [
+    191.6,
+    108.5
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j01",
+   "a": "box_roof",
+   "b": "exhaust",
+   "kind": "strapped",
+   "strength": 0.4,
+   "order": 4,
+   "at": [
+    232.0,
+    49.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j06",
+   "a": "box_roof",
+   "b": "rear_erector",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    29.2,
+    48.5
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j07",
+   "a": "bumper",
+   "b": "cab_shell",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    314.0,
+    101.0
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j08",
+   "a": "bumper",
+   "b": "chassis",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    307.8,
+    109.5
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j16",
+   "a": "cab_shell",
+   "b": "exhaust",
+   "kind": "strapped",
+   "strength": 0.4,
+   "order": 4,
+   "at": [
+    240.3,
+    69.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j21",
+   "a": "chassis",
+   "b": "exhaust",
+   "kind": "strapped",
+   "strength": 0.4,
+   "order": 4,
+   "at": [
+    234.0,
+    97.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j25",
+   "a": "chassis",
+   "b": "rear_erector",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    28.5,
+    92.8
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j35",
+   "a": "exhaust",
+   "b": "launch_rail",
+   "kind": "strapped",
+   "strength": 0.4,
+   "order": 4,
+   "at": [
+    233.0,
+    39.0
+   ],
+   "rapier": "fixed",
+   "hp": 40,
+   "radius": 8
+  },
+  {
+   "id": "j46",
+   "a": "launch_rail",
+   "b": "rear_erector",
+   "kind": "bolted",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    20.5,
+    46.0
+   ],
+   "rapier": "fixed",
+   "hp": 50,
+   "radius": 8
+  },
+  {
+   "id": "j33",
+   "a": "clamp_band",
+   "b": "launch_rail",
+   "kind": "bolted",
+   "strength": 0.6,
+   "order": 5,
+   "at": [
+    181.0,
+    39.0
+   ],
+   "rapier": "fixed",
+   "hp": 60,
+   "radius": 8
+  },
+  {
+   "id": "j34",
+   "a": "clamp_band",
+   "b": "missile",
+   "kind": "strapped",
+   "strength": 0.45,
+   "order": 5,
+   "at": [
+    180.9,
+    25.0
+   ],
+   "rapier": "fixed",
+   "hp": 45,
+   "radius": 8
+  },
+  {
+   "id": "j09",
+   "a": "bumper",
+   "b": "tow_hook",
+   "kind": "welded",
+   "strength": 0.7,
+   "order": 6,
+   "at": [
+    309.5,
+    119.0
+   ],
+   "rapier": "fixed",
+   "hp": 70,
+   "radius": 8
+  },
+  {
+   "id": "j15",
+   "a": "cab_shell",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.7,
+   "order": 6,
+   "at": [
+    287.3,
+    94.1
+   ],
+   "rapier": "fixed",
+   "hp": 70,
+   "radius": 8
+  },
+  {
+   "id": "j28",
+   "a": "chassis",
+   "b": "tow_hook",
+   "kind": "welded",
+   "strength": 0.7,
+   "order": 6,
+   "at": [
+    299.8,
+    119.5
+   ],
+   "rapier": "fixed",
+   "hp": 70,
+   "radius": 8
+  },
+  {
+   "id": "j20",
+   "a": "cab_shell",
+   "b": "missile",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 7,
+   "at": [
+    242.5,
+    36.2
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j36",
+   "a": "exhaust",
+   "b": "missile",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 7,
+   "at": [
+    235.5,
+    38.0
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j45",
+   "a": "launch_rail",
+   "b": "missile",
+   "kind": "railed",
+   "strength": 0.0,
+   "order": 7,
+   "at": [
+    114.2,
+    39.0
+   ],
+   "rapier": "prismatic",
+   "hp": 0,
+   "radius": 8,
+   "axis": [
+    -1,
+    0
+   ],
+   "note": "prismatic along the rail; free when the clamp is gone and the chassis tilts past 20 degrees (destruction_model 4.2)"
+  },
+  {
+   "id": "j02",
+   "a": "box_roof",
+   "b": "launch_rail",
+   "kind": "welded",
+   "strength": 0.85,
+   "order": 8,
+   "at": [
+    128.7,
+    45.9
+   ],
+   "rapier": "fixed",
+   "hp": 85,
+   "radius": 8
+  },
+  {
+   "id": "j55",
+   "a": "body_frame",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.9,
+   "order": 9,
+   "at": [
+    131.5,
+    71.5
+   ],
+   "rapier": "fixed",
+   "hp": 90,
+   "radius": 8
+  },
+  {
+   "id": "j56",
+   "a": "body_frame",
+   "b": "box_roof",
+   "kind": "welded",
+   "strength": 0.9,
+   "order": 9,
+   "at": [
+    131.5,
+    71.5
+   ],
+   "rapier": "fixed",
+   "hp": 90,
+   "radius": 8
+  },
+  {
+   "id": "j57",
+   "a": "engine",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.9,
+   "order": 9,
+   "at": [
+    279.4,
+    83.4
+   ],
+   "rapier": "fixed",
+   "hp": 90,
+   "radius": 8
+  },
+  {
+   "id": "j58",
+   "a": "well_1",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    63.8,
+    116.4
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j59",
+   "a": "well_2",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    114.6,
+    116.3
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j60",
+   "a": "well_3",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    213.6,
+    116.3
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  },
+  {
+   "id": "j61",
+   "a": "well_4",
+   "b": "chassis",
+   "kind": "welded",
+   "strength": 0.95,
+   "order": 9,
+   "at": [
+    270.6,
+    116.4
+   ],
+   "rapier": "fixed",
+   "hp": 95,
+   "radius": 8
+  }
+ ],
+ "damagedDecals": [
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    123,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    132,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    141,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    150,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    159,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    168,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "bolt",
+   "at": [
+    177,
+    50
+   ]
+  },
+  {
+   "joint": "j03",
+   "kind": "lift",
+   "at": [
+    186,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    30,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    39,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    66,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    75,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "bolt",
+   "at": [
+    93,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    102,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    111,
+    50
+   ]
+  },
+  {
+   "joint": "j04",
+   "kind": "lift",
+   "at": [
+    120,
+    50
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    198,
+    50
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    207,
+    50
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    216,
+    50
+   ]
+  },
+  {
+   "joint": "j05",
+   "kind": "lift",
+   "at": [
+    225,
+    50
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    273,
+    43
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    273,
+    50
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    278,
+    43
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    273,
+    63
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    273,
+    70
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    273,
+    76
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    273,
+    83
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    273,
+    89
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    294,
+    43
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    281,
+    91
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    302,
+    46
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    290,
+    91
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    305,
+    57
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    295,
+    91
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    305,
+    70
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    306,
+    76
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "bolt",
+   "at": [
+    303,
+    91
+   ]
+  },
+  {
+   "joint": "j10",
+   "kind": "lift",
+   "at": [
+    306,
+    89
+   ]
+  },
+  {
+   "joint": "j11",
+   "kind": "lift",
+   "at": [
+    289,
+    51
+   ]
+  },
+  {
+   "joint": "j11",
+   "kind": "lift",
+   "at": [
+    298,
+    51
+   ]
+  },
+  {
+   "joint": "j12",
+   "kind": "bolt",
+   "at": [
+    275,
+    62
+   ]
+  },
+  {
+   "joint": "j12",
+   "kind": "bolt",
+   "at": [
+    280,
+    67
+   ]
+  },
+  {
+   "joint": "j12",
+   "kind": "bolt",
+   "at": [
+    289,
+    67
+   ]
+  },
+  {
+   "joint": "j13",
+   "kind": "bolt",
+   "at": [
+    275,
+    58
+   ]
+  },
+  {
+   "joint": "j13",
+   "kind": "bolt",
+   "at": [
+    286,
+    51
+   ]
+  },
+  {
+   "joint": "j17",
+   "kind": "lift",
+   "at": [
+    258,
+    67
+   ]
+  },
+  {
+   "joint": "j18",
+   "kind": "lift",
+   "at": [
+    249,
+    53
+   ]
+  },
+  {
+   "joint": "j18",
+   "kind": "bolt",
+   "at": [
+    250,
+    67
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    132,
+    92
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    141,
+    92
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    168,
+    92
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    177,
+    92
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    186,
+    92
+   ]
+  },
+  {
+   "joint": "j22",
+   "kind": "lift",
+   "at": [
+    195,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    30,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    39,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    48,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    57,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    66,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "bolt",
+   "at": [
+    75,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    93,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "lift",
+   "at": [
+    102,
+    92
+   ]
+  },
+  {
+   "joint": "j23",
+   "kind": "bolt",
+   "at": [
+    111,
+    92
+   ]
+  },
+  {
+   "joint": "j24",
+   "kind": "bolt",
+   "at": [
+    198,
+    92
+   ]
+  },
+  {
+   "joint": "j24",
+   "kind": "bolt",
+   "at": [
+    216,
+    92
+   ]
+  },
+  {
+   "joint": "j24",
+   "kind": "lift",
+   "at": [
+    225,
+    92
+   ]
+  },
+  {
+   "joint": "j26",
+   "kind": "lift",
+   "at": [
+    29,
+    94
+   ]
+  },
+  {
+   "joint": "j26",
+   "kind": "lift",
+   "at": [
+    38,
+    94
+   ]
+  },
+  {
+   "joint": "j26",
+   "kind": "lift",
+   "at": [
+    41,
+    101
+   ]
+  },
+  {
+   "joint": "j27",
+   "kind": "lift",
+   "at": [
+    145,
+    112
+   ]
+  },
+  {
+   "joint": "j27",
+   "kind": "lift",
+   "at": [
+    145,
+    119
+   ]
+  },
+  {
+   "joint": "j27",
+   "kind": "lift",
+   "at": [
+    160,
+    98
+   ]
+  },
+  {
+   "joint": "j27",
+   "kind": "lift",
+   "at": [
+    178,
+    98
+   ]
+  },
+  {
+   "joint": "j29",
+   "kind": "lift",
+   "at": [
+    48,
+    102
+   ]
+  },
+  {
+   "joint": "j29",
+   "kind": "lift",
+   "at": [
+    57,
+    102
+   ]
+  },
+  {
+   "joint": "j29",
+   "kind": "bolt",
+   "at": [
+    83,
+    106
+   ]
+  },
+  {
+   "joint": "j29",
+   "kind": "bolt",
+   "at": [
+    87,
+    115
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "lift",
+   "at": [
+    94,
+    107
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "lift",
+   "at": [
+    97,
+    103
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "bolt",
+   "at": [
+    103,
+    102
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "lift",
+   "at": [
+    112,
+    102
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "lift",
+   "at": [
+    121,
+    102
+   ]
+  },
+  {
+   "joint": "j30",
+   "kind": "lift",
+   "at": [
+    137,
+    109
+   ]
+  },
+  {
+   "joint": "j31",
+   "kind": "bolt",
+   "at": [
+    197,
+    102
+   ]
+  },
+  {
+   "joint": "j31",
+   "kind": "bolt",
+   "at": [
+    206,
+    102
+   ]
+  },
+  {
+   "joint": "j31",
+   "kind": "lift",
+   "at": [
+    224,
+    102
+   ]
+  },
+  {
+   "joint": "j31",
+   "kind": "lift",
+   "at": [
+    237,
+    114
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    247,
+    110
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    249,
+    107
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    252,
+    103
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    260,
+    102
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    278,
+    102
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "bolt",
+   "at": [
+    293,
+    111
+   ]
+  },
+  {
+   "joint": "j32",
+   "kind": "lift",
+   "at": [
+    295,
+    120
+   ]
+  },
+  {
+   "joint": "j37",
+   "kind": "lift",
+   "at": [
+    233,
+    51
+   ]
+  },
+  {
+   "joint": "j37",
+   "kind": "bolt",
+   "at": [
+    233,
+    60
+   ]
+  },
+  {
+   "joint": "j37",
+   "kind": "lift",
+   "at": [
+    233,
+    69
+   ]
+  },
+  {
+   "joint": "j37",
+   "kind": "bolt",
+   "at": [
+    233,
+    87
+   ]
+  },
+  {
+   "joint": "j38",
+   "kind": "crack_star",
+   "at": [
+    289,
+    57
+   ]
+  },
+  {
+   "joint": "j38",
+   "kind": "crack_star",
+   "at": [
+    295,
+    65
+   ]
+  },
+  {
+   "joint": "j39",
+   "kind": "crack_star",
+   "at": [
+    289,
+    52
+   ]
+  },
+  {
+   "joint": "j40",
+   "kind": "crack_star",
+   "at": [
+    285,
+    61
+   ]
+  },
+  {
+   "joint": "j41",
+   "kind": "crack_star",
+   "at": [
+    276,
+    58
+   ]
+  },
+  {
+   "joint": "j42",
+   "kind": "crack_star",
+   "at": [
+    258,
+    62
+   ]
+  },
+  {
+   "joint": "j43",
+   "kind": "crack_star",
+   "at": [
+    259,
+    61
+   ]
+  },
+  {
+   "joint": "j47",
+   "kind": "bolt",
+   "at": [
+    123,
+    51
+   ]
+  },
+  {
+   "joint": "j47",
+   "kind": "bolt",
+   "at": [
+    123,
+    60
+   ]
+  },
+  {
+   "joint": "j47",
+   "kind": "lift",
+   "at": [
+    123,
+    69
+   ]
+  },
+  {
+   "joint": "j47",
+   "kind": "lift",
+   "at": [
+    123,
+    78
+   ]
+  },
+  {
+   "joint": "j48",
+   "kind": "bolt",
+   "at": [
+    197,
+    51
+   ]
+  },
+  {
+   "joint": "j48",
+   "kind": "lift",
+   "at": [
+    197,
+    60
+   ]
+  },
+  {
+   "joint": "j48",
+   "kind": "bolt",
+   "at": [
+    197,
+    78
+   ]
+  },
+  {
+   "joint": "j48",
+   "kind": "lift",
+   "at": [
+    197,
+    87
+   ]
+  },
+  {
+   "joint": "j49",
+   "kind": "bolt",
+   "at": [
+    29,
+    51
+   ]
+  },
+  {
+   "joint": "j49",
+   "kind": "lift",
+   "at": [
+    29,
+    60
+   ]
+  },
+  {
+   "joint": "j49",
+   "kind": "lift",
+   "at": [
+    29,
+    69
+   ]
+  },
+  {
+   "joint": "j49",
+   "kind": "lift",
+   "at": [
+    29,
+    87
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "hinge",
+   "at": [
+    286,
+    47
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "dent",
+   "at": [
+    281,
+    90
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "crack",
+   "at": [
+    60,
+    86
+   ]
+  },
+  {
+   "joint": null,
+   "kind": "dent",
+   "at": [
+    150,
+    107
+   ]
+  }
+ ],
+ "notes": [
+  "Inside pieces are STAND-INS painted by code from the truck's own palette; a paid sheet can replace them (spec in _host_runs/level2_fracture).",
+  "The missile is one body; when it lands hard the goal-missile rules (its own fracture map) can take over."
+ ]
+}

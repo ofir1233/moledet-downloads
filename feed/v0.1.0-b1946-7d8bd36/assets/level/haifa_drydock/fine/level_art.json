@@ -1,0 +1,71 @@
+{
+ "version": 3,
+ "pxPerCell": 32,
+ "size": [
+  15360,
+  2176
+ ],
+ "frame": "px, origin top-left of the level, y down",
+ "made": "tools/haifa/fine_art.py over tools/drydock/paint_panels.py (17.11): the dry dock's panels as pixel matter for the destruction engine",
+ "materials": [
+  {
+   "id": 0,
+   "name": "painted_air",
+   "maskColour": "#000000"
+  },
+  {
+   "id": 1,
+   "name": "carved_air",
+   "maskColour": "#ff00ff"
+  },
+  {
+   "id": 2,
+   "name": "pier",
+   "maskColour": "#8b6a44"
+  },
+  {
+   "id": 3,
+   "name": "masonry",
+   "maskColour": "#8d877c"
+  },
+  {
+   "id": 4,
+   "name": "plate",
+   "maskColour": "#7a6f62"
+  },
+  {
+   "id": 5,
+   "name": "shell",
+   "maskColour": "#3c3c46"
+  },
+  {
+   "id": 6,
+   "name": "bedrock",
+   "maskColour": "#282830"
+  },
+  {
+   "id": 7,
+   "name": "quaystone",
+   "maskColour": "#8f7f66"
+  },
+  {
+   "id": 8,
+   "name": "sandbag",
+   "maskColour": "#96825a"
+  }
+ ],
+ "panels": [
+  {
+   "id": "drydock",
+   "rect": [
+    0,
+    0,
+    15360,
+    2176
+   ],
+   "col": "col.webp",
+   "mat": "mat.png",
+   "back": "back.webp"
+  }
+ ]
+}

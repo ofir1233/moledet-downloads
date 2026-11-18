@@ -1,0 +1,55 @@
+{
+ "canvas": [
+  208,
+  224
+ ],
+ "cell": 32,
+ "hero_height_px": 96,
+ "origin_ground_y": 218,
+ "pole_x": 60,
+ "lamp_glow_centre": [
+  34,
+  121
+ ],
+ "cloth_centre_raised": [
+  62,
+  66
+ ],
+ "fx_origin": "same as the frames",
+ "states": {
+  "waiting": {
+   "frames": 4,
+   "fps": 4,
+   "loop": true
+  },
+  "raising": {
+   "frames": 10,
+   "durations_ms": [
+    70,
+    70,
+    70,
+    70,
+    70,
+    70,
+    80,
+    80,
+    90,
+    100
+   ],
+   "total_ms": 770,
+   "loop": false,
+   "then": "raised"
+  },
+  "raised": {
+   "frames": 12,
+   "fps": 12,
+   "loop": true
+  },
+  "fx": {
+   "frames": 24,
+   "fps": 12,
+   "loop": false,
+   "start": "at raising frame 6 (the snap)"
+  }
+ }
+}

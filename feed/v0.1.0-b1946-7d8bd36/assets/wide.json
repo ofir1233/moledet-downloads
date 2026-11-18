@@ -1,0 +1,298 @@
+{
+ "about": "made by tools/publish/wide_tiles.ts: each wide picture split into tiles of at most 2048 px (file.tN.png; no @ in a name, the launcher manifest allows only A-Za-z0-9._-/), put together on the GPU by src/render/paint/gpuOnly.ts",
+ "tileW": 2048,
+ "files": {
+  "level/haifa/fine/sky.phone.png": {
+   "w": 8176,
+   "h": 576,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     2048
+    ],
+    [
+     6144,
+     2032
+    ]
+   ]
+  },
+  "level/haifa/fine/sky.png": {
+   "w": 16352,
+   "h": 1152,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     2048
+    ],
+    [
+     6144,
+     2048
+    ],
+    [
+     8192,
+     2048
+    ],
+    [
+     10240,
+     2048
+    ],
+    [
+     12288,
+     2048
+    ],
+    [
+     14336,
+     2016
+    ]
+   ]
+  },
+  "level/haifa/layers/carmel.png": {
+   "w": 5000,
+   "h": 1056,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     904
+    ]
+   ]
+  },
+  "level/haifa/layers/carmel_near.phone.png": {
+   "w": 4464,
+   "h": 693,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     368
+    ]
+   ]
+  },
+  "level/haifa/layers/carmel_near.png": {
+   "w": 5952,
+   "h": 924,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     1856
+    ]
+   ]
+  },
+  "level/haifa/layers/port_near.phone.png": {
+   "w": 5808,
+   "h": 867,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     1712
+    ]
+   ]
+  },
+  "level/haifa/layers/port_near.png": {
+   "w": 7744,
+   "h": 1156,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     2048
+    ],
+    [
+     6144,
+     1600
+    ]
+   ]
+  },
+  "level/haifa/layers/sea_strip8.png": {
+   "w": 10240,
+   "h": 1056,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     2048
+    ],
+    [
+     6144,
+     2048
+    ],
+    [
+     8192,
+     2048
+    ]
+   ]
+  },
+  "level/haifa_drydock/fine/sky.png": {
+   "w": 15360,
+   "h": 2176,
+   "tiles": [
+    [
+     0,
+     2048
+    ],
+    [
+     2048,
+     2048
+    ],
+    [
+     4096,
+     2048
+    ],
+    [
+     6144,
+     2048
+    ],
+    [
+     8192,
+     2048
+    ],
+    [
+     10240,
+     2048
+    ],
+    [
+     12288,
+     2048
+    ],
+    [
+     14336,
+     1024
+    ]
+   ]
+  }
+ },
+ "tileFiles": [
+  "level/haifa/fine/sky.phone.t0.png",
+  "level/haifa/fine/sky.phone.t1.png",
+  "level/haifa/fine/sky.phone.t2.png",
+  "level/haifa/fine/sky.phone.t3.png",
+  "level/haifa/fine/sky.t0.png",
+  "level/haifa/fine/sky.t1.png",
+  "level/haifa/fine/sky.t2.png",
+  "level/haifa/fine/sky.t3.png",
+  "level/haifa/fine/sky.t4.png",
+  "level/haifa/fine/sky.t5.png",
+  "level/haifa/fine/sky.t6.png",
+  "level/haifa/fine/sky.t7.png",
+  "level/haifa/layers/carmel.t0.png",
+  "level/haifa/layers/carmel.t1.png",
+  "level/haifa/layers/carmel.t2.png",
+  "level/haifa/layers/carmel_near.phone.t0.png",
+  "level/haifa/layers/carmel_near.phone.t1.png",
+  "level/haifa/layers/carmel_near.phone.t2.png",
+  "level/haifa/layers/carmel_near.t0.png",
+  "level/haifa/layers/carmel_near.t1.png",
+  "level/haifa/layers/carmel_near.t2.png",
+  "level/haifa/layers/port_near.phone.t0.png",
+  "level/haifa/layers/port_near.phone.t1.png",
+  "level/haifa/layers/port_near.phone.t2.png",
+  "level/haifa/layers/port_near.t0.png",
+  "level/haifa/layers/port_near.t1.png",
+  "level/haifa/layers/port_near.t2.png",
+  "level/haifa/layers/port_near.t3.png",
+  "level/haifa/layers/sea_strip8.t0.png",
+  "level/haifa/layers/sea_strip8.t1.png",
+  "level/haifa/layers/sea_strip8.t2.png",
+  "level/haifa/layers/sea_strip8.t3.png",
+  "level/haifa/layers/sea_strip8.t4.png",
+  "level/haifa_drydock/fine/sky.t0.png",
+  "level/haifa_drydock/fine/sky.t1.png",
+  "level/haifa_drydock/fine/sky.t2.png",
+  "level/haifa_drydock/fine/sky.t3.png",
+  "level/haifa_drydock/fine/sky.t4.png",
+  "level/haifa_drydock/fine/sky.t5.png",
+  "level/haifa_drydock/fine/sky.t6.png",
+  "level/haifa_drydock/fine/sky.t7.png"
+ ],
+ "foldFiles": [
+  "chars/eli/atlas.fold.json",
+  "chars/eli/atlas.fold.png",
+  "chars/king/atlas.fold.json",
+  "chars/king/atlas.fold.png",
+  "chars/king/atlas_n.fold.png",
+  "level/haifa/fine/sky.phone.png",
+  "level/haifa/layers/carmel_near.phone.png",
+  "level/haifa/layers/port_near.phone.png",
+  "level/haifa/map/c01.phone.jpg",
+  "level/haifa/map/c02.phone.jpg",
+  "level/haifa/map/c03.phone.jpg",
+  "level/haifa/map/c04.phone.jpg",
+  "level/haifa/map/c05.phone.jpg",
+  "level/haifa/map/c06.phone.jpg",
+  "level/haifa/map/c07.phone.jpg",
+  "level/haifa/map/m01.phone.png",
+  "level/haifa/map/m02.phone.png",
+  "level/haifa/map/m03.phone.png",
+  "level/haifa/map/m04.phone.png",
+  "level/haifa/map/m05.phone.png",
+  "level/haifa/map/m06.phone.png",
+  "level/haifa/map/m07.phone.png",
+  "level/haifa/map/p01.phone.jpg",
+  "level/haifa/map/p02.phone.jpg",
+  "level/haifa/map/p03.phone.jpg",
+  "level/haifa/map/p04.phone.jpg",
+  "level/haifa/map/p05.phone.jpg",
+  "level/haifa/map/p06.phone.jpg",
+  "level/haifa/map/p07.phone.jpg"
+ ]
+}

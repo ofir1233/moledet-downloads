@@ -2,6 +2,17 @@
  "schema": 1,
  "note": "Patch notes, written by hand at each release: one entry per release id (the folder name in builds/releases). kind: added | changed | fixed. Plain Hebrew a player reads. The feed tool (launcher2/tools/make_feed.mjs) copies this file into the feed beside latest.json; the launcher shows it in «מה חדש» and under the update question. docs/RELEASE_AND_LAUNCHER.md, section 4b.",
  "versions": {
+  "v0.1.0-b1946-7d8bd36": {
+   "version": "0.1.0",
+   "date": "2026-11-18",
+   "title": "עוד תיקון זיכרון לאייפון",
+   "items": [
+    {
+     "kind": "fixed",
+     "text": "פחות זיכרון בטלפון: בנמל המשחק צורך כשליש פחות זיכרון, ניסיון נוסף נגד הקריסה באייפון. המראה לא השתנה."
+    }
+   ]
+  },
   "v0.1.0-b1909-6d591ba": {
    "version": "0.1.0",
    "date": "2026-11-18",
