@@ -2,6 +2,37 @@
  "schema": 1,
  "note": "Patch notes, written by hand at each release: one entry per release id (the folder name in builds/releases). kind: added | changed | fixed. Plain Hebrew a player reads. The feed tool (launcher2/tools/make_feed.mjs) copies this file into the feed beside latest.json; the launcher shows it in «מה חדש» and under the update question. docs/RELEASE_AND_LAUNCHER.md, section 4b.",
  "versions": {
+  "v0.1.0-b1898-351ed77": {
+   "version": "0.1.0",
+   "date": "2026-11-18",
+   "title": "סבב הלילה בנמל",
+   "items": [
+    {
+     "kind": "changed",
+     "text": "כל נשק של אלי יורה עכשיו קליע גדול ואיטי שרואים אותו עף ופוגע."
+    },
+    {
+     "kind": "added",
+     "text": "אזהרה לפני פגיעת מרגמה: רואים איפה היא תיפול."
+    },
+    {
+     "kind": "added",
+     "text": "אפשר לטפס על המבנים בנמל, ויש דרך לצאת מהים."
+    },
+    {
+     "kind": "added",
+     "text": "מארב של החזירים בנמל."
+    },
+    {
+     "kind": "fixed",
+     "text": "העלייה לסולם: אלי תופס את השלבים בידיים למעלה ומטפס, בלי קפיצה באוויר."
+    },
+    {
+     "kind": "fixed",
+     "text": "באייפון המשחק צורך פחות זיכרון: מ-1283 ל-860 מגה-בייט."
+    }
+   ]
+  },
   "v0.1.0-b1723-782867a": {
    "version": "0.1.0",
    "date": "2026-11-17",

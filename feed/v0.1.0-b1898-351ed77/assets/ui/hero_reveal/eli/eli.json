@@ -1,0 +1,37 @@
+{
+ "about": "made by art/hero_reveal/cut_eli.py from the paid reveal figure raw/97_97_reveal_eli_figure (art/specs/reveal_eli_figure.json, from the approved sheet3)",
+ "w": 92,
+ "h": 226,
+ "feet": 224,
+ "waist": 106,
+ "tug": [
+  48,
+  38,
+  29,
+  22
+ ],
+ "blink": [
+  49,
+  20
+ ],
+ "brow": [
+  47,
+  14
+ ],
+ "face": [
+  46,
+  14
+ ],
+ "glint": [
+  42,
+  3
+ ],
+ "head": [
+  46,
+  20
+ ],
+ "eye": [
+  52,
+  20
+ ]
+}

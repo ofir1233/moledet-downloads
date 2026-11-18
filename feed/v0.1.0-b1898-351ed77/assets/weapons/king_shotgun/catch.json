@@ -1,0 +1,158 @@
+{
+ "body": "art/chars/v3/king/unarmed/out/unarmed96/pixel/unarmed_fragment_96.json#catch (its ticks)",
+ "sprites": {
+  "file": "catch.png",
+  "cell": [
+   58,
+   48
+  ],
+  "cells": [
+   "falling a",
+   "falling b",
+   "canopy collapsing",
+   "canopy crumpled"
+  ],
+  "anchor": "the cell's bottom-left at `at` (frame px)"
+ },
+ "frames": [
+  {
+   "ticks": 8,
+   "sprite": 0,
+   "at": [
+    14,
+    -54
+   ],
+   "weapon": null,
+   "events": [
+    "weapon:arrives"
+   ]
+  },
+  {
+   "ticks": 6,
+   "sprite": 1,
+   "at": [
+    16,
+    -40
+   ],
+   "weapon": null,
+   "events": []
+  },
+  {
+   "ticks": 10,
+   "sprite": 0,
+   "at": [
+    14,
+    -26
+   ],
+   "weapon": null,
+   "events": []
+  },
+  {
+   "ticks": 3,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     38,
+     28
+    ],
+    "aim": -1.1,
+    "layer": "back"
+   },
+   "events": [
+    "catch",
+    "weapon:picked"
+   ],
+   "sprite": 2,
+   "at": [
+    30,
+    10
+   ]
+  },
+  {
+   "ticks": 3,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     41,
+     60
+    ],
+    "aim": 3.3,
+    "layer": "front"
+   },
+   "events": [],
+   "sprite": 3,
+   "at": [
+    33,
+    50
+   ]
+  },
+  {
+   "ticks": 7,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     42,
+     63
+    ],
+    "aim": 3.3,
+    "layer": "front"
+   },
+   "events": []
+  },
+  {
+   "ticks": 5,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     40,
+     58
+    ],
+    "aim": 3.0,
+    "layer": "front"
+   },
+   "events": []
+  },
+  {
+   "ticks": 6,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": []
+  },
+  {
+   "ticks": 12,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": []
+  },
+  {
+   "ticks": 30,
+   "weapon": {
+    "col": 0,
+    "hand": [
+     30,
+     29
+    ],
+    "aim": 0.0,
+    "layer": "back"
+   },
+   "events": [
+    "reveal"
+   ]
+  }
+ ],
+ "note": "frames 0-2: the gun on its parachute, the body looks up and reaches (the body holds frame 2 until the gun is within 8 art px of the hands, as the unarmed builder's note says); 3: the catch; 3-4: the canopy collapses; 5-6: the gun in the hands; 7-9: the gun BEHIND his head (layer back), the reveal from 9"
+}

@@ -1,0 +1,3924 @@
+{
+ "id": "cable",
+ "version": 1,
+ "form": "J17 fracture v1 (account D), cut by the cables builder's copy of the lane's tools, 12.11.2026 03:29",
+ "character": "State Flex No. 3, issued by the metre: too thin, so a second wire was wound round it; cut once and spliced under two wads of plaster; tagged and stamped by a clerk; a metre too long, looped and taped. It breaks in character: the splice lets go first, the frayed end spits, the tags flutter down last.",
+ "source": {
+  "intact": "props/cable_intact.png",
+  "crop": null,
+  "w": 23,
+  "h": 270,
+  "pxPerCell": 32
+ },
+ "files": {
+  "atlas": "atlas.png",
+  "atlasNormals": "atlas_n.png",
+  "atlasMaterial": "atlas_mat.png",
+  "atlasInside": "atlas_inside.png",
+  "pieceIds": "pieces_id.png",
+  "engineForm": {
+   "col": "cable_col.png",
+   "n": "cable_n.png",
+   "mat": "cable_mat.png",
+   "parts": "cable_parts.png",
+   "grain": "cable_grain.png",
+   "inside": "cable_inside.png",
+   "under": {
+    "col": "cable_under_col.png",
+    "n": "cable_under_n.png",
+    "mat": "cable_under_mat.png",
+    "parts": "cable_under_parts.png"
+   }
+  },
+  "damaged": "damaged.png",
+  "damagedNormals": "damaged_n.png",
+  "shadow": "shadow.png"
+ },
+ "units": "sprite px of the intact picture, y down; outline = convex hull, points relative to the piece centre; mass = px area x areal density",
+ "breakOrder": [
+  "1 hung (the splice): the planned weak line: the cord parts under the splice's lower plaster and the lamp falls with the cord below it",
+  "2 nailed / tied: the feed wire springs off its staple",
+  "3 tied / strapped: the tags and the spare loop come off",
+  "4 tied: the knot slips the hook: the whole cord falls",
+  "5 hung: any other joint of the flex, when a hit lands on it (every joint is a place it can be cut)",
+  "6 hooked: the hook leaves the plate only with the plate"
+ ],
+ "buckle": null,
+ "sections": null,
+ "states": {
+  "intact": "sprite",
+  "damaged": "damaged.png (= intact: rubber shows no wear before it parts)",
+  "broken": "by the joints"
+ },
+ "pieces": [
+  {
+   "id": "plate",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "light",
+   "mass": 73.2,
+   "layer": "shell",
+   "z": 0,
+   "atlas": [
+    18,
+    0,
+    12,
+    12
+   ],
+   "at": [
+    5,
+    1
+   ],
+   "centre": [
+    11.0,
+    6.5
+   ],
+   "outline": [
+    [
+     -6.0,
+     -5.5
+    ],
+    [
+     6.0,
+     -5.5
+    ],
+    [
+     6.0,
+     5.5
+    ],
+    [
+     -4.0,
+     6.5
+    ],
+    [
+     -5.0,
+     6.5
+    ],
+    [
+     -6.0,
+     5.5
+    ]
+   ],
+   "partIndex": 1,
+   "anchor": true,
+   "what": "the ceiling plate, its two bolts, its nail, the lug (anchored: the matter above it is its mount)",
+   "stays": true,
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      44,
+      36,
+      5,
+      1
+     ],
+     "at": [
+      8,
+      11
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_00",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 9.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    46,
+    26,
+    5,
+    6
+   ],
+   "at": [
+    10,
+    20
+   ],
+   "centre": [
+    12.1,
+    23.1
+   ],
+   "outline": [
+    [
+     -2.1,
+     -3.1
+    ],
+    [
+     0.9,
+     -3.1
+    ],
+    [
+     1.9,
+     -2.1
+    ],
+    [
+     2.9,
+     1.9
+    ],
+    [
+     2.9,
+     2.9
+    ],
+    [
+     -2.1,
+     2.9
+    ]
+   ],
+   "partIndex": 2,
+   "what": "the flex, segment 0 (cell 0: cable_mount)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 0
+   },
+   "edges": [
+    {
+     "joint": "j02",
+     "atlas": [
+      61,
+      26,
+      6,
+      5
+     ],
+     "at": [
+      9,
+      20
+     ]
+    },
+    {
+     "joint": "j03",
+     "atlas": [
+      134,
+      26,
+      5,
+      2
+     ],
+     "at": [
+      10,
+      25
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_01",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 20.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    64,
+    0,
+    10,
+    8
+   ],
+   "at": [
+    6,
+    26
+   ],
+   "centre": [
+    11.8,
+    29.5
+   ],
+   "outline": [
+    [
+     -5.8,
+     2.5
+    ],
+    [
+     -2.8,
+     -3.5
+    ],
+    [
+     4.2,
+     -3.5
+    ],
+    [
+     4.2,
+     -0.5
+    ],
+    [
+     3.2,
+     2.5
+    ],
+    [
+     0.2,
+     4.5
+    ],
+    [
+     -4.8,
+     4.5
+    ],
+    [
+     -5.8,
+     3.5
+    ]
+   ],
+   "partIndex": 3,
+   "what": "the flex, segment 1 (cell 0: cable_mount)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 1
+   },
+   "edges": [
+    {
+     "joint": "j03",
+     "atlas": [
+      141,
+      26,
+      5,
+      2
+     ],
+     "at": [
+      10,
+      25
+     ]
+    },
+    {
+     "joint": "j04",
+     "atlas": [
+      51,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      9,
+      33
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_02",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    198,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    8,
+    34
+   ],
+   "centre": [
+    10.4,
+    37.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -2.9
+    ]
+   ],
+   "partIndex": 4,
+   "what": "the flex, segment 2 (cell 0: cable_mount)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 2
+   },
+   "edges": [
+    {
+     "joint": "j04",
+     "atlas": [
+      56,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      9,
+      34
+     ]
+    },
+    {
+     "joint": "j05",
+     "atlas": [
+      161,
+      36,
+      2,
+      1
+     ],
+     "at": [
+      10,
+      41
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_03",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    204,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    42
+   ],
+   "centre": [
+    11.4,
+    45.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -2.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -1.9
+    ]
+   ],
+   "partIndex": 5,
+   "what": "the flex, segment 3 (cell 1: cable_seg_a)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 3
+   },
+   "edges": [
+    {
+     "joint": "j05",
+     "atlas": [
+      165,
+      36,
+      2,
+      1
+     ],
+     "at": [
+      10,
+      42
+     ]
+    },
+    {
+     "joint": "j06",
+     "atlas": [
+      61,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      49
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_04",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 18.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    111,
+    0,
+    8,
+    8
+   ],
+   "at": [
+    9,
+    50
+   ],
+   "centre": [
+    12.0,
+    54.7
+   ],
+   "outline": [
+    [
+     -3.0,
+     -1.7
+    ],
+    [
+     -2.0,
+     -4.7
+    ],
+    [
+     1.0,
+     -4.7
+    ],
+    [
+     5.0,
+     0.3
+    ],
+    [
+     5.0,
+     1.3
+    ],
+    [
+     3.0,
+     3.3
+    ],
+    [
+     -3.0,
+     3.3
+    ]
+   ],
+   "partIndex": 6,
+   "what": "the flex, segment 4 (cell 1: cable_seg_a)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 4
+   },
+   "edges": [
+    {
+     "joint": "j06",
+     "atlas": [
+      66,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      50
+     ]
+    },
+    {
+     "joint": "j07",
+     "atlas": [
+      71,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      57
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_05",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    210,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    58
+   ],
+   "centre": [
+    11.4,
+    62.0
+   ],
+   "outline": [
+    [
+     -2.4,
+     -0.0
+    ],
+    [
+     -1.4,
+     -4.0
+    ],
+    [
+     1.6,
+     -4.0
+    ],
+    [
+     1.6,
+     4.0
+    ],
+    [
+     -1.4,
+     4.0
+    ],
+    [
+     -2.4,
+     1.0
+    ]
+   ],
+   "partIndex": 7,
+   "what": "the flex, segment 5 (cell 1: cable_seg_a)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 5
+   },
+   "edges": [
+    {
+     "joint": "j07",
+     "atlas": [
+      162,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      57
+     ]
+    },
+    {
+     "joint": "j08",
+     "atlas": [
+      76,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      65
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_06",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    216,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    10,
+    66
+   ],
+   "centre": [
+    11.6,
+    69.9
+   ],
+   "outline": [
+    [
+     -1.6,
+     -3.9
+    ],
+    [
+     2.4,
+     -3.9
+    ],
+    [
+     2.4,
+     -2.9
+    ],
+    [
+     1.4,
+     4.1
+    ],
+    [
+     -1.6,
+     4.1
+    ]
+   ],
+   "partIndex": 8,
+   "what": "the flex, segment 6 (cell 1: cable_seg_a)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 6
+   },
+   "edges": [
+    {
+     "joint": "j08",
+     "atlas": [
+      167,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      65
+     ]
+    },
+    {
+     "joint": "j09",
+     "atlas": [
+      81,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      73
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_07",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    222,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    74
+   ],
+   "centre": [
+    11.4,
+    78.0
+   ],
+   "outline": [
+    [
+     -2.4,
+     -1.0
+    ],
+    [
+     -1.4,
+     -4.0
+    ],
+    [
+     1.6,
+     -4.0
+    ],
+    [
+     1.6,
+     4.0
+    ],
+    [
+     -1.4,
+     4.0
+    ],
+    [
+     -2.4,
+     0.0
+    ]
+   ],
+   "partIndex": 9,
+   "what": "the flex, segment 7 (cell 2: cable_seg_b)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 7
+   },
+   "edges": [
+    {
+     "joint": "j09",
+     "atlas": [
+      172,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      73
+     ]
+    },
+    {
+     "joint": "j10",
+     "atlas": [
+      86,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      81
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_08",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 12.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    156,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    9,
+    82
+   ],
+   "centre": [
+    11.4,
+    85.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -2.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     2.6,
+     -2.9
+    ],
+    [
+     2.6,
+     -1.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -2.4,
+     4.1
+    ]
+   ],
+   "partIndex": 10,
+   "what": "the flex, segment 8 (cell 2: cable_seg_b)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 8
+   },
+   "edges": [
+    {
+     "joint": "j10",
+     "atlas": [
+      177,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      81
+     ]
+    },
+    {
+     "joint": "j11",
+     "atlas": [
+      182,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      89
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_09",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    228,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    10,
+    90
+   ],
+   "centre": [
+    11.6,
+    94.0
+   ],
+   "outline": [
+    [
+     -1.6,
+     -4.0
+    ],
+    [
+     1.4,
+     -4.0
+    ],
+    [
+     2.4,
+     -1.0
+    ],
+    [
+     2.4,
+     0.0
+    ],
+    [
+     1.4,
+     4.0
+    ],
+    [
+     -1.6,
+     4.0
+    ]
+   ],
+   "partIndex": 11,
+   "what": "the flex, segment 9 (cell 2: cable_seg_b)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 9
+   },
+   "edges": [
+    {
+     "joint": "j11",
+     "atlas": [
+      91,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      90
+     ]
+    },
+    {
+     "joint": "j12",
+     "atlas": [
+      96,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      97
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_10",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    234,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    98
+   ],
+   "centre": [
+    11.4,
+    101.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -1.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -0.9
+    ]
+   ],
+   "partIndex": 12,
+   "what": "the flex, segment 10 (cell 2: cable_seg_b)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 10
+   },
+   "edges": [
+    {
+     "joint": "j12",
+     "atlas": [
+      101,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      98
+     ]
+    },
+    {
+     "joint": "j13",
+     "atlas": [
+      187,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      105
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_11",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 14.4,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    140,
+    0,
+    6,
+    8
+   ],
+   "at": [
+    7,
+    106
+   ],
+   "centre": [
+    10.8,
+    110.6
+   ],
+   "outline": [
+    [
+     -3.8,
+     1.4
+    ],
+    [
+     -0.8,
+     -4.6
+    ],
+    [
+     2.2,
+     -4.6
+    ],
+    [
+     2.2,
+     3.4
+    ],
+    [
+     -3.8,
+     3.4
+    ]
+   ],
+   "partIndex": 13,
+   "what": "the flex, segment 11 (cell 3: cable_seg_c)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 11
+   },
+   "edges": [
+    {
+     "joint": "j13",
+     "atlas": [
+      106,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      106
+     ]
+    },
+    {
+     "joint": "j14",
+     "atlas": [
+      118,
+      26,
+      6,
+      2
+     ],
+     "at": [
+      7,
+      113
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_12",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 25.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    76,
+    0,
+    10,
+    8
+   ],
+   "at": [
+    4,
+    114
+   ],
+   "centre": [
+    9.5,
+    117.7
+   ],
+   "outline": [
+    [
+     -5.5,
+     2.3
+    ],
+    [
+     -3.5,
+     -3.7
+    ],
+    [
+     4.5,
+     -3.7
+    ],
+    [
+     4.5,
+     0.3
+    ],
+    [
+     3.5,
+     4.3
+    ],
+    [
+     -5.5,
+     4.3
+    ]
+   ],
+   "partIndex": 14,
+   "what": "the flex, segment 12 (cell 3: cable_seg_c)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 12
+   },
+   "edges": [
+    {
+     "joint": "j14",
+     "atlas": [
+      126,
+      26,
+      6,
+      2
+     ],
+     "at": [
+      7,
+      113
+     ]
+    },
+    {
+     "joint": "j15",
+     "atlas": [
+      69,
+      26,
+      9,
+      2
+     ],
+     "at": [
+      4,
+      121
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_13",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 25.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    88,
+    0,
+    10,
+    8
+   ],
+   "at": [
+    4,
+    122
+   ],
+   "centre": [
+    9.5,
+    126.3
+   ],
+   "outline": [
+    [
+     -5.5,
+     -4.3
+    ],
+    [
+     3.5,
+     -4.3
+    ],
+    [
+     4.5,
+     -0.3
+    ],
+    [
+     4.5,
+     3.7
+    ],
+    [
+     -3.5,
+     3.7
+    ],
+    [
+     -5.5,
+     -2.3
+    ]
+   ],
+   "partIndex": 15,
+   "what": "the flex, segment 13 (cell 3: cable_seg_c)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 13
+   },
+   "edges": [
+    {
+     "joint": "j15",
+     "atlas": [
+      80,
+      26,
+      9,
+      2
+     ],
+     "at": [
+      4,
+      121
+     ]
+    },
+    {
+     "joint": "j16",
+     "atlas": [
+      28,
+      36,
+      7,
+      1
+     ],
+     "at": [
+      7,
+      129
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_14",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 14.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    121,
+    0,
+    8,
+    8
+   ],
+   "at": [
+    7,
+    130
+   ],
+   "centre": [
+    11.3,
+    133.4
+   ],
+   "outline": [
+    [
+     -4.3,
+     -3.4
+    ],
+    [
+     2.7,
+     -3.4
+    ],
+    [
+     3.7,
+     -2.4
+    ],
+    [
+     3.7,
+     -0.4
+    ],
+    [
+     1.7,
+     4.6
+    ],
+    [
+     -1.3,
+     4.6
+    ],
+    [
+     -4.3,
+     -2.4
+    ]
+   ],
+   "partIndex": 16,
+   "what": "the flex, segment 14 (cell 3: cable_seg_c)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 14
+   },
+   "edges": [
+    {
+     "joint": "j16",
+     "atlas": [
+      91,
+      26,
+      7,
+      2
+     ],
+     "at": [
+      7,
+      129
+     ]
+    },
+    {
+     "joint": "j17",
+     "atlas": [
+      192,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      137
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_15",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    240,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    138
+   ],
+   "centre": [
+    11.4,
+    141.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -1.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -0.9
+    ]
+   ],
+   "partIndex": 17,
+   "what": "the flex, segment 15 (cell 4: cable_seg_d)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 15
+   },
+   "edges": [
+    {
+     "joint": "j17",
+     "atlas": [
+      111,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      138
+     ]
+    },
+    {
+     "joint": "j18",
+     "atlas": [
+      116,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      145
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_16",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 12.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    163,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    8,
+    146
+   ],
+   "centre": [
+    11.1,
+    150.3
+   ],
+   "outline": [
+    [
+     -3.1,
+     0.7
+    ],
+    [
+     -1.1,
+     -4.3
+    ],
+    [
+     1.9,
+     -4.3
+    ],
+    [
+     1.9,
+     3.7
+    ],
+    [
+     -2.1,
+     3.7
+    ],
+    [
+     -3.1,
+     2.7
+    ]
+   ],
+   "partIndex": 18,
+   "what": "the flex, segment 16 (cell 4: cable_seg_d)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 16
+   },
+   "edges": [
+    {
+     "joint": "j18",
+     "atlas": [
+      121,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      146
+     ]
+    },
+    {
+     "joint": "j19",
+     "atlas": [
+      197,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      153
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_17",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 12.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    170,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    10,
+    154
+   ],
+   "centre": [
+    11.8,
+    158.1
+   ],
+   "outline": [
+    [
+     -1.8,
+     -4.1
+    ],
+    [
+     1.2,
+     -4.1
+    ],
+    [
+     3.2,
+     -1.1
+    ],
+    [
+     3.2,
+     0.9
+    ],
+    [
+     1.2,
+     3.9
+    ],
+    [
+     -1.8,
+     3.9
+    ]
+   ],
+   "partIndex": 19,
+   "what": "the flex, segment 17 (cell 4: cable_seg_d)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 17
+   },
+   "edges": [
+    {
+     "joint": "j19",
+     "atlas": [
+      202,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      153
+     ]
+    },
+    {
+     "joint": "j20",
+     "atlas": [
+      126,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      161
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_18",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    246,
+    0,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    162
+   ],
+   "centre": [
+    11.4,
+    165.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -1.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -0.9
+    ]
+   ],
+   "partIndex": 20,
+   "what": "the flex, segment 18 (cell 4: cable_seg_d)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 18
+   },
+   "edges": [
+    {
+     "joint": "j20",
+     "atlas": [
+      207,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      161
+     ]
+    },
+    {
+     "joint": "j21",
+     "atlas": [
+      212,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      169
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_19",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.7,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    0,
+    26,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    170
+   ],
+   "centre": [
+    11.3,
+    174.1
+   ],
+   "outline": [
+    [
+     -2.3,
+     -0.1
+    ],
+    [
+     -1.3,
+     -4.1
+    ],
+    [
+     1.7,
+     -4.1
+    ],
+    [
+     1.7,
+     3.9
+    ],
+    [
+     -1.3,
+     3.9
+    ],
+    [
+     -2.3,
+     2.9
+    ]
+   ],
+   "partIndex": 21,
+   "what": "the flex, segment 19 (cell 5: cable_seg_e)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 19
+   },
+   "edges": [
+    {
+     "joint": "j21",
+     "atlas": [
+      217,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      169
+     ]
+    },
+    {
+     "joint": "j22",
+     "atlas": [
+      131,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      177
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_20",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    6,
+    26,
+    4,
+    8
+   ],
+   "at": [
+    10,
+    178
+   ],
+   "centre": [
+    12.1,
+    182.0
+   ],
+   "outline": [
+    [
+     -2.1,
+     -4.0
+    ],
+    [
+     0.9,
+     -4.0
+    ],
+    [
+     1.9,
+     -1.0
+    ],
+    [
+     1.9,
+     4.0
+    ],
+    [
+     -1.1,
+     4.0
+    ],
+    [
+     -2.1,
+     0.0
+    ]
+   ],
+   "partIndex": 22,
+   "what": "the flex, segment 20 (cell 5: cable_seg_e)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 20
+   },
+   "edges": [
+    {
+     "joint": "j22",
+     "atlas": [
+      222,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      177
+     ]
+    },
+    {
+     "joint": "j23",
+     "atlas": [
+      227,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      11,
+      185
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_21",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 12.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    177,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    10,
+    186
+   ],
+   "centre": [
+    12.2,
+    190.0
+   ],
+   "outline": [
+    [
+     -2.2,
+     -3.0
+    ],
+    [
+     -1.2,
+     -4.0
+    ],
+    [
+     1.8,
+     -4.0
+    ],
+    [
+     2.8,
+     1.0
+    ],
+    [
+     2.8,
+     2.0
+    ],
+    [
+     0.8,
+     4.0
+    ],
+    [
+     -2.2,
+     4.0
+    ]
+   ],
+   "partIndex": 23,
+   "what": "the flex, segment 21 (cell 5: cable_seg_e)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 21
+   },
+   "edges": [
+    {
+     "joint": "j23",
+     "atlas": [
+      136,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      11,
+      186
+     ]
+    },
+    {
+     "joint": "j24",
+     "atlas": [
+      141,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      193
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_22",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 10.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    24,
+    26,
+    3,
+    8
+   ],
+   "at": [
+    10,
+    194
+   ],
+   "centre": [
+    11.5,
+    198.0
+   ],
+   "outline": [
+    [
+     -1.5,
+     -4.0
+    ],
+    [
+     1.5,
+     -4.0
+    ],
+    [
+     1.5,
+     4.0
+    ],
+    [
+     -1.5,
+     4.0
+    ]
+   ],
+   "partIndex": 24,
+   "what": "the flex, segment 22 (cell 5: cable_seg_e)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 22
+   },
+   "edges": [
+    {
+     "joint": "j24",
+     "atlas": [
+      146,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      10,
+      194
+     ]
+    },
+    {
+     "joint": "j25",
+     "atlas": [
+      232,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      201
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_23",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 10.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    29,
+    26,
+    3,
+    8
+   ],
+   "at": [
+    10,
+    202
+   ],
+   "centre": [
+    11.5,
+    206.0
+   ],
+   "outline": [
+    [
+     -1.5,
+     -4.0
+    ],
+    [
+     1.5,
+     -4.0
+    ],
+    [
+     1.5,
+     4.0
+    ],
+    [
+     -1.5,
+     4.0
+    ]
+   ],
+   "partIndex": 25,
+   "what": "the flex, segment 23 (cell 6: cable_seg_f)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 23
+   },
+   "edges": [
+    {
+     "joint": "j25",
+     "atlas": [
+      237,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      201
+     ]
+    },
+    {
+     "joint": "j26",
+     "atlas": [
+      242,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      209
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_24",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    12,
+    26,
+    4,
+    8
+   ],
+   "at": [
+    9,
+    210
+   ],
+   "centre": [
+    11.4,
+    214.1
+   ],
+   "outline": [
+    [
+     -2.4,
+     2.9
+    ],
+    [
+     -1.4,
+     -4.1
+    ],
+    [
+     1.6,
+     -4.1
+    ],
+    [
+     1.6,
+     3.9
+    ],
+    [
+     -2.4,
+     3.9
+    ]
+   ],
+   "partIndex": 26,
+   "what": "the flex, segment 24 (cell 6: cable_seg_f)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 24
+   },
+   "edges": [
+    {
+     "joint": "j26",
+     "atlas": [
+      247,
+      26,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      209
+     ]
+    },
+    {
+     "joint": "j27",
+     "atlas": [
+      0,
+      36,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      217
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_25",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 12.6,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    148,
+    0,
+    6,
+    8
+   ],
+   "at": [
+    9,
+    218
+   ],
+   "centre": [
+    11.5,
+    222.2
+   ],
+   "outline": [
+    [
+     -2.5,
+     -2.2
+    ],
+    [
+     -1.5,
+     -4.2
+    ],
+    [
+     1.5,
+     -4.2
+    ],
+    [
+     3.5,
+     2.8
+    ],
+    [
+     3.5,
+     3.8
+    ],
+    [
+     -1.5,
+     3.8
+    ],
+    [
+     -2.5,
+     0.8
+    ]
+   ],
+   "partIndex": 27,
+   "what": "the flex, segment 25 (cell 6: cable_seg_f)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 25
+   },
+   "edges": [
+    {
+     "joint": "j27",
+     "atlas": [
+      5,
+      36,
+      3,
+      2
+     ],
+     "at": [
+      10,
+      217
+     ]
+    },
+    {
+     "joint": "j28",
+     "atlas": [
+      148,
+      26,
+      5,
+      2
+     ],
+     "at": [
+      10,
+      225
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_26",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.7,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    184,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    10,
+    226
+   ],
+   "centre": [
+    11.7,
+    229.8
+   ],
+   "outline": [
+    [
+     -1.7,
+     -3.8
+    ],
+    [
+     3.3,
+     -3.8
+    ],
+    [
+     3.3,
+     -2.8
+    ],
+    [
+     1.3,
+     4.2
+    ],
+    [
+     -1.7,
+     4.2
+    ]
+   ],
+   "partIndex": 28,
+   "what": "the flex, segment 26 (cell 6: cable_seg_f)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 26
+   },
+   "edges": [
+    {
+     "joint": "j28",
+     "atlas": [
+      155,
+      26,
+      5,
+      2
+     ],
+     "at": [
+      10,
+      225
+     ]
+    },
+    {
+     "joint": "j29",
+     "atlas": [
+      169,
+      36,
+      2,
+      1
+     ],
+     "at": [
+      10,
+      233
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_27",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 11.2,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    18,
+    26,
+    4,
+    8
+   ],
+   "at": [
+    8,
+    234
+   ],
+   "centre": [
+    10.4,
+    237.9
+   ],
+   "outline": [
+    [
+     -2.4,
+     -1.9
+    ],
+    [
+     -1.4,
+     -3.9
+    ],
+    [
+     1.6,
+     -3.9
+    ],
+    [
+     1.6,
+     4.1
+    ],
+    [
+     -1.4,
+     4.1
+    ],
+    [
+     -2.4,
+     -0.9
+    ]
+   ],
+   "partIndex": 29,
+   "what": "the flex, segment 27 (cell 7: cable_join)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 27
+   },
+   "edges": [
+    {
+     "joint": "j29",
+     "atlas": [
+      173,
+      36,
+      2,
+      1
+     ],
+     "at": [
+      10,
+      234
+     ]
+    },
+    {
+     "joint": "j30",
+     "atlas": [
+      10,
+      36,
+      3,
+      2
+     ],
+     "at": [
+      9,
+      241
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_28",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 14.0,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    131,
+    0,
+    7,
+    8
+   ],
+   "at": [
+    8,
+    242
+   ],
+   "centre": [
+    10.8,
+    246.7
+   ],
+   "outline": [
+    [
+     -2.8,
+     1.3
+    ],
+    [
+     -1.8,
+     -4.7
+    ],
+    [
+     1.2,
+     -4.7
+    ],
+    [
+     4.2,
+     2.3
+    ],
+    [
+     4.2,
+     3.3
+    ],
+    [
+     -2.8,
+     3.3
+    ]
+   ],
+   "partIndex": 30,
+   "what": "the flex, segment 28 (cell 7: cable_join)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 28
+   },
+   "edges": [
+    {
+     "joint": "j30",
+     "atlas": [
+      151,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      9,
+      242
+     ]
+    },
+    {
+     "joint": "j31",
+     "atlas": [
+      100,
+      26,
+      7,
+      2
+     ],
+     "at": [
+      8,
+      249
+     ]
+    },
+    {
+     "joint": "j32",
+     "atlas": [
+      20,
+      36,
+      2,
+      2
+     ],
+     "at": [
+      13,
+      248
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_29",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 15.8,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    100,
+    0,
+    9,
+    8
+   ],
+   "at": [
+    6,
+    250
+   ],
+   "centre": [
+    10.6,
+    253.5
+   ],
+   "outline": [
+    [
+     -4.6,
+     3.5
+    ],
+    [
+     -2.6,
+     -3.5
+    ],
+    [
+     4.4,
+     -3.5
+    ],
+    [
+     4.4,
+     -1.5
+    ],
+    [
+     1.4,
+     4.5
+    ],
+    [
+     -4.6,
+     4.5
+    ]
+   ],
+   "partIndex": 31,
+   "what": "the flex, segment 29 (cell 7: cable_join)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 29
+   },
+   "edges": [
+    {
+     "joint": "j31",
+     "atlas": [
+      109,
+      26,
+      7,
+      2
+     ],
+     "at": [
+      8,
+      249
+     ]
+    },
+    {
+     "joint": "j33",
+     "atlas": [
+      15,
+      36,
+      3,
+      2
+     ],
+     "at": [
+      9,
+      257
+     ]
+    },
+    {
+     "joint": "j34",
+     "atlas": [
+      34,
+      26,
+      4,
+      7
+     ],
+     "at": [
+      11,
+      250
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "seg_30",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 29.7,
+   "layer": "shell",
+   "z": 1,
+   "atlas": [
+    32,
+    0,
+    12,
+    12
+   ],
+   "at": [
+    4,
+    258
+   ],
+   "centre": [
+    9.5,
+    264.2
+   ],
+   "outline": [
+    [
+     -5.5,
+     -4.2
+    ],
+    [
+     -4.5,
+     -6.2
+    ],
+    [
+     2.5,
+     -6.2
+    ],
+    [
+     6.5,
+     -1.2
+    ],
+    [
+     6.5,
+     -0.2
+    ],
+    [
+     3.5,
+     5.8
+    ],
+    [
+     1.5,
+     5.8
+    ],
+    [
+     -5.5,
+     4.8
+    ]
+   ],
+   "partIndex": 32,
+   "what": "the flex, segment 30 (cell 7: cable_join)",
+   "flap": {
+    "garment": "cable",
+    "strip": "flex",
+    "row": 30
+   },
+   "edges": [
+    {
+     "joint": "j33",
+     "atlas": [
+      156,
+      36,
+      3,
+      1
+     ],
+     "at": [
+      9,
+      258
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "hook",
+   "material": "steel",
+   "mat": 3,
+   "massClass": "feather",
+   "mass": 25.9,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    46,
+    0,
+    8,
+    12
+   ],
+   "at": [
+    8,
+    12
+   ],
+   "centre": [
+    11.5,
+    17.9
+   ],
+   "outline": [
+    [
+     -3.5,
+     -5.9
+    ],
+    [
+     1.5,
+     -5.9
+    ],
+    [
+     3.5,
+     -3.9
+    ],
+    [
+     4.5,
+     3.1
+    ],
+    [
+     4.5,
+     5.1
+    ],
+    [
+     3.5,
+     6.1
+    ],
+    [
+     -2.5,
+     6.1
+    ],
+    [
+     -3.5,
+     5.1
+    ]
+   ],
+   "partIndex": 33,
+   "what": "the S of rebar",
+   "edges": [
+    {
+     "joint": "j01",
+     "atlas": [
+      37,
+      36,
+      5,
+      1
+     ],
+     "at": [
+      8,
+      12
+     ]
+    },
+    {
+     "joint": "j02",
+     "atlas": [
+      53,
+      26,
+      6,
+      5
+     ],
+     "at": [
+      9,
+      19
+     ]
+    }
+   ],
+   "bent": []
+  },
+  {
+   "id": "feed_wire",
+   "material": "brass",
+   "mat": 12,
+   "massClass": "feather",
+   "mass": 18.2,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    0,
+    0,
+    5,
+    24
+   ],
+   "at": [
+    15,
+    2
+   ],
+   "centre": [
+    18.4,
+    13.3
+   ],
+   "outline": [
+    [
+     -3.4,
+     10.7
+    ],
+    [
+     -1.4,
+     -8.3
+    ],
+    [
+     -0.4,
+     -11.3
+    ],
+    [
+     0.6,
+     -11.3
+    ],
+    [
+     1.6,
+     -8.3
+    ],
+    [
+     1.6,
+     5.7
+    ],
+    [
+     -0.4,
+     9.7
+    ],
+    [
+     -2.4,
+     12.7
+    ],
+    [
+     -3.4,
+     12.7
+    ]
+   ],
+   "partIndex": 34,
+   "what": "the bare copper feed: through its own hole, stapled once, a slack arc to the flex",
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "tag_b",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 2.9,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    56,
+    0,
+    6,
+    11
+   ],
+   "at": [
+    14,
+    84
+   ],
+   "centre": [
+    16.8,
+    90.6
+   ],
+   "outline": [
+    [
+     -2.8,
+     -6.6
+    ],
+    [
+     -1.8,
+     -6.6
+    ],
+    [
+     2.2,
+     -3.6
+    ],
+    [
+     3.2,
+     -2.6
+    ],
+    [
+     3.2,
+     3.4
+    ],
+    [
+     2.2,
+     4.4
+    ],
+    [
+     -1.8,
+     4.4
+    ],
+    [
+     -2.8,
+     3.4
+    ]
+   ],
+   "partIndex": 35,
+   "what": "the clerk's paper tag on its string",
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "tag_c",
+   "material": "cloth",
+   "mat": 11,
+   "massClass": "feather",
+   "mass": 1.5,
+   "layer": "shell",
+   "z": 3,
+   "atlas": [
+    191,
+    0,
+    5,
+    8
+   ],
+   "at": [
+    14,
+    115
+   ],
+   "centre": [
+    16.3,
+    119.9
+   ],
+   "outline": [
+    [
+     -2.3,
+     -4.9
+    ],
+    [
+     -1.3,
+     -4.9
+    ],
+    [
+     2.7,
+     -0.9
+    ],
+    [
+     2.7,
+     2.1
+    ],
+    [
+     1.7,
+     3.1
+    ],
+    [
+     -1.3,
+     3.1
+    ],
+    [
+     -2.3,
+     2.1
+    ]
+   ],
+   "partIndex": 36,
+   "what": "the splice's small tag, stamped",
+   "edges": [],
+   "bent": []
+  },
+  {
+   "id": "spare_loop",
+   "material": "rubber",
+   "mat": 10,
+   "massClass": "feather",
+   "mass": 28.4,
+   "layer": "shell",
+   "z": 2,
+   "atlas": [
+    7,
+    0,
+    9,
+    13
+   ],
+   "at": [
+    12,
+    248
+   ],
+   "centre": [
+    16.6,
+    255.1
+   ],
+   "outline": [
+    [
+     -4.6,
+     -3.1
+    ],
+    [
+     -2.6,
+     -7.1
+    ],
+    [
+     1.4,
+     -6.1
+    ],
+    [
+     4.4,
+     -3.1
+    ],
+    [
+     4.4,
+     1.9
+    ],
+    [
+     3.4,
+     3.9
+    ],
+    [
+     1.4,
+     5.9
+    ],
+    [
+     -1.6,
+     5.9
+    ],
+    [
+     -3.6,
+     3.9
+    ],
+    [
+     -4.6,
+     1.9
+    ]
+   ],
+   "partIndex": 37,
+   "what": "the spare metre, looped and taped",
+   "edges": [
+    {
+     "joint": "j32",
+     "atlas": [
+      24,
+      36,
+      2,
+      2
+     ],
+     "at": [
+      14,
+      248
+     ]
+    },
+    {
+     "joint": "j34",
+     "atlas": [
+      40,
+      26,
+      4,
+      7
+     ],
+     "at": [
+      12,
+      250
+     ]
+    }
+   ],
+   "bent": []
+  }
+ ],
+ "joints": [
+  {
+   "id": "j16",
+   "a": "seg_13",
+   "b": "seg_14",
+   "kind": "hung",
+   "strength": 0.12,
+   "order": 1,
+   "at": [
+    10.0,
+    129.0
+   ],
+   "rapier": "revolute",
+   "hp": 12,
+   "radius": 8,
+   "note": "THE WEAK LINE: the splice under its lower plaster lets go first"
+  },
+  {
+   "id": "j35",
+   "a": "feed_wire",
+   "b": "plate",
+   "kind": "nailed",
+   "strength": 0.2,
+   "order": 2,
+   "at": [
+    18,
+    5
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8,
+   "note": "one staple"
+  },
+  {
+   "id": "j36",
+   "a": "feed_wire",
+   "b": "seg_00",
+   "kind": "tied",
+   "strength": 0.1,
+   "order": 2,
+   "at": [
+    15,
+    25
+   ],
+   "rapier": "rope",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j32",
+   "a": "seg_28",
+   "b": "spare_loop",
+   "kind": "strapped",
+   "strength": 0.2,
+   "order": 3,
+   "at": [
+    13,
+    249
+   ],
+   "rapier": "fixed",
+   "hp": 20,
+   "radius": 8,
+   "note": "plaster: the loop hangs from it and sways"
+  },
+  {
+   "id": "j34",
+   "a": "seg_29",
+   "b": "spare_loop",
+   "kind": "resting",
+   "strength": 0.0,
+   "order": 3,
+   "at": [
+    12.0,
+    252.6
+   ],
+   "rapier": "contact",
+   "hp": 0,
+   "radius": 8
+  },
+  {
+   "id": "j37",
+   "a": "tag_b",
+   "b": "seg_08",
+   "kind": "tied",
+   "strength": 0.1,
+   "order": 3,
+   "at": [
+    13,
+    83
+   ],
+   "rapier": "rope",
+   "hp": 10,
+   "radius": 8,
+   "note": "a string: the tag turns and flutters"
+  },
+  {
+   "id": "j38",
+   "a": "tag_c",
+   "b": "seg_12",
+   "kind": "tied",
+   "strength": 0.1,
+   "order": 3,
+   "at": [
+    13,
+    115
+   ],
+   "rapier": "rope",
+   "hp": 10,
+   "radius": 8
+  },
+  {
+   "id": "j02",
+   "a": "hook",
+   "b": "seg_00",
+   "kind": "tied",
+   "strength": 0.5,
+   "order": 4,
+   "at": [
+    11,
+    23
+   ],
+   "rapier": "rope",
+   "hp": 50,
+   "radius": 8,
+   "note": "the flex knotted in the hook's lower curl: the swing's pivot"
+  },
+  {
+   "id": "j03",
+   "a": "seg_00",
+   "b": "seg_01",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    12.0,
+    25.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j04",
+   "a": "seg_01",
+   "b": "seg_02",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    10.0,
+    33.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j05",
+   "a": "seg_02",
+   "b": "seg_03",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    10.5,
+    41.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j06",
+   "a": "seg_03",
+   "b": "seg_04",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    49.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j07",
+   "a": "seg_04",
+   "b": "seg_05",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    57.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j08",
+   "a": "seg_05",
+   "b": "seg_06",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    65.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j09",
+   "a": "seg_06",
+   "b": "seg_07",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    73.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j10",
+   "a": "seg_07",
+   "b": "seg_08",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    81.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j11",
+   "a": "seg_08",
+   "b": "seg_09",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    89.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j12",
+   "a": "seg_09",
+   "b": "seg_10",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    97.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j13",
+   "a": "seg_10",
+   "b": "seg_11",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    105.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j14",
+   "a": "seg_11",
+   "b": "seg_12",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    9.5,
+    113.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j15",
+   "a": "seg_12",
+   "b": "seg_13",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    8.0,
+    121.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j17",
+   "a": "seg_14",
+   "b": "seg_15",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    137.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j18",
+   "a": "seg_15",
+   "b": "seg_16",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    145.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j19",
+   "a": "seg_16",
+   "b": "seg_17",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    153.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j20",
+   "a": "seg_17",
+   "b": "seg_18",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    161.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j21",
+   "a": "seg_18",
+   "b": "seg_19",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    169.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j22",
+   "a": "seg_19",
+   "b": "seg_20",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    177.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j23",
+   "a": "seg_20",
+   "b": "seg_21",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    12.0,
+    185.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j24",
+   "a": "seg_21",
+   "b": "seg_22",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    193.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j25",
+   "a": "seg_22",
+   "b": "seg_23",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    201.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j26",
+   "a": "seg_23",
+   "b": "seg_24",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    209.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j27",
+   "a": "seg_24",
+   "b": "seg_25",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    217.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j28",
+   "a": "seg_25",
+   "b": "seg_26",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.8,
+    225.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j29",
+   "a": "seg_26",
+   "b": "seg_27",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    10.5,
+    233.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j30",
+   "a": "seg_27",
+   "b": "seg_28",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    10.0,
+    241.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j31",
+   "a": "seg_28",
+   "b": "seg_29",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    11.0,
+    249.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j33",
+   "a": "seg_29",
+   "b": "seg_30",
+   "kind": "hung",
+   "strength": 0.35,
+   "order": 5,
+   "at": [
+    10.0,
+    257.0
+   ],
+   "rapier": "revolute",
+   "hp": 35,
+   "radius": 8,
+   "note": "limp: the flex bends here, and a hit can part it here"
+  },
+  {
+   "id": "j01",
+   "a": "hook",
+   "b": "plate",
+   "kind": "hooked",
+   "strength": 0.8,
+   "order": 6,
+   "at": [
+    10.0,
+    12.0
+   ],
+   "rapier": "fixed",
+   "hp": 80,
+   "radius": 8,
+   "note": "the hook in the lug: it goes when the plate goes"
+  }
+ ],
+ "damagedDecals": [],
+ "notes": [
+  "The flex is one verlet strip (`flap.strip` = flex), as the laundry's cloth strips: points at the segment joints, the bitmap skinned along it, moved by whole pixels. Bodies on limp revolute joints are the fallback.",
+  "The lamp hangs on the last segment: `external` joins it to the lamp's bracket."
+ ],
+ "tiling": {
+  "about": "This picture is the kit once, as a cord of 8 cells. A cord of n cells: cell 0 = the mount cell, cells 1 .. n - 2 = middle cells in the order of install/tunnel/cable.json `tiling` (cycle and start per cable), cell n - 1 = the join cell. Take a cell's pieces from `cells` and put them at the target cell; the joint across a cell boundary is the same limp joint (kind hung, hp 35) at the flex's middle on that boundary.",
+  "lineRow": 10,
+  "rowsPerCell": 32,
+  "axisColumn": 10,
+  "anchorPx": [
+   10.5,
+   10
+  ],
+  "cells": [
+   {
+    "index": 0,
+    "piece": "cable_mount",
+    "rows": [
+     0,
+     42
+    ],
+    "pieces": [
+     "plate",
+     "seg_00",
+     "seg_01",
+     "seg_02",
+     "hook",
+     "feed_wire"
+    ]
+   },
+   {
+    "index": 1,
+    "piece": "cable_seg_a",
+    "rows": [
+     42,
+     74
+    ],
+    "pieces": [
+     "seg_03",
+     "seg_04",
+     "seg_05",
+     "seg_06"
+    ]
+   },
+   {
+    "index": 2,
+    "piece": "cable_seg_b",
+    "rows": [
+     74,
+     106
+    ],
+    "pieces": [
+     "seg_07",
+     "seg_08",
+     "seg_09",
+     "seg_10",
+     "tag_b"
+    ]
+   },
+   {
+    "index": 3,
+    "piece": "cable_seg_c",
+    "rows": [
+     106,
+     138
+    ],
+    "pieces": [
+     "seg_11",
+     "seg_12",
+     "seg_13",
+     "seg_14",
+     "tag_c"
+    ]
+   },
+   {
+    "index": 4,
+    "piece": "cable_seg_d",
+    "rows": [
+     138,
+     170
+    ],
+    "pieces": [
+     "seg_15",
+     "seg_16",
+     "seg_17",
+     "seg_18"
+    ]
+   },
+   {
+    "index": 5,
+    "piece": "cable_seg_e",
+    "rows": [
+     170,
+     202
+    ],
+    "pieces": [
+     "seg_19",
+     "seg_20",
+     "seg_21",
+     "seg_22"
+    ]
+   },
+   {
+    "index": 6,
+    "piece": "cable_seg_f",
+    "rows": [
+     202,
+     234
+    ],
+    "pieces": [
+     "seg_23",
+     "seg_24",
+     "seg_25",
+     "seg_26"
+    ]
+   },
+   {
+    "index": 7,
+    "piece": "cable_join",
+    "rows": [
+     234,
+     270
+    ],
+    "pieces": [
+     "seg_27",
+     "seg_28",
+     "seg_29",
+     "seg_30",
+     "spare_loop"
+    ]
+   }
+  ],
+  "loudspeaker": "for a loudspeaker the join cell is cable_join_horn (install/tunnel/props): cut it into 4 segments of 8 rows the same way; it has no spare loop",
+  "cord1": "cable_one (hook and knot in one cell): the mount cell's plate, hook, feed wire and seg_00 .. seg_02, then the knot"
+ },
+ "external": [
+  {
+   "a": "seg_30",
+   "b": "lamp:bracket",
+   "kind": "tied",
+   "rapier": "rope",
+   "hp": 50,
+   "order": 4,
+   "at": [
+    10.5,
+    266
+   ],
+   "note": "the knot round the lamp's bracket. On a cable the lamp's `bracket` is NOT anchored (its parts.json says anchor: true for a lamp fixed to matter): see lamp_states/lamp_states.json."
+  },
+  {
+   "a": "plate",
+   "b": "matter above",
+   "kind": "bolted",
+   "rapier": "fixed",
+   "at": [
+    10.5,
+    5
+   ],
+   "note": "the plate is the anchor: when the matter it is bolted to is carved away, the whole cord falls (lamps.ts: lamp:out cause mount)"
+  }
+ ],
+ "verlet": {
+  "strip": "flex",
+  "segments": 31,
+  "pitch": 8,
+  "pinTop": [
+   10.5,
+   23
+  ],
+  "load": "the lamp (mass from its own parts.json) hangs on the last point",
+  "note": "draw each segment's bitmap at its point, moved by whole pixels, never rotated more than its row shear: the picture stays hard"
+ },
+ "cut": {
+  "endPiece": "../../../tunnel/props/cable_cut.png",
+  "spark": "../../../tunnel/props/cable_spark.png",
+  "note": "where a joint of the flex parts, the upper end may take the hand-drawn frayed end (cable_cut, its top on the joint) in place of the atlas edge overlay; the spark is centred on its tip"
+ }
+}

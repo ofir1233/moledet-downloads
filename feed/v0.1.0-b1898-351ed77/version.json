@@ -1,0 +1,11 @@
+{
+ "game": "rubble",
+ "id": "v0.1.0-b1898-351ed77",
+ "version": "0.1.0",
+ "build": 1898,
+ "commit": "351ed7763e843b1772eb22c051c94f54d30dceee",
+ "date": "2026-11-18T06:02:45.905Z",
+ "protocol": 1,
+ "contentHash": "ded1676947a321415dcbd01a45c0c5f39a60439910ac91c6a116aa88b1423f28",
+ "simHash": "c3b9e3f6d286b655f7e6151b9aa8c6432ee83e410cfa4ec87cdbca839e7681e9"
+}

@@ -1,0 +1,167 @@
+{
+ "material": "rock",
+ "version": 3,
+ "pxPerCell": 32,
+ "alpha": "0 or 255 only",
+ "character": "the mountain itself, old and sullen: it does not crumble, it SPLITS along its strata into big angular plates with clean fresh faces paler than its weathered skin, and puffs its own dust",
+ "ramp": [
+  "#1e2b2c",
+  "#3d3b34",
+  "#655140",
+  "#8f6c48",
+  "#b98d5c"
+ ],
+ "inside": [
+  "#2d3533",
+  "#6c6556",
+  "#9a8c72",
+  "#c3b293",
+  "#e0cfac"
+ ],
+ "back": [
+  "#141c1d",
+  "#1e2b2c"
+ ],
+ "section": [
+  "#6c6556",
+  "#9a8c72"
+ ],
+ "hash": "h32 as concrete (tools/art_host/fx/hashrule.py); salt 301",
+ "edges": {
+  "strips": {
+   "file": "rock_edge_strips.png",
+   "normal": "rock_edge_strips_n.png",
+   "slot": [
+    32,
+    32
+   ],
+   "halfDepth": 16,
+   "variants": 6,
+   "joinLevels": [
+    -3,
+    3,
+    8,
+    13
+   ],
+   "pairs": 16,
+   "layout": "column = variant v, row = pair p = ia * 4 + ib (ia, ib = the level index of the start / end vertex)",
+   "depthRange": [
+    -9,
+    16
+   ]
+  },
+  "corners": {
+   "file": "rock_edge_corners.png",
+   "normal": "rock_edge_corners_n.png",
+   "slot": [
+    41,
+    41
+   ],
+   "origin": [
+    20,
+    20
+   ],
+   "rows": [
+    "outer",
+    "inner",
+    "pinch"
+   ],
+   "counts": {
+    "outer": 6,
+    "inner": 6,
+    "pinch": 2
+   }
+  },
+  "salt": 301
+ },
+ "stages": {
+  "file": "rock_stages.png",
+  "normal": "rock_stages_n.png",
+  "slot": [
+   48,
+   48
+  ],
+  "margin": 8,
+  "rows": [
+   "25",
+   "50",
+   "75"
+  ],
+  "variants": 4,
+  "use": "opaque overlay over the cell art at stage = dmg/thr crossing 25 / 50 / 75 %; variant h32(x, y, 71) % 4; clip to the rock body"
+ },
+ "bites": {
+  "file": "rock_bites.png",
+  "normal": "rock_bites_n.png",
+  "slot": 8,
+  "variants": 6,
+  "anchor": [
+   4,
+   4
+  ],
+  "use": "one per bullet hit on rock, variant h32(x, y, 80 + salt) % 6, at the hit point; opaque, clipped to the body"
+ },
+ "chunks": {
+  "file": "rock_chunks.png",
+  "normal": "rock_chunks_n.png",
+  "slot": 16,
+  "variants": 8,
+  "shapes": [
+   {
+    "name": "plate",
+    "px": 75
+   },
+   {
+    "name": "wedge",
+    "px": 60
+   },
+   {
+    "name": "block",
+    "px": 78
+   },
+   {
+    "name": "strata_sliver",
+    "px": 30
+   },
+   {
+    "name": "boulder",
+    "px": 88
+   },
+   {
+    "name": "shard",
+    "px": 66
+   },
+   {
+    "name": "small_wedge",
+    "px": 28
+   },
+   {
+    "name": "big_slab",
+    "px": 83
+   }
+  ],
+  "facets": {
+   "#ff0000": "top: the art one ramp step lighter",
+   "#00ff00": "front: the art as it is",
+   "#0000ff": "side / underside: one step darker"
+  },
+  "use": "as concrete: a removed cell gives 3-6 chunks cut from its own art, turned by 90s, settling on a 36 deg cone with a 1 px contact shadow"
+ },
+ "slabs": {
+  "file": "rock_slabs.png",
+  "normal": "rock_slabs_n.png",
+  "slot": [
+   28,
+   16
+  ],
+  "variants": 6,
+  "facets": {
+   "#00ff00": "the rock's painted face kept AS IT IS",
+   "#ff0000": "the broken top edge: FRESH rock, lit",
+   "#0000ff": "side / underside"
+  },
+  "use": "as concrete slabs (holes of 3+ cells, min(4, 1 + n // 2)), settled on the hole lower lip inside a mass"
+ },
+ "behind": "deeper rock: the level back plane two steps darker with a contact shadow (as concrete), never a black void",
+ "dust": "use the game's material dust (dust_impact_mat / dust_puff_mat) in the rock surface colours; a blast hole adds 2-3 smoke_linger puffs tinted #8f6c48"
+}

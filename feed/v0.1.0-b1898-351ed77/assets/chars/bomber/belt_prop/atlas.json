@@ -1,0 +1,109 @@
+{
+ "id": "bomber_belt",
+ "cell": [
+  48,
+  36
+ ],
+ "pivot": [
+  24,
+  32
+ ],
+ "angles": [
+  0
+ ],
+ "note": "the bomber's dynamite belt with its alarm clock as a prop, ONE row (it does not turn), a COLUMN per state: 0 fall_a and 1 fall_b (limp in the air, the heavy clock leading, the ends trailing above), 2-5 the four TICK frames on the floor (the hammer swings to a bell, the clock face goes red on the last two as on his body in the fuse; loop them while the belt is lit, 62 ms each = an 8 Hz blink at double speed), 6 the DUD (the clock stopped: a dull face, both hands at six, the hammer flung up on its spring). Columns 2-6 carry a contact shadow. The pivot is the floor point under its middle. \"fall\" starts where death frame 2 leaves it (grip_dx/dy = the pivot from the bomber's anchor, canvas px, y down; flip dx with his facing): it drops, lands (thud), hops 3 px and lies; then the game plays `tick` or shows `dud`.",
+ "from": "death frame 2",
+ "fall": [
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": -17,
+   "ms": 50
+  },
+  {
+   "row": 0,
+   "col": 0,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": -10,
+   "ms": 40
+  },
+  {
+   "row": 0,
+   "col": 1,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": -4,
+   "ms": 40
+  },
+  {
+   "row": 0,
+   "col": 2,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": 0,
+   "ms": 60,
+   "event": "thud"
+  },
+  {
+   "row": 0,
+   "col": 1,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": -3,
+   "ms": 50
+  },
+  {
+   "row": 0,
+   "col": 2,
+   "angle": 0,
+   "grip_dx": 1,
+   "grip_dy": 0,
+   "ms": 60,
+   "event": "rest"
+  }
+ ],
+ "fall_ms": 240,
+ "states": {
+  "fall": {
+   "cols": [
+    0,
+    1
+   ]
+  },
+  "tick": {
+   "cols": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "ms": [
+    62,
+    62,
+    62,
+    62
+   ],
+   "loop": true,
+   "events": {
+    "1": "tick",
+    "3": "tick"
+   }
+  },
+  "dud": {
+   "cols": [
+    6
+   ]
+  }
+ },
+ "rest_row": 0,
+ "rest_col": 2,
+ "size_px": [
+  33,
+  10
+ ],
+ "normal": "atlas_n.png",
+ "look": "pixel"
+}

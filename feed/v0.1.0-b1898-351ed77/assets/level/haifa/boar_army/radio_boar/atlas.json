@@ -1,0 +1,416 @@
+{
+ "about": "THE RADIO BOAR, painted (16.11; the same painter and sheets as the rifleman). Cut by tools/haifa/boar_atlas2.py from the painted sheets of art/boar_v3_1611 (table: tools/haifa/boar_atlas2_radio.json). STAND-IN until the owner approves the look. src/game/haifa/boarArmy.ts",
+ "standin": true,
+ "canvas": [
+  260,
+  135
+ ],
+ "anchor": [
+  135,
+  125
+ ],
+ "scale": "3/8",
+ "figurePx": 96,
+ "density": 1.6,
+ "hd": "boar_atlas2.py: 2 texels a shown art px (64 a cell, as Eli); a frame px is shown at figure_scale.json boarShow (0.8), so he stands 82 art px on screen, hooves to the top of his helmet (Eli: 97)",
+ "look": "pixel",
+ "source": "art/boar_v3_1611/out (gpt-image-2 sheets from our own design picture); build: py -3.12 -I -B tools/haifa/boar_atlas2.py",
+ "filter": "lanczos",
+ "shownPx": 82.0,
+ "anims": {
+  "idle": {
+   "frames": [
+    [
+     0,
+     0,
+     260,
+     135
+    ],
+    [
+     260,
+     0,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    420,
+    420
+   ],
+   "loop": true
+  },
+  "walk": {
+   "frames": [
+    [
+     520,
+     0,
+     260,
+     135
+    ],
+    [
+     780,
+     0,
+     260,
+     135
+    ],
+    [
+     1040,
+     0,
+     260,
+     135
+    ],
+    [
+     1300,
+     0,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    150,
+    150,
+    150,
+    150
+   ],
+   "loop": true,
+   "stride": 0.318
+  },
+  "run": {
+   "frames": [
+    [
+     1560,
+     0,
+     260,
+     135
+    ],
+    [
+     1820,
+     0,
+     260,
+     135
+    ],
+    [
+     2080,
+     0,
+     260,
+     135
+    ],
+    [
+     0,
+     135,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    80,
+    80,
+    80,
+    80
+   ],
+   "loop": true,
+   "stride": 1.094
+  },
+  "hurt": {
+   "frames": [
+    [
+     260,
+     135,
+     260,
+     135
+    ],
+    [
+     520,
+     135,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    70,
+    140
+   ],
+   "loop": false
+  },
+  "death": {
+   "frames": [
+    [
+     780,
+     135,
+     260,
+     135
+    ],
+    [
+     1040,
+     135,
+     260,
+     135
+    ],
+    [
+     1300,
+     135,
+     260,
+     135
+    ],
+    [
+     1560,
+     135,
+     260,
+     135
+    ],
+    [
+     1820,
+     135,
+     260,
+     135
+    ],
+    [
+     2080,
+     135,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    70,
+    90,
+    110,
+    100,
+    110,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 2,
+   "helmet": [
+    151,
+    53
+   ]
+  },
+  "death_blast": {
+   "frames": [
+    [
+     0,
+     270,
+     260,
+     135
+    ],
+    [
+     260,
+     270,
+     260,
+     135
+    ],
+    [
+     520,
+     270,
+     260,
+     135
+    ],
+    [
+     780,
+     270,
+     260,
+     135
+    ],
+    [
+     1040,
+     270,
+     260,
+     135
+    ],
+    [
+     1300,
+     270,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    80,
+    90,
+    90,
+    100,
+    130,
+    400
+   ],
+   "loop": false,
+   "helmetOff": 0
+  },
+  "radio": {
+   "frames": [
+    [
+     1560,
+     270,
+     260,
+     135
+    ],
+    [
+     1820,
+     270,
+     260,
+     135
+    ],
+    [
+     2080,
+     270,
+     260,
+     135
+    ],
+    [
+     0,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    150,
+    150,
+    150,
+    150
+   ],
+   "loop": true
+  },
+  "cower": {
+   "frames": [
+    [
+     260,
+     405,
+     260,
+     135
+    ],
+    [
+     520,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    300,
+    300
+   ],
+   "loop": true
+  },
+  "aim": {
+   "frames": [
+    [
+     780,
+     405,
+     260,
+     135
+    ],
+    [
+     1040,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    110,
+    200
+   ],
+   "loop": false,
+   "muzzle": [
+    [
+     210,
+     65
+    ],
+    [
+     209,
+     73
+    ]
+   ]
+  },
+  "fire": {
+   "frames": [
+    [
+     1300,
+     405,
+     260,
+     135
+    ],
+    [
+     1560,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    60,
+    90
+   ],
+   "loop": false,
+   "muzzle": [
+    [
+     209,
+     71
+    ],
+    [
+     214,
+     54
+    ]
+   ]
+  },
+  "cover_low": {
+   "frames": [
+    [
+     1820,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    400
+   ],
+   "loop": true
+  },
+  "fall": {
+   "frames": [
+    [
+     2080,
+     405,
+     260,
+     135
+    ]
+   ],
+   "durations": [
+    200
+   ],
+   "loop": true
+  }
+ },
+ "aliases": {
+  "bolt": "run",
+  "alert": "radio",
+  "cooldown": "walk",
+  "jump": "fall",
+  "land": "idle",
+  "recover": "idle",
+  "shoot": "fire",
+  "squeal": "radio",
+  "call": "radio",
+  "cover": "cover_low",
+  "panic": "cower",
+  "stun": "hurt",
+  "stagger": "hurt"
+ },
+ "drawn": [
+  "aim",
+  "cover_low",
+  "cower",
+  "death",
+  "death_blast",
+  "fall",
+  "fire",
+  "hurt",
+  "idle",
+  "radio",
+  "run",
+  "walk"
+ ],
+ "points": "muzzle (aim, fire): the rifle's tip, frame px. helmetOff (death, death_blast): the first frame his head is bare; helmet: where the thrown helmet starts on that frame. The game throws the helmet (boars:helmet), the loose painted helmet is not in the frames."
+}
